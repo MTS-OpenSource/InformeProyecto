@@ -17,22 +17,17 @@ Startup: MTS
 
 “IntegraVida”
 
-
 U202414054 – Jean Pool Alexander Arias Tasayco
 U202318001 – Abigail Nadhim Raymundo Villarroel 
 U202223405 – Juan Sebastian Estupiñan Olortegui
 
-
-
-
-Abril  2026-10
+Abril 2026-10
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
 
-|Versión|Fecha|Autor|Descripción de Modificación|
-| :-: | :-: | :-: | :-: |
-|0\.1|01/04|Jean Arias||
-
+| Versión | Fecha |   Autor    | Descripción de Modificación |
+| :-----: | :---: | :--------: | :-------------------------: |
+|  0\.1   | 01/04 | Jean Arias |                             |
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
@@ -41,197 +36,192 @@ Abril  2026-10
   - ¿Qué Problema se encontró?
   - ¿Cómo se resolverá?
 
-
-
 Contenido
 
-[**REGISTRO DE VERSIONES DEL INFORME	**2****](#_toc226040379)
+[**REGISTRO DE VERSIONES DEL INFORME **2\*\*\*\*](#_toc226040379)
 
-[**PROJECT REPORT COLLABORATION INSIGHTS	**2****](#_toc226040380)
+[**PROJECT REPORT COLLABORATION INSIGHTS **2\*\*\*\*](#_toc226040380)
 
-[**STUDENT OUTCOME	**6****](#_toc226040381)
+[**STUDENT OUTCOME **6\*\*\*\*](#_toc226040381)
 
-[**CAPITULO I: INTRODUCTION	**7****](#_toc226040382)
+[**CAPITULO I: INTRODUCTION **7\*\*\*\*](#_toc226040382)
 
-[1.1 Startup Profile	7](#_toc226040383)
+[1.1 Startup Profile 7](#_toc226040383)
 
-[*1.1.1 Descripción de la Startup	*7**](#_toc226040384)
+[*1.1.1 Descripción de la Startup *7\*\*](#_toc226040384)
 
-[*1.1.2. Perfiles de integrantes del equipo	*7**](#_toc226040385)
+[*1.1.2. Perfiles de integrantes del equipo *7\*\*](#_toc226040385)
 
-[1.2. Solution Profile	7](#_toc226040386)
+[1.2. Solution Profile 7](#_toc226040386)
 
-[*1.2.1 Antecedentes y problemática	*7**](#_toc226040387)
+[*1.2.1 Antecedentes y problemática *7\*\*](#_toc226040387)
 
-[*1.2.2 Lean UX Process	*7**](#_toc226040388)
+[*1.2.2 Lean UX Process *7\*\*](#_toc226040388)
 
-[1.2.2.1 Lean UX Problem Statements	7](#_toc226040389)
+[1.2.2.1 Lean UX Problem Statements 7](#_toc226040389)
 
-[1.2.2.2 Lean UX Assumption	7](#_toc226040390)
+[1.2.2.2 Lean UX Assumption 7](#_toc226040390)
 
-[12.2.3 Lean UX Hypothesis Statements	7](#_toc226040391)
+[12.2.3 Lean UX Hypothesis Statements 7](#_toc226040391)
 
-[1.2.2.4 Lean UX Canvas	7](#_toc226040392)
+[1.2.2.4 Lean UX Canvas 7](#_toc226040392)
 
-[1.3 Segmento Objetivo	7](#_toc226040393)
+[1.3 Segmento Objetivo 7](#_toc226040393)
 
-[**CAPITULO II: REQUIREMENTS ELICITATION & ANALYSIS	**7****](#_toc226040394)
+[**CAPITULO II: REQUIREMENTS ELICITATION & ANALYSIS **7\*\*\*\*](#_toc226040394)
 
-[2.1 Competidores	7](#_toc226040395)
+[2.1 Competidores 7](#_toc226040395)
 
-[*2.1.1 Analisis Competitivo	*7**](#_toc226040396)
+[*2.1.1 Analisis Competitivo *7\*\*](#_toc226040396)
 
-[*2.1.2 Estrategia y tácticas frente a competidores	*7**](#_toc226040397)
+[*2.1.2 Estrategia y tácticas frente a competidores *7\*\*](#_toc226040397)
 
-[2.2 Entrevistas	7](#_toc226040398)
+[2.2 Entrevistas 7](#_toc226040398)
 
-[*2.2.1 Diseño de entrevistas	*7**](#_toc226040399)
+[*2.2.1 Diseño de entrevistas *7\*\*](#_toc226040399)
 
-[*2.2.2 Registro de entrevista	*7**](#_toc226040400)
+[*2.2.2 Registro de entrevista *7\*\*](#_toc226040400)
 
-[*2.2.3 Analisis de entrevista	*7**](#_toc226040401)
+[*2.2.3 Analisis de entrevista *7\*\*](#_toc226040401)
 
-[2.3 Needfinding	7](#_toc226040402)
+[2.3 Needfinding 7](#_toc226040402)
 
-[*2.3.1 User Personas	*7**](#_toc226040403)
+[*2.3.1 User Personas *7\*\*](#_toc226040403)
 
-[*2.3.2 User Task Matrix	*7**](#_toc226040404)
+[*2.3.2 User Task Matrix *7\*\*](#_toc226040404)
 
-[*2.3.3 User Journey Mapping	*7**](#_toc226040405)
+[*2.3.3 User Journey Mapping *7\*\*](#_toc226040405)
 
-[*2.3.4 Empathy Mapping	*7**](#_toc226040406)
+[*2.3.4 Empathy Mapping *7\*\*](#_toc226040406)
 
-[2.4 Big Picture Event Storming	7](#_toc226040407)
+[2.4 Big Picture Event Storming 7](#_toc226040407)
 
-[2.5 Ubiquitous Language	7](#_toc226040408)
+[2.5 Ubiquitous Language 7](#_toc226040408)
 
-[**CAPITULO III: REQUIREMENTS SPECIFICATION	**7****](#_toc226040409)
+[**CAPITULO III: REQUIREMENTS SPECIFICATION **7\*\*\*\*](#_toc226040409)
 
-[3.1 User Stories	7](#_toc226040410)
+[3.1 User Stories 7](#_toc226040410)
 
-[3.2 Impact Mapping	7](#_toc226040411)
+[3.2 Impact Mapping 7](#_toc226040411)
 
-[3.3 Product Backlog	7](#_toc226040412)
+[3.3 Product Backlog 7](#_toc226040412)
 
-[**CAPITULO IV: PRODUCT DESIGN	**8****](#_toc226040413)
+[**CAPITULO IV: PRODUCT DESIGN **8\*\*\*\*](#_toc226040413)
 
-[4.1. Style Guidelines.	8](#_toc226040414)
+[4.1. Style Guidelines. 8](#_toc226040414)
 
-[*4.1.1. General Style Guidelines.	*8**](#_toc226040415)
+[*4.1.1. General Style Guidelines. *8\*\*](#_toc226040415)
 
-[*4.1.2. Web Style Guidelines.	*8**](#_toc226040416)
+[*4.1.2. Web Style Guidelines. *8\*\*](#_toc226040416)
 
-[4.2. Information Architecture.	8](#_toc226040417)
+[4.2. Information Architecture. 8](#_toc226040417)
 
-[*4.2.1. Organization Systems.	*8**](#_toc226040418)
+[*4.2.1. Organization Systems. *8\*\*](#_toc226040418)
 
-[*4.2.2. Labeling Systems.	*8**](#_toc226040419)
+[*4.2.2. Labeling Systems. *8\*\*](#_toc226040419)
 
-[*4.2.3. SEO Tags and Meta Tags	*8**](#_toc226040420)
+[*4.2.3. SEO Tags and Meta Tags *8\*\*](#_toc226040420)
 
-[*4.2.4. Searching Systems.	*8**](#_toc226040421)
+[*4.2.4. Searching Systems. *8\*\*](#_toc226040421)
 
-[*4.2.5. Navigation Systems.	*8**](#_toc226040422)
+[*4.2.5. Navigation Systems. *8\*\*](#_toc226040422)
 
-[4.3. Landing Page UI Design.	8](#_toc226040423)
+[4.3. Landing Page UI Design. 8](#_toc226040423)
 
-[*4.3.1. Landing Page Wireframe.	*8**](#_toc226040424)
+[*4.3.1. Landing Page Wireframe. *8\*\*](#_toc226040424)
 
-[*4.3.2. Landing Page Mock-up.	*8**](#_toc226040425)
+[*4.3.2. Landing Page Mock-up. *8\*\*](#_toc226040425)
 
-[4.4. Web Applications UX/UI Design.	8](#_toc226040426)
+[4.4. Web Applications UX/UI Design. 8](#_toc226040426)
 
-[*4.4.1. Web Applications Wireframes.	*8**](#_toc226040427)
+[*4.4.1. Web Applications Wireframes. *8\*\*](#_toc226040427)
 
-[*4.4.2. Web Applications Wireflow Diagrams.	*8**](#_toc226040428)
+[*4.4.2. Web Applications Wireflow Diagrams. *8\*\*](#_toc226040428)
 
-[*4.4.2. Web Applications Mock-ups.	*8**](#_toc226040429)
+[*4.4.2. Web Applications Mock-ups. *8\*\*](#_toc226040429)
 
-[*4.4.3. Web Applications User Flow Diagrams.	*8**](#_toc226040430)
+[*4.4.3. Web Applications User Flow Diagrams. *8\*\*](#_toc226040430)
 
-[4.5. Web Applications Prototyping.	8](#_toc226040431)
+[4.5. Web Applications Prototyping. 8](#_toc226040431)
 
-[4.6. Domain-Driven Software Architecture.	8](#_toc226040432)
+[4.6. Domain-Driven Software Architecture. 8](#_toc226040432)
 
-[*4.6.1. Design-Level Event Storming.	*8**](#_toc226040433)
+[*4.6.1. Design-Level Event Storming. *8\*\*](#_toc226040433)
 
-[*4.6.2. Software Architecture Context Diagram.	*8**](#_toc226040434)
+[*4.6.2. Software Architecture Context Diagram. *8\*\*](#_toc226040434)
 
-[*4.6.3. Software Architecture Container Diagrams.	*8**](#_toc226040435)
+[*4.6.3. Software Architecture Container Diagrams. *8\*\*](#_toc226040435)
 
-[*4.6.4. Software Architecture Components Diagrams.	*8**](#_toc226040436)
+[*4.6.4. Software Architecture Components Diagrams. *8\*\*](#_toc226040436)
 
-[4.7. Software Object-Oriented Design.	8](#_toc226040437)
+[4.7. Software Object-Oriented Design. 8](#_toc226040437)
 
-[*4.7.1. Class Diagrams.	*8**](#_toc226040438)
+[*4.7.1. Class Diagrams. *8\*\*](#_toc226040438)
 
-[4.8. Database Design.	8](#_toc226040439)
+[4.8. Database Design. 8](#_toc226040439)
 
-[*4.8.1. Database Diagrams	*8**](#_toc226040440)
+[*4.8.1. Database Diagrams *8\*\*](#_toc226040440)
 
-[**CAPITULO V: PRODUCT IMPLEMENTATION, VALIDATION & DEPLOYMENT	**8****](#_toc226040441)
+[**CAPITULO V: PRODUCT IMPLEMENTATION, VALIDATION & DEPLOYMENT **8\*\*\*\*](#_toc226040441)
 
-[5.1. Software Configuration Management.	8](#_toc226040442)
+[5.1. Software Configuration Management. 8](#_toc226040442)
 
-[*5.1.1. Software Development Environment Configuration.	*8**](#_toc226040443)
+[*5.1.1. Software Development Environment Configuration. *8\*\*](#_toc226040443)
 
-[*5.1.2. Source Code Management.	*8**](#_toc226040444)
+[*5.1.2. Source Code Management. *8\*\*](#_toc226040444)
 
-[*5.1.3. Source Code Style Guide & Conventions.	*8**](#_toc226040445)
+[*5.1.3. Source Code Style Guide & Conventions. *8\*\*](#_toc226040445)
 
-[*5.1.4. Software Deployment Configuration.	*8**](#_toc226040446)
+[*5.1.4. Software Deployment Configuration. *8\*\*](#_toc226040446)
 
-[5.2. Landing Page, Services & Applications Implementation.	8](#_toc226040447)
+[5.2. Landing Page, Services & Applications Implementation. 8](#_toc226040447)
 
-[*5.2.X. Sprint n	*8**](#_toc226040448)
+[*5.2.X. Sprint n *8\*\*](#_toc226040448)
 
-[*5.2.X.1. Sprint Planning n.	*8**](#_toc226040449)
+[*5.2.X.1. Sprint Planning n. *8\*\*](#_toc226040449)
 
-[*5.2.X.2. Aspect Leaders and Collaborators.	*8**](#_toc226040450)
+[*5.2.X.2. Aspect Leaders and Collaborators. *8\*\*](#_toc226040450)
 
-[*5.2.X.3. Sprint Backlog n.	*8**](#_toc226040451)
+[*5.2.X.3. Sprint Backlog n. *8\*\*](#_toc226040451)
 
-[*5.2.X.4. Development Evidence for Sprint Review.	*8**](#_toc226040452)
+[*5.2.X.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
 
-[*5.2.X.5. Execution Evidence for Sprint Review.	*8**](#_toc226040453)
+[*5.2.X.5. Execution Evidence for Sprint Review. *8\*\*](#_toc226040453)
 
-[*5.2.X.6. Services Documentation Evidence for Sprint Review.	*8**](#_toc226040454)
+[*5.2.X.6. Services Documentation Evidence for Sprint Review. *8\*\*](#_toc226040454)
 
-[*5.2.X.7. Software Deployment Evidence for Sprint Review.	*8**](#_toc226040455)
+[*5.2.X.7. Software Deployment Evidence for Sprint Review. *8\*\*](#_toc226040455)
 
-[*5.2.X.8. Team Collaboration Insights during Sprint.	*8**](#_toc226040456)
+[*5.2.X.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
 
-[5.3. Validation Interviews.	8](#_toc226040457)
+[5.3. Validation Interviews. 8](#_toc226040457)
 
-[*5.3.1. Diseño de Entrevistas.	*8**](#_toc226040458)
+[*5.3.1. Diseño de Entrevistas. *8\*\*](#_toc226040458)
 
-[*5.3.2. Registro de Entrevistas.	*8**](#_toc226040459)
+[*5.3.2. Registro de Entrevistas. *8\*\*](#_toc226040459)
 
-[*5.3.3. Evaluaciones según heurísticas.	*8**](#_toc226040460)
+[*5.3.3. Evaluaciones según heurísticas. *8\*\*](#_toc226040460)
 
-[5.4. Video About-the-Product.	8](#_toc226040461)
+[5.4. Video About-the-Product. 8](#_toc226040461)
 
-[**CONCLUSIONES	**8****](#_toc226040462)
+[**CONCLUSIONES **8\*\*\*\*](#_toc226040462)
 
-[Conclusiones y recomendaciones	8](#_toc226040463)
+[Conclusiones y recomendaciones 8](#_toc226040463)
 
-[Video About-the-Team	8](#_toc226040464)
+[Video About-the-Team 8](#_toc226040464)
 
-[**BIBLIOGRAFÍA	**8****](#_toc226040465)
+[**BIBLIOGRAFÍA **8\*\*\*\*](#_toc226040465)
 
-[**ANEXOS	**9****](#_toc226040466)
-
-
-
+[**ANEXOS **9\*\*\*\*](#_toc226040466)
 
 # <a name="_toc226040381"></a>Student Outcome
 
-|Criterio Especifico|Acciones Realizadas|Conclusiones|
-| :- | :- | :- |
-||||
-
+| Criterio Especifico | Acciones Realizadas | Conclusiones |
+| :------------------ | :------------------ | :----------- |
+|                     |                     |              |
 
 # <a name="_toc226040382"></a>Capitulo I: Introduction
+
 ## <a name="_toc226040383"></a>1.1 Startup Profile
 
 IntegraVida es una startup tecnológica del sector HealthTech nacida con la ambición de transformar radicalmente el paradigma del manejo de enfermedades crónicas, con un enfoque inicial en la diabetes. Nos definimos como una organización orientada a la innovación que desarrolla ecosistemas de software abiertos, rompiendo con las limitaciones de las soluciones propietarias y cerradas que fragmentan la información médica. 
@@ -247,10 +237,10 @@ Visión 
 Consolidarnos para el año 2030 como la plataforma referente a nivel mundial en el ecosistema de salud abierta, convirtiéndonos en el núcleo digital estándar para la atención médica personalizada. Aspiramos a liderar la integración tecnológica en el sector salud, donde nuestras arquitecturas de software sirvan de base para millones de usuarios, transformando los sistemas de salud tradicionales en modelos predictivos, inclusivos y altamente eficientes, escalando desde nuestra base operativa en Perú hacia mercados internacionales.
 
 ### <a name="_toc226040384"></a>1.1.1 Descripción de la Startup
+
 ### <a name="_toc226040385"></a>1.1.2. Perfiles de integrantes del equipo
 
 ## <a name="_toc226040386"></a>1.2. Solution Profile
-
 
 ### <a name="_toc226040387"></a>1.2.1 Antecedentes y problemática
 
@@ -259,13 +249,10 @@ Who (¿A quiénes les afecta?) 
 El impacto de esta problemática es sistémico y se distribuye en tres niveles críticos: 
 
 - Pacientes con diabetes: Se ven obligados a gestionar su condición con herramientas que ofrecen datos fragmentados (silos de información), careciendo de una visión holística de su salud. Esto genera "fatiga de datos" y una alarmante ausencia de alertas preventivas que les permitan actuar antes de una crisis. 
-    
 
 - Personal Médico y Clínicas: Los especialistas reciben datos recolectados de forma asíncrona y sin contexto. Al no contar con trazabilidad real sobre la adherencia farmacológica o los efectos adversos, se ven limitados para realizar ajustes terapéuticos precisos, trabajando bajo un modelo de "ensayo y error" reactivo. 
-    
 
 - Sistemas de Salud Públicos y Privados: Estos organismos asumen el impacto financiero de las complicaciones crónicas (nefropatías, neuropatías, etc.) que podrían evitarse con un seguimiento preventivo. La ineficiencia en el manejo ambulatorio dispara los costos operativos y satura los servicios de emergencia. 
-    
 
 What (¿Cuál es el problema?) 
 
@@ -290,73 +277,225 @@ El problema se manifiesta a través de un ecosistema de aplicaciones reactivas 
 How Much (¿Qué impacto tiene?) 
 
 A escala global, la diabetes afecta a 830 millones de personas, con la cifra alarmante de que más del 50% no recibe una terapia adecuada. En el contexto local, IntegraVida identifica en Lima Metropolitana un mercado de alta densidad que requiere soluciones urgentes. Proyectamos que la implementación de GlucoSmart permitirá no solo reducir costos por complicaciones en un porcentaje significativo, sino también escalar la solución a nivel nacional, transformando la brecha de tratamiento en el Perú en un caso de éxito de salud digital distribuida.
+
 ### <a name="_toc226040388"></a>1.2.2 Lean UX Process
-#### <a name="_toc226040389"></a>*1.2.2.1 Lean UX Problem Statements*
-#### <a name="_toc226040390"></a>*1.2.2.2 Lean UX Assumption*
-#### <a name="_toc226040391"></a>*12.2.3 Lean UX Hypothesis Statements*
-#### <a name="_toc226040392"></a>*1.2.2.4 Lean UX Canvas*
+
+#### <a name="_toc226040389"></a>_1.2.2.1 Lean UX Problem Statements_
+
+#### <a name="_toc226040390"></a>_1.2.2.2 Lean UX Assumption_
+
+#### <a name="_toc226040391"></a>_12.2.3 Lean UX Hypothesis Statements_
+
+#### <a name="_toc226040392"></a>_1.2.2.4 Lean UX Canvas_
+
 ## <a name="_toc226040393"></a>1.3 Segmento Objetivo
+
 # <a name="_toc226040394"></a>Capitulo II: Requirements Elicitation & Analysis
+
 ## <a name="_toc226040395"></a>2.1 Competidores
+
 ### <a name="_toc226040396"></a>2.1.1 Analisis Competitivo
 
-|Competitive Analysis Landscape|||||||
-| :- | :- | :- | :- | :- | :- | :- |
-|¿Por qué llevar a cabo este análisis?|||||||
-||||||||
-|(En la Cabecera colocar por cada competidor nombre y logo)|Su Startup|Competidor 1|Competidor 2|Competidor 3|||
-|Perfil|Overview||||||
-||Ventaja Competitiva ¿Qué valor ofrece a los clientes?||||||
-|Perfil de Marketing|Mercado Objetivo||||||
-||Estrategias de Marketing||||||
-|Perfil de Producto|Productos & Servicios||||||
-||<p>Precios & Costos</p><p></p>||||||
-||<p>Canales de distribución</p><p>(Web y/o Movil)</p>||||||
-|Análisis SWOT|Realice esto para su startup y sus competidores. Sus fortalezas deberían apoyar sus oportunidades y contribuir a lo que ustedes definen como su posible ventaja competitiva.||||||
-||Fortalezas||||||
-||Debilidades||||||
-||Oportunidades||||||
-||Amenazas||||||
+| Competitive Analysis Landscape                             |                                                                                                                                                                              |              |              |              |     |     |
+| :--------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------- | :----------- | :----------- | :-- | :-- |
+| ¿Por qué llevar a cabo este análisis?                      |                                                                                                                                                                              |              |              |              |     |     |
+|                                                            |                                                                                                                                                                              |              |              |              |     |     |
+| (En la Cabecera colocar por cada competidor nombre y logo) | Su Startup                                                                                                                                                                   | Competidor 1 | Competidor 2 | Competidor 3 |     |     |
+| Perfil                                                     | Overview                                                                                                                                                                     |              |              |              |     |     |
+|                                                            | Ventaja Competitiva ¿Qué valor ofrece a los clientes?                                                                                                                        |              |              |              |     |     |
+| Perfil de Marketing                                        | Mercado Objetivo                                                                                                                                                             |              |              |              |     |     |
+|                                                            | Estrategias de Marketing                                                                                                                                                     |              |              |              |     |     |
+| Perfil de Producto                                         | Productos & Servicios                                                                                                                                                        |              |              |              |     |     |
+|                                                            | <p>Precios & Costos</p><p></p>                                                                                                                                               |              |              |              |     |     |
+|                                                            | <p>Canales de distribución</p><p>(Web y/o Movil)</p>                                                                                                                         |              |              |              |     |     |
+| Análisis SWOT                                              | Realice esto para su startup y sus competidores. Sus fortalezas deberían apoyar sus oportunidades y contribuir a lo que ustedes definen como su posible ventaja competitiva. |              |              |              |     |     |
+|                                                            | Fortalezas                                                                                                                                                                   |              |              |              |     |     |
+|                                                            | Debilidades                                                                                                                                                                  |              |              |              |     |     |
+|                                                            | Oportunidades                                                                                                                                                                |              |              |              |     |     |
+|                                                            | Amenazas                                                                                                                                                                     |              |              |              |     |     |
 
 ### <a name="_toc226040397"></a>2.1.2 Estrategia y tácticas frente a competidores
 
-
 ## <a name="_toc226040398"></a>2.2 Entrevistas
-### <a name="_toc226040399"></a>2.2.1 Diseño de entrevistas
 
+### <a name="_toc226040399"></a>2.2.1 Diseño de entrevistas
 
 ### <a name="_toc226040400"></a>2.2.2 Registro de entrevista
 
-
 ### <a name="_toc226040401"></a>2.2.3 Analisis de entrevista
 
-
 ## <a name="_toc226040402"></a>2.3 Needfinding
+
 ### <a name="_toc226040403"></a>2.3.1 User Personas
 
-
 ### <a name="_toc226040404"></a>2.3.2 User Task Matrix
-
 
 ### <a name="_toc226040405"></a>2.3.3 User Journey Mapping
 
 ### <a name="_toc226040406"></a>2.3.4 Empathy Mapping
 
-
 ## <a name="_toc226040407"></a>2.4 Big Picture Event Storming
+
 ## <a name="_toc226040408"></a>2.5 Ubiquitous Language
+
+El lenguaje ubicuo del proyecto **GlucoSmart** define los términos clave que serán utilizados de manera consistente a lo largo del análisis, diseño e implementación del sistema. Este glosario permite que todos los integrantes del equipo compartan una misma comprensión del dominio de negocio relacionado con el monitoreo y control de la diabetes.
+
+### Términos generales
+
+**1. Platform (Plataforma):**  
+Sistema digital de GlucoSmart que permite centralizar la información clínica del paciente y facilitar la interacción con el doctor.
+
+**2. Patient (Paciente):**  
+Persona con diabetes que utiliza la plataforma para registrar su información de salud, recibir seguimiento y controlar su tratamiento.
+
+**3. Doctor (Doctor):**  
+Profesional de salud encargado de revisar la información del paciente, brindar seguimiento médico y tomar decisiones clínicas.
+
+**4. Diabetes Management (Gestión de la diabetes):**  
+Proceso de control, seguimiento y tratamiento continuo de la diabetes mediante registros clínicos, monitoreo y atención médica.
+
+**5. Clinical Information (Información clínica):**  
+Conjunto de datos relacionados con el estado de salud del paciente, tales como niveles de glucosa, síntomas, medicamentos y observaciones médicas.
+
+**6. Treatment (Tratamiento):**  
+Plan médico definido para el paciente, que incluye medicamentos, indicaciones y controles necesarios para el manejo de la diabetes.
+
+**7. Monitoring (Monitoreo):**  
+Seguimiento continuo de los datos de salud del paciente registrados dentro de la plataforma.
+
+**8. Clinical Record (Registro clínico):**  
+Historial digital donde se almacena la información médica relevante del paciente para su consulta y seguimiento.
+
+---
+
+### Perfil de usuario – Paciente
+
+**1. Glucose Level (Nivel de glucosa):**  
+Valor registrado en la plataforma para representar la concentración de glucosa del paciente en sangre.
+
+**2. Glucose Log (Registro de glucosa):**  
+Historial de mediciones de glucosa ingresadas por el paciente para el control de su estado de salud.
+
+**3. Medication (Medicamento):**  
+Fármaco indicado al paciente para controlar la diabetes o tratar condiciones relacionadas.
+
+**4. Medication Intake (Toma de medicación):**  
+Acción de registrar el consumo de un medicamento en la plataforma.
+
+**5. Symptom (Síntoma):**  
+Malestar o señal física reportada por el paciente durante su tratamiento o seguimiento.
+
+**6. Treatment Adherence (Adherencia al tratamiento):**  
+Nivel de cumplimiento del paciente respecto a las indicaciones médicas, medicamentos y controles establecidos.
+
+**7. Reminder (Recordatorio):**  
+Notificación generada por el sistema para avisar al paciente sobre la toma de medicamentos, controles o citas médicas.
+
+**8. Alert (Alerta):**  
+Aviso emitido por la plataforma cuando se detecta una situación que requiere atención, como una medición fuera del rango esperado.
+
+**9. Appointment (Cita médica):**  
+Encuentro programado entre el paciente y el doctor para revisión, seguimiento o evaluación del tratamiento.
+
+**10. Health History (Historial de salud):**  
+Conjunto de registros del paciente relacionados con su evolución, controles, síntomas y tratamiento.
+
+---
+
+### Perfil de usuario – Doctor
+
+**1. Clinical Review (Revisión clínica):**  
+Proceso mediante el cual el doctor analiza la información registrada por el paciente en la plataforma.
+
+**2. Diagnosis (Diagnóstico):**  
+Determinación médica sobre la condición de salud del paciente a partir de su evaluación clínica.
+
+**3. Prescription (Prescripción):**  
+Indicación médica que define qué medicamentos debe tomar el paciente, en qué dosis y con qué frecuencia.
+
+**4. Clinical Follow-up (Seguimiento clínico):**  
+Supervisión periódica realizada por el doctor sobre el estado de salud y evolución del paciente.
+
+**5. Therapeutic Adjustment (Ajuste terapéutico):**  
+Modificación del tratamiento en función de la evolución clínica y los datos registrados en la plataforma.
+
+**6. Medical Observation (Observación médica):**  
+Comentario o anotación realizada por el doctor sobre el estado, avance o respuesta del paciente al tratamiento.
+
+**7. Medical Decision (Decisión médica):**  
+Acción clínica tomada por el doctor a partir de la información analizada en el sistema.
+
+**8. Appointment Schedule (Agenda de citas):**  
+Listado de citas médicas programadas que permite al doctor organizar su seguimiento con los pacientes.
+
+---
+
+### Gestión del tratamiento y seguimiento
+
+**1. Dose (Dosis):**  
+Cantidad específica de medicamento que el paciente debe consumir según la prescripción médica.
+
+**2. Frequency (Frecuencia):**  
+Número de veces o intervalo en el que el paciente debe tomar su medicación.
+
+**3. Schedule (Horario):**  
+Momento definido para la toma de medicamentos, controles o citas médicas.
+
+**4. Medical Report (Reporte médico):**  
+Resumen organizado de la información clínica del paciente en un periodo determinado.
+
+**5. Traceability (Trazabilidad):**  
+Capacidad del sistema para registrar y seguir la evolución del paciente y el cumplimiento de su tratamiento a lo largo del tiempo.
+
+**6. Follow-up History (Historial de seguimiento):**  
+Registro cronológico de revisiones, observaciones y cambios realizados durante el control médico del paciente.
+
+---
+
+### Alertas y control de riesgos
+
+**1. Risk Alert (Alerta de riesgo):**  
+Notificación emitida cuando el sistema detecta una posible situación peligrosa para la salud del paciente.
+
+**2. Adverse Effect (Efecto adverso):**  
+Reacción no deseada que puede presentarse en el paciente como consecuencia de un medicamento o tratamiento.
+
+**3. Preventive Notification (Notificación preventiva):**  
+Aviso generado para anticipar posibles complicaciones y promover una acción oportuna.
+
+**4. Clinical Event (Evento clínico):**  
+Situación relevante registrada en la plataforma, como una variación anormal de glucosa, un síntoma o un cambio en el tratamiento.
+
+---
+
+### Acceso a la plataforma
+
+**1. Sign Up (Registro):**  
+Proceso mediante el cual un usuario crea una cuenta en la plataforma GlucoSmart.
+
+**2. Sign In (Inicio de sesión):**  
+Acción de ingresar al sistema mediante credenciales para acceder a sus funcionalidades.
+
+**3. User Account (Cuenta de usuario):**  
+Perfil digital asociado a un paciente o doctor dentro de la plataforma.
+
+**4. User Profile (Perfil de usuario):**  
+Información personal y profesional registrada en el sistema según el tipo de usuario.
+
 # <a name="_toc226040409"></a>Capitulo III: Requirements Specification
+
 ## <a name="_toc226040410"></a>3.1 User Stories
 
-|Epic ID|Titulo|
-| :- | :- |
-|EP-01|<p>Como</p><p>Quiero </p><p>Para</p>|
+| Epic ID | Titulo                               |
+| :------ | :----------------------------------- |
+| EP-01   | <p>Como</p><p>Quiero </p><p>Para</p> |
 
-|Story ID|Titulo|Descripcion|Criterios de Aceptacion|Epic ID|
-| :- | :- | :- | :- | :- |
-|US-01||<p>Como</p><p>Quiero </p><p>Para</p>|<p>Escenario 1:</p><p>Dado</p><p>Cuando</p><p>Entonces</p>|EP-01|
+| Story ID | Titulo | Descripcion                          | Criterios de Aceptacion                                    | Epic ID |
+| :------- | :----- | :----------------------------------- | :--------------------------------------------------------- | :------ |
+| US-01    |        | <p>Como</p><p>Quiero </p><p>Para</p> | <p>Escenario 1:</p><p>Dado</p><p>Cuando</p><p>Entonces</p> | EP-01   |
 
 ## <a name="_toc226040411"></a>3.2 Impact Mapping
+
 ## <a name="_toc226040412"></a>3.3 Product Backlog
 
 | # Orden | User Story ID | Titulo | Descripcion                          | Story Point |
@@ -364,43 +503,78 @@ A escala global, la diabetes afecta a 830 millones de personas, con la cifra al
 | 1       | US-01         | AAA    | <p>Como </p><p>Deseo </p><p>para</p> | 1/2/3/5/8   |
 
 # <a name="_toc226040413"></a>Capitulo IV: Product Design
-## <a name="_toc226040414"></a>4.1. Style Guidelines. 
-### <a name="_toc226040415"></a>4.1.1. General Style Guidelines. 
-### <a name="_toc226040416"></a>4.1.2. Web Style Guidelines. 
-## <a name="_toc226040417"></a>4.2. Information Architecture. 
-### <a name="_toc226040418"></a>4.2.1. Organization Systems. 
-### <a name="_toc226040419"></a>4.2.2. Labeling Systems. 
-### <a name="_toc226040420"></a>4.2.3. SEO Tags and Meta Tags 
-### <a name="_toc226040421"></a>4.2.4. Searching Systems. 
-### <a name="_toc226040422"></a>4.2.5. Navigation Systems. 
-## <a name="_toc226040423"></a>4.3. Landing Page UI Design. 
-### <a name="_toc226040424"></a>4.3.1. Landing Page Wireframe. 
-### <a name="_toc226040425"></a>4.3.2. Landing Page Mock-up. 
-## <a name="_toc226040426"></a>4.4. Web Applications UX/UI Design. 
-### <a name="_toc226040427"></a>4.4.1. Web Applications Wireframes. 
-### <a name="_toc226040428"></a>4.4.2. Web Applications Wireflow Diagrams. 
-### <a name="_toc226040429"></a>4.4.2. Web Applications Mock-ups. 
-### <a name="_toc226040430"></a>4.4.3. Web Applications User Flow Diagrams. 
-## <a name="_toc226040431"></a>4.5. Web Applications Prototyping. 
-## <a name="_toc226040432"></a>4.6. Domain-Driven Software Architecture. 
-### <a name="_toc226040433"></a>4.6.1. Design-Level Event Storming. 
-### <a name="_toc226040434"></a>4.6.2. Software Architecture Context Diagram. 
-### <a name="_toc226040435"></a>4.6.3. Software Architecture Container Diagrams. 
-### <a name="_toc226040436"></a>4.6.4. Software Architecture Components Diagrams. 
-## <a name="_toc226040437"></a>4.7. Software Object-Oriented Design. 
-### <a name="_toc226040438"></a>4.7.1. Class Diagrams. 
-## <a name="_toc226040439"></a>4.8. Database Design. 
+
+## <a name="_toc226040414"></a>4.1. Style Guidelines.
+
+### <a name="_toc226040415"></a>4.1.1. General Style Guidelines.
+
+### <a name="_toc226040416"></a>4.1.2. Web Style Guidelines.
+
+## <a name="_toc226040417"></a>4.2. Information Architecture.
+
+### <a name="_toc226040418"></a>4.2.1. Organization Systems.
+
+### <a name="_toc226040419"></a>4.2.2. Labeling Systems.
+
+### <a name="_toc226040420"></a>4.2.3. SEO Tags and Meta Tags
+
+### <a name="_toc226040421"></a>4.2.4. Searching Systems.
+
+### <a name="_toc226040422"></a>4.2.5. Navigation Systems.
+
+## <a name="_toc226040423"></a>4.3. Landing Page UI Design.
+
+### <a name="_toc226040424"></a>4.3.1. Landing Page Wireframe.
+
+### <a name="_toc226040425"></a>4.3.2. Landing Page Mock-up.
+
+## <a name="_toc226040426"></a>4.4. Web Applications UX/UI Design.
+
+### <a name="_toc226040427"></a>4.4.1. Web Applications Wireframes.
+
+### <a name="_toc226040428"></a>4.4.2. Web Applications Wireflow Diagrams.
+
+### <a name="_toc226040429"></a>4.4.2. Web Applications Mock-ups.
+
+### <a name="_toc226040430"></a>4.4.3. Web Applications User Flow Diagrams.
+
+## <a name="_toc226040431"></a>4.5. Web Applications Prototyping.
+
+## <a name="_toc226040432"></a>4.6. Domain-Driven Software Architecture.
+
+### <a name="_toc226040433"></a>4.6.1. Design-Level Event Storming.
+
+### <a name="_toc226040434"></a>4.6.2. Software Architecture Context Diagram.
+
+### <a name="_toc226040435"></a>4.6.3. Software Architecture Container Diagrams.
+
+### <a name="_toc226040436"></a>4.6.4. Software Architecture Components Diagrams.
+
+## <a name="_toc226040437"></a>4.7. Software Object-Oriented Design.
+
+### <a name="_toc226040438"></a>4.7.1. Class Diagrams.
+
+## <a name="_toc226040439"></a>4.8. Database Design.
+
 ### <a name="_toc226040440"></a>4.8.1. Database Diagrams
+
 # <a name="_toc226040441"></a>Capitulo V: Product Implementation, Validation & Deployment
-## <a name="_toc226040442"></a>5.1. Software Configuration Management. 
-### <a name="_toc226040443"></a>5.1.1. Software Development Environment Configuration. 
-### <a name="_toc226040444"></a>5.1.2. Source Code Management. 
-### <a name="_toc226040445"></a>5.1.3. Source Code Style Guide & Conventions. 
-### <a name="_toc226040446"></a>5.1.4. Software Deployment Configuration. 
-## <a name="_toc226040447"></a>5.2. Landing Page, Services & Applications Implementation. 
+
+## <a name="_toc226040442"></a>5.1. Software Configuration Management.
+
+### <a name="_toc226040443"></a>5.1.1. Software Development Environment Configuration.
+
+### <a name="_toc226040444"></a>5.1.2. Source Code Management.
+
+### <a name="_toc226040445"></a>5.1.3. Source Code Style Guide & Conventions.
+
+### <a name="_toc226040446"></a>5.1.4. Software Deployment Configuration.
+
+## <a name="_toc226040447"></a>5.2. Landing Page, Services & Applications Implementation.
+
 ### <a name="_toc226040448"></a>5.2.1. Sprint 1
 
-### <a name="_toc226040449"></a>5.2.1.1. Sprint Planning 1. 
+### <a name="_toc226040449"></a>5.2.1.1. Sprint Planning 1.
 
 | Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                              |     |
 | :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
@@ -417,7 +591,7 @@ A escala global, la diabetes afecta a 830 millones de personas, con la cifra al
 | Sprint N Velocity                | 20                                                                                                                                                                                                                                                                                                                                                                                                    |     |
 | Sum of Story Points              | 18                                                                                                                                                                                                                                                                                                                                                                                                    |     |
 
-### <a name="_toc226040450"></a>5.2.X.2. Aspect Leaders and Collaborators. 
+### <a name="_toc226040450"></a>5.2.X.2. Aspect Leaders and Collaborators.
 
 | Team Member      | GitHub Username | Landing Page Structure | Navbar & Footer | Hero & Service | About & Testiomonials | Contact Section |
 | :--------------- | :-------------- | :--------------------- | :-------------- | :------------- | :-------------------- | --------------- |
@@ -450,7 +624,7 @@ A escala global, la diabetes afecta a 830 millones de personas, con la cifra al
 | :---------- | :----- | :-------- | :------------- | :------------------ | :---------- |
 | IntegraVida | main   |           |                |                     |             |
 
-### <a name="_toc226040453"></a>5.2.1.5. Execution Evidence for Sprint Review. 
+### <a name="_toc226040453"></a>5.2.1.5. Execution Evidence for Sprint Review.
 
 En esta entrega el equipo ha desplegado con exito la primera version del LandingPage de IntegraVida 
 
@@ -466,11 +640,11 @@ Las Secciones implementadas son: 
 - Formulario de Contacto 
 - Footer con redes sociales
 
-### <a name="_toc226040454"></a>5.2.1.6. Services Documentation Evidence for Sprint Review. 
+### <a name="_toc226040454"></a>5.2.1.6. Services Documentation Evidence for Sprint Review.
 
 En este Sprint no se implementaron Web Services. El enfoque fue exclusivamente en desarrollo y despliegue del Landing Page estatico
 
-### <a name="_toc226040455"></a>5.2.1.7. Software Deployment Evidence for Sprint Review. 
+### <a name="_toc226040455"></a>5.2.1.7. Software Deployment Evidence for Sprint Review.
 
 Para el despliegue del Landing Page se utilizó GitHub Page. 
 
@@ -481,6 +655,7 @@ Pasos realizados: 
 3. Seleccionar el apartado Pages 
 4. Eligir la rama ‘main’ y folder ‘/root’ 
 5. Confirmar el despliegue y acceder al link generado
+
 ### <a name="_toc226040456"></a>5.2.1.8. Team Collaboration Insights during Sprint.
 
 Durante este Sprint la tareas fueron distribuidas equitativamente entre los dos integrantes del equipo de desarollo Jean Pool Arias lidero la estructura vase del proyecto, el navbar, el contact y el language service. Abigail Raymundo liero el hero, el about, los testimonio y los servicio 
@@ -491,8 +666,11 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 | Abigail Raymundo | commits   |
 
 # <a name="_toc226040462"></a>Conclusiones
+
 ## <a name="_toc226040463"></a>Conclusiones y recomendaciones
+
 ## <a name="_toc226040464"></a>Video About-the-Team
+
 # <a name="_toc226040465"></a>Bibliografía
 
 # <a name="_toc226040466"></a>Anexos
