@@ -658,6 +658,12 @@ La separación en dos diagramas no implica una división del sistema en módulos
 
 ### <a name="_toc226040440"></a>4.8.1. Database Diagrams
 
+El siguiente diagrama entidad-relación representa el diseño de base de datos del sistema **GlucoSmart**, alineado con los diagramas de clases definidos previamente. El modelo relacional considera la gestión de usuarios, pacientes, doctores, expedientes clínicos, historial médico, registros de glucosa, síntomas, tratamientos, medicamentos, tomas de medicación, reportes de efectos adversos, alertas y citas médicas.
+
+La estructura propuesta permite mantener la integridad de los datos y asegurar la trazabilidad clínica del paciente, además de brindar soporte a las principales funcionalidades de monitoreo, tratamiento y seguimiento médico de la plataforma.
+
+![ERD - GlucoSmart](./Informe/assets/erd-database-diagram.png)
+
 # <a name="_toc226040441"></a>Capitulo V: Product Implementation, Validation & Deployment
 
 ## <a name="_toc226040442"></a>5.1. Software Configuration Management.
