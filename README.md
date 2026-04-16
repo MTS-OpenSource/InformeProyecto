@@ -29,9 +29,9 @@ Abril  2026-10
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
 
-|Versión|Fecha|Autor|Descripción de Modificación|
-| :-: | :-: | :-: | :-: |
-|0\.1|01/04|Jean Arias||
+| Versión | Fecha |   Autor    | Descripción de Modificación |
+| :-----: | :---: | :--------: | :-------------------------: |
+|  0\.1   | 09/04 | Jean Arias |                             |
 
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
