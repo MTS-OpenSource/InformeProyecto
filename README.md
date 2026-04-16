@@ -15,10 +15,12 @@ Ingenieria de Software
 
 Startup: MTS
 
-“AquaMatch”
+“IntegraVida”
+
 
 U202414054 – Jean Pool Alexander Arias Tasayco
-
+U202318001 – Abigail Nadhim Raymundo Villarroel 
+U202223405 – Juan Sebastian Estupiñan Olortegui
 
 
 
@@ -27,9 +29,9 @@ Abril  2026-10
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
 
-|Versión|Fecha|Autor|Descripción de Modificación|
-| :-: | :-: | :-: | :-: |
-|0\.1|01/04|Jean Arias||
+| Versión | Fecha |   Autor    | Descripción de Modificación |
+| :-----: | :---: | :--------: | :-------------------------: |
+|  0\.1   | 10/04 | Jean Arias |                             |
 
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
@@ -231,11 +233,63 @@ Contenido
 
 # <a name="_toc226040382"></a>Capitulo I: Introduction
 ## <a name="_toc226040383"></a>1.1 Startup Profile
+
+IntegraVida es una startup tecnológica del sector HealthTech nacida con la ambición de transformar radicalmente el paradigma del manejo de enfermedades crónicas, con un enfoque inicial en la diabetes. Nos definimos como una organización orientada a la innovación que desarrolla ecosistemas de software abiertos, rompiendo con las limitaciones de las soluciones propietarias y cerradas que fragmentan la información médica. 
+
+Nuestra propuesta de valor reside en la interoperabilidad y la democratización de los datos de salud. A través del uso de arquitecturas distribuidas y modernas, IntegraVida conecta a pacientes, especialistas y sistemas de farmacovigilancia en una red de colaboración en tiempo real. No solo buscamos registrar datos, sino transformarlos en activos clínicos accionables que permitan cerrar la brecha de tratamiento y mejorar la calidad de vida de las poblaciones vulnerables a nivel global. 
+
+Misión 
+
+Empoderar a pacientes que conviven con enfermedades crónicas a través de soluciones de software de código abierto de alto rendimiento, diseñadas para facilitar una gestión integral, autónoma y segura de su salud. Nos comprometemos a proporcionar una infraestructura digital robusta que garantice la trazabilidad terapéutica y la precisión clínica, permitiendo que las decisiones médicas se basen en la analítica de datos en tiempo real y en una comunicación bidireccional efectiva entre el paciente y el equipo multidisciplinario de salud. 
+
+Visión 
+
+Consolidarnos para el año 2030 como la plataforma referente a nivel mundial en el ecosistema de salud abierta, convirtiéndonos en el núcleo digital estándar para la atención médica personalizada. Aspiramos a liderar la integración tecnológica en el sector salud, donde nuestras arquitecturas de software sirvan de base para millones de usuarios, transformando los sistemas de salud tradicionales en modelos predictivos, inclusivos y altamente eficientes, escalando desde nuestra base operativa en Perú hacia mercados internacionales.
+
 ### <a name="_toc226040384"></a>1.1.1 Descripción de la Startup
 ### <a name="_toc226040385"></a>1.1.2. Perfiles de integrantes del equipo
+
 ## <a name="_toc226040386"></a>1.2. Solution Profile
+
+
 ### <a name="_toc226040387"></a>1.2.1 Antecedentes y problemática
-Aquí se incluye una aproximación preliminar a la descripción de los antecedentes y la descripción de la problemática. Para la elaboración de esta descripción, el equipo debe aplicar previamente la técnica de The 5 ‘W’s y 2 ‘H’s - Who, What, Where, When, Why, How & How Much.
+
+Who (¿A quiénes les afecta?) 
+
+El impacto de esta problemática es sistémico y se distribuye en tres niveles críticos: 
+
+- Pacientes con diabetes: Se ven obligados a gestionar su condición con herramientas que ofrecen datos fragmentados (silos de información), careciendo de una visión holística de su salud. Esto genera "fatiga de datos" y una alarmante ausencia de alertas preventivas que les permitan actuar antes de una crisis. 
+    
+
+- Personal Médico y Clínicas: Los especialistas reciben datos recolectados de forma asíncrona y sin contexto. Al no contar con trazabilidad real sobre la adherencia farmacológica o los efectos adversos, se ven limitados para realizar ajustes terapéuticos precisos, trabajando bajo un modelo de "ensayo y error" reactivo. 
+    
+
+- Sistemas de Salud Públicos y Privados: Estos organismos asumen el impacto financiero de las complicaciones crónicas (nefropatías, neuropatías, etc.) que podrían evitarse con un seguimiento preventivo. La ineficiencia en el manejo ambulatorio dispara los costos operativos y satura los servicios de emergencia. 
+    
+
+What (¿Cuál es el problema?) 
+
+El problema central es la ineficiencia funcional y la desarticulación de datos en el ecosistema mHealth actual. Las aplicaciones convencionales se han limitado al registro cuantitativo de la glucosa, ignorando la integración de pilares fundamentales como la farmacovigilancia y la trazabilidad terapéutica. Existe una brecha crítica entre lo que el médico prescribe (indicación) y lo que el paciente realmente ejecuta (consumo real), lo que convierte a los datos recolectados en información estéril para el análisis clínico profesional. 
+
+Where (¿Dónde surge el problema?) 
+
+La problemática se localiza en la convergencia crítica entre el sector salud y la ingeniería de software (mHealth). No es solo un problema de software, sino de diseño arquitectónico: las interfaces y los flujos de datos no están anclados a los protocolos clínicos del mundo real. Esta desconexión impide que las intervenciones digitales logren su objetivo principal: la reducción sostenida de los niveles de hemoglobina glicosilada (HbA1c) en el paciente. 
+
+When (¿Cu.ándo sucede el problema?) 
+
+El problema persiste de manera ininterrumpida durante todo el ciclo de vida del tratamiento, pero se agudiza drásticamente en el periodo ambulatorio. Es precisamente cuando el paciente sale del entorno controlado del consultorio cuando se pierde el control sobre la adherencia a la medicación y se omiten las señales tempranas de reacciones adversas, rompiendo la continuidad del cuidado médico. 
+
+Why (¿Por qué sucede el problema?) 
+
+Esta situación es consecuencia de una visión técnica limitada que prioriza el registro de números sobre la gestión de la salud. Las herramientas actuales carecen de módulos de retroalimentación profesional y sistemas de apoyo a la decisión clínica. Al no existir una infraestructura integral que conecte la ingesta de fármacos con las variaciones glicémicas, el ciclo terapéutico permanece abierto, impidiendo la identificación de riesgos antes de que se conviertan en complicaciones severas. 
+
+How (¿Cómo sucede el problema?) 
+
+El problema se manifiesta a través de un ecosistema de aplicaciones reactivas e interacciones aisladas. Las apps generan alertas genéricas e irrelevantes que el paciente termina ignorando. Según investigaciones recientes (Tang, 2024), la falta de un diseño interactivo que incluya recordatorios personalizados, soporte profesional y una experiencia de usuario (UX) consistente, degrada la retención del paciente y, por ende, la sostenibilidad de cualquier beneficio clínico inicial. 
+
+How Much (¿Qué impacto tiene?) 
+
+A escala global, la diabetes afecta a 830 millones de personas, con la cifra alarmante de que más del 50% no recibe una terapia adecuada. En el contexto local, IntegraVida identifica en Lima Metropolitana un mercado de alta densidad que requiere soluciones urgentes. Proyectamos que la implementación de GlucoSmart permitirá no solo reducir costos por complicaciones en un porcentaje significativo, sino también escalar la solución a nivel nacional, transformando la brecha de tratamiento en el Perú en un caso de éxito de salud digital distribuida.
 ### <a name="_toc226040388"></a>1.2.2 Lean UX Process
 #### <a name="_toc226040389"></a>*1.2.2.1 Lean UX Problem Statements*
 #### <a name="_toc226040390"></a>*1.2.2.2 Lean UX Assumption*
@@ -344,54 +398,98 @@ Aquí se incluye una aproximación preliminar a la descripción de los anteceden
 ### <a name="_toc226040445"></a>5.1.3. Source Code Style Guide & Conventions. 
 ### <a name="_toc226040446"></a>5.1.4. Software Deployment Configuration. 
 ## <a name="_toc226040447"></a>5.2. Landing Page, Services & Applications Implementation. 
-### <a name="_toc226040448"></a>5.2.X. Sprint n
+### <a name="_toc226040448"></a>5.2.1. Sprint 1
 
-### <a name="_toc226040449"></a>5.2.X.1. Sprint Planning n. 
+### <a name="_toc226040449"></a>5.2.1.1. Sprint Planning 1. 
 
-|Sprint #|Sprint N|
-| :- | :- |
-|**Sprint Planning Background**||
-|Date||
-|Time||
-|Location||
-|Prepared By|Jean Pool Arias|
-|Attendees (To planning meeting)||
-|SprinT N-1 Review Summary||
-|SprinT N-1 Retrospective Summary||
-|**Sprint Goal & User Stories**||
-|Sprint N Goal|Example #1 Context The CatchUp Product Team decided to add a new feature: To offer users the option to favorite news sources, for showing news from that sources in the new options “favorites” Sprint Goal “Our focus is on offering a more customized experience to the current CatchUp user community. We believe it delivers rapid access to news from frequent news sources to users of the app. This will be confirmed when users access news from news sources they previously marked as favorite ones in the app, with a Session Length of 10-minute or more.” Example #2 Context The ACME Learning Center Product Team decided to include plan information in the platform website, and allow students of the learning platform to cancel a previously requested enrollment. They also will implement a set of endpoints in order to allow frontend and mobile app developers the possibility of implementing student enrollment transaction features in their apps through the API. Sprint Goal “Our focus is on offering more detailed information to new visitors, providing an enhanced enrollment process to students, and incrementing new feature possibilities to the development team members. We believe it delivers an easier plan selection to visitors, more flexibility on enrollment to students, and opportunities for implementing more enrollment-related features in the Learning Center ecosystem to development team This will be confirmed when visitors can subscribe directly with and specific plan in no more than three steps, students can cancel previously requested enrollments without intervention of support staff, and developers implement new features related to enrollments using the implemented endpoints without intervention of backend development team.”|
-|Sprint N Velocity||
-|Sum of Story Points ||
+| Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                              |     |
+| :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **Sprint Planning Background**   |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| Date                             | 01/042026                                                                                                                                                                                                                                                                                                                                                                                             |     |
+| Time                             | 6:00PM                                                                                                                                                                                                                                                                                                                                                                                                |     |
+| Location                         | Virtual - Discord                                                                                                                                                                                                                                                                                                                                                                                     |     |
+| Prepared By                      | Jean Pool Arias                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| Attendees (To planning meeting)  | Jean Pool Arias, Abigail Raymundo                                                                                                                                                                                                                                                                                                                                                                     |     |
+| SprinT N-1 Review Summary        |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| SprinT N-1 Retrospective Summary |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| **Sprint Goal & User Stories**   |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| Sprint N Goal                    | Our focus is on delivering the first version of the GlucoSmart Landing Page. We believe it delivers a clear and attractive presentation of the product to potential users and medical professionals. This will be confirmed when the Landing Page is successfully deployed and accessible via a public URL, displaying all key sections including hero, services, about us, testimonials and contact. |     |
+| Sprint N Velocity                | 20                                                                                                                                                                                                                                                                                                                                                                                                    |     |
+| Sum of Story Points              | 18                                                                                                                                                                                                                                                                                                                                                                                                    |     |
 
 ### <a name="_toc226040450"></a>5.2.X.2. Aspect Leaders and Collaborators. 
 
-|Team Member|GitHub Username|Aspect Name 1|Aspect Name 2|---|Aspec Name n|
-| :- | :- | :- | :- | :- | :- |
-|Jean, Arias|Jean-AT|L|C|||
+| Team Member      | GitHub Username | Landing Page Structure | Navbar & Footer | Hero & Service | About & Testiomonials | Contact Section |
+| :--------------- | :-------------- | :--------------------- | :-------------- | :------------- | :-------------------- | --------------- |
+| Jean, Arias      | Jean-AT         | L                      | L               | L              | C                     | C               |
+| Abigail Raymundo | AbigailRv       | C                      | C               | L              | L                     | L               |
 
-### <a name="_toc226040451"></a>5.2.X.3. Sprint Backlog n.
+### <a name="_toc226040451"></a>5.2.X.3. Sprint Backlog 1.
 
-|Sprint #||||||||
-| :- | :- | :- | :- | :- | :- | :- | :- |
-|User Story|Work-item/ Task|||||||
-|Id|Title|Id|Title|Description|Estimation|Assignet To|Status|
-|||||||||
+| Sprint#    |                                   |                |                                                   |                                                                                                 |            |             |        |
+| :--------- | :-------------------------------- | :------------- | :------------------------------------------------ | :---------------------------------------------------------------------------------------------- | :--------- | ----------- | ------ |
+| User Story |                                   | Work-Item/Task |                                                   |                                                                                                 |            |             |        |
+| Id         | Title                             | Id             | Title                                             | Description                                                                                     | Estimation | Assignet To | Status |
+| US-29      | Navegacion por el Landing Page    | T01            | Crear estructura base del proyecto Angular        | Inicializar proyecto Angular con la estructura de carpetas definidas (shared,comoponents, core) | 1          | Jean Pool   | Done   |
+| US-29      | Navegacion por el LandingPage     | T02            | Implementar Navbar component                      | Crear el componente navbar con logo, link de navegacion y botones de accion                     | 1          | Jean Pool   | Done   |
+| US-29      | Navegación por el Landing Page    | T03            | Implementar Footer component                      | Crear el componente footer con logo, links, redes sociales y copyright                          | 1          | Abigail     | To-Do  |
+| US-29      | Navegación por el Landing Page    | T04            | Implementar navegación entre secciones            | Configurar scroll suave entre secciones del Landing Page                                        | 0.5        | Jean Pool   | To-Do  |
+| US-30      | Ver Información del Startup       | T05            | Implementar sección About                         | Crear el componente about con descripción, misión y visión de IntegraVida                       | 1          | Abigail     | To-Do  |
+| US-31      | Conocer la mision de la Startup   | T06            | Agregar cards de Msion y vision                   | Implementar las cards dentro del componente about con su contenido                              | 0.5        | Abigail     | To-Do  |
+| US-33      | Contactar al equipo de soporte    | T07            | Implementar seccion contact                       | Crear el componente contact con el formulario e informacion de contacto                         | 2          | Jean Pool   | Done   |
+| US-01      | Hero section del Landing Page     | T08            | Implementar la seccion Hero                       | Crear el componente service con imagen y principal call to action                               | 1          | Abigail     | To-Do  |
+| US-01      | Hero section del LandingPage      | T09            | Implementar seccion Service                       | Crear el componente con carousel de servicio especializados                                     | 2          | Abigail     | To-Do  |
+| US-01      | Hero section del LandingPage      | 10             | Implementar Testimonios                           | Crear el componente testimonial con las cards de usuarios                                       | 1          | Abigai      | To-Do  |
+| US-32      | Cambiar el idioma del LandingPage | T11            | Implementar Lenguage Service                      | Crear el servicio de internacionalizacion con traduciones en ES y EN                            | 1.5        | Jean Pool   | Done   |
+| U-32       | Cambiar el idioma del LandingPage | T12            | Conectar Language Service a todos los componentes | Inyectar el servicio en cada componente y reemplazar textos estaticos                           | 1.5        | Jean Pool   | Done   |
+| US-32      | Cambiar el idioma del LandingPage | T13            | Agregar toggle de idioma en navbar                | Implementar boton EN/ES en el navbar para cambiar idioma                                        | 0.5        | Jean Pool   | To-Do  |
 
-### <a name="_toc226040452"></a>5.2.X.4. Development Evidence for Sprint Review.
+### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
 
-|Repository|Branch|Commit Id|Commit Message|Commit Message Body|Commited on|
-| :- | :- | :- | :- | :- | :- |
-|||||||
+| Repository  | Branch | Commit Id | Commit Message | Commit Message Body | Commited on |
+| :---------- | :----- | :-------- | :------------- | :------------------ | :---------- |
+| IntegraVida | main   |           |                |                     |             |
 
-### <a name="_toc226040453"></a>5.2.X.5. Execution Evidence for Sprint Review. 
-### <a name="_toc226040454"></a>5.2.X.6. Services Documentation Evidence for Sprint Review. 
-### <a name="_toc226040455"></a>5.2.X.7. Software Deployment Evidence for Sprint Review. 
-### <a name="_toc226040456"></a>5.2.X.8. Team Collaboration Insights during Sprint.
-## <a name="_toc226040457"></a>5.3. Validation Interviews. 
-### <a name="_toc226040458"></a>5.3.1. Diseño de Entrevistas. 
-### <a name="_toc226040459"></a>5.3.2. Registro de Entrevistas. 
-### <a name="_toc226040460"></a>5.3.3. Evaluaciones según heurísticas. 
-## <a name="_toc226040461"></a>5.4. Video About-the-Product.
+### <a name="_toc226040453"></a>5.2.1.5. Execution Evidence for Sprint Review. 
+
+En esta entrega el equipo ha desplegado con exito la primera version del LandingPage de IntegraVida 
+
+Enlace del Landing Page desplegado: 
+
+Las Secciones implementadas son: 
+
+- Navbar con toggle de idioma ES/EN
+- Hero section con imagen principal 
+- Servicios Especializados con carousel
+- Sobre Nosotros con cards de Mision y Vision
+- Testimonio de usuarios 
+- Formulario de Contacto 
+- Footer con redes sociales
+
+### <a name="_toc226040454"></a>5.2.1.6. Services Documentation Evidence for Sprint Review. 
+
+En este Sprint no se implementaron Web Services. El enfoque fue exclusivamente en desarrollo y despliegue del Landing Page estatico
+
+### <a name="_toc226040455"></a>5.2.1.7. Software Deployment Evidence for Sprint Review. 
+
+Para el despliegue del Landing Page se utilizó GitHub Page. 
+
+Pasos realizados: 
+
+1. Subif el codigo fuentede la organizacion MTS-OpenSource 
+2. Ir a Settings del repositorio 
+3. Seleccionar el apartado Pages 
+4. Eligir la rama ‘main’ y folder ‘/root’ 
+5. Confirmar el despliegue y acceder al link generado
+### <a name="_toc226040456"></a>5.2.1.8. Team Collaboration Insights during Sprint.
+
+Durante este Sprint la tareas fueron distribuidas equitativamente entre los dos integrantes del equipo de desarollo Jean Pool Arias lidero la estructura vase del proyecto, el navbar, el contact y el language service. Abigail Raymundo liero el hero, el about, los testimonio y los servicio 
+
+| Team Member      | Commits   |
+| ---------------- | --------- |
+| Jean Pool Arias  | 9 commits |
+| Abigail Raymundo | commits   |
+
 # <a name="_toc226040462"></a>Conclusiones
 ## <a name="_toc226040463"></a>Conclusiones y recomendaciones
 ## <a name="_toc226040464"></a>Video About-the-Team
