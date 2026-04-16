@@ -638,6 +638,22 @@ El Product Backlog del proyecto **GlucoSmart** organiza las historias de usuario
 
 ### <a name="_toc226040438"></a>4.7.1. Class Diagrams.
 
+Para representar de manera más clara la estructura orientada a objetos del sistema **GlucoSmart**, el diseño fue dividido en dos diagramas de clases complementarios. Ambos diagramas pertenecen al mismo dominio del sistema y se encuentran relacionados principalmente a través de las clases **Patient** y **Doctor**, que actúan como entidades centrales del modelo.
+
+El primer diagrama, **User & Clinical Management**, presenta la estructura relacionada con la gestión de usuarios y la información clínica del paciente, incluyendo el expediente clínico, historial médico, registros de glucosa, síntomas, diagnósticos, observaciones médicas y reportes clínicos.
+
+El segundo diagrama, **Treatment & Appointment Management**, presenta la estructura relacionada con la gestión de tratamientos, medicamentos, tomas de medicación, reportes de efectos adversos, alertas y citas médicas.
+
+La separación en dos diagramas no implica una división del sistema en módulos independientes, sino una organización visual del mismo modelo orientado a objetos con el fin de mejorar la legibilidad, comprensión y trazabilidad del dominio.
+
+#### Class Diagram 1: User & Clinical Management
+
+![Class Diagram 1](./Informe/assets/class-diagram-1.png)
+
+#### Class Diagram 2: Treatment & Appointment Management
+
+![Class Diagram 2](./Informe/assets/class-diagram-2.png)
+
 ## <a name="_toc226040439"></a>4.8. Database Design.
 
 ### <a name="_toc226040440"></a>4.8.1. Database Diagrams
