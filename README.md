@@ -31,7 +31,7 @@ Abril  2026-10
 
 | Versión | Fecha |   Autor    | Descripción de Modificación |
 | :-----: | :---: | :--------: | :-------------------------: |
-|  0\.1   | 09/04 | Jean Arias |                             |
+|  0\.1   | 10/04 | Jean Arias |                             |
 
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
