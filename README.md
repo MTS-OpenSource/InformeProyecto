@@ -662,7 +662,69 @@ User Persona Segmento 1:
 ![EmpathyMapSegmento2](./informe/assets/EmpathyMap2.png)
 ## <a name="_toc226040407"></a>2.4 Big Picture Event Storming
 
-![EventStorming](./Informe/assets/EventStorming.jpg)
+![EventStorming|601](./Informe/assets/EventStorming.jpg)
+
+El análisis de _Big Picture Event Storming_ se ha realizado con el objetivo de comprender la complejidad del dominio de la gestión de la diabetes y la farmacovigilancia. Esta dinámica nos permitió visualizar cronológicamente cómo interactúan los pacientes, los médicos y el sistema a lo largo del proceso de tratamiento.
+
+Para este análisis se ha definido la siguiente leyenda estándar:
+
+- **Actores (Amarillo):** Quién ejecuta la acción (Paciente, Médico, Sistema Automatizado).
+- **Comandos (Azul):** La intención o acción ejecutada (Ej. "Registrar Glucosa")
+- **Eventos de Dominio (Naranja):** El resultado inmutable en tiempo pasado (Ej. "Glucosa Registrada").
+- **Sistemas Externos (Rosado):** Servicios de terceros (Ej. "Servicio de Notificaciones Push").
+- **Modelos de Lectura (Verde):** La información que el actor visualiza para tomar decisiones (Ej. "Dashboard de Tendencias").
+
+#### Flujo Cronológico del Dominio (GlucoSmart)
+
+El flujo del negocio se ha dividido en cuatro fases principales, basadas en las necesidades identificadas en las entrevistas de validación:
+
+**Fase 1: Configuración Inicial y Vinculación**
+
+- **Actor:** Paciente / Médico.
+    
+- **Comando:** Crear cuenta de usuario $\rightarrow$ **Evento:** Cuenta Creada.
+    
+- **Comando:** Configurar plan de medicación $\rightarrow$ **Evento:** Plan de Medicación Establecido.
+    
+- **Comando:** Generar código de acceso clínico $\rightarrow$ **Evento:** Código de Acceso Generado.
+    
+- **Comando:** Ingresar código de paciente $\rightarrow$ **Evento:** Paciente Vinculado al Médico.
+    
+
+**Fase 2: Monitoreo Diario y Adherencia (Prevención de Olvidos)**
+
+- **Actor:** Sistema Automatizado.
+- **Comando:** Evaluar horario de medicación $\rightarrow$ **Evento:** Recordatorio Disparado.
+- **Sistema Externo:** Servicio de Notificaciones Push notifica al usuario.
+- **Actor:** Paciente.
+- **Comando:** Confirmar ingesta de medicamento $\rightarrow$ **Evento:** Medicación Confirmada.
+- **Comando:** Ingresar nivel de glucosa matutino $\rightarrow$ **Evento:** Medición de Glucosa Registrada.
+
+**Fase 3: Farmacovigilancia y Gestión de Crisis**
+
+- **Actor:** Paciente.
+- **Modelo de Lectura:** Formulario de síntomas.
+- **Comando:** Registrar reacción adversa (Ej. mareos/ardor) $\rightarrow$ **Evento:** Efecto Adverso Registrado.
+- **Actor:** Sistema Automatizado.
+- **Comando:** Evaluar umbral de riesgo clínico $\rightarrow$ **Evento:** Límite de Hipoglucemia Excedido.
+- **Comando:** Generar alerta de riesgo $\rightarrow$ **Evento:** Alerta Crítica Generada.
+- **Sistema Externo:** Servicio de Mensajería (Email/SMS) envía aviso al médico tratante.
+
+**Fase 4: Consulta y Ajuste de Tratamiento**
+
+- **Actor:** Médico (Ej. Dr. Gómez).
+- **Modelo de Lectura:** Dashboard de Tendencias de HbA1c y Registro de Farmacovigilancia.
+- **Comando:** Visualizar evolución trimestral $\rightarrow$ **Evento:** Historial Clínico Consultado.
+- **Comando:** Modificar dosis o tipo de medicamento $\rightarrow$ **Evento:** Tratamiento Ajustado.
+- **Actor:** Sistema Automatizado.
+- **Comando:** Actualizar plan del paciente $\rightarrow$ **Evento:** Plan de Medicación Actualizado (Cierra el ciclo volviendo a la Fase 2).
+
+#### Análisis de Puntos Críticos (Cuellos de Botella)
+
+Durante el Event Storming, se identificaron dos áreas de fricción (representadas con notas adhesivas rojas en el diseño visual) que el software debe mitigar de forma prioritaria:
+
+1. **Fricción en el Registro Manual:** La dependencia de que el paciente ingrese manualmente sus niveles de glucosa puede generar vacíos en la base de datos.
+2. **Tiempo de Reacción ante Alertas:** La alerta crítica de hipoglucemia debe ser bidireccional; si el médico no está disponible de inmediato, el sistema debe proporcionar instrucciones de primeros auxilios básicas al paciente para mitigar el daño orgánico inmediato.
 ## <a name="_toc226040408"></a>2.5 Ubiquitous Language
 
 El lenguaje ubicuo del proyecto **GlucoSmart** define los términos clave que serán utilizados de manera consistente a lo largo del análisis, diseño e implementación del sistema. Este glosario permite que todos los integrantes del equipo compartan una misma comprensión del dominio de negocio relacionado con el monitoreo y control de la diabetes.
@@ -869,6 +931,55 @@ En esta sección se presentan las épicas y las historias de usuario del proyect
 | US-36    | Recibir recordatorio de cita                 | Como usuario, quiero recibir recordatorios de mis citas médicas para no olvidar mis atenciones programadas.                                         | **Scenario 1:**<br>**Given** the user has an upcoming appointment registered,<br>**When** the appointment date is approaching,<br>**Then** the system sends the corresponding reminder.                                            | EP-07   |
 
 ## <a name="_toc226040411"></a>3.2 Impact Mapping
+
+![](./Informe/assets/ImpactMapping.jpg)
+
+Para asegurar que las funcionalidades de **GlucoSmart** estén alineadas con los objetivos estratégicos de **IntegraVida**, se ha desarrollado un Impact Mapping. Esta técnica nos permite visualizar cómo los entregables de software generarán un cambio de comportamiento en nuestros usuarios, logrando así el impacto de negocio deseado.
+
+A continuación, se detalla la estructura del mapa de impacto:
+
+#### 1. Objetivo del Negocio (WHY / ¿Por qué?)
+
+- **Meta Principal:** Lograr una retención de uso continuo del 80% en pacientes durante los primeros 3 meses y reducir el tiempo de revisión de historial clínico en las consultas médicas en un 20%
+#### 2. Actores (WHO / ¿Quién?)
+
+Para alcanzar esta meta, dependemos de los dos segmentos principales identificados en nuestras entrevistas:
+
+- **Actor 1:** Paciente con Diabetes (Ej. Jorge).
+- **Actor 2:** Médico Especialista (Ej. Dr. Walter).
+#### 3. Impactos (HOW / ¿Cómo?)
+
+¿Cómo necesitamos que cambie el comportamiento de estos actores para lograr nuestra meta?
+
+- **Para el Paciente:**
+    
+    - _Impacto 1.1:_ Que registre su glucosa y confirme la ingesta de su medicación diariamente sin olvidos.
+    - _Impacto 1.2:_ Que reporte los efectos adversos o síntomas inusuales en el momento en que ocurren.
+    
+- **Para el Médico:**
+    
+    - _Impacto 2.1:_ Que interprete la evolución de la hemoglobina glicosilada (HbA1c) en segundos, en lugar de revisar apuntes desordenados.
+    - _Impacto 2.2:_ Que intervenga de forma preventiva antes de que un paciente sufra daño orgánico por hipoglucemia.
+
+#### 4. Entregables / Funcionalidades (WHAT / ¿Qué?)
+
+¿Qué vamos a construir (desarrollar) en la plataforma para facilitar esos impactos?
+
+- **Para lograr el Impacto 1.1 (Registro diario):**
+    
+    - _Entregable:_ Sistema automatizado de recordatorios y confirmación de dosis.
+	
+- **Para lograr el Impacto 1.2 (Reporte de síntomas):**
+    
+    - _Entregable:_ Módulo de registro rápido de farmacovigilancia y reacciones adversas.
+    
+- **Para lograr el Impacto 2.1 (Interpretación rápida):**
+    
+    - _Entregable:_ Dashboard interactivo con gráficos de tendencias de glucosa y filtros históricos.
+    
+- **Para lograr el Impacto 2.2 (Intervención preventiva):**
+    
+    - _Entregable:_ Sistema de alertas críticas enviadas en tiempo real ante niveles fuera del rango seguro.
 
 ## <a name="_toc226040412"></a>3.3 Product Backlog
 
