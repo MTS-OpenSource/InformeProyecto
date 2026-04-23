@@ -1,5 +1,5 @@
-––\
-![](Aspose.Words.e1cbbbc5-9341-4a6a-9d10-a60204f19244.001.png)
+
+![LOGO UPC](./Informe/assets/LogoUPC.png)
 
 Universidad Peruana de Ciencias Aplicadas
 
@@ -259,13 +259,8 @@ Who (¿A quiénes les afecta?) 
 El impacto de esta problemática es sistémico y se distribuye en tres niveles críticos: 
 
 - Pacientes con diabetes: Se ven obligados a gestionar su condición con herramientas que ofrecen datos fragmentados (silos de información), careciendo de una visión holística de su salud. Esto genera "fatiga de datos" y una alarmante ausencia de alertas preventivas que les permitan actuar antes de una crisis. 
-    
-
 - Personal Médico y Clínicas: Los especialistas reciben datos recolectados de forma asíncrona y sin contexto. Al no contar con trazabilidad real sobre la adherencia farmacológica o los efectos adversos, se ven limitados para realizar ajustes terapéuticos precisos, trabajando bajo un modelo de "ensayo y error" reactivo. 
-    
-
 - Sistemas de Salud Públicos y Privados: Estos organismos asumen el impacto financiero de las complicaciones crónicas (nefropatías, neuropatías, etc.) que podrían evitarse con un seguimiento preventivo. La ineficiencia en el manejo ambulatorio dispara los costos operativos y satura los servicios de emergencia. 
-    
 
 What (¿Cuál es el problema?) 
 
@@ -335,9 +330,38 @@ A partir de nuestros supuestos, hemos formulado las siguientes declaraciones de 
 - **Hipótesis 4 (Focalizada en la Comunicación):** Creemos que _aumentaremos la retención de pacientes en el uso de la plataforma_, si los _pacientes con diabetes_ logran _sentir un mayor acompañamiento médico_ a través de la característica de _compartir reportes en tiempo real con sus médicos y recibir sugerencias personalizadas.
 #### <a name="_toc226040392"></a>*1.2.2.4 Lean UX Canvas*
 
-![](LeanUxCanvas.png)
+![LeanUXCanvas](./Informe/assets/LeanUxCanvas.png)
 
 ## <a name="_toc226040393"></a>1.3 Segmento Objetivo
+
+El éxito de GlucoSmart radica en su capacidad para interconectar a los actores principales del ecosistema de salud. Por ello, se han identificado dos segmentos objetivos primarios y uno secundario, definidos a partir de los hallazgos en las entrevistas y el análisis del dominio del problema.
+
+#### 1.3.1 Segmento Primario 1: Pacientes con Diabetes Mellitus (Tipo 1 y 2)
+
+Este segmento comprende a personas que requieren un control constante de sus niveles de glucosa y una gestión rigurosa de su medicación.
+
+- **Perfil Demográfico:** Hombres y mujeres de 18 a 65 años, residentes en zonas urbanas con acceso a dispositivos móviles y conexión a internet.
+- **Perfil Psicográfico:** Personas que buscan mayor autonomía en el manejo de su enfermedad, pero que experimentan frustración por el olvido de dosis o la falta de interpretación de sus datos clínicos.
+- **Necesidades Críticas:** * Automatización de recordatorios de medicación para mejorar la adherencia.
+    
+    - Visualización clara (gráficos) de sus niveles de glucosa y hemoglobina glicosilada (HbA1c).
+    - Un canal para reportar efectos adversos (farmacovigilancia) y recibir retroalimentación médica.
+    - Consejos personalizados sobre nutrición y manejo del estrés.
+
+#### 1.3.2 Segmento Primario 2: Médicos Especialistas y Personal de Salud
+
+Este segmento incluye a endocrinólogos, médicos generales y personal de enfermería encargados del seguimiento de pacientes crónicos.
+
+- **Perfil Profesional:** Médicos de clínicas privadas y hospitales que atienden una alta carga de pacientes con diabetes mensualmente (como el caso del Dr. Walter Gómez, con 40 años de experiencia).
+- **Necesidades Críticas:**
+    
+    - Acceso a una historia clínica centralizada y actualizada en tiempo real.
+    - Herramientas de análisis de tendencias para optimizar el tiempo de consulta.
+    - Sistemas de alertas tempranas ante crisis de hipoglucemia o hiperglucemia para prevenir daños orgánicos.
+    - Registro estructurado de reacciones adversas a medicamentos para ajustar tratamientos de forma segura
+
+# <a name="_toc226040394"></a>Capitulo II: Requirements Elicitation & Analysis
+## <a name="_toc226040395"></a>2.1 Competidores
 
 Para comprender el posicionamiento de **GlucoSmart** en el mercado de la salud digital, se ha realizado un análisis competitivo identificando a los principales actores actuales que ofrecen soluciones para el manejo de la diabetes y la integración de datos de salud. A continuación, se detallan los principales competidores directos e indirectos:
 
@@ -362,54 +386,291 @@ Para comprender el posicionamiento de **GlucoSmart** en el mercado de la salud d
 #### Ventaja Competitiva de GlucoSmart (IntegraVida)
 
 A diferencia de los competidores mencionados, que actúan principalmente como diarios digitales o herramientas aisladas para el usuario final, **GlucoSmart** se posiciona como una solución integral _B2B2C_. Nuestra plataforma destaca por su robusta arquitectura de base de datos relacional orientada no solo al registro, sino al **control de la adherencia** y a la **farmacovigilancia**. Al proporcionar a los hospitales y consultorios un historial clínico centralizado y alertas inmediatas ante reacciones adversas, GlucoSmart empodera la toma de decisiones clínicas y garantiza la seguridad del paciente de manera más efectiva que las aplicaciones convencionales.
-# <a name="_toc226040394"></a>Capitulo II: Requirements Elicitation & Analysis
-## <a name="_toc226040395"></a>2.1 Competidores
 ### <a name="_toc226040396"></a>2.1.1 Analisis Competitivo
 
-|Competitive Analysis Landscape|||||||
-| :- | :- | :- | :- | :- | :- | :- |
-|¿Por qué llevar a cabo este análisis?|||||||
-||||||||
-|(En la Cabecera colocar por cada competidor nombre y logo)|Su Startup|Competidor 1|Competidor 2|Competidor 3|||
-|Perfil|Overview||||||
-||Ventaja Competitiva ¿Qué valor ofrece a los clientes?||||||
-|Perfil de Marketing|Mercado Objetivo||||||
-||Estrategias de Marketing||||||
-|Perfil de Producto|Productos & Servicios||||||
-||<p>Precios & Costos</p><p></p>||||||
-||<p>Canales de distribución</p><p>(Web y/o Movil)</p>||||||
-|Análisis SWOT|Realice esto para su startup y sus competidores. Sus fortalezas deberían apoyar sus oportunidades y contribuir a lo que ustedes definen como su posible ventaja competitiva.||||||
-||Fortalezas||||||
-||Debilidades||||||
-||Oportunidades||||||
-||Amenazas||||||
+| **Perfil**                   | **Su Startup: IntegraVida (GlucoSmart)**                                                  | **Competidor 1: mySugr**                                                       | **Competidor 2: SocialDiabetes**                                                | **Competidor 3: Glucose Buddy**                                    |
+| ---------------------------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Logo / Nombre**            | **IntegraVida**                                                                           | **mySugr**                                                                     | **SocialDiabetes**                                                              | **Glucose Buddy**                                                  |
+| **Overview**                 | Plataforma integral B2B2C para el monitoreo de diabetes con enfoque en farmacovigilancia. | Aplicación móvil enfocada en el registro diario y gamificación para pacientes. | Plataforma certificada para la interconexión de dispositivos y ajuste de dosis. | Diario digital para el seguimiento de métricas de glucosa y dieta. |
+| **Ventaja Competitiva**      | Centralización de historial clínico para médicos y alertas de reacciones adversas.        | Interfaz altamente intuitiva y "monstruo" de diabetes para gamificación.       | Alta compatibilidad con hardware (glucómetros y bombas) y certificación CE.     | Simplicidad de uso y amplia base de datos de alimentos.            |
+| **Mercado Objetivo**         | Clínicas, hospitales, endocrinólogos y pacientes crónicos.                                | Pacientes con diabetes tipo 1 y 2 que buscan autogestión.                      | Usuarios avanzados que requieren sincronización con dispositivos médicos.       | Usuarios que buscan un registro manual sencillo y gratuito.        |
+| **Estrategias de Marketing** | Venta directa a instituciones de salud y marketing de contenidos médicos.                 | Alianzas con farmacéuticas (Roche) y posicionamiento en App Stores.            | Enfoque en certificaciones médicas y prescripción por profesionales.            | Modelo Freemium con publicidad y presencia orgánica en móviles.    |
+| **Productos & Servicios**    | Dashboard médico, App para pacientes, Módulo de Farmacovigilancia.                        | Diario de azúcar, Calculadora de bolos, Reportes médicos.                      | Registro de carbohidratos, Conector en la nube, Telemedicina.                   | Diario de glucosa, seguimiento de presión arterial y peso.         |
+| **Precios & Costos**         | Modelo SaaS por suscripción institucional o premium para pacientes.                       | Gratis (Básico) / Suscripción Pro (SaaS).                                      | Suscripción mensual/anual para funciones premium.                               | Gratuito con anuncios / Versión Premium sin anuncios.              |
+| **Canales de Distribución**  | Web (Panel Médico) y Móvil (Paciente).                                                    | Principalmente Móvil (iOS/Android).                                            | Web y Móvil.                                                                    | Móvil (iOS/Android).                                               |
+#### Análisis SWOT (FODA)
 
+**1. IntegraVida (Su Startup)**
+
+- **Fortalezas:** Base de datos relacional robusta, enfoque único en farmacovigilancia, interoperabilidad médico-paciente.
+- **Debilidades:** Marca nueva en el mercado, dependencia de la adopción por parte de instituciones médicas.
+- **Oportunidades:** Creciente digitalización del sector salud en la región, falta de herramientas que consoliden reacciones adversas.
+- **Amenazas:** Regulaciones gubernamentales estrictas sobre datos de salud (Ley de Protección de Datos Personales).
+
+**2. mySugr**
+
+- **Fortalezas:** Gran base de usuarios, respaldo de Roche, excelente experiencia de usuario (UX).
+- **Debilidades:** Poca profundidad en el análisis de farmacovigilancia para el médico.
+- **Oportunidades:** Expansión a mercados emergentes.
+- **Amenazas:** Nuevas aplicaciones con IA que automaticen el registro sin intervención del usuario.
+
+**3. SocialDiabetes**
+
+- **Fortalezas:** Certificaciones sanitarias europeas, conectividad con hardware médico.
+- **Debilidades:** Costo elevado para integración en clínicas pequeñas.
+- **Oportunidades:** Alianzas con sistemas de salud pública.
+- **Amenazas:** Competencia directa de fabricantes de glucómetros que lanzan sus propias apps.
+
+**4. Glucose Buddy**
+
+- **Fortalezas:** Facilidad de uso, marca establecida desde los inicios de las App Stores.
+- **Debilidades:** Funcionalidades limitadas para el seguimiento médico profesional.
+- **Oportunidades:** Mejora de su plataforma web para telemedicina.
+- **Amenazas:** Pérdida de usuarios que migran a apps más especializadas o gamificadas.
 ### <a name="_toc226040397"></a>2.1.2 Estrategia y tácticas frente a competidores
 
+Para asegurar la penetración en el mercado de **IntegraVida** frente a los competidores analizados, se plantean las siguientes estrategias:
+
+1. **Diferenciación Técnica (Frente a mySugr y Glucose Buddy):**
+    
+    - Mientras los competidores se centran en el "diario del paciente", nuestra táctica será el **"Ecosistema de Decisiones Clínicas"**. Implementaremos reportes automáticos de farmacovigilancia que los competidores no poseen, permitiendo que el médico identifique si un síntoma es una reacción adversa al medicamento, algo que las apps de registro manual ignoran.
+    
+2. **Estrategia de Alianzas Institucionales (Frente a SocialDiabetes):**
+    
+    - En lugar de competir solo por el usuario final, IntegraVida buscará convenios con clínicas locales para que el uso de **GlucoSmart** sea el estándar de seguimiento en sus consultas. La táctica incluye ofrecer un "Dashboard de Gestión" gratuito para el médico por cada _N_ pacientes referidos, facilitando la adopción tecnológica en centros de salud.
+    
+3. **Táctica de Contenido y Confianza:**
+    
+    - Publicaremos casos de estudio sobre cómo la centralización de datos en una base de datos relacional (nuestra arquitectura) reduce errores en la prescripción, atacando la debilidad de las aplicaciones "diario" que mantienen la información aislada del flujo de trabajo del doctor.
+    
+4. **Optimización de Canales:**
+    
+    - A diferencia de mySugr, que es casi 100% móvil, fortaleceremos nuestra **plataforma Web** con visualizaciones de datos complejas (gráficos de tendencia de HbA1c), orientadas específicamente a la pantalla del consultorio médico, mejorando la experiencia de revisión en la cita presencial o virtual.
 
 ## <a name="_toc226040398"></a>2.2 Entrevistas
 ### <a name="_toc226040399"></a>2.2.1 Diseño de entrevistas
 
+Segmento 1: Pacientes con Diabetes 
 
+1. ¿Cómo describes tu experiencia diaria gestionando su diabetes con las herramientas o apps que usa actualmente?.
+2. ¿Ha sentido alguna vez "fatiga de datos" o agotamiento por tener que registrar manualmente sus niveles de glucosa constantemente?  
+3. ¿Qué tan difícil le resulta mantener el control y la adherencia a sus medicamentos cuando se encuentra fuera del consultorio o centro médico?  
+4. ¿Siente que las apps actuales le brindan alertas preventivas realmente útiles antes de sufrir una crisis o descompensación?  
+5. ¿Alguna vez ha ignorado notificaciones de salud por considerarlas poco relevantes para su situación específica?  
+6. ¿Le resultaría valioso que sus registros de glucosa se cruzaran automáticamente con los horarios en que toma sus medicamentos?  
+7. ¿Qué opina de la posibilidad de que su médico pueda visualizar sus datos en tiempo real sin esperar a su próxima cita presencial? 
+8. ¿Estaría dispuesto a usar nuestra nueva app que garantice la transparencia y la seguridad de su información médica?  
+9. ¿Cómo cree que mejoraría su calidad de vida si tuviera una visión completa de su tratamiento (dieta, medicamentos, glucosa) en una sola aplicación?  
+10. Al conocer la propuesta de GlucoSmart, ¿qué función le parece que resolvería mejor sus problemas diarios?  
+11. ¿Qué otras funciones no anunciadas en la propuesta de la app le gustaría agregar y cómo le resultaría de uso importante?  
+12. ¿Estaría dispuesto a usar GlucoSmart como su herramienta principal de gestión de glucosa si estuviera disponible hoy mismo? 
+
+Segmento 2: Doctores 
+
+1. ¿Qué tan complicado le resulta a usted realizar ajustes terapéuticos precisos utilizando solo los datos manuales que el paciente trae a consulta? 
+2. ¿Considera que los actuales silos de información en salud dificultan obtener una visión más precisa de la condición de sus pacientes? 
+3. ¿Cómo afecta a su diagnóstico el hecho de recibir datos recolectados de forma asíncrona y sin un contexto clínico real? 
+4. ¿Ha sentido que su tratamiento a veces se basa en realizar ensayo y error debido a la falta de trazabilidad del paciente? 
+5. ¿Qué importancia le asigna a la brecha existente entre lo que usted recomienda a sus pacientes y lo que el paciente realmente consume en su periodo ambulatorio? 
+6. ¿Cree que una app o plataforma facilitaría la integración de datos entre diferentes instituciones de salud? 
+7. ¿Qué valor le daría a contar con herramientas de analítica de datos en tiempo real para apoyar su toma de decisiones clínicas? 
+8. ¿De qué manera una app podría mejorar la precisión en el seguimiento de enfermedades crónicas que suelen considerarse complejas? 
+9. ¿Le interesaría una plataforma que conecte directamente el sistema de farmacovigilancia con las variaciones glicémicas del paciente? 
+10. ¿Cómo evaluaría una solución digital cuyo diseño esté estrictamente anclado a los protocolos clínicos del mundo real? 
+11. ¿Considera que acceder a datos accionables en tiempo real ayudaría a reducir las complicaciones severas y los costos operativos en salud? 
+12. ¿Integraría GlucoSmart en su flujo de trabajo clínico si esto le permitiera cerrar el ciclo terapéutico de manera proactiva?
 ### <a name="_toc226040400"></a>2.2.2 Registro de entrevista
 
+- Entrevista a Pacientes con Diabetes (Segmento 1)
+	
+	Nombre: Jorge
+	Apellidos: Quispe 
+	Edad: 19 años
+	Distrito: San Miguel
+	
+	![[./Informe/assets/CapturaEntrevista1.png|661]]
+	
+	[Entrevista_a_Paciente01.mp4](https://youtu.be/siAso9B_aSc)
+	
+	- Resumen de la entrevista a Paciente
+	
+	La entrevista fue realizada a Jorge Quispe, de 19 años y residente de San Miguel, quien fue diagnosticado con diabetes tipo 2 hace aproximadamente 7 u 8 años.
+	
+	Control de Glucosa y Medicación:
+	
+	- Medición: Mide sus niveles de glucosa diariamente, por las mañanas, utilizando un glucómetro.
+	- Episodios: En el último mes, experimentó dos episodios de hiperglucemia.
+	- Medicamentos: Actualmente utiliza metformina y glibenclamida.
+	- Adherencia: Ocasionalmente olvida o retrasa una dosis, lo que ocurre aproximadamente una o dos veces al mes.
+	- Efectos Secundarios: Ha experimentado efectos secundarios leves, como mareos.
+	
+	Hábitos y Estilo de Vida:
+	
+	- Actividad Física: Realiza actividad física tres veces por semana, saliendo a caminar y a andar en bicicleta.
+	- Alimentación: Sigue una dieta con restricción de azúcares y frituras.
+	- Factores Adicionales: El estrés afecta sus niveles de glucosa, causando un aumento.
+	
+	Uso de Tecnología y Apoyo Digital:
+	
+	- Recordatorios: Le gustaría recibir recordatorios para la toma de medicamentos.
+	- Visualización de Datos: Le parece útil ver gráficos de la evolución de su glucosa para monitorear su salud.
+	- Recomendaciones: Le gustaría que una aplicación le sugiera recetas y recomendaciones personalizadas.
+	- Compartir Datos: Estaría dispuesto a compartir sus datos de salud con su médico a través de una aplicación para facilitar las consultas.
+	
+	Sugerencia de Valor Añadido: Propone la adición de un chat en la aplicación con profesionales (nutricionistas o doctores) para resolver dudas rápidas, lo que le brindaría mayor confianza.
+
+- Entrevista a Pacientes con Diabetes (Segmento 1)
+    
+    Nombre: Virgilia
+    Apellidos: Velasque Huarcalla
+	Edad: 49 años
+	
+	![[./Informe/assets/CapturaEntrevista2.png]]
+	
+	Distrito: callao
+	[Entrevista a paciente 02.mp4](https://youtu.be/RhP6C_cGmqs)
+	
+	- Resumen de la entrevista a Paciente
+    
+	La entrevista fue realizada a Virgilia Velasque, de 49 años y residente del Callao, quien fue diagnosticada con diabetes tipo 2 hace aproximadamente 15 años.
+	
+	Control de Glucosa y Medicación:
+	
+	- Medición: Mide sus niveles de glucosa cada 2-3 meses, dependiendo de cómo se siente, utilizando un glucómetro en postas o farmacias.
+	- Episodios: A lo largo de 15 años ha tenido dos episodios de hipoglucemia.
+	- Medicamentos: Uso metformina durante 10 años; desde hace 6 meses cambio a otra medicación.
+	- Adherencia: En los primeros años tomaba tratamiento de forma desordenada, pero desde hace 6 años cumple al pie de la letra las indicaciones de su médico.
+	- Efectos Secundarios: Con la metformina tuvo ardor gástrico; con la nueva medicación presentó maremotos leves, que con el tiempo disminuyeron por la adaptación de su propio cuerpo.
+	
+	Hábitos y Estilo de Vida:
+	
+	- Actividad Física: Hace 6 años realizaba ejercicio con el peso corporal y desde hace 1 año y medio entrena con pesas, principalmente para controlar sus niveles de estrés.
+	- Alimentación: Su dieta se basa en un mayor consumo de proteínas y verduras, con baja ingesta de carbohidratos; solo en raras ocasiones consume grandes cantidades de estos
+	- Factores Adicionales: El estrés afecta directamente sus niveles de glucosa, generando descompensaciones y falta de sueño.
+	
+	Uso de Tecnología y Apoyo Digital:
+	
+	- Recordatorios: Considera muy útil recibir alarmas o recordatorios que le ayuden a no olvidar la toma de sus medicamentos.
+	- Visualización de Datos: Le interesa contar con gráficos que muestran cómo evoluciona o se dispara su glucosa a lo largo del tiempo.
+	- Recomendaciones:Le gustaría recibir sugerencias personalizadas relacionadas con su tratamiento, principalmente enfocadas en alarmas para recordar la medicación.
+	- Compartir Datos: Vería beneficioso poder compartir sus registros directamente con el médico a través de la aplicación, especialmente en citas virtuales personalizadas.
+	- Sugerencia de Valor Añadido: Destaca la importancia de contar con citas virtuales enfocadas en el paciente, pues le dan mayor confianza y apoyo en su control.
+
+- Entrevista a Pacientes con Diabetes (Segmento 1)
+	
+	Nombre: Andy Jermy Ascalla Venancio
+	Edad: 18
+	Distrito: San Martin de Porres
+	
+	![[./Informe/assets/CapturaEntrevista3.png]]
+	
+	[Entrevista a paciente 03.mp4](https://youtu.be/rn8sOZuT5MM)
+	
+	Resumen de la entrevista a Paciente
+	
+	La entrevista fue realizada a Andy Jermy Ascalla Venancio, de 18 años y residente de San Miguel, quien fue diagnosticado con diabetes tipo 1 hace aproximadamente 5  años.
+	
+	Control de Glucosa y Medicación:
+	
+	- Medición: Mide sus niveles de glucosa diariamente, por las mañanas, utilizando un glucómetro.
+	- Episodios: En el último mes, experimentó dos episodios de hiperglucemia.
+	- Medicamentos: Actualmente utiliza metformina y glibenclamida.
+	- Adherencia: Ocasionalmente olvida o retrasa una dosis, lo que ocurre aproximadamente una o dos veces al mes.
+	- Efectos Secundarios: Ha experimentado efectos secundarios leves, como mareos.
+	
+	Hábitos y Estilo de Vida:
+	
+	- Actividad Física: Realiza actividad física tres veces por semana, saliendo a caminar y a andar en bicicleta.
+	- Alimentación: Sigue una dieta con restricción de azúcares y frituras.
+	- Factores Adicionales: El estrés afecta sus niveles de glucosa, causando un aumento.
+	
+	Uso de Tecnología y Apoyo Digital:
+	
+	- Recordatorios: Le gustaría recibir recordatorios para la toma de medicamentos.
+	- Visualización de Datos: Le parece útil ver gráficos de la evolución de su glucosa para monitorear su salud.
+	- Recomendaciones: Le gustaría que una aplicación le sugiera recetas y recomendaciones personalizadas.
+	- Compartir Datos: Estaría dispuesto a compartir sus datos de salud con su médico a través de una aplicación para facilitar las consultas.
+
+- Entrevista a medicos (Segmento 2
+	
+	Nombre: Walter
+	Apellidos: Gomez Navarro
+	Edad: 70 años
+	Distrito: La Molina
+	
+	![[./Informe/assets/CapturaEntrevista4.png]]
+	
+	[Entrevista a medico 01.mp4](https://youtu.be/O9gIC_WXCfg)
+	
+	- Resumen de la entrevista a Paciente
+	
+	La entrevista se realizó con Walter Gómez Navarro (70), médico con 40 años de experiencia. Destaca la hemoglobina glicosilada como clave en el control de la diabetes, señala problemas de adherencia al tratamiento y considera muy útiles los gráficos y alertas en tiempo real para prevenir riesgos.
+	
+	Manejo de la diabetes: 
+	
+	- Pacientes atendidos: 5 pacientes diabéticos mensuales
+	- Monitoreo de glucosa: Revisión cada 3 meses.
+	- Métodos: Benedict (menos preciso) y hemoglobina glicosilada (HbA1c), considerado el estándar internacional, porque refleja el promedio de glucosa de los últimos 3 meses.
+	- Indicadores clave: HbA1c por debajo de 7 indica buen control; por encima, diabetes mal controlada.
+	- Registro: Historia clínica como unidad central, complementada con bases de datos personales y hojas Excel.
+	
+	Tratamiento y adherencia:
+	
+	- Adherencia: Problema frecuente, muchos pacientes olvidan la medicación.. Un olvido aislado no es grave, pero múltiples omisiones desencadenan riesgo de hiperglucemia, coma diabético y estado premortem.
+	- Ajustes de tratamiento: Según evolución del paciente. Dificultad: los pacientes no cumplen dietas y fallan los hipoglucemiantes orales.
+	- Efectos adversos: Considera muy importante registrarlos. 
+	
+	Uso de Tecnología y Apoyo Digital:
+	
+	- Dispositivos: Recomienda glucómetros de punción digital.
+	- Datos en gráficos: Considera que ver tendencias gráficas de glucosa es muy útil para entender la evolución del paciente rápidamente. Incluso lo ve como indicador de calidad en la práctica médica.
+	- Alertas inmediatas: Considera esencial recibir avisos de hipoglucemia para la prevención de daños cerebrales, cardíacos, hepáticos y renales, además de riesgo de muerte.
 
 ### <a name="_toc226040401"></a>2.2.3 Analisis de entrevista
 
+Tras el procesamiento de las entrevistas realizadas a los segmentos de pacientes y al médico especialista (Dr. Walter Gómez), se han identificado patrones críticos que justifican la arquitectura y funcionalidades de **GlucoSmart**. El análisis se divide en los siguientes hallazgos clave, los cuales son la base directa para las Historias de Usuario de nuestro Product Backlog:
 
+1. **Deficiencia en la Adherencia y Necesidad de Automatización:** Los pacientes jóvenes (Jorge y Andy, 18-19 años) reportan olvidos mensuales de medicación, mientras que Virgilia (49 años) destaca la importancia de las alarmas. El Dr. Gómez advierte que estos olvidos "aislados" incrementan el riesgo de coma diabético. Esto valida la prioridad alta de un **sistema automatizado de recordatorios**.
+2. **Monitoreo Basado en Evidencia y Tendencias:** El Dr. Gómez señala que la revisión cada 3 meses debe basarse en la hemoglobina glicosilada (HbA1c) y tendencias gráficas, ya que son indicadores de calidad. Los tres pacientes entrevistados solicitaron ver su evolución visualmente en lugar de datos aislados. Esto justifica la creación de un **Dashboard de Tendencias** interactivo.
+3. **Gestión de Seguridad del Paciente: Farmacovigilancia:** Se identificaron efectos secundarios reales: ardor gástrico en Virgilia y mareos en Jorge. El Dr. Gómez califica como "esencial" recibir alertas inmediatas de hipoglucemia para prevenir daños cerebrales o muerte. Estos hallazgos fundamentan el **Registro de Efectos Adversos** y el **Sistema de Alertas Críticas** en tiempo real.
+4. **Colaboración y Telemedicina:** Los pacientes expresaron su total disposición a compartir datos para facilitar consultas virtuales (especialmente Virgilia y Jorge). Jorge propuso un chat directo con profesionales para resolver dudas rápidas, lo que incrementaría su confianza. Esto da soporte al **Módulo de Compartición de Datos** y al **Chat de Consultas**.
+5. **Educación y Factores Externos:** El análisis reveló que el estrés afecta directamente los niveles de glucosa de todos los pacientes. Jorge y Andy solicitaron recetas y recomendaciones personalizadas. Esto justifica la inclusión de **Sugerencias de Estilo de Vida** para un manejo integral de la enfermedad.
 ## <a name="_toc226040402"></a>2.3 Needfinding
 ### <a name="_toc226040403"></a>2.3.1 User Personas
 
+User Persona Segmento 2:
+![UserPersonaSegmento1](./informe/assets/UserPersona1.png)
+
+User Persona Segmento 1:
+![UserPersonaSegmento2](./informe/assets/UserPersona2.png)
 
 ### <a name="_toc226040404"></a>2.3.2 User Task Matrix
 
-
+| **Segmento** | **Tarea Principal**   | **Descripción**                                                  | **Frecuencia**         |
+| ------------ | --------------------- | ---------------------------------------------------------------- | ---------------------- |
+| **Paciente** | Registro de Glucosa   | Ingreso manual o sincronizado de niveles medidos con glucómetro. | Diaria (Mañanas)       |
+| **Paciente** | Confirmación de Dosis | Notificar al sistema la ingesta de la medicación prescrita.      | Diaria (Según receta)  |
+| **Paciente** | Reporte de Síntomas   | Registrar mareos, ardor u otros efectos secundarios.             | Ocasional (Evento)     |
+| **Médico**   | Revisión de Dashboard | Analizar gráficos de tendencias y HbA1c del paciente.            | Trimestral (Consulta)  |
+| **Médico**   | Atención de Alertas   | Evaluar notificaciones críticas de hipoglucemia severa.          | Inmediata (Emergencia) |
+| **Médico**   | Ajuste de Tratamiento | Modificar medicación basándose en el historial de adherencia.    | Trimestral / Remoto    |
 ### <a name="_toc226040405"></a>2.3.3 User Journey Mapping
+
+| **Etapa**      | **Acciones**                                                  | **Pensamientos**                                       | **Emociones**         | **Oportunidades**                                     |
+| -------------- | ------------------------------------------------------------- | ------------------------------------------------------ | --------------------- | ----------------------------------------------------- |
+| **Registro**   | Crea cuenta y configura su medicación y metas de glucosa.     | "¿Será difícil configurar todas mis pastillas?"        | Ansiedad / Esperanza  | Tutorial guiado y carga masiva de medicamentos.       |
+| **Uso Diario** | Recibe alertas, confirma toma de medicina y registra glucosa. | "Es bueno que la app me recuerde, a veces se me pasa." | Alivio / Control      | Gamificación por días de adherencia perfecta.         |
+| **Crisis**     | Siente mareo y registra el síntoma y un nivel bajo en la app. | "Me siento mal, ¿qué debo hacer ahora?"                | Preocupación / Miedo  | Botón de pánico o guía rápida de primeros auxilios.   |
+| **Consulta**   | Comparte el acceso de sus datos con el Dr. Walter.            | "Ahora mi doctor verá exactamente qué pasó este mes."  | Confianza / Seguridad | Generación de reporte PDF profesional para el médico. |
 
 ### <a name="_toc226040406"></a>2.3.4 Empathy Mapping
 
+![EmpathyMapSegmento1](./informe/assets/EmpathyMap1.png)
 
+![EmpathyMapSegmento2](./informe/assets/EmpathyMap2.png)
 ## <a name="_toc226040407"></a>2.4 Big Picture Event Storming
+
+![EventStorming](./Informe/assets/EventStorming.jpg)
 ## <a name="_toc226040408"></a>2.5 Ubiquitous Language
 # <a name="_toc226040409"></a>Capitulo III: Requirements Specification
 ## <a name="_toc226040410"></a>3.1 User Stories
@@ -428,6 +689,7 @@ A diferencia de los competidores mencionados, que actúan principalmente como di
 | # Orden | User Story ID | Titulo | Descripcion                          | Story Point |
 | :------ | :------------ | :----- | :----------------------------------- | :---------- |
 | 1       | US-01         | AAA    | <p>Como </p><p>Deseo </p><p>para</p> | 1/2/3/5/8   |
+
 
 # <a name="_toc226040413"></a>Capitulo IV: Product Design
 ## <a name="_toc226040414"></a>4.1. Style Guidelines. 
