@@ -1223,6 +1223,17 @@ La estructura propuesta permite mantener la integridad de los datos y asegurar l
 
 ### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
 
+
+| Repository  | Branch                  | Commit Id                                | Commit Message                                           | Commit Message Body                                                                                                                                                              | Commited on    |
+| :---------- | :---------------------- | :--------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------- |
+| IntegraVida | main                    | 79f9b95c9283ad21816efd8f2f5297a71ec4798d | Initial commit                                           | Initial commit                                                                                                                                                                   | 3 weeks ago    |
+| IntegraVida | feature/button          | fad9eebb2bf9f8f036b123f834cff54a39c728e2 | Done the component Button                                | Complete make the componet button alreay to merge                                                                                                                                | Abril 12, 2026 |
+| IntegraVida | feature/navbar          | 86686462672580b3e6f3212036c498fb613bfcf2 | Done the component Navbar                                | Make the component navbar                                                                                                                                                        | Abril 12, 2026 |
+| IntegraVida | feature/hero            | dc48b680b66be028595bdef4daf27bb3aca86b50 | Done the component Hero                                  | Done the component Hero already to use                                                                                                                                           | Abril 12, 2026 |
+| IntegraVida | feature/contact         | a330beb680a6ebc9e8a27463225811fc3e4af0db | Finish the contact component & already use to sent mails | I add the component. it's cards and a simple forms to contact with us and y add the fetch using Form Submit to send, I using my personal gmail to receive the mail users sending | Abril 13, 2026 |
+| Integravida | feature/tooggleLanguage | 9fe7cee533381a7edfbd94216b838ebc7efc68f8 | Feature/toggle language                                  | Add the tooggleButtonLanguage and the Page Directory to organize the pages                                                                                                       | Abril 13,2026  |
+|             |                         |                                          |                                                          |                                                                                                                                                                                  |                |
+
 ### <a name="_toc226040453"></a>5.2.1.5. Execution Evidence for Sprint Review.
 
 En esta entrega el equipo ha desplegado con exito la primera version del LandingPage de IntegraVida 
