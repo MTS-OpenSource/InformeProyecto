@@ -1029,27 +1029,85 @@ El Product Backlog del proyecto **GlucoSmart** organiza las historias de usuario
 
 ## <a name="_toc226040414"></a>4.1. Style Guidelines.
 
+El propósito de esta sección es establecer los lineamientos visuales y de diseño de interacción para la plataforma GlucoSmart de la startup IntegraVida. Estas directrices aseguran que la interfaz de usuario (UI) sea coherente, profesional y transmita confianza, factores críticos en un sistema de gestión de salud y farmacovigilancia tanto para pacientes como para personal médico.
 ### <a name="_toc226040415"></a>4.1.1. General Style Guidelines.
 
+![](./Informe/assets/StudyGuidelines.jpeg)
+
+Los lineamientos generales definen la identidad visual de la marca y los elementos base que componen todas las interfaces del sistema, tal como se muestra en la imagen de referencia adjunta.
+
+- Tipografía (Typography):Para garantizar la máxima legibilidad de los datos clínicos (niveles de glucosa, registros de HbA1c), se ha seleccionado la familia tipográfica. Esta fuente _sans-serif_ ofrece claridad en pantallas digitales de cualquier tamaño. Se establece una jerarquía estructurada utilizando distintos pesos: _Bold_ o _SemiBold_ para encabezados y títulos principales, y _Regular_ para el cuerpo de texto y lectura de tablas médicas.
+- Paleta de Colores (Color Palette): La selección de colores busca transmitir limpieza, tranquilidad y tecnología médica, evitando la fatiga visual del doctor durante la revisión de historiales.
+    
+    - Color Primario : Utilizado para resaltar los elementos de mayor importancia y establecer la identidad de la marca.
+    - **Color Secundario y Fondos:** Tonos neutros y grises claros que permiten que la información y los gráficos destaquen sin saturar la vista.
+    - **Colores Semánticos:** Fundamentales para el entorno de salud. Se emplea el color rojo para alertas críticas (ej. hipoglucemia severa o efectos adversos), amarillo para advertencias preventivas, y verde para confirmaciones de éxito y estados estables.
+    
+- **Logotipo e Iconografía:** El logotipo de IntegraVida se mantendrá constante en la cabecera (_header_) del sistema. La iconografía empleada debe ser minimalista, de trazos limpios y consistentes, facilitando el reconocimiento rápido de secciones clave como "Farmacovigilancia", "Dashboard Médico" y "Recordatorios".
 ### <a name="_toc226040416"></a>4.1.2. Web Style Guidelines.
+
+Estas directrices especifican cómo los elementos generales se aplican directamente a la experiencia e interacción dentro de la aplicación web de **GlucoSmart**, asegurando que los usuarios completen sus tareas de manera eficiente.
+
+- **Estructura y Disposición (Layout):** La plataforma está diseñada bajo los principios de diseño web adaptable (_Responsive Web Design_). Para la vista del médico, se implementa una estructura de panel de control (_Dashboard_) dividida en una barra lateral (_sidebar_) para la navegación principal, y una sección principal (_main view_) donde se despliegan las tablas de pacientes y los gráficos de tendencias.
+- **Componentes de Interacción:**
+    
+    - **Botones (Buttons):** Los botones de llamada a la acción (CTA), como "Registrar Glucosa" o "Notificar Reacción Adversa", utilizarán el color primario con texto en alto contraste (blanco). Todo botón debe contar con estados visuales definidos (_hover_, _active_, _disabled_) para proporcionar retroalimentación inmediata al interactuar con ellos.
+    - **Formularios de Entrada (Forms):** Los campos para ingresar la medicación o actualizar la historia clínica tendrán bordes sutiles y etiquetas descriptivas claras. Los mensajes de validación (errores al ingresar datos anómalos) aprovecharán los colores semánticos para guiar al usuario a corregir la información.
+    - **Visualización de Datos:** Las gráficas de evolución y reportes de adherencia deben respetar el contraste establecido por las pautas de accesibilidad (WCAG). Se prioriza el uso de espacios en blanco (_white space_) para separar los bloques de información, evitando el uso excesivo de líneas divisorias, lo que garantiza una lectura ágil del historial clínico.
 
 ## <a name="_toc226040417"></a>4.2. Information Architecture.
 
 ### <a name="_toc226040418"></a>4.2.1. Organization Systems.
 
+Para estructurar el contenido de la plataforma, se han implementado los siguientes sistemas:
+
+- **Esquema Jerárquico:** Se utiliza para la navegación principal, permitiendo profundizar desde una visión general (Dashboard) hacia detalles específicos (Historial de dosis o Reporte de Farmacovigilancia).
+- **Organización Orientada a Tareas:** Las interfaces están agrupadas según las acciones prioritarias identificadas en el _Task Mapping_: "Registrar Medición", "Consultar Alertas" y "Generar Reporte".
+- **Esquema Matricial:** En el panel del médico, la información se organiza permitiendo múltiples puntos de acceso; un médico puede llegar a un reporte de efectos adversos filtrando por el nombre del paciente o por la gravedad de la alerta.
+
 ### <a name="_toc226040419"></a>4.2.2. Labeling Systems.
+
+El sistema de etiquetado busca un equilibrio entre la precisión clínica y la claridad para el paciente, evitando ambigüedades:
+
+- **Etiquetas para Médicos:** Se emplea terminología técnica estandarizada como _"HbA1c"_ (Hemoglobina Glicosilada), _"Farmacovigilancia"_ y _"Adherencia Terapéutica"_.
+- **Etiquetas para Pacientes:** Se utilizan términos familiares y directos como _"Mi Glucosa"_, _"Mis Recordatorios"_ y _"¿Cómo me siento?"_ (para el registro de síntomas).
+- **Iconografía Predictiva:** Se acompañan las etiquetas con iconos universales (ej. una campana para alarmas, un gráfico para tendencias) para acelerar el reconocimiento visual.
 
 ### <a name="_toc226040420"></a>4.2.3. SEO Tags and Meta Tags
 
+Para posicionar a **IntegraVida** como un referente en salud digital y facilitar el acceso a la plataforma, se han definido los siguientes metadatos:
+
+- **Index Title:** `IntegraVida | GlucoSmart - Control Inteligente de Diabetes y Farmacovigilancia`.
+    
+- **Meta Description:** `Plataforma integral para el monitoreo de diabetes. Conecta a médicos y pacientes en tiempo real para el seguimiento de glucosa, adherencia a medicación y prevención de efectos adversos.`
+    
+- **Keywords:** `Control de diabetes`, `monitoreo de glucosa`, `farmacovigilancia digital`, `salud digital Perú`, `historial clínico interactivo`.
+
 ### <a name="_toc226040421"></a>4.2.4. Searching Systems.
 
+Dada la naturaleza crítica de los datos médicos, el sistema de búsqueda está optimizado para la velocidad:
+
+- **Búsqueda Global (Médico):** Permite localizar pacientes por nombre, DNI o nivel de riesgo actual.
+- **Filtros Avanzados:** En los reportes, el usuario puede filtrar por "Rango de Fechas", "Tipo de Síntoma" o "Nivel de Glucosa" (Hipoglucemia/Hiperglucemia).
+- **Autocompletado:** El sistema sugiere nombres de medicamentos comunes para evitar errores ortográficos en el registro de dosis.
+
 ### <a name="_toc226040422"></a>4.2.5. Navigation Systems.
+
+Se han implementado tres capas de navegación para garantizar que el usuario nunca se sienta perdido:
+
+- **Navegación Global (Navbar):** Ubicada en la parte superior, permite el acceso a las secciones principales (Inicio, Mi Perfil, Soporte) y el cambio de idioma.
+- **Navegación Local (Sidebar):** Una barra lateral persistente en el _Dashboard_ que permite conmutar entre las herramientas de gestión (Gráficos, Alarmas, Farmacovigilancia).
+- **Navegación Contextual (Breadcrumbs):** Migas de pan que indican la ruta actual (ej. _Inicio > Pacientes > Jorge Quispe > Historial Mensual_), facilitando el retorno a niveles superiores sin usar el botón de retroceso del navegador.
 
 ## <a name="_toc226040423"></a>4.3. Landing Page UI Design.
 
 ### <a name="_toc226040424"></a>4.3.1. Landing Page Wireframe.
 
+![](./Informe/assets/Wireframe.png)
+
 ### <a name="_toc226040425"></a>4.3.2. Landing Page Mock-up.
+
+![](./Informe/assets/Prototipe.png)
 
 ## <a name="_toc226040426"></a>4.4. Web Applications UX/UI Design.
 
@@ -1136,14 +1194,14 @@ La estructura propuesta permite mantener la integridad de los datos y asegurar l
 | Sprint N Velocity                | 20                                                                                                                                                                                                                                                                                                                                                                                                    |     |
 | Sum of Story Points              | 18                                                                                                                                                                                                                                                                                                                                                                                                    |     |
 
-### <a name="_toc226040450"></a>5.2.X.2. Aspect Leaders and Collaborators.
+### <a name="_toc226040450"></a>5.2.1.2. Aspect Leaders and Collaborators.
 
 | Team Member      | GitHub Username | Landing Page Structure | Navbar & Footer | Hero & Service | About & Testiomonials | Contact Section |
 | :--------------- | :-------------- | :--------------------- | :-------------- | :------------- | :-------------------- | --------------- |
 | Jean, Arias      | Jean-AT         | L                      | L               | L              | C                     | C               |
 | Abigail Raymundo | AbigailRv       | C                      | C               | L              | L                     | L               |
 
-### <a name="_toc226040451"></a>5.2.X.3. Sprint Backlog 1.
+### <a name="_toc226040451"></a>5.2.1.3. Sprint Backlog 1.
 
 | Sprint#    |                                   |                |                                                   |                                                                                                 |            |             |        |
 | :--------- | :-------------------------------- | :------------- | :------------------------------------------------ | :---------------------------------------------------------------------------------------------- | :--------- | ----------- | ------ |
@@ -1164,10 +1222,6 @@ La estructura propuesta permite mantener la integridad de los datos y asegurar l
 | US-32      | Cambiar el idioma del LandingPage | T13            | Agregar toggle de idioma en navbar                | Implementar boton EN/ES en el navbar para cambiar idioma                                        | 0.5        | Jean Pool   | To-Do  |
 
 ### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
-
-| Repository  | Branch | Commit Id | Commit Message | Commit Message Body | Commited on |
-| :---------- | :----- | :-------- | :------------- | :------------------ | :---------- |
-| IntegraVida | main   |           |                |                     |             |
 
 ### <a name="_toc226040453"></a>5.2.1.5. Execution Evidence for Sprint Review.
 
@@ -1205,10 +1259,10 @@ Pasos realizados: 
 
 Durante este Sprint la tareas fueron distribuidas equitativamente entre los dos integrantes del equipo de desarollo Jean Pool Arias lidero la estructura vase del proyecto, el navbar, el contact y el language service. Abigail Raymundo liero el hero, el about, los testimonio y los servicio 
 
-| Team Member      | Commits   |
-| ---------------- | --------- |
-| Jean Pool Arias  | 9 commits |
-| Abigail Raymundo | commits   |
+| Team Member      | Commits    |
+| ---------------- | ---------- |
+| Jean Pool Arias  | 14 commits |
+| Abigail Raymundo | 6 commits  |
 
 # <a name="_toc226040462"></a>Conclusiones
 
