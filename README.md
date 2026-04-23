@@ -481,7 +481,7 @@ Segmento 2: Doctores 
 	Edad: 19 años
 	Distrito: San Miguel
 	
-	![[./Informe/assets/CapturaEntrevista1.png|661]]
+	![](./Informe/assets/CapturaEntrevista1.png)
 	
 	[Entrevista_a_Paciente01.mp4](https://youtu.be/siAso9B_aSc)
 	
@@ -518,7 +518,7 @@ Segmento 2: Doctores 
     Apellidos: Velasque Huarcalla
 	Edad: 49 años
 	
-	![[./Informe/assets/CapturaEntrevista2.png]]
+	![](./Informe/assets/CapturaEntrevista2.png)
 	
 	Distrito: callao
 	[Entrevista a paciente 02.mp4](https://youtu.be/RhP6C_cGmqs)
@@ -555,7 +555,7 @@ Segmento 2: Doctores 
 	Edad: 18
 	Distrito: San Martin de Porres
 	
-	![[./Informe/assets/CapturaEntrevista3.png]]
+	![](./Informe/assets/CapturaEntrevista3.png)
 	
 	[Entrevista a paciente 03.mp4](https://youtu.be/rn8sOZuT5MM)
 	
@@ -591,7 +591,7 @@ Segmento 2: Doctores 
 	Edad: 70 años
 	Distrito: La Molina
 	
-	![[./Informe/assets/CapturaEntrevista4.png]]
+	![](./Informe/assets/CapturaEntrevista4.png)
 	
 	[Entrevista a medico 01.mp4](https://youtu.be/O9gIC_WXCfg)
 	
@@ -631,10 +631,10 @@ Tras el procesamiento de las entrevistas realizadas a los segmentos de pacientes
 ## <a name="_toc226040402"></a>2.3 Needfinding
 
 User Persona Segmento 2:
-![UserPersonaSegmento1](./informe/assets/UserPersona1.png)
+![UserPersonaSegmento1](./Informe/assets/UserPersona1.png)
 
 User Persona Segmento 1:
-![UserPersonaSegmento2](./informe/assets/UserPersona2.png)
+![UserPersonaSegmento2](./Informe/assets/UserPersona2.png)
 
 ### <a name="_toc226040404"></a>2.3.2 User Task Matrix
 
