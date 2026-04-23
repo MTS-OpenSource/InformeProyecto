@@ -25,11 +25,13 @@ Abril 2026-10
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
 
-| Versión | Fecha |   Autor    | Descripción de Modificación |
-| :-----: | :---: | :--------: | :-------------------------: |
-|  0\.1   | 10/04 | Jean Arias |                             |
-
-|  0\.1   | 01/04 | Jean Arias |                             |
+| Versión | Fecha |   Autor    |                              Descripción de Modificación                               |
+| :-----: | :---: | :--------: | :------------------------------------------------------------------------------------: |
+|  0\.1   | 10/04 | Jean Arias | Definición del Startup Profile y Lean UX Assumption y Hypotesis Stament (Capítulo I).  |
+|   0.2   | 13/04 | Jean Arias | Desarrollo del Artefactos de Negocio: Empathy Map, Persona y Journey Map (Capítulo II) |
+|   0.3   | 16/04 | Jean Arias |           Especificación de requerimientos: Impact Mapping  (Capítulo III).            |
+|   0.4   | 19/04 | Jean Arias |        Diseño de Arquitectura de Información y Style Guidelines (Capítulo IV).         |
+|   0.5   | 21/04 | Jean Arias |   Implementación del Sprint 1, Configuración de Software y Despliegue (Capítulo V).    |
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
@@ -178,13 +180,13 @@ Contenido
 
 [5.2. Landing Page, Services & Applications Implementation. 8](#_toc226040447)
 
-[*5.2.X. Sprint n *8\*\*](#_toc226040448)
+[*5.2.1. Sprint n *8\*\*](#_toc226040448)
 
-[*5.2.X.1. Sprint Planning n. *8\*\*](#_toc226040449)
+[*5.2.1.1. Sprint Planning n. *8\*\*](#_toc226040449)
 
-[*5.2.X.2. Aspect Leaders and Collaborators. *8\*\*](#_toc226040450)
+[*5.2.1.2. Aspect Leaders and Collaborators. *8\*\*](#_toc226040450)
 
-[*5.2.X.3. Sprint Backlog n. *8\*\*](#_toc226040451)
+[*5.2.1.3. Sprint Backlog n. *8\*\*](#_toc226040451)
 
 [*5.2.X.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
 
@@ -218,9 +220,10 @@ Contenido
 
 # <a name="_toc226040381"></a>Student Outcome
 
-| Criterio Especifico | Acciones Realizadas | Conclusiones |
-| :------------------ | :------------------ | :----------- |
-|                     |                     |              |
+| Criterio Especifico                                                    | Acciones Realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Conclusiones                                                                                                                                                                                                                                                                                                              |
+| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Proporciona Liderazgo y Planifica Tareas, Establece y Cumple Objetivos | Asumiendo un rol de liderazgo en IntegraVida, se planificó el desarrollo de la plataforma GlucoSmart utilizando el marco de trabajo Scrum para traducir los requerimientos médicos en un _Product Backlog_. Durante el Sprint 1, se cumplió la meta técnica al desplegar exitosamente la _Landing Page_ en GitHub Pages, alcanzando 18 de los 20 _Story Points_ estimados. La implementación de estas tareas críticas Estructura base, Navbar, Hero, Formulario de Contacto y Servicio de Idioma permitió validar de forma práctica las hipótesis del proceso Lean UX, estableciendo un primer hito sólido hacia la solución final de gestión de farmacovigilancia. | - El cumplimiento de los objetivos establecidos demuestra la viabilidad técnica de la solución. La metodología de validación constante (implementación-despliegue) permitió obtener una versión del producto que satisface las necesidades de los usuarios finales y los estándares de ingeniería de software requeridos. |
+|                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                                                                           |
 
 # <a name="_toc226040382"></a>Capitulo I: Introduction
 
@@ -240,8 +243,19 @@ Consolidarnos para el año 2030 como la plataforma referente a nivel 
 
 ### <a name="_toc226040384"></a>1.1.1 Descripción de la Startup
 
+**IntegraVida** es una startup peruana del sector **HealthTech** orientada al desarrollo de soluciones digitales para el seguimiento y control de enfermedades crónicas, con un enfoque inicial en la diabetes. La empresa surge como respuesta a la fragmentación de información clínica, la baja interoperabilidad entre actores del sistema de salud y la falta de herramientas que acompañen de forma continua tanto al paciente como al profesional médico en la toma de decisiones.
+
+La startup propone una visión centrada en la integración de datos y en la construcción de un ecosistema digital accesible, seguro y escalable. En lugar de limitarse al registro aislado de indicadores de salud, **IntegraVida** busca consolidar información clínica relevante, hábitos del paciente, adherencia al tratamiento, alertas preventivas y comunicación médico-paciente dentro de una misma plataforma. De esta manera, se promueve una atención más precisa, preventiva y conectada con el contexto real del usuario.
+
+Como primer producto, **IntegraVida** desarrolla **GlucoSmart**, una plataforma web que permite monitorear niveles de glucosa, registrar medicamentos, generar recordatorios, visualizar reportes y fortalecer la trazabilidad terapéutica. Esta solución está pensada para atender las necesidades de pacientes con diabetes y de profesionales de salud que requieren información confiable y oportuna para mejorar el seguimiento clínico.
+
+El valor diferencial de la startup radica en combinar tecnología, enfoque centrado en el usuario y principios de software abierto para construir una solución con impacto social. Con ello, **IntegraVida** aspira a contribuir a la modernización del cuidado de la salud, reducir la brecha de tratamiento y mejorar la calidad de vida de las personas que conviven con enfermedades crónicas.
+
 ### <a name="_toc226040385"></a>1.1.2. Perfiles de integrantes del equipo
 
+| Estudiante: Arias Tasayco, Jean Pool Alexander<br><br>Carrera:Ingeniería de Software<br><br>Soy un estudiante de la carrera de Ingeniería de Software. Me considero un apasionado por la tecnología y me dedico a transformar ideas en soluciones digitales eficientes y escalables.<br><br>Durante mi formación, he adquirido habilidades en el desarrollo de software y en la creación de soluciones que no solo cumplen con su propósito, sino que buscan innovar. Mi objetivo es utilizar mis conocimientos para resolver problemas reales y generar un impacto positivo a través de la tecnología |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## <a name="_toc226040386"></a>1.2. Solution Profile
 
@@ -443,6 +457,8 @@ Para asegurar la penetración en el mercado de **IntegraVida** frente a los comp
 
 ## <a name="_toc226040398"></a>2.2 Entrevistas
 
+### <a name="_toc226040399"></a>2.2.1 Diseño de entrevistas
+
 Segmento 1: Pacientes con Diabetes 
 
 1. ¿Cómo describes tu experiencia diaria gestionando su diabetes con las herramientas o apps que usa actualmente?.
@@ -629,6 +645,8 @@ Tras el procesamiento de las entrevistas realizadas a los segmentos de pacientes
 4. **Colaboración y Telemedicina:** Los pacientes expresaron su total disposición a compartir datos para facilitar consultas virtuales (especialmente Virgilia y Jorge). Jorge propuso un chat directo con profesionales para resolver dudas rápidas, lo que incrementaría su confianza. Esto da soporte al **Módulo de Compartición de Datos** y al **Chat de Consultas**.
 5. **Educación y Factores Externos:** El análisis reveló que el estrés afecta directamente los niveles de glucosa de todos los pacientes. Jorge y Andy solicitaron recetas y recomendaciones personalizadas. Esto justifica la inclusión de **Sugerencias de Estilo de Vida** para un manejo integral de la enfermedad.
 ## <a name="_toc226040402"></a>2.3 Needfinding
+
+### <a name="_toc226040403"></a>2.3.1 User Personas
 
 User Persona Segmento 2:
 ![UserPersonaSegmento1](./Informe/assets/UserPersona1.png)
@@ -1165,13 +1183,57 @@ La estructura propuesta permite mantener la integridad de los datos y asegurar l
 
 ## <a name="_toc226040442"></a>5.1. Software Configuration Management.
 
+La gestión de configuración del software del proyecto **IntegraVida** se definió con el objetivo de asegurar la organización del código fuente, la consistencia del entorno de desarrollo, la estandarización de convenciones técnicas y la correcta publicación del producto. Debido a que la solución implementada corresponde a una **Landing Page** desarrollada con **Angular**, **HTML**, **CSS** y **TypeScript**, se establecieron lineamientos simples pero formales para mantener la trazabilidad de cambios y facilitar el trabajo colaborativo del equipo.
+
 ### <a name="_toc226040443"></a>5.1.1. Software Development Environment Configuration.
+
+Para el desarrollo del proyecto se configuró un entorno basado en tecnologías web modernas. La aplicación fue construida utilizando **Angular** como framework principal, con apoyo de **TypeScript** para la lógica de componentes y servicios, **HTML** para la estructura de las vistas y **CSS** para los estilos de la interfaz.
+
+El entorno de desarrollo consideró la instalación de las siguientes herramientas:
+
+- **Node.js**, como entorno de ejecución para las dependencias del proyecto.
+- **npm**, para la administración de paquetes y librerías.
+- **Angular CLI**, para la creación, ejecución y compilación del proyecto.
+- **Git**, para el control de versiones distribuido.
+- **Visual Studio Code**, como editor de código recomendado para el equipo.
+
+Para ejecutar el proyecto en entorno local, primero se instalan las dependencias con el comando `npm install` y luego se inicia el servidor de desarrollo con `ng serve`. Con ello, la Landing Page puede visualizarse desde un navegador web en un entorno local, permitiendo validar cambios de manera continua durante la etapa de implementación.
 
 ### <a name="_toc226040444"></a>5.1.2. Source Code Management.
 
+La administración del código fuente se realizó mediante **Git** y el repositorio remoto fue alojado en **GitHub**. Esta decisión permitió mantener un historial completo de cambios, facilitar la colaboración entre integrantes del equipo y asegurar la recuperación de versiones estables del producto.
+
+El flujo de trabajo adoptado se basó en el uso de una rama principal, desde la cual se publican las versiones consolidadas del proyecto, y ramas de trabajo creadas para el desarrollo de funcionalidades o ajustes específicos. Cada cambio realizado fue registrado mediante **commits** descriptivos, lo que permitió identificar con claridad el propósito de cada modificación.
+
+Asimismo, GitHub fue utilizado como plataforma de integración del trabajo colaborativo, ya que centralizó el almacenamiento del repositorio, el seguimiento de avances y la preparación de la versión desplegable de la Landing Page.
+
 ### <a name="_toc226040445"></a>5.1.3. Source Code Style Guide & Conventions.
 
+Con el fin de mantener la legibilidad y uniformidad del proyecto, se aplicaron convenciones de desarrollo acordes con la estructura de Angular. Los componentes fueron organizados por responsabilidad funcional, separando secciones reutilizables y secciones propias de la Landing Page. De esta manera, el código quedó distribuido en carpetas orientadas a mejorar el mantenimiento y la escalabilidad del proyecto.
+
+Las principales convenciones aplicadas fueron las siguientes:
+
+- Uso de **TypeScript** para la lógica de componentes y servicios.
+- Estructuración del proyecto por carpetas como `core`, `shared` y `components`.
+- Nombres de archivos y componentes descriptivos, alineados con su responsabilidad funcional.
+- Separación de responsabilidades entre estructura (`HTML`), presentación (`CSS`) y comportamiento (`TypeScript`).
+- Reutilización de componentes comunes para mantener consistencia visual y reducir duplicidad de código.
+
+Estas convenciones permitieron que el proyecto conserve una base ordenada, fácil de comprender y preparada para futuras ampliaciones.
+
 ### <a name="_toc226040446"></a>5.1.4. Software Deployment Configuration.
+
+La configuración de despliegue del proyecto **IntegraVida** fue definida para publicar la Landing Page en **GitHub Pages**, permitiendo que el sistema sea accesible mediante una URL pública sin requerir infraestructura de servidor adicional.
+
+El proceso de despliegue se encuentra vinculado al repositorio del proyecto y utiliza un archivo de configuración **`static.yaml`** ubicado dentro de la carpeta **`.github`**, el cual define el comportamiento necesario para la publicación del sitio estático. A partir de esta configuración, la versión compilada de la aplicación puede ser generada y publicada automáticamente en el entorno de GitHub Pages.
+
+De manera general, el flujo de despliegue contempla las siguientes actividades:
+
+1. Compilar la aplicación Angular para generar los archivos estáticos de producción.
+2. Publicar la versión generada en la rama o entorno configurado para GitHub Pages.
+3. Verificar que la URL pública cargue correctamente la Landing Page y sus recursos asociados.
+
+Esta configuración permitió contar con un mecanismo de despliegue simple, reproducible y adecuado para un producto web estático orientado a presentación institucional y validación temprana de la propuesta de valor.
 
 ## <a name="_toc226040447"></a>5.2. Landing Page, Services & Applications Implementation.
 
@@ -1274,6 +1336,16 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 | ---------------- | ---------- |
 | Jean Pool Arias  | 14 commits |
 | Abigail Raymundo | 6 commits  |
+
+## <a name="_toc226040457"></a>5.3. Validation Interviews.
+
+### <a name="_toc226040458"></a>5.3.1. Diseño de Entrevistas.
+
+### <a name="_toc226040459"></a>5.3.2. Registro de Entrevistas.
+
+### <a name="_toc226040460"></a>5.3.3. Evaluaciones según heurísticas.
+
+## <a name="_toc226040461"></a>5.4. Video About-the-Product.
 
 # <a name="_toc226040462"></a>Conclusiones
 
