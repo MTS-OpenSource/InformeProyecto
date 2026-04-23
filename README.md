@@ -35,10 +35,22 @@ Abril 2026-10
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
-- Enlace del Repositorio: <https://github.com/MTS-OpenSource/AquaMatch.git>
-- TB1:
+- Enlace del Repositorio:
+	- [ <https://github.com/MTS-OpenSource/IntegraVida.git>](https://github.com/MTS-OpenSource/IntegraVida)
+	- [ <https://github.com/MTS-OpenSource/InformeProyecto.git>](https://github.com/MTS-OpenSource/InformeProyecto)
+
+- AV1:
   - ¿Qué Problema se encontró?
-  - ¿Cómo se resolverá?
+	  Se identificó una alta fragmentación y deficiencia en la gestión de la información clínica de pacientes diagnosticados con Diabetes Mellitus. Actualmente, el registro de métricas vitales (como los niveles de glucosa y hemoglobina glicosilada - HbA1c) y el control de la medicación se realizan, en su mayoría, de forma manual, aislada o dependiente de la memoria del paciente. Esta situación genera dos problemas críticos:
+		1. **En el paciente:** Una baja adherencia al tratamiento debido a olvidos frecuentes de las dosis, sumado a la incertidumbre y falta de un canal directo para reportar efectos secundarios de los fármacos.
+		2. **En el personal médico:** Pérdida de tiempo valioso durante las consultas al tener que unificar e interpretar historiales desordenados (en papel o Excel). Además, existe una nula capacidad de **farmacovigilancia activa**, lo que impide a los doctores intervenir preventivamente antes de que un paciente sufra una crisis de hipoglucemia severa o daño orgánico.
+
+- ¿Cómo se resolverá?
+	El problema se resolverá mediante el desarrollo y despliegue de IntegraVida una plataforma web B2B2C respaldada por una arquitectura de base de datos relacional robusta. Esta solución centralizará la información y conectará en tiempo real a los pacientes con sus médicos tratantes, resolviendo la problemática a través de tres pilares tecnológicos:
+	
+	1. **Sistema de Adherencia Automatizado:** Notificaciones y confirmaciones de toma de medicación que reducen drásticamente los olvidos en los pacientes.
+	2. **Módulo de Farmacovigilancia y Alertas Críticas:** Un canal de registro rápido donde los pacientes reportan reacciones adversas, el cual dispara alertas inmediatas al médico si los parámetros indican un riesgo vital.
+	3. **Ecosistema de Decisiones Clínicas:** Un panel de control (_Dashboard_) interactivo para el médico que procesa los datos registrados y los visualiza en gráficos de tendencias, permitiendo optimizar el tiempo de consulta y ajustar los tratamientos de forma rápida y segura basándose en evidencia real.
 
 Contenido
 
@@ -180,31 +192,23 @@ Contenido
 
 [5.2. Landing Page, Services & Applications Implementation. 8](#_toc226040447)
 
-[*5.2.1. Sprint n *8\*\*](#_toc226040448)
+[*5.2.1. Sprint 1 *8\*\*](#_toc226040448)
 
-[*5.2.1.1. Sprint Planning n. *8\*\*](#_toc226040449)
+[*5.2.1.1. Sprint Planning 1. *8\*\*](#_toc226040449)
 
 [*5.2.1.2. Aspect Leaders and Collaborators. *8\*\*](#_toc226040450)
 
-[*5.2.1.3. Sprint Backlog n. *8\*\*](#_toc226040451)
+[*5.2.1.3. Sprint Backlog 1. *8\*\*](#_toc226040451)
 
-[*5.2.X.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
+[*5.2.1.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
 
-[*5.2.X.5. Execution Evidence for Sprint Review. *8\*\*](#_toc226040453)
+[*5.2.1.5. Execution Evidence for Sprint Review. *8\*\*](#_toc226040453)
 
-[*5.2.X.6. Services Documentation Evidence for Sprint Review. *8\*\*](#_toc226040454)
+[*5.2.1.6. Services Documentation Evidence for Sprint Review. *8\*\*](#_toc226040454)
 
-[*5.2.X.7. Software Deployment Evidence for Sprint Review. *8\*\*](#_toc226040455)
+[*5.2.1.7. Software Deployment Evidence for Sprint Review. *8\*\*](#_toc226040455)
 
-[*5.2.X.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
-
-[5.3. Validation Interviews. 8](#_toc226040457)
-
-[*5.3.1. Diseño de Entrevistas. *8\*\*](#_toc226040458)
-
-[*5.3.2. Registro de Entrevistas. *8\*\*](#_toc226040459)
-
-[*5.3.3. Evaluaciones según heurísticas. *8\*\*](#_toc226040460)
+[*5.2.1.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
 
 [5.4. Video About-the-Product. 8](#_toc226040461)
 
@@ -675,9 +679,9 @@ User Persona Segmento 1:
 
 ### <a name="_toc226040406"></a>2.3.4 Empathy Mapping
 
-![EmpathyMapSegmento1](./informe/assets/EmpathyMap1.png)
+![EmpathyMapSegmento1](./Informe/assets/EmpathyMap1.png)
 
-![EmpathyMapSegmento2](./informe/assets/EmpathyMap2.png)
+![EmpathyMapSegmento2](./Informe/assets/EmpathyMap2.png)
 ## <a name="_toc226040407"></a>2.4 Big Picture Event Storming
 
 ![EventStorming|601](./Informe/assets/EventStorming.jpg)
