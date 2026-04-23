@@ -180,31 +180,23 @@ Contenido
 
 [5.2. Landing Page, Services & Applications Implementation. 8](#_toc226040447)
 
-[*5.2.1. Sprint n *8\*\*](#_toc226040448)
+[*5.2.1. Sprint 1 *8\*\*](#_toc226040448)
 
-[*5.2.1.1. Sprint Planning n. *8\*\*](#_toc226040449)
+[*5.2.1.1. Sprint Planning 1. *8\*\*](#_toc226040449)
 
 [*5.2.1.2. Aspect Leaders and Collaborators. *8\*\*](#_toc226040450)
 
-[*5.2.1.3. Sprint Backlog n. *8\*\*](#_toc226040451)
+[*5.2.1.3. Sprint Backlog 1. *8\*\*](#_toc226040451)
 
-[*5.2.X.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
+[*5.2.1.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
 
-[*5.2.X.5. Execution Evidence for Sprint Review. *8\*\*](#_toc226040453)
+[*5.2.1.5. Execution Evidence for Sprint Review. *8\*\*](#_toc226040453)
 
-[*5.2.X.6. Services Documentation Evidence for Sprint Review. *8\*\*](#_toc226040454)
+[*5.2.1.6. Services Documentation Evidence for Sprint Review. *8\*\*](#_toc226040454)
 
-[*5.2.X.7. Software Deployment Evidence for Sprint Review. *8\*\*](#_toc226040455)
+[*5.2.1.7. Software Deployment Evidence for Sprint Review. *8\*\*](#_toc226040455)
 
-[*5.2.X.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
-
-[5.3. Validation Interviews. 8](#_toc226040457)
-
-[*5.3.1. Diseño de Entrevistas. *8\*\*](#_toc226040458)
-
-[*5.3.2. Registro de Entrevistas. *8\*\*](#_toc226040459)
-
-[*5.3.3. Evaluaciones según heurísticas. *8\*\*](#_toc226040460)
+[*5.2.1.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
 
 [5.4. Video About-the-Product. 8](#_toc226040461)
 
