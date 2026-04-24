@@ -1336,7 +1336,7 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 | Team Member      | Commits    |
 | ---------------- | ---------- |
 | Jean Pool Arias  | 14 commits |
-| Abigail Raymundo | 6 commits  |
+| Abigail Raymundo | 11 commits  |
 
 # <a name="_toc226040462"></a>Conclusiones
 
