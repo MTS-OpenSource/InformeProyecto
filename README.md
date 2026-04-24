@@ -1151,30 +1151,126 @@ Estos wireframes permiten definir la organización de la información y la naveg
 
 #### Wireframes
 <img width="1148" height="817" alt="image" src="https://github.com/user-attachments/assets/8cd0345d-d3cf-4d17-a075-b50783159dcd" />
+
 <img width="655" height="654" alt="image" src="https://github.com/user-attachments/assets/deb19b67-55d1-4d3d-8ab9-cbfe99a9d6b7" />
+
 <img width="834" height="850" alt="image" src="https://github.com/user-attachments/assets/22cd18d2-debf-4fa0-894c-9d55fbc8b436" />
+
 <img width="904" height="852" alt="image" src="https://github.com/user-attachments/assets/f319f3d8-ca38-4225-a141-b1f9b573b7c3" />
+
 <img width="967" height="796" alt="image" src="https://github.com/user-attachments/assets/b72f84de-0a87-49e1-a8b7-ece2c3a19d91" />
+
 <img width="958" height="875" alt="image" src="https://github.com/user-attachments/assets/fefe95f6-fff8-412e-8b75-3f57efb5beb1" />
 
 
 
 
 
-
 ### <a name="_toc226040428"></a>4.4.2. Web Applications Wireflow Diagrams.
+El wireflow representa la navegación entre las diferentes pantallas del sistema.
+
+El flujo principal inicia en el login, seguido del dashboard, desde donde el usuario puede acceder a las funcionalidades principales como registro de glucosa, historial de salud, alertas y perfil.
+
+Este flujo permite visualizar cómo el usuario interactúa con la aplicación de manera estructurada.
+
+#### Wireflow Diagram
+
+<img width="1280" height="841" alt="image" src="https://github.com/user-attachments/assets/17590af3-7f3b-4c32-96cf-f7e267255d1c" />
+
+
 
 ### <a name="_toc226040429"></a>4.4.2. Web Applications Mock-ups.
 
+Los mockups representan la versión visual final de la aplicación, incorporando elementos de diseño como colores, tipografía y estilo visual.
+
+Se mantuvo coherencia con la landing page de IntegraVida, utilizando un diseño limpio, moderno y enfocado en el sector salud.
+
+#### Mockups
+
+<img width="1190" height="850" alt="image" src="https://github.com/user-attachments/assets/7a3e3f9f-c02b-4ef3-b117-b8b1f839e977" />
+
+<img width="815" height="820" alt="image" src="https://github.com/user-attachments/assets/61fe34d7-c3d9-4035-a756-3c49b936f141" />
+
+<img width="836" height="856" alt="image" src="https://github.com/user-attachments/assets/5b154510-5d1a-4171-87ae-af27460c0294" />
+
+<img width="826" height="712" alt="image" src="https://github.com/user-attachments/assets/d8a37522-1754-4e92-8953-5c6676070df7" />
+
+<img width="823" height="802" alt="image" src="https://github.com/user-attachments/assets/8d040395-5264-40cf-ae8d-5be2cad3baa2" />
+
+<img width="824" height="840" alt="image" src="https://github.com/user-attachments/assets/24ccf265-ad96-428b-afae-85b459abf06b" />
+
+
+
+
+
+
+
 ### <a name="_toc226040430"></a>4.4.3. Web Applications User Flow Diagrams.
 
+El flujo de usuario se diseñó considerando como segmento objetivo principal a pacientes con diabetes, quienes requieren monitorear constantemente su estado de salud.
+
+El flujo principal describe el proceso de uso diario de la aplicación:
+
+1. El paciente inicia sesión en la aplicación
+2. Accede al dashboard donde visualiza su estado actual
+3. Registra su nivel de glucosa
+4. El sistema procesa la información
+5. Se actualiza el historial de salud
+6. En caso de valores críticos, se generan alertas
+
+Adicionalmente, el usuario puede acceder a:
+
+- Historial de salud para revisar registros anteriores
+- Alertas y notificaciones para monitorear riesgos
+- Perfil del paciente para gestionar su información
+
+Este flujo permite garantizar una experiencia centrada en el monitoreo continuo y la prevención de complicaciones.
+
+<img width="1112" height="993" alt="image" src="https://github.com/user-attachments/assets/6df92336-42f4-4b6a-9866-212c8249037d" />
+
+
+
 ## <a name="_toc226040431"></a>4.5. Web Applications Prototyping.
+
+Se desarrolló un prototipo interactivo de la aplicación GlucoSmart utilizando la herramienta Figma, con el objetivo de simular la navegación entre las principales funcionalidades del sistema.
+
+El prototipo está enfocado en el segmento objetivo principal: pacientes con diabetes, permitiendo validar la experiencia de usuario en el proceso de monitoreo de su salud.
+
+Las principales interacciones implementadas son:
+
+- Inicio de sesión y acceso al dashboard del paciente
+- Navegación desde el dashboard hacia el registro de glucosa
+- Visualización del historial de salud
+- Acceso a alertas y notificaciones
+- Consulta y edición del perfil del paciente
+- Retorno al dashboard desde cada funcionalidad
+
+El prototipo permite representar el flujo completo de uso diario del paciente, asegurando una navegación intuitiva y coherente con los objetivos del sistema.
+
+#### Prototipo de la aplicación
+
+<img width="1190" height="850" alt="image" src="https://github.com/user-attachments/assets/7a3e3f9f-c02b-4ef3-b117-b8b1f839e977" />
+
+<img width="815" height="820" alt="image" src="https://github.com/user-attachments/assets/61fe34d7-c3d9-4035-a756-3c49b936f141" />
+
+<img width="836" height="856" alt="image" src="https://github.com/user-attachments/assets/5b154510-5d1a-4171-87ae-af27460c0294" />
+
+<img width="826" height="712" alt="image" src="https://github.com/user-attachments/assets/d8a37522-1754-4e92-8953-5c6676070df7" />
+
+<img width="823" height="802" alt="image" src="https://github.com/user-attachments/assets/8d040395-5264-40cf-ae8d-5be2cad3baa2" />
+
+<img width="824" height="840" alt="image" src="https://github.com/user-attachments/assets/24ccf265-ad96-428b-afae-85b459abf06b" />
+
+
 
 ## <a name="_toc226040432"></a>4.6. Domain-Driven Software Architecture.
 
 ### <a name="_toc226040433"></a>4.6.1. Design-Level Event Storming.
 
 ### <a name="_toc226040434"></a>4.6.2. Software Architecture Context Diagram.
+
+<img width="2380" height="1250" alt="image" src="https://github.com/user-attachments/assets/0e2c75c2-cfde-4635-b8d6-5415886566ad" />
+
 
 ### <a name="_toc226040435"></a>4.6.3. Software Architecture Container Diagrams.
 
