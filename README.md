@@ -21,6 +21,7 @@ U202414054 – Jean Pool Alexander Arias Tasayco
 U202318001 – Abigail Nadhim Raymundo Villarroel 
 U202223405 – Juan Sebastian Estupiñan Olortegui
 U202218387 - Javier Oswaldo Tello Murga
+U20231D385 - Jose Antonio Muñoz Amasifuen
 
 Abril 2026-10
 
@@ -1266,6 +1267,30 @@ El prototipo permite representar el flujo completo de uso diario del paciente, a
 ## <a name="_toc226040432"></a>4.6. Domain-Driven Software Architecture.
 
 ### <a name="_toc226040433"></a>4.6.1. Design-Level Event Storming.
+
+Se realizó un Event Storming a nivel de diseño con el objetivo de identificar los principales eventos del dominio en el sistema GlucoSmart.
+
+El análisis se centró en el flujo de monitoreo de pacientes con diabetes mellitus tipo 1 y tipo 2, considerando también la interacción con profesionales de salud.
+
+Se identificaron los siguientes eventos principales:
+
+- Usuario inicia sesión
+- Usuario registra nivel de glucosa
+- Sistema valida el registro de glucosa
+- Registro de glucosa almacenado
+- Sistema evalúa el estado del paciente
+- Alerta generada (en caso de valores críticos)
+- Usuario visualiza alerta
+- Historial de salud actualizado
+- Profesional de salud consulta información del paciente
+- Profesional de salud analiza evolución clínica
+
+Estos eventos permiten modelar el comportamiento del sistema desde una perspectiva orientada al dominio, facilitando la identificación de procesos clave y puntos de decisión dentro de la aplicación.
+
+El Event Storming permitió comprender la lógica del negocio y establecer una base sólida para el diseño de la arquitectura del sistema.
+
+<img width="8192" height="575" alt="image" src="https://github.com/user-attachments/assets/026d2231-cc02-4cf5-8b81-33ec401f4aa8" />
+
 
 ### <a name="_toc226040434"></a>4.6.2. Software Architecture Context Diagram.
 
