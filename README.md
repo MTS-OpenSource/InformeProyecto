@@ -19,7 +19,7 @@ Startup: IntegraVIda
 
 U202414054 – Jean Pool Alexander Arias Tasayco
 U202318001 – Abigail Nadhim Raymundo Villarroel 
-U202223405 – Juan Sebastian Estupiñan Olortegui
+U202223405 – Juan Sebastián Estupiñan Olortegui
 U202218387 - Javier Oswaldo Tello Murga
 
 Abril 2026-10
