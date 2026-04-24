@@ -33,6 +33,7 @@ Abril 2026-10
 |   0.3   | 16/04 | Jean Arias |           Especificación de requerimientos: Impact Mapping  (Capítulo III).            |
 |   0.4   | 19/04 | Jean Arias |        Diseño de Arquitectura de Información y Style Guidelines (Capítulo IV).         |
 |   0.5   | 21/04 | Jean Arias |   Implementación del Sprint 1, Configuración de Software y Despliegue (Capítulo V).    |
+|   0.6   | 21/04 | Abigail Raymundo |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.    |
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
@@ -255,6 +256,7 @@ El valor diferencial de la startup radica en combinar tecnología, enfoque centr
 ### <a name="_toc226040385"></a>1.1.2. Perfiles de integrantes del equipo
 
 | Estudiante: Arias Tasayco, Jean Pool Alexander<br><br>Carrera:Ingeniería de Software<br><br>Soy un estudiante de la carrera de Ingeniería de Software. Me considero un apasionado por la tecnología y me dedico a transformar ideas en soluciones digitales eficientes y escalables.<br><br>Durante mi formación, he adquirido habilidades en el desarrollo de software y en la creación de soluciones que no solo cumplen con su propósito, sino que buscan innovar. Mi objetivo es utilizar mis conocimientos para resolver problemas reales y generar un impacto positivo a través de la tecnología |
+
 | Estudiante: Raymundo Villarroel, Abigail Nadhimr<br><br>Carrera:Ingeniería de Software<br><br>Soy un estudiante de la carrera de Ingeniería de Software.Actualmente estoy cursando el 5° ciclo de Ingeniería de Software, avanzando algunos cursos del ciclo superior. Desde siempre me ha apasionado crear, diseñar y programar para ofrecer soluciones, me gusta aprender constantemente para ampliar mis conocimientos y perfil profesional. Me comprometo a aportar con responsabilidad al equipo, trabajar de manera colaborativa y contribuir a que juntos podamos desarrollar un proyecto sobresaliente. Mis principales habilidades incluyen creatividad, disciplina y trabajo en equipo, cualidades que aplico para lograr resultados efectivos y de calidad |
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
