@@ -1410,6 +1410,7 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 | ---------------- | ---------- |
 | Jean Pool Arias  | 14 commits |
 | Abigail Raymundo | 11 commits  |
+| Juan Estupiñan | 6 commits  |
 
 # <a name="_toc226040462"></a>Conclusiones
 
