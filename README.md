@@ -1136,6 +1136,31 @@ Se han implementado tres capas de navegación para garantizar que el usuario nun
 ## <a name="_toc226040426"></a>4.4. Web Applications UX/UI Design.
 
 ### <a name="_toc226040427"></a>4.4.1. Web Applications Wireframes.
+Se desarrollaron wireframes para representar la estructura base de la aplicación, enfocándose en la distribución de los elementos sin considerar aspectos visuales avanzados.
+
+Los wireframes diseñados incluyen las siguientes pantallas:
+
+- Login / Register
+- Dashboard del paciente
+- Registro de glucosa
+- Historial de salud
+- Alertas y notificaciones
+- Perfil del paciente
+
+Estos wireframes permiten definir la organización de la información y la navegación del sistema.
+
+#### Wireframes
+<img width="1148" height="817" alt="image" src="https://github.com/user-attachments/assets/8cd0345d-d3cf-4d17-a075-b50783159dcd" />
+<img width="655" height="654" alt="image" src="https://github.com/user-attachments/assets/deb19b67-55d1-4d3d-8ab9-cbfe99a9d6b7" />
+<img width="834" height="850" alt="image" src="https://github.com/user-attachments/assets/22cd18d2-debf-4fa0-894c-9d55fbc8b436" />
+<img width="904" height="852" alt="image" src="https://github.com/user-attachments/assets/f319f3d8-ca38-4225-a141-b1f9b573b7c3" />
+<img width="967" height="796" alt="image" src="https://github.com/user-attachments/assets/b72f84de-0a87-49e1-a8b7-ece2c3a19d91" />
+<img width="958" height="875" alt="image" src="https://github.com/user-attachments/assets/fefe95f6-fff8-412e-8b75-3f57efb5beb1" />
+
+
+
+
+
 
 ### <a name="_toc226040428"></a>4.4.2. Web Applications Wireflow Diagrams.
 
