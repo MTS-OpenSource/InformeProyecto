@@ -30,12 +30,15 @@ Abril 2026-10
 | :-----: | :---: | :--------: | :------------------------------------------------------------------------------------: |
 |  0\.1   | 10/04 | Jean Arias | Definición del Startup Profile y Lean UX Assumption y Hypotesis Stament (Capítulo I).  |
 |   0.2   | 13/04 | Jean Arias | Desarrollo del Artefactos de Negocio: Empathy Map, Persona y Journey Map (Capítulo II) |
-|   0.3   | 16/04 | Jean Arias |           Especificación de requerimientos: Impact Mapping  (Capítulo III).            |
-|   0.4   | 19/04 | Jean Arias |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.  (Capítulo IV)   |
-|   0.5   | 19/04 | Abigail Raymundo |  Creación de wireframes para definir la estructura de contenidos y la elaboración de mockups de alta fidelidad en Figma.   |
-|   0.6   | 21/04 | Jean Arias |   Implementación del Sprint 1, Configuración de Software y Despliegue (Capítulo V).    |
-|   0.7   | 21/04 | Abigail Raymundo |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.    |
-|   0.8   | 21/04 | Javier Tello | Desarrollo del lenguaje ubicuo del dominio, estimación y priorización del Product Backlog, diagramas de clases y diagrama entidad-relación del sistema GlucoSmart.  |
+|   0.3   | 14/04 | Juan Estupiñan | Desarrollo de Lean UX Problem Statements y Lean UX Canvas, Diseño de entrevistas, y avance de Figma para el UI Design  |
+|   0.4   | 16/04 | Jean Arias |           Especificación de requerimientos: Impact Mapping  (Capítulo III).            |
+|   0.5   | 19/04 | Jean Arias |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.  (Capítulo IV)   |
+|   0.6   | 19/04 | Abigail Raymundo |  Creación de wireframes para definir la estructura de contenidos y la elaboración de mockups de alta fidelidad en Figma.   |
+|   0.7   | 21/04 | Jean Arias |   Implementación del Sprint 1, Configuración de Software y Despliegue (Capítulo V).    |
+|   0.8   | 21/04 | Abigail Raymundo |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.    |
+|   0.9   | 21/04 | Javier Tello | Desarrollo del lenguaje ubicuo del dominio, estimación y priorización del Product Backlog, diagramas de clases y diagrama entidad-relación del sistema GlucoSmart.  |
+|   0.10   | 24/04 | Juan Estupiñan | Desarrollo de Entrevistas en Segmento Doctores, junto con los análisis respectivos.  |
+
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
@@ -261,7 +264,9 @@ Estudiante: **Arias Tasayco, Jean Pool Alexander**<br>Carrera:**Ingeniería de S
 
 Estudiante: **Raymundo Villarroel, Abigail Nadhimr**<br>Carrera:**Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software.Actualmente estoy cursando el 5° ciclo de Ingeniería de Software, avanzando algunos cursos del ciclo superior. Desde siempre me ha apasionado crear, diseñar y programar para ofrecer soluciones, me gusta aprender constantemente para ampliar mis conocimientos y perfil profesional. Me comprometo a aportar con responsabilidad al equipo, trabajar de manera colaborativa y contribuir a que juntos podamos desarrollar un proyecto sobresaliente. Mis principales habilidades incluyen creatividad, disciplina y trabajo en equipo, cualidades que aplico para lograr resultados efectivos y de calidad. <br><br>
 
-Estudiante: **Tello Murga, Javier Oswaldo**<br>Carrera: **Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software, actualmente cursando el 6.º ciclo. Me considero una persona responsable, perseverante y comprometida con mi aprendizaje. Me interesa el desarrollo de software y la creación de soluciones digitales que puedan resolver problemas reales. A través del trabajo en equipo, busco aportar con organización, análisis y compromiso para contribuir al desarrollo de un proyecto sólido y de calidad.<br><br>                                                                                                                                                                                                                                                                                         
+Estudiante: **Tello Murga, Javier Oswaldo**<br>Carrera: **Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software, actualmente cursando el 6.º ciclo. Me considero una persona responsable, perseverante y comprometida con mi aprendizaje. Me interesa el desarrollo de software y la creación de soluciones digitales que puedan resolver problemas reales. A través del trabajo en equipo, busco aportar con organización, análisis y compromiso para contribuir al desarrollo de un proyecto sólido y de calidad.<br><br>          
+
+Estudiante: **Estupiñan Olortegui, Juan Sebastian**<br>Carrera: **Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software,  con conocimientos en diversos lenguajes de programación como C++, Java y Python. Soy activo en participación y trabajo en equipo, aunque un poco débil en coordinación pero siempre me comprometo a trabajar y apoyar en lo más que pueda. Busco siempre proponer ideas y soluciones efectivas y fáciles para todo tipo de problemas que pueden resultar complejos, para que los proyectos puedan resultar eficientes en el trabajo. <br><br> 
 
 ## <a name="_toc226040386"></a>1.2. Solution Profile
 
@@ -606,6 +611,20 @@ Segmento 2: Doctores 
 	- Recomendaciones: Le gustaría que una aplicación le sugiera recetas y recomendaciones personalizadas.
 	- Compartir Datos: Estaría dispuesto a compartir sus datos de salud con su médico a través de una aplicación para facilitar las consultas.
 
+- Entrevista a Pacientes con Diabetes (Segmento 1)
+	
+	Nombre: Marycruz Pérez
+	Edad: 27
+	
+	![](./Informe/assets/CapturaEntrevista5.png)
+	
+	[Link de entrevista](https://drive.google.com/file/d/1KPruG_Rz3B9QFQu-2GltK_0_WK3tAzB5/view?usp=sharing)
+	
+	Resumen de la entrevista a paciente
+	
+	Marycruz, una ama de casa de 27 años diagnosticada con diabetes hace un año, presenta un perfil de usuario que actualmente gestiona su salud de manera reactiva y tradicional. Durante la entrevista, revela que no utiliza ninguna aplicación especializada, limitándose al uso de alarmas en su celular para recordar la toma de medicamentos y acudiendo directamente a Essalud solo cuando experimenta malestar. Su interés por la propuesta de GlucoSmart radica principalmente en la accesibilidad y la centralización de datos, ya que considera que los dispositivos físicos de medición son costosos y el proceso de trasladarse a un hospital es tedioso. Una de sus respuestas más destacadas se refiere a la funcionalidad de compartir datos en tiempo real con su médico; Marycruz valora esto enormemente porque evitaría la redundancia de tener que explicar su historial clínico desde cero en cada consulta, un problema recurrente en el sistema de seguros. Respecto a la medición de glucosa, señala que tener esta herramienta en el móvil sería un cambio radical en su calidad de vida, permitiéndole estar más alerta ante la necesidad de insulina antes de sufrir una descompensación. Además, sugiere la incorporación de servicios de enfermería a domicilio para inyecciones, inspirada en las facilidades que existieron durante la pandemia. En conclusión, Marycruz se muestra totalmente dispuesta a adoptar la aplicación como su herramienta principal de gestión, siempre que se garantice la transparencia y seguridad de sus datos médicos, transformando su actual control manual y fragmentado en un monitoreo proactivo y eficiente.
+
+
 - Entrevista a medicos (Segmento 2
 	
 	Nombre: Walter
@@ -640,6 +659,53 @@ Segmento 2: Doctores 
 	- Dispositivos: Recomienda glucómetros de punción digital.
 	- Datos en gráficos: Considera que ver tendencias gráficas de glucosa es muy útil para entender la evolución del paciente rápidamente. Incluso lo ve como indicador de calidad en la práctica médica.
 	- Alertas inmediatas: Considera esencial recibir avisos de hipoglucemia para la prevención de daños cerebrales, cardíacos, hepáticos y renales, además de riesgo de muerte.
+
+ - Entrevista a medicos (Segmento 2)
+	
+	Nombres y Apellidos: Angela Damaris Prado Obregón
+	Edad: 23 años
+	Distrito: Chancay
+	
+	![](./Informe/assets/CapturaEntrevista6.png)
+	
+	[Link de la entrevista](https://drive.google.com/file/d/1YaL28agujd9A1uq6Nd-U9xPmYzcVBkG6/view?usp=sharing)
+	
+	- Resumen de la entrevista a paciente
+	
+	1. Desafío
+Aquí se enfatiza que los métodos actuales dependen de datos manuales que suelen ser imprecisos o incompletos. Esto genera una dependencia del ensayo y error, especialmente en enfermedades crónicas, donde la falta de trazabilidad impide tomar decisiones informadas desde el primer momento.
+
+2. Importancia del Contexto sobre el Dato
+Una de las afirmaciones es que un número sin contexto pierde su valor clínico. Para la entrevistada, no basta con saber el nivel de glucosa; sino que también es vital conocer la dieta, la actividad física y la medicación concomitante para interpretar correctamente el estado del paciente.
+
+3. Centralización
+La dispersión de la información en diferentes instituciones como hospitales y clínicas, es vista como una barrera crítica. La especialista valida que una plataforma centrada en el paciente que unifique este historial facilitaría enormemente el seguimiento médico.
+
+4. Analítica y Farmacovigilancia
+Aquí la entrevistada otorga un valor muy alto a la analítica en tiempo real. Destaca dos beneficios principales:
+- Anticipación: Identificar tendencias antes de que ocurra una descompensación.
+- Optimización Farmacológica: Correlacionar directamente el uso de medicamentos con las variaciones de glucosa para detectar efectos adversos o ajustar dosis con precisión.
+
+5. Validación y Estándares
+Para que una herramienta como GlucoSmart sea adoptada, la especialista pone condiciones claras:
+- Debe estar anclada a guías internacionales (como la ADA o KDIGO).
+- Debe garantizar la seguridad de los datos y la interoperabilidad con sistemas existentes.
+- Debe demostrar validez clínica y resultados proactivos.
+
+Se concluye con una recepción muy positiva hacia la propuesta de GlucoSmart, ya que ve en la aplicación una solución al problema de la adherencia del paciente y una vía directa para reducir hospitalizaciones y costos operativos mediante la detección precoz.
+
+- Entrevista a medicos (Segmento 2)
+	
+	Nombres y Apellidos: Medalith Olortegui
+	Distrito: Comas
+	
+	![](./Informe/assets/CapturaEntrevista7.png)
+	
+	[Link de la entrevista](https://drive.google.com/file/d/1vZu3e05MQSLtU1CQXCX58IY2vh1Mb6QI/view?usp=sharing)
+	
+	- Resumen de la entrevista a paciente
+	
+La entrevista realizada a la obstetra Medalith Olórtegui, especialista en EsSalud con experiencia en el manejo de pacientes con diabetes gestacional, revela una postura técnica que enfatiza la necesidad de integrar el rigor clínico con las soluciones digitales. Una de sus opiniones más contundentes es que resulta imposible realizar ajustes terapéuticos precisos basándose únicamente en datos manuales proporcionados por el paciente, ya que la evaluación física y clínica directa es el dato principal e innegociable para un diagnóstico acertado. La especialista identifica la "falta de adherencia" como el punto débil más crítico en el sistema de salud actual, señalando que, aunque se brinde el mejor tratamiento, el incumplimiento por parte del paciente anula los esfuerzos médicos, por lo que ve en la tecnología un puente para vigilar este cumplimiento de manera más cercana. Respecto a la aplicación GlucoSmart, su propuesta central para un mejor funcionamiento radica en la integración de datos entre distintas instituciones de salud, permitiendo que un médico pueda consultar el historial y las variaciones glucémicas del paciente independientemente de si fue atendido previamente en el Ministerio de Salud (MINSA) o en clínicas privadas. Propone que la plataforma no solo se limite al registro, sino que funcione como una herramienta de farmacovigilancia y analítica en tiempo real que conecte directamente al paciente con el sistema de teleconsultas, especialmente para el seguimiento de casos ya estabilizados. Además, sugiere que la aplicación debe reforzar la educación del usuario mediante información clara sobre signos y síntomas de alarma, pero siempre bajo un diseño que esté estrictamente anclado a los protocolos clínicos del mundo real y que garantice la privacidad absoluta de los datos. Para la especialista, el valor final de la aplicación reside en su capacidad de cerrar brechas de tiempo y distancia, reduciendo costos operativos y complicaciones severas al permitir decisiones médicas basadas en una trazabilidad real y continua, transformándose así en un soporte vital tanto para el personal de salud como para el bienestar directo del paciente.
 
 ### <a name="_toc226040401"></a>2.2.3 Analisis de entrevista
 
