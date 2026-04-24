@@ -31,8 +31,8 @@ Abril 2026-10
 |  0\.1   | 10/04 | Jean Arias | Definición del Startup Profile y Lean UX Assumption y Hypotesis Stament (Capítulo I).  |
 |   0.2   | 13/04 | Jean Arias | Desarrollo del Artefactos de Negocio: Empathy Map, Persona y Journey Map (Capítulo II) |
 |   0.3   | 16/04 | Jean Arias |           Especificación de requerimientos: Impact Mapping  (Capítulo III).            |
-|   0.4   | 19/04 | Abigail Raymundo |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.    |
-|   0.5   | 19/04 | Jean Arias |        Creación de wireframes para definir la estructura de contenidos y la elaboración de mockups de alta fidelidad en Figma.   |
+|   0.4   | 19/04 | Jean Arias |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.  (Capítulo IV)   |
+|   0.5   | 19/04 | Abigail Raymundo |  Creación de wireframes para definir la estructura de contenidos y la elaboración de mockups de alta fidelidad en Figma.   |
 |   0.6   | 21/04 | Jean Arias |   Implementación del Sprint 1, Configuración de Software y Despliegue (Capítulo V).    |
 |   0.7   | 21/04 | Abigail Raymundo |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.    |
 
