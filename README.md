@@ -1299,8 +1299,14 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 | IntegraVida | feature/navbar          | 86686462672580b3e6f3212036c498fb613bfcf2 | Done the component Navbar                                | Make the component navbar                                                                                                                                                        | Abril 12, 2026 |
 | IntegraVida | feature/hero            | dc48b680b66be028595bdef4daf27bb3aca86b50 | Done the component Hero                                  | Done the component Hero already to use                                                                                                                                           | Abril 12, 2026 |
 | IntegraVida | feature/contact         | a330beb680a6ebc9e8a27463225811fc3e4af0db | Finish the contact component & already use to sent mails | I add the component. it's cards and a simple forms to contact with us and y add the fetch using Form Submit to send, I using my personal gmail to receive the mail users sending | Abril 13, 2026 |
-| Integravida | feature/tooggleLanguage | 9fe7cee533381a7edfbd94216b838ebc7efc68f8 | Feature/toggle language                                  | Add the tooggleButtonLanguage and the Page Directory to organize the pages                                                                                                       | Abril 13,2026  |
-|             |                         |                                          |                                                          |                                                                                                                                                                                  |                |
+| Integravida | feature/tooggleLanguage | 9fe7cee533381a7edfbd94216b838ebc7efc68f8 | Feature/toggle language                                  | Add the tooggleButtonLanguage and the Page Directory to organize the pages                                                                                         Abril 22, 2026 |
+| IntegraVida | feature/servicios        | e4faec0224cc0568449160b2ea86379c07fe4c94 | feat: carousel de servicios |                             Make the component servicios
+Abril 23, 2026 |
+| IntegraVida | feature/about-us       | 028db5cf2348fa06e091a2b2ee51536ebc3bf8ba| feat: implementacion de seccion Sobre Nosotros con diseno de tarjetas superpuestas |   Make the component about-us
+Abril 23, 2026 |
+| IntegraVida | feature/testimonials       | 2bfa2fae2524283bb540924a440c0cf2877a4a14| feat: seccion de testimonios completada con diseño de ondas y responsive |   Make the component testimonials
+Abril 23, 2026 |
+| IntegraVida | feature/footer      | 8524ebc7508136c9b56f6e82d7a44bc2c0643c11| feat: footer completado, logo en formato texto e integracion de iconos de redes sociales |   Make the component footer
 
 ### <a name="_toc226040453"></a>5.2.1.5. Execution Evidence for Sprint Review.
 
