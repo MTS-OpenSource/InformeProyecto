@@ -13,13 +13,14 @@ Ingenieria de Software
 
 "Informe de Trabajo Final"
 
-Startup: MTS
+Startup: IntegraVIda
 
-“IntegraVida”
+“GlucoSmart”
 
 U202414054 – Jean Pool Alexander Arias Tasayco
 U202318001 – Abigail Nadhim Raymundo Villarroel 
 U202223405 – Juan Sebastian Estupiñan Olortegui
+U202218387 - Javier Oswaldo Tello Murga
 
 Abril 2026-10
 
@@ -44,7 +45,7 @@ Abril 2026-10
 	  Se identificó una alta fragmentación y deficiencia en la gestión de la información clínica de pacientes diagnosticados con Diabetes Mellitus. Actualmente, el registro de métricas vitales (como los niveles de glucosa y hemoglobina glicosilada - HbA1c) y el control de la medicación se realizan, en su mayoría, de forma manual, aislada o dependiente de la memoria del paciente. Esta situación genera dos problemas críticos:
 		1. **En el paciente:** Una baja adherencia al tratamiento debido a olvidos frecuentes de las dosis, sumado a la incertidumbre y falta de un canal directo para reportar efectos secundarios de los fármacos.
 		2. **En el personal médico:** Pérdida de tiempo valioso durante las consultas al tener que unificar e interpretar historiales desordenados (en papel o Excel). Además, existe una nula capacidad de **farmacovigilancia activa**, lo que impide a los doctores intervenir preventivamente antes de que un paciente sufra una crisis de hipoglucemia severa o daño orgánico.
-
+	
 - ¿Cómo se resolverá?
 	El problema se resolverá mediante el desarrollo y despliegue de IntegraVida una plataforma web B2B2C respaldada por una arquitectura de base de datos relacional robusta. Esta solución centralizará la información y conectará en tiempo real a los pacientes con sus médicos tratantes, resolviendo la problemática a través de tres pilares tecnológicos:
 	
@@ -210,13 +211,9 @@ Contenido
 
 [*5.2.1.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
 
-[5.4. Video About-the-Product. 8](#_toc226040461)
-
 [**CONCLUSIONES **8\*\*\*\*](#_toc226040462)
 
 [Conclusiones y recomendaciones 8](#_toc226040463)
-
-[Video About-the-Team 8](#_toc226040464)
 
 [**BIBLIOGRAFÍA **8\*\*\*\*](#_toc226040465)
 
@@ -251,7 +248,7 @@ Consolidarnos para el año 2030 como la plataforma referente a nivel 
 
 La startup propone una visión centrada en la integración de datos y en la construcción de un ecosistema digital accesible, seguro y escalable. En lugar de limitarse al registro aislado de indicadores de salud, **IntegraVida** busca consolidar información clínica relevante, hábitos del paciente, adherencia al tratamiento, alertas preventivas y comunicación médico-paciente dentro de una misma plataforma. De esta manera, se promueve una atención más precisa, preventiva y conectada con el contexto real del usuario.
 
-Como primer producto, **IntegraVida** desarrolla **GlucoSmart**, una plataforma web que permite monitorear niveles de glucosa, registrar medicamentos, generar recordatorios, visualizar reportes y fortalecer la trazabilidad terapéutica. Esta solución está pensada para atender las necesidades de pacientes con diabetes y de profesionales de salud que requieren información confiable y oportuna para mejorar el seguimiento clínico.
+Como primer producto, desarrolla **GlucoSmart**, una plataforma web que permite monitorear niveles de glucosa, registrar medicamentos, generar recordatorios, visualizar reportes y fortalecer la trazabilidad terapéutica. Esta solución está pensada para atender las necesidades de pacientes con diabetes y de profesionales de salud que requieren información confiable y oportuna para mejorar el seguimiento clínico.
 
 El valor diferencial de la startup radica en combinar tecnología, enfoque centrado en el usuario y principios de software abierto para construir una solución con impacto social. Con ello, **IntegraVida** aspira a contribuir a la modernización del cuidado de la salud, reducir la brecha de tratamiento y mejorar la calidad de vida de las personas que conviven con enfermedades crónicas.
 
@@ -1341,22 +1338,47 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 | Jean Pool Arias  | 14 commits |
 | Abigail Raymundo | 6 commits  |
 
-## <a name="_toc226040457"></a>5.3. Validation Interviews.
-
-### <a name="_toc226040458"></a>5.3.1. Diseño de Entrevistas.
-
-### <a name="_toc226040459"></a>5.3.2. Registro de Entrevistas.
-
-### <a name="_toc226040460"></a>5.3.3. Evaluaciones según heurísticas.
-
-## <a name="_toc226040461"></a>5.4. Video About-the-Product.
-
 # <a name="_toc226040462"></a>Conclusiones
 
 ## <a name="_toc226040463"></a>Conclusiones y recomendaciones
 
-## <a name="_toc226040464"></a>Video About-the-Team
+#### Conclusiones
+
+1. **Validación Temprana mediante Lean UX:** La aplicación del proceso Lean UX, respaldada por entrevistas a pacientes y personal médico, permitió validar que la fragmentación de la información y la falta de seguimiento de la adherencia son problemas críticos. Esta validación orientada al usuario garantizó que la definición del _Product Backlog_ se centrara en funcionalidades de alto valor, como el módulo de farmacovigilancia y el panel de control clínico, evitando el desarrollo de características innecesarias.
+2. **Estandarización de la Arquitectura Frontend:** La configuración del entorno de desarrollo utilizando el marco de trabajo Angular y TypeScript permitió establecer una arquitectura escalable, modular y basada en componentes. La estricta separación de responsabilidades (lógica, estructura y presentación) asegura que el código fuente sea mantenible y esté preparado para la integración de funcionalidades dinámicas en los próximos ciclos de desarrollo.
+3. **Cumplimiento de Objetivos de Despliegue:** La implementación y el despliegue exitoso de la _Landing Page_ estática en GitHub Pages al cierre del Sprint 1 demuestra la viabilidad técnica del equipo para cumplir con los hitos planificados. Este logro evidencia un dominio adecuado de las herramientas de gestión de configuración de software (Git/GitHub) y establece una base sólida para la futura entrega continua del producto web.
+
+#### Recomendaciones
+
+1. **Implementación de la Capa de Servicios (Backend):** Para los siguientes Sprints, se recomienda priorizar el diseño e implementación de la base de datos relacional y el desarrollo de servicios web (API RESTful). Esto es vital para dar vida a las historias de usuario de mayor impacto, permitiendo la persistencia de los registros de glucosa y la emisión automatizada de alertas de hipoglucemia hacia los médicos.
+2. **Priorización de la Seguridad de Datos Clínicos:** Dado que **GlucoSmart** procesará información médica altamente sensible, se recomienda integrar requerimientos no funcionales de seguridad desde el inicio del desarrollo del backend. Esto incluye la encriptación de datos en tránsito y en reposo, autenticación robusta (ej. JSON Web Tokens) y el estricto cumplimiento de la Ley de Protección de Datos Personales vigente en el país.
+3. **Integración de Pruebas Automatizadas:** Se sugiere incorporar la automatización de pruebas (unitarias y de integración) en el flujo de trabajo del repositorio. Considerando que el sistema maneja alertas de riesgo vital para los pacientes, asegurar la calidad del código mediante la integración continua (CI) minimizará la probabilidad de fallos en el entorno de producción al momento de notificar reacciones adversas o crisis glucémicas.
 
 # <a name="_toc226040465"></a>Bibliografía
 
+- Carrillo-Larco, R. M., & Bernabé-Ortiz, A. (2019). Diabetes mellitus tipo 2 en Perú: Una revisión sistemática sobre la prevalencia e incidencia en población general. Revista Peruana de Medicina Experimental y Salud Pública. [https://doi.org/10.17843/rpmesp.2019.361.4027](https://doi.org/10.17843/rpmesp.2019.361.4027)
+
+- Lozano Ortiz, M., & Salazar González, B. C. (2007). Estrés percibido y adaptación en pacientes con diabetes mellitus tipo 2. [](http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1657-59972007000100007) [http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1657-59972007000100007](http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1657-59972007000100007)
+
+- Mishra, L. N. (2024, 5 de agosto). Functional Requirements Analysis – Benefits, Steps and Challenges. Adaptive US. Recuperado el 14 de septiembre de 2025. [https://www.adaptiveus-com.translate.goog/blog/functional-requirements-analysis/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc](https://www.adaptiveus-com.translate.goog/blog/functional-requirements-analysis/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc)
+
+- Domínguez Reyes, M. Y., & Viamonte Pérez, Y. (2014). Ansiedad, depresión y vulnerabilidad al estrés ante el diagnóstico reciente de diabetes mellitus tipo 2. Gaceta Médica Espirituana. [http://scielo.sld.cu/scielo.php?pid=s1608-89212014000300009&script=sci_arttext&tlng=en](http://scielo.sld.cu/scielo.php?pid=s1608-89212014000300009&script=sci_arttext&tlng=en)
+
+- Organización Mundial de la Salud. (2024, 14 de noviembre). Diabetes. [https://www.who.int/news-room/fact-sheets/detail/diabetes](https://www.who.int/news-room/fact-sheets/detail/diabetes?utm_source=chatgpt.com) [Organización Mundial de la Salud](https://www.who.int/news-room/fact-sheets/detail/diabetes)
+
+- GBD 2021 Diabetes Collaborators. (2023). Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: A systematic analysis for the Global Burden of Disease Study 2021. The Lancet, 402(10397), 203–234. [Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: a systematic analysis for the Global Burden of Disease Study 2021 - The Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736\(23\)01301-6/fulltext)
+
+- Yu, X., Wang, Z., Liu, S., & Jung, H. (2025). Technological functionality and system architecture of mobile health interventions for diabetes management: A systematic review and meta-analysis of randomized controlled trials. Frontiers in Public Health, 13, 1549568. [](https://doi.org/10.3389/fpubh.2025.1549568)[Frontiers | Technological functionality and system architecture of mobile health interventions for diabetes management: a systematic review and meta-analysis of randomized controlled trials  ](https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1549568/full)
+
+- Organización Panamericana de la Salud. (s. f.). Farmacovigilancia. [https://www.paho.org/es/temas/farmacovigilancia](https://www.paho.org/es/temas/farmacovigilancia?utm_source=chatgpt.com)
+
+- Tang, Z., Zhao, L., Li, J., Yang, Y., Liu, F., Li, H., Yang, Z., Qin, S., & Li, X. (2024). Prognostic effectiveness of interactive vs. non-interactive mobile app interventions in type 2 diabetes: A systematic review and meta-analysis. Archives of Public Health, 82, 221. [](https://doi.org/10.1186/s13690-024-01450-x)[Prognostic effectiveness of interactive vs. non-interactive mobile app interventions in type 2 diabetes: a systematic review and meta-analysis | Archives of Public Health | Full Text](https://archpublichealth.biomedcentral.com/articles/10.1186/s13690-024-01450-x)
+
+- Oracle. (s. f.). What is MySQL? Oracle. Recuperado el 4 de octubre de 2025, de [](https://www.oracle.com/mysql/what-is-mysql/?utm_source=chatgpt.com)[https://www.oracle.com/mysql/what-is-mysql/](https://www.oracle.com/mysql/what-is-mysql/)
+
+- Amazon Web Services. (2024). Amazon DynamoDB documentation. [https://docs.aws.amazon.com/dynamodb/](https://docs.aws.amazon.com/dynamodb/)
 # <a name="_toc226040466"></a>Anexos
+
+Anexo 1: [LandignPage Desplegada](https://mts-opensource.github.io/IntegraVida/)
+Anexo 2: [Mockups - Wireframe](https://www.figma.com/design/lu1p4NLglhTYnbHWT8lDl4/GlucoSmart-Prototype?node-id=0-1&t=LGg8wMfqWMWoYlOB-1)
+Anexo 3: [Impact Mapping](https://miro.com/app/board/uXjVHdifA00=/?share_link_id=602434447345)
