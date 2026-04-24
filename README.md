@@ -1269,12 +1269,60 @@ El prototipo permite representar el flujo completo de uso diario del paciente, a
 
 ### <a name="_toc226040434"></a>4.6.2. Software Architecture Context Diagram.
 
-<img width="2380" height="1250" alt="image" src="https://github.com/user-attachments/assets/0e2c75c2-cfde-4635-b8d6-5415886566ad" />
+El diagrama de contexto representa la interacción entre el sistema GlucoSmart y los actores externos que forman parte del ecosistema de salud.
+
+En este caso, se identifican dos segmentos principales:
+
+- Pacientes con diabetes mellitus tipo 1 y tipo 2, quienes utilizan la aplicación para registrar sus niveles de glucosa, consultar su historial de salud y recibir alertas preventivas.
+- Profesionales de salud (médicos especialistas y personal de salud), quienes acceden al sistema para monitorear la evolución clínica del paciente y apoyar su seguimiento.
+
+Adicionalmente, el sistema se integra con un servicio externo de notificaciones encargado de enviar alertas y recordatorios relevantes.
+
+Este diagrama permite visualizar el alcance del sistema y su relación con los actores principales, proporcionando una visión general de su funcionamiento dentro del ecosistema.
+
+
+<img width="1799" height="935" alt="image" src="https://github.com/user-attachments/assets/35d8217e-b9db-44d9-8ec1-e40f868a208a" />
+
 
 
 ### <a name="_toc226040435"></a>4.6.3. Software Architecture Container Diagrams.
 
+El diagrama de contenedores describe la arquitectura interna del sistema GlucoSmart, mostrando los principales componentes tecnológicos y su interacción.
+
+El sistema se compone de los siguientes contenedores:
+
+- Web Application: Interfaz desarrollada en Angular que permite la interacción de pacientes y profesionales de salud con el sistema.
+- RESTful API: Backend desarrollado en Spring Boot encargado de procesar la lógica de negocio, gestionar datos clínicos, autenticación y generación de alertas.
+- Database: Base de datos relacional donde se almacenan los registros de glucosa, historial clínico, perfiles de usuario y alertas.
+- Notification Service: Servicio externo encargado del envío de alertas y recordatorios al usuario.
+
+La comunicación entre estos contenedores se realiza mediante solicitudes HTTP/REST, garantizando una arquitectura desacoplada, escalable y mantenible.
+
+Este nivel permite comprender cómo se estructura técnicamente el sistema y cómo fluye la información entre sus componentes principales.
+
+<img width="1800" height="701" alt="image" src="https://github.com/user-attachments/assets/5cc88130-74c5-4c0e-aec4-422decaec86c" />
+
+
 ### <a name="_toc226040436"></a>4.6.4. Software Architecture Components Diagrams.
+
+El diagrama de componentes presenta una vista detallada del backend del sistema GlucoSmart, específicamente de la API REST, descomponiéndola en sus principales módulos internos.
+
+La arquitectura sigue un enfoque en capas, organizada de la siguiente manera:
+
+- Controllers: Encargados de gestionar las solicitudes HTTP provenientes del frontend, como autenticación, registro de glucosa, consulta de historial y alertas.
+- Services: Contienen la lógica de negocio del sistema, incluyendo la validación de datos, procesamiento de información clínica y generación de alertas preventivas.
+- Repositories: Responsables del acceso a la base de datos, permitiendo almacenar y recuperar información de usuarios, pacientes, registros de glucosa e historial clínico.
+
+Adicionalmente, se incluye un componente orientado a profesionales de salud, el cual permite consultar la información clínica del paciente para apoyar la toma de decisiones médicas.
+
+Esta estructura modular permite mantener una separación clara de responsabilidades, facilitando la escalabilidad, mantenibilidad y evolución del sistema.
+
+
+
+<img width="1527" height="1090" alt="image" src="https://github.com/user-attachments/assets/1fe09ded-f9b0-4d9c-8b59-b5a514c7d14a" />
+
+
+
 
 ## <a name="_toc226040437"></a>4.7. Software Object-Oriented Design.
 
