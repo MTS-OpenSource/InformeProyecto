@@ -35,6 +35,7 @@ Abril 2026-10
 |   0.5   | 19/04 | Abigail Raymundo |  Creación de wireframes para definir la estructura de contenidos y la elaboración de mockups de alta fidelidad en Figma.   |
 |   0.6   | 21/04 | Jean Arias |   Implementación del Sprint 1, Configuración de Software y Despliegue (Capítulo V).    |
 |   0.7   | 21/04 | Abigail Raymundo |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.    |
+|   0.8   | 21/04 | Javier Tello | Desarrollo del lenguaje ubicuo del dominio, estimación y priorización del Product Backlog, diagramas de clases y diagrama entidad-relación del sistema GlucoSmart.  |
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
