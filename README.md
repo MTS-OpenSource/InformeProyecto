@@ -1272,20 +1272,25 @@ Este flujo permite garantizar una experiencia centrada en el monitoreo continuo 
 
 ## <a name="_toc226040431"></a>4.5. Web Applications Prototyping.
 
-Se desarrolló un prototipo interactivo de la aplicación GlucoSmart utilizando la herramienta Figma, con el objetivo de simular la navegación entre las principales funcionalidades del sistema.
+Se desarrolló un prototipo interactivo de la aplicación GlucoSmart utilizando la herramienta Figma, con el objetivo de simular la navegación y la interacción real del usuario dentro del sistema antes de su implementación.
 
-El prototipo está enfocado en el segmento objetivo principal: pacientes con diabetes, permitiendo validar la experiencia de usuario en el proceso de monitoreo de su salud.
+El prototipo considera como segmento objetivo principal a pacientes con diabetes mellitus tipo 1 y tipo 2, quienes representan el usuario con mayor nivel de interacción dentro de la plataforma. Asimismo, se contempla de manera secundaria la participación de profesionales de salud en el proceso de monitoreo y seguimiento clínico.
 
-Las principales interacciones implementadas son:
+Las principales interacciones implementadas incluyen:
 
 - Inicio de sesión y acceso al dashboard del paciente
 - Navegación desde el dashboard hacia el registro de glucosa
-- Visualización del historial de salud
-- Acceso a alertas y notificaciones
+- Registro y almacenamiento de niveles de glucosa
+- Visualización del historial de salud y evolución del paciente
+- Acceso a alertas y notificaciones generadas por el sistema
 - Consulta y edición del perfil del paciente
-- Retorno al dashboard desde cada funcionalidad
+- Retorno al dashboard desde las distintas funcionalidades
 
-El prototipo permite representar el flujo completo de uso diario del paciente, asegurando una navegación intuitiva y coherente con los objetivos del sistema.
+El prototipo fue construido a partir de los diagramas de Wireflow y User Flow, permitiendo mantener coherencia con la arquitectura de navegación definida previamente.
+
+Asimismo, se implementaron enlaces interactivos entre pantallas en Figma, simulando el comportamiento real de la aplicación mediante acciones de usuario, lo que permitió validar la usabilidad, identificar mejoras en la experiencia de usuario y reducir riesgos antes de la fase de desarrollo.
+
+El prototipo representa el flujo completo de uso diario del paciente, asegurando una navegación intuitiva, eficiente y alineada con los objetivos del sistema.
 
 #### Prototipo de la aplicación
 
@@ -1307,28 +1312,36 @@ El prototipo permite representar el flujo completo de uso diario del paciente, a
 
 ### <a name="_toc226040433"></a>4.6.1. Design-Level Event Storming.
 
-Se realizó un Event Storming a nivel de diseño con el objetivo de identificar los principales eventos del dominio en el sistema GlucoSmart.
+Se aplicó la técnica de Event Storming a nivel de diseño con el objetivo de identificar y modelar los principales eventos del dominio en la aplicación GlucoSmart, orientada al monitoreo de pacientes con diabetes mellitus tipo 1 y tipo 2, así como al apoyo de profesionales de salud en su seguimiento clínico.
 
-El análisis se centró en el flujo de monitoreo de pacientes con diabetes mellitus tipo 1 y tipo 2, considerando también la interacción con profesionales de salud.
+El proceso permitió comprender el comportamiento del sistema desde la perspectiva del negocio, identificando las acciones del usuario (comandos), los resultados generados por el sistema (eventos) y las reglas que gobiernan estos procesos (políticas).
 
-Se identificaron los siguientes eventos principales:
+Para facilitar el análisis, el dominio fue dividido en los siguientes módulos o *bounded contexts*:
 
-- Usuario inicia sesión
-- Usuario registra nivel de glucosa
-- Sistema valida el registro de glucosa
-- Registro de glucosa almacenado
-- Sistema evalúa el estado del paciente
-- Alerta generada (en caso de valores críticos)
-- Usuario visualiza alerta
-- Historial de salud actualizado
-- Profesional de salud consulta información del paciente
-- Profesional de salud analiza evolución clínica
+- Account Management
+- Patient Profile Management
+- Glucose Monitoring
+- Alerts & Pharmacovigilance
+- Medical Follow-up
+- Appointment Management
 
-Estos eventos permiten modelar el comportamiento del sistema desde una perspectiva orientada al dominio, facilitando la identificación de procesos clave y puntos de decisión dentro de la aplicación.
+Dentro de cada contexto se definieron entidades centrales, como *User*, *Patient*, *Glucose Record*, *Alert*, *Clinical Record* y *Appointment*, alrededor de las cuales se organizaron los comandos y eventos asociados.
 
-El Event Storming permitió comprender la lógica del negocio y establecer una base sólida para el diseño de la arquitectura del sistema.
+Entre los eventos más relevantes identificados se encuentran:
 
-<img width="8192" height="575" alt="image" src="https://github.com/user-attachments/assets/026d2231-cc02-4cf5-8b81-33ec401f4aa8" />
+- Glucose recorded
+- History updated
+- Alert generated
+- Adverse effect reported
+- Treatment updated
+- Appointment scheduled
+
+Asimismo, se identificaron políticas clave del sistema, como la evaluación automática de los niveles de glucosa y la generación de alertas cuando los valores se encuentran fuera de rango, lo que constituye una funcionalidad crítica del sistema.
+
+El Event Storming permitió estructurar la lógica del dominio antes del diseño técnico, sirviendo como base para la definición de la arquitectura del sistema mediante el modelo C4.
+
+<img width="1330" height="860" alt="image" src="https://github.com/user-attachments/assets/78a7e57e-e6ae-40bc-9561-d1c62d2580a3" />
+
 
 
 ### <a name="_toc226040434"></a>4.6.2. Software Architecture Context Diagram.
