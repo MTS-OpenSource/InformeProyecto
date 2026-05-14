@@ -1591,6 +1591,152 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 | Jean Pool Arias  | 14 commits |
 | Abigail Raymundo | 11 commits  |
 
+### <a name="_toc226040448"></a>5.3.1. Sprint 2
+
+### <a name="_toc226040449"></a>5.3.1.1. Sprint Planning 2.
+
+| Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **Sprint Planning Background**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
+| Date                             | 04/05/2026                                                                                                                                                                                                                                                                                                                                                                                                                                     |     |
+| Time                             | 6:00PM                                                                                                                                                                                                                                                                                                                                                                                                                                         |     |
+| Location                         | Virtual - Discord                                                                                                                                                                                                                                                                                                                                                                                                                              |     |
+| Prepared By                      | Jean Pool Arias                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
+| Attendees (To planning meeting)  | Jean Pool Alexander Arias Tasayco<br>Abigail Nadhim Raymundo Villarroel <br>Juan Sebastian Estupiñan Olortegui<br>Javier Oswaldo Tello Murga<br>Jose Antonio Muñoz Amasifuen                                                                                                                                                                                                                                                                   |     |
+| SprinT N-1 Review Summary        | El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.                                                                                                                                                            |     |
+| SprinT N-1 Retrospective Summary | El equipo identificó como acierto la distribución clara de componentes entre los integrantes. Como oportunidad de mejora se señaló la necesidad de establecer convenciones de commits desde el inicio y mejorar la sincronización de ramas para evitar conflictos en Git. Para este Sprint se acordó usar prefijos feat/fix/chore en todos los commits.                                                                                        |     |
+| **Sprint Goal & User Stories**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
+| Sprint N Goal                    | Our focus is on delivering the core functional views of the GlucoSmart web application connected to a fake REST API. We believe it delivers a navigable and data-driven experience to patients managing their diabetes. This will be confirmed when patients can log in, register glucose readings, view their health history with charts, manage alerts and consult their profile — all consuming data from json-server via Angular services. |     |
+| Sprint N Velocity                | 45                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
+| Sum of Story Points              | 43                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
+
+### <a name="_toc226040450"></a>5.3.1.2. Aspect Leaders and Collaborators.
+En este Sprint los aspectos principales son: Authentication (login/register), Dashboard, Glucose Management, Health History, Alerts & Notifications y Patient Profile. Cada aspecto agrupa vistas y servicios relacionados.
+
+| Team Member      | GitHub Username | Login service | Glucose Lecture | Dashboard Service | Deploy | Design |
+| :--------------- | :-------------- | :------------ | :-------------- | :---------------- | :----- | ------ |
+| Jean Arias       | Jean-AT         | L             | L               | L                 | L      | C      |
+| Abigail Raymundo | AbigailRv       | C             | C               | C                 | C      | L      |
+| Juan Sebastian   |                 | C             | C               | C                 | C      | L      |
+| Javier Oswaldo   |                 | C             | C               | C                 | C      | C      |
+| Jose Antonio     |                 | C             | C               | C                 | C      | C      |
+
+### <a name="_toc226040451"></a>5.3.1.3. Sprint Backlog 2.
+El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.
+
+|Sprint#|Sprint 2|||||||
+|---|---|---|---|---|---|---|---|
+|**User Story**||**Work-Item/Task**||||||
+|**Id**|**Title**|**Id**|**Title**|**Description**|**Estimation**|**Assigned To**|**Status**|
+|US-04|Log in|T01|Crear LoginComponent|Implementar formulario de login con email/password, toggle show/hide password y botones Google/LinkedIn|3|Abigail|To-Do|
+|US-02|Registro de paciente|T02|Crear RegisterComponent|Implementar formulario de registro con tabs Login/Sign Up y validaciones reactivas|3|Abigail|To-Do|
+|US-06|Cerrar sesión|T03|Implementar logout en Sidebar|Agregar botón Sign Out en sidebar, limpiar localStorage y redirigir al login|1|Abigail|To-Do|
+|US-55|Visualizar resumen general|T04|Crear DashboardComponent|Implementar Health Summary con cards de Current Glucose, Treatment Status, Readings Today y HbA1c|5|Abigail|To-Do|
+|US-37|Gráficos de glucosa|T05|Implementar Glucose Trends chart|Integrar librería de gráficos con línea Actual vs Target de los últimos 7 días|5|Abigail|To-Do|
+|US-17|Visualizar tratamiento actual|T06|Crear Upcoming Doses widget|Implementar lista de medicamentos del día con estados Done/Next/Later en el dashboard|3|Abigail|To-Do|
+|US-41|Alertas en dashboard|T07|Crear Recent Alerts widget|Implementar sección Recent Alerts con badges High/Missed/Info en el dashboard|3|Abigail|To-Do|
+|US-11|Consultar perfil del paciente|T08|Crear PatientProfileComponent|Implementar vista de perfil con secciones: info médica, contacto y configuración|3|Abigail|To-Do|
+|US-08|Editar perfil de paciente|T09|Implementar edición de perfil|Habilitar botón Editar en secciones de info médica y contacto, con botón Guardar cambios|3|Abigail|To-Do|
+|US-12|Registrar nivel de glucosa|T10|Crear GlucoseLogComponent|Implementar formulario Nueva Lectura con valor mg/dL, fecha, hora, estado del paciente y comentarios|3|943775190|To-Do|
+|US-16|Alerta por glucosa fuera de rango|T11|Implementar lógica de color por rango|Mostrar badge Normal/Alto/Bajo según valor ingresado con colores semánticos en tiempo real|2|943775190|To-Do|
+|US-13|Visualizar historial de glucosa|T12|Crear HealthHistoryComponent|Implementar tabla de registros con columnas Fecha, Hora, Glucosa, Estado y paginación|3|943775190|To-Do|
+|US-38|Filtrar historial por fechas|T13|Implementar filtros en historial|Agregar filtros Desde/Hasta con accesos rápidos: Última semana, Último mes, 3 meses, 6 meses|3|943775190|To-Do|
+|US-37|Evolución de glucosa en historial|T14|Implementar gráfico en historial|Integrar gráfico de línea con límite superior e inferior, estadísticas TIR, hiper, hipo y CV|3|943775190|To-Do|
+|US-39|Editar registro de glucosa|T15|Implementar edición en tabla historial|Agregar botón editar en tabla, abrir modal con datos pre-cargados|2|943775190|To-Do|
+|US-40|Eliminar registro de glucosa|T16|Implementar eliminación en tabla|Agregar botón eliminar con confirmación modal en tabla del historial|1|943775190|To-Do|
+|US-41|Visualizar alertas y notificaciones|T17|Crear AlertsComponent|Implementar página de alertas con tabs Todas/Activas/Resueltas y lista con severidad|3|943775190|To-Do|
+|US-43|Marcar alerta como leída|T18|Implementar "Marcar como visto"|Agregar botón por alerta y botón global "Marcar todas como vistas"|2|943775190|To-Do|
+|US-42|Configurar rango de glucosa|T19|Implementar panel Configuración de Alertas|Agregar toggles para alertas de glucosa alta/baja y recordatorios en sidebar de alertas|2|943775190|To-Do|
+||Poblar base de datos|T20|~~Crear y poblar db.json~~|~~Estructurar db.json con datos fake para: users, patients, glucose_records, medications, medication_intakes, alerts, glucose_ranges~~|3| Jean Arias |**Done**|
+|US-04|Log in|T21|Crear AuthService - login()|GET /users, validar email+password, guardar sesión en localStorage|3|Jean Arias |Done|
+|US-06|Cerrar sesión|T22|Implementar logout() + AuthGuard|Limpiar localStorage, redirigir al login e implementar guard en rutas protegidas|1|Jean Arias |Done|
+|US-55|Dashboard data|T23|Crear DashboardService|Agregar llamadas a glucose_records, medications y alerts para armar resumen del dashboard|5|Jean Arias |Done|
+|US-13|Historial de glucosa|T24|Crear GlucoseService - GET|Método getReadings(patientId) GET /glucose_records?patientId=, ordenar por fecha desc|3|Jean Arias |Done|
+|US-16|Generar alerta automática|T25|Lógica de alerta en GlucoseService|Al guardar lectura evaluar vs glucose_ranges y hacer POST /alerts si está fuera de rango|3|Jean Arias |Done|
+|US-42|Rangos de glucosa|T26|AlertService - rangos|Métodos GET y PUT /glucose_ranges?patientId= para leer y guardar configuración|2|Jean Arias |Done|
+|US-02|Registro de paciente|T27|Implementar register() en AuthService|POST /users, verificar email duplicado antes de registrar|3|Josue|To-Do|
+|US-12|Registrar glucosa|T28|GlucoseService - POST|Método saveReading() POST /glucose_records con validación de rango incluida|3|Josue|To-Do|
+|US-39|Editar glucosa|T29|GlucoseService - PUT|Método updateReading() PUT /glucose_records/:id con validaciones|2|Josue|To-Do|
+|US-40|Eliminar glucosa|T30|GlucoseService - DELETE|Método deleteReading() DELETE /glucose_records/:id|1|Josue|To-Do|
+|US-19|Registrar toma de medicación|T31|MedicationService - logIntake()|POST /medication_intakes para confirmar toma de medicamento|2|Josue|To-Do|
+|US-38|Filtrar historial|T32|GlucoseService - filtros|Método getReadingsByDateRange(from, to) usando query params en json-server|2|935598887|To-Do|
+|US-41|Alertas|T33|Crear AlertService - GET|getAlerts(patientId) GET /alerts?patientId=, filtrar por status activo/resuelto|3|935598887|To-Do|
+|US-43|Marcar alerta leída|T34|AlertService - markAsRead()|PATCH /alerts/:id con { read: true, status: 'resolved' }|2|935598887|To-Do|
+|US-17|Medicación actual|T35|Crear MedicationService - GET|getMedications(patientId) GET /medications?patientId= filtrando activos|3|935598887|To-Do|
+|US-11|Perfil paciente|T36|Crear PatientService - GET|getProfile(patientId) GET /patients/:id con todos los datos clínicos|2|935598887|To-Do|
+|US-08|Editar perfil|T37|PatientService - updateProfile()|PUT /patients/:id para actualizar datos personales, médicos y configuración|3|935598887|To-Do|
+### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
+
+| Repository                   | Branch                       | Commit Id                                | Commit Message                                                                           | Commit Message Body                                                                      | Committed on  |
+| :--------------------------- | :--------------------------- | :--------------------------------------- | :--------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- | :------------ |
+| Integravida-FrontendServices | main                         | f24b0d08ac2c3ce093814aaf0e2c87fd417e4da6 | Initial commit                                                                           | Initial Proyect & fake db added                                                          | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/loginService-US04    | 24a5e388b70a82b858878f5b274cbfca2d4ddbb7 | feat: Add Log UserApi & signIn()                                                         | feat: Add Log UserApi & signIn()                                                         | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/logOutService-US06   | e95291ab00b14a624dc027d24d8bda8a1c0408bf | feat: Implement AuthStore & signOut Service                                              | feat: Implement AuthStore & signOut Service                                              | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/logOutService-US06   | d32b6a6882c4b89dd12b369fcc0d234e5a5609fd | feat: Change the ApiURL & delete FakedbData                                              | feat: Change the ApiURL & delete FakedbData                                              | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/dashboardData-US55   | 81b1b2f5894fcfcb3355bd0a7535068ddbe1f8af | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/GlucoseReadings-US13 | 5204d51062bd47f8cfd1fdf6ea024608261845fa | feat: Implement glucoseReadings and testing in the dashboard test                        | feat: Implement glucoseReadings and testing in the dashboard test                        | Mayo 14, 2026 |
+| Integravida-FrontendServices | development                  | 8d1abf1ccf5c433cf046ae26991f139117bdc32b | hotfix: explain needs code to run the fake data                                          | hotfix: explain needs code to run the fake data                                          | Mayo 14, 2026 |
+| Integravida-FrontendServices | development                  | 095b016d4b13ad98d4c2a4736a63b84c8f3c8606 | Merge pull request #1 from MTS-OpenSource/feature/loginService-US04                      | feat: Add Log UserApi & signIn()                                                         | Mayo 14, 2026 |
+| Integravida-FrontendServices | development                  | ad206c1756829f2e5c79e0435af9056443e821c3 | Merge pull request #2 from MTS-OpenSource/feature/logOutService-US06                     | Feature/log out service us06                                                             | Mayo 14, 2026 |
+| Integravida-FrontendServices | development                  | fba16e93fbc4404a00fb00f8d047898f879dd7d1 | Merge pull request #3 from MTS-OpenSource/feature/dashboardData-US55                     | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
+| Integravida-FrontendServices | development                  | 724b4215209f89c4c3864df985ad139a28717404 | Merge pull request #5 from MTS-OpenSource/feature/GlucoseReadings-US13                   | feat: Implement glucoseReadings and testing in the dashboard test                        | Mayo 14, 2026 |
+
+### <a name="_toc226040453"></a>5.3.1.5. Execution Evidence for Sprint Review.
+_(Completar con screenshots y video al finalizar el Sprint)_
+
+En este Sprint se implementaron las principales vistas funcionales de la Web Application de GlucoSmart. Las secciones desarrolladas incluyen:
+
+- **Login / Register** — autenticación con validaciones y toggle de contraseña
+- **Dashboard** — resumen de salud con gráfico de tendencias y medicamentos del día
+- **Registro de Glucosa** — formulario con clasificación en tiempo real Normal/Alto/Bajo
+- **Historial de Salud** — tabla paginada con filtros de fecha y gráfico de evolución
+- **Alertas y Notificaciones** — gestión de alertas activas y resueltas con configuración de rangos
+- **Perfil del Paciente** — datos clínicos, contacto y configuración editable
+
+Video de demostración: _(agregar enlace aquí)_
+### <a name="_toc226040454"></a>5.3.1.6. Services Documentation Evidence for Sprint Review.
+
+### Services Documentation Evidence for Sprint Review
+
+Todos los endpoints se consumen mediante json-server corriendo en `https://integravida-data.onrender.com`.
+
+| Endpoint             | Verbo HTTP | Descripción                    | Parámetros                                    | Assigned Service  |
+| -------------------- | ---------- | ------------------------------ | --------------------------------------------- | ----------------- |
+| /users               | GET        | Obtener usuarios para login    | email, password (query)                       | AuthService       |
+| /users               | POST       | Registrar nuevo usuario        | body: { email, password, role }               | AuthService       |
+| /patients/:id        | GET        | Obtener perfil del paciente    | id (path)                                     | PatientService    |
+| /patients/:id        | PUT        | Actualizar perfil del paciente | id (path), body completo                      | PatientService    |
+| /glucose_records     | GET        | Obtener lecturas de glucosa    | patientId (query)                             | GlucoseService    |
+| /glucose_records     | POST       | Guardar nueva lectura          | body: { patientId, value, date, time, state } | GlucoseService    |
+| /glucose_records/:id | PUT        | Editar lectura existente       | id (path), body actualizado                   | GlucoseService    |
+| /glucose_records/:id | DELETE     | Eliminar lectura               | id (path)                                     | GlucoseService    |
+| /alerts              | GET        | Obtener alertas del paciente   | patientId (query)                             | AlertService      |
+| /alerts              | POST       | Crear alerta automática        | body: { patientId, type, value }              | AlertService      |
+| /alerts/:id          | PATCH      | Marcar alerta como leída       | id (path), body: { read: true }               | AlertService      |
+| /glucose_ranges      | GET        | Obtener rangos configurados    | patientId (query)                             | AlertService      |
+| /glucose_ranges/:id  | PUT        | Actualizar rangos de glucosa   | id (path), body: { min, max }                 | AlertService      |
+| /medications         | GET        | Obtener medicamentos activos   | patientId (query)                             | MedicationService |
+| /medication_intakes  | POST       | Registrar toma de medicamento  | body: { medicationId, patientId, takenAt }    | MedicationService |
+
+### <a name="_toc226040455"></a>5.3.1.7. Software Deployment Evidence for Sprint Review.
+
+Para este Sprint el despliegue contempla:
+
+1. Ejecutar la Web Application con `npm start` en `http://localhost:4200`
+2. _(Sprint siguiente)_ Despliegue en plataforma cloud — Firebase Hosting y el DB JSON con  Render.com
+
+### <a name="_toc226040456"></a>5.3.1.8. Team Collaboration Insights during Sprint.
+
+Durante este Sprint la tareas fueron distribuidas equitativamente entre los dos integrantes del equipo de desarollo Jean Pool Arias lidero la estructura vase del proyecto, el navbar, el contact y el language service. Abigail Raymundo liero el hero, el about, los testimonio y los servicio 
+
+| Team Member      | Commits    |
+| ---------------- | ---------- |
+| Jean Pool Arias  | 11 commits |
+| Abigail Raymundo |            |
+| Juan Sebastian   |            |
+| Javier Oswaldo   |            |
+| Jose Antonio     |            |
+
 # <a name="_toc226040462"></a>Conclusiones
 
 ## <a name="_toc226040463"></a>Conclusiones y recomendaciones
@@ -1635,3 +1781,4 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 Anexo 1: [LandignPage Desplegada](https://mts-opensource.github.io/IntegraVida/)
 Anexo 2: [Mockups - Wireframe](https://www.figma.com/design/lu1p4NLglhTYnbHWT8lDl4/GlucoSmart-Prototype?node-id=0-1&t=LGg8wMfqWMWoYlOB-1)
 Anexo 3: [Impact Mapping](https://miro.com/app/board/uXjVHdifA00=/?share_link_id=602434447345)
+Anexo 4:
