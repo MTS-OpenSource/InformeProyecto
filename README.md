@@ -17,13 +17,16 @@ Startup: IntegraVIda
 
 “GlucoSmart”
 
-U202414054 – Jean Pool Alexander Arias Tasayco
-U202318001 – Abigail Nadhim Raymundo Villarroel 
-U202223405 – Juan Sebastian Estupiñan Olortegui
-U202218387 - Javier Oswaldo Tello Murga
-U20231D385 - Jose Antonio Muñoz Amasifuen
+| Código | Integrante |
+| :---: | --- |
+| U202414054 | Jean Pool Alexander Arias Tasayco |
+| U202318001 | Abigail Nadhim Raymundo Villarroel |
+| U202223405 | Juan Sebastian Estupiñan Olortegui |
+| U202218387 | Javier Oswaldo Tello Murga |
+| U20231D385 | Jose Antonio Muñoz Amasifuen |
 
 Abril 2026-10
+
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
 
