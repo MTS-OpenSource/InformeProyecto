@@ -1530,30 +1530,16 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 | Sprint N Velocity | 20 |
 | Sum of Story Points | 20 |
 
-### <a name="_toc226040449"></a>5.2.2.1. Sprint Planning 2.
-
-| Sprint # | Sprint 2 |
-| :--- | :--- |
-| Sprint Planning Background |  |
-| Date | 10/05/2026 |
-| Time | 7:00 PM |
-| Location | Virtual - Discord |
-| Prepared By | Jean Pool Arias |
-| Attendees (To planning meeting) | Jean Pool Arias, Abigail Raymundo, Javier Tello, Jose Muñoz, Juan Estupiñan |
-| Sprint N-1 Review Summary | Durante el Sprint 1, el equipo desarrolló y desplegó exitosamente la primera versión de la Landing Page de IntegraVida utilizando Angular y Firebase Hosting. Este Sprint permitió validar la identidad visual, el diseño responsive y la configuración inicial del entorno de desarrollo del proyecto. |
-| Sprint N-1 Retrospective Summary | El equipo identificó la necesidad de mejorar la integración colaborativa, la organización de ramas en Git y la escalabilidad del frontend. A partir de ello, se decidió adoptar una arquitectura modular basada en Bounded Contexts y una organización por capas para facilitar el desarrollo colaborativo durante el Sprint 2. |
-| Sprint Goal & User Stories |  |
-| Sprint N Goal | El enfoque principal del Sprint 2 fue implementar la primera versión funcional de la Frontend Web Application de IntegraVida. Durante este Sprint participaron todos los integrantes del equipo, distribuyendo el desarrollo en distintos Bounded Contexts como Authentication, Patient Profile Management, Medical Follow-up y Appointment Management. Asimismo, se organizó la arquitectura frontend siguiendo principios de Domain-Driven Design y una estructura por capas utilizando domain, application, infrastructure y presentation, permitiendo una mejor modularidad, escalabilidad e integración colaborativa entre funcionalidades. El Sprint se considerará exitoso cuando la aplicación frontend se encuentre desplegada y accesible mediante Firebase Hosting con los principales módulos funcionales integrados a servicios REST. |
-| Sprint N Velocity | 18 |
-| Sum of Story Points | 18 |
 
 
-### <a name="_toc226040450"></a>5.2.1.2. Aspect Leaders and Collaborators.
+### <a name="_toc226040451"></a>5.2.1.2. Aspect Leaders and Collaborators.
 
-| Team Member      | GitHub Username | Landing Page Structure | Navbar & Footer | Hero & Service | About & Testiomonials | Contact Section |
-| :--------------- | :-------------- | :--------------------- | :-------------- | :------------- | :-------------------- | --------------- |
-| Jean, Arias      | Jean-AT         | L                      | L               | L              | C                     | C               |
-| Abigail Raymundo | AbigailRv       | C                      | C               | L              | L                     | L               |
+| Team Member | GitHub Username | Landing Page Structure | Navbar & Footer | Hero & Services | About & Testimonials | Contact Section | Firebase Deployment |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Jean Pool Arias | Jean-AT | L | L | C | C | C | L |
+| Abigail Raymundo | AbigailRv | C | C | L | L | L | C |
+
+
 
 ### <a name="_toc226040451"></a>5.2.1.3. Sprint Backlog 1.
 
@@ -1657,9 +1643,9 @@ En este Sprint los aspectos principales son: Authentication (login/register), Da
 | :--------------- | :-------------- | :------------ | :-------------- | :---------------- | :----- | ------ |
 | Jean Arias       | Jean-AT         | L             | L               | L                 | L      | C      |
 | Abigail Raymundo | AbigailRv       | C             | C               | C                 | C      | L      |
-| Juan Sebastian   |                 | C             | C               | C                 | C      | L      |
-| Javier Oswaldo   |                 | C             | C               | C                 | C      | C      |
-| Jose Antonio     |                 | C             | C               | C                 | C      | C      |
+| Juan Sebastian   | JuanSEstupinan  | C             | C               | C                 | C      | L      |
+| Javier Oswaldo   | JavierTello20   | C             | C               | C                 | C      | C      |
+| Jose Antonio     | joseam05        | C             | C               | C                 | C      | C      |
 
 ### <a name="_toc226040451"></a>5.3.1.3. Sprint Backlog 2.
 El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.
@@ -1705,22 +1691,28 @@ El objetivo principal de este Sprint es implementar las vistas funcionales de la
 |US-17|Medicación actual|T35|Crear MedicationService - GET|getMedications(patientId) GET /medications?patientId= filtrando activos|3|935598887|To-Do|
 |US-11|Perfil paciente|T36|Crear PatientService - GET|getProfile(patientId) GET /patients/:id con todos los datos clínicos|2|935598887|To-Do|
 |US-08|Editar perfil|T37|PatientService - updateProfile()|PUT /patients/:id para actualizar datos personales, médicos y configuración|3|935598887|To-Do|
+
 ### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
 
-| Repository                   | Branch                       | Commit Id                                | Commit Message                                                                           | Commit Message Body                                                                      | Committed on  |
-| :--------------------------- | :--------------------------- | :--------------------------------------- | :--------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------- | :------------ |
-| Integravida-FrontendServices | main                         | f24b0d08ac2c3ce093814aaf0e2c87fd417e4da6 | Initial commit                                                                           | Initial Proyect & fake db added                                                          | Mayo 14, 2026 |
-| Integravida-FrontendServices | feature/loginService-US04    | 24a5e388b70a82b858878f5b274cbfca2d4ddbb7 | feat: Add Log UserApi & signIn()                                                         | feat: Add Log UserApi & signIn()                                                         | Mayo 14, 2026 |
-| Integravida-FrontendServices | feature/logOutService-US06   | e95291ab00b14a624dc027d24d8bda8a1c0408bf | feat: Implement AuthStore & signOut Service                                              | feat: Implement AuthStore & signOut Service                                              | Mayo 14, 2026 |
-| Integravida-FrontendServices | feature/logOutService-US06   | d32b6a6882c4b89dd12b369fcc0d234e5a5609fd | feat: Change the ApiURL & delete FakedbData                                              | feat: Change the ApiURL & delete FakedbData                                              | Mayo 14, 2026 |
-| Integravida-FrontendServices | feature/dashboardData-US55   | 81b1b2f5894fcfcb3355bd0a7535068ddbe1f8af | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
-| Integravida-FrontendServices | feature/GlucoseReadings-US13 | 5204d51062bd47f8cfd1fdf6ea024608261845fa | feat: Implement glucoseReadings and testing in the dashboard test                        | feat: Implement glucoseReadings and testing in the dashboard test                        | Mayo 14, 2026 |
-| Integravida-FrontendServices | development                  | 8d1abf1ccf5c433cf046ae26991f139117bdc32b | hotfix: explain needs code to run the fake data                                          | hotfix: explain needs code to run the fake data                                          | Mayo 14, 2026 |
-| Integravida-FrontendServices | development                  | 095b016d4b13ad98d4c2a4736a63b84c8f3c8606 | Merge pull request #1 from MTS-OpenSource/feature/loginService-US04                      | feat: Add Log UserApi & signIn()                                                         | Mayo 14, 2026 |
-| Integravida-FrontendServices | development                  | ad206c1756829f2e5c79e0435af9056443e821c3 | Merge pull request #2 from MTS-OpenSource/feature/logOutService-US06                     | Feature/log out service us06                                                             | Mayo 14, 2026 |
-| Integravida-FrontendServices | development                  | fba16e93fbc4404a00fb00f8d047898f879dd7d1 | Merge pull request #3 from MTS-OpenSource/feature/dashboardData-US55                     | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
-| Integravida-FrontendServices | development                  | 724b4215209f89c4c3864df985ad139a28717404 | Merge pull request #5 from MTS-OpenSource/feature/GlucoseReadings-US13                   | feat: Implement glucoseReadings and testing in the dashboard test                        | Mayo 14, 2026 |
-| Integravida-FrontendServices | main                         | ad206c1756829f2e5c79e0435af90325325f325  | feat: fixed alert bugs                                                                   | feat: fixed alert bugs                                                                   | Mayo 14, 2026 |
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Integravida-FrontendServices | main | f24b0d08ac2c3ce093814aaf0e2c87fd417e4da6 | Initial commit | Initial Proyect & fake db added | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/loginService-US04 | 24a5e388b70a82b858878f5b274cbfca2d4ddbb7 | feat: Add Log UserApi & signIn() | feat: Add Log UserApi & signIn() | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/logOutService-US06 | e95291ab00b14a624dc027d24d8bda8a1c0408bf | feat: Implement AuthStore & signOut Service | feat: Implement AuthStore & signOut Service | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/logOutService-US06 | d32b6a6882c4b89dd12b369fcc0d234e5a5609fd | feat: Change the ApiURL & delete FakedbData | feat: Change the ApiURL & delete FakedbData | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/dashboardData-US55 | 81b1b2f5894fcfcb3355bd0a7535068ddbe1f8af | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/GlucoseReadings-US13 | 5204d51062bd47f8cfd1fdf6ea024608261845fa | feat: Implement glucoseReadings and testing in the dashboard test | feat: Implement glucoseReadings and testing in the dashboard test | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | 8d1abf1ccf5c433cf046ae26991f139117bdc32b | hotfix: explain needs code to run the fake data | hotfix: explain needs code to run the fake data | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | 095b016d4b13ad98d4c2a4736a63b84c8f3c8606 | Merge pull request #1 from MTS-OpenSource/feature/loginService-US04 | feat: Add Log UserApi & signIn() | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | ad206c1756829f2e5c79e0435af9056443e821c3 | Merge pull request #2 from MTS-OpenSource/feature/logOutService-US06 | Feature/log out service us06 | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | fba16e93fbc4404a00fb00f8d047898f879dd7d1 | Merge pull request #3 from MTS-OpenSource/feature/dashboardData-US55 | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | 724b4215209f89c4c3864df985ad139a28717404 | Merge pull request #5 from MTS-OpenSource/feature/GlucoseReadings-US13 | feat: Implement glucoseReadings and testing in the dashboard test | Mayo 14, 2026 |
+| Integravida-FrontendServices | main | ad206c1756829f2e5c79e0435af90325325f325 | feat: fixed alert bugs | feat: fixed alert bugs | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/patient-profile-management-frontend | f2ea363ea7642b93d5f71fdbe14723928bb3aab3 | feat: add patient profile management flows | Added Patient Profile Management flows following layered frontend architecture using domain, application, infrastructure and presentation folders | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/frontend-ddd-cleanup-glucose | 1687481cf18e789c67bcb259b8cf22e65b8b94ab| Merge pull request #10 from MTS-OpenSource/feature/frontend-ddd-cleanup-glucose | Integrated frontend cleanup and bounded context organization using Domain-Driven Design architecture | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/Medical-Followup-Dashboard | b5bd92b63d18784f5613765dea6c8f05526a89c4 | Merge pull request #13 from MTS-OpenSource/feature/Medical-Followup-Dashboard | Integrated Medical Follow-up Dashboard module into development branch | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/appointment-management-javier | c937102e6aeb3fa2530804ca77ba18e12cb86298 | Merge pull request #12 from MTS-OpenSource/feature/appointment-management-javier | Integrated Appointment Management frontend module into the application | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/patient-profile-management-frontend | 94fd770ff0ff5717fbbc639faf90d323336639e2 | Improve patient profile UI and editing experience | Improved Patient Profile interface, responsive layout and profile editing experience for Patient Profile Management bounded context | Mayo 15, 2026 |
 
 ### <a name="_toc226040453"></a>5.3.1.5. Execution Evidence for Sprint Review.
 
