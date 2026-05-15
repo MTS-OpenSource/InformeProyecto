@@ -59,7 +59,7 @@ Abril 2026-10
 	2. **Módulo de Farmacovigilancia y Alertas Críticas:** Un canal de registro rápido donde los pacientes reportan reacciones adversas, el cual dispara alertas inmediatas al médico si los parámetros indican un riesgo vital.
 	3. **Ecosistema de Decisiones Clínicas:** Un panel de control (_Dashboard_) interactivo para el médico que procesa los datos registrados y los visualiza en gráficos de tendencias, permitiendo optimizar el tiempo de consulta y ajustar los tratamientos de forma rápida y segura basándose en evidencia real.
 
-![Commits Review](./Informe/assets/CommitsSpring2.png)
+![Commits Review](./Informe/assets/commitsSpring2.png)
 
 Contenido
 
