@@ -27,17 +27,23 @@ Abril 2026-10
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
 
-| Versión | Fecha |   Autor    |                              Descripción de Modificación                               |
-| :-----: | :---: | :--------: | :------------------------------------------------------------------------------------: |
-|  0\.1   | 10/04 | Jean Arias | Definición del Startup Profile y Lean UX Assumption y Hypotesis Stament (Capítulo I).  |
-|   0.2   | 13/04 | Jean Arias | Desarrollo del Artefactos de Negocio: Empathy Map, Persona y Journey Map (Capítulo II) |
-|   0.3   | 16/04 | Jean Arias |           Especificación de requerimientos: Impact Mapping  (Capítulo III).            |
-|   0.4   | 19/04 | Jean Arias |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.  (Capítulo IV)   |
-|   0.5   | 19/04 | Abigail Raymundo |  Creación de wireframes para definir la estructura de contenidos y la elaboración de mockups de alta fidelidad en Figma.   |
-|   0.6   | 21/04 | Jean Arias |   Implementación del Sprint 1, Configuración de Software y Despliegue (Capítulo V).    |
-|   0.7   | 21/04 | Abigail Raymundo |   Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart.    |
-|   0.8   | 21/04 | Javier Tello | Desarrollo del lenguaje ubicuo del dominio, estimación y priorización del Product Backlog, diagramas de clases y diagrama entidad-relación del sistema GlucoSmart.  |
-| V0.9    | 23/04 | Jose Muñoz | Desarrollo de user stories ,Desarrollo del diseño UX/UI de la Web Application (wireframes, mockups, wireflows y user flows), elaboración del prototipo interactivo en Figma y definición de la arquitectura del sistema mediante Event Storming y diagramas C4 (Context, Container y Component) 
+| Versión | Fecha | Autor | Descripción de Modificación |
+| :---: | :---: | :--- | :--- |
+| 0.1 | 10/04 | Jean Arias | Definición del Startup Profile y Lean UX Assumption y Hypotesis Statement (Capítulo I). |
+| 0.2 | 13/04 | Jean Arias | Desarrollo de Artefactos de Negocio: Empathy Map, Persona y Journey Map (Capítulo II). |
+| 0.3 | 16/04 | Jean Arias | Especificación de requerimientos: Impact Mapping (Capítulo III). |
+| 0.4 | 19/04 | Jean Arias | Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart (Capítulo IV). |
+| 0.5 | 19/04 | Abigail Raymundo | Creación de wireframes para definir la estructura de contenidos y elaboración de mockups de alta fidelidad en Figma. |
+| 0.6 | 21/04 | Jean Arias | Implementación del Sprint 1, configuración de software y despliegue (Capítulo V). |
+| 0.7 | 21/04 | Abigail Raymundo | Desarrollo e integración de la interfaz de usuario (UI) para la Landing Page de GlucoSmart. |
+| 0.8 | 21/04 | Javier Tello | Desarrollo del lenguaje ubicuo del dominio, estimación y priorización del Product Backlog, diagramas de clases y diagrama entidad-relación del sistema GlucoSmart. |
+| 0.9 | 23/04 | Jose Muñoz | Desarrollo de User Stories, diseño UX/UI de la Web Application (wireframes, mockups, wireflows y user flows), prototipo interactivo en Figma y definición de arquitectura mediante Event Storming y diagramas C4. |
+| 1.0 | 10/05 | Jean Arias | Implementación de servicios frontend, integración de API REST, configuración de json-server y despliegue inicial del entorno frontend en Firebase Hosting y Render.com. |
+| 1.1 | 12/05 | Abigail Raymundo | Desarrollo del bounded context Patient Profile Management incluyendo PatientProfileComponent, edición de perfil, mejoras visuales del frontend y experiencia responsive de usuario. |
+| 1.2 | 13/05 | Juan Sebastian Estupiñan | Implementación del bounded context Glucose Monitoring incluyendo registro de glucosa, historial clínico, filtros y gráficos médicos. |
+| 1.3 | 14/05 | Javier Tello | Desarrollo e integración del bounded context Appointment Management y mejoras de navegación dentro de la Web Application. |
+| 1.4 | 14/05 | Jose Muñoz | Implementación de servicios REST, validaciones y lógica de integración para módulos clínicos y alertas médicas. |
+
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
@@ -61,198 +67,153 @@ Abril 2026-10
 
 ![Commits Review](./Informe/assets/commitsSpring2.png)
 
-Contenido
+# Contenido
 
-[**REGISTRO DE VERSIONES DEL INFORME **2\*\*\*\*](#_toc226040379)
+- [Registro de versiones del informe](#_toc226040379)
+- [Project Report Collaboration Insights](#_toc226040380)
+- [Student Outcome](#_toc226040381)
+
+# Capítulo I: Introduction
 
-[**PROJECT REPORT COLLABORATION INSIGHTS **2\*\*\*\*](#_toc226040380)
+- [1.1 Startup Profile](#_toc226040383)
+  - [1.1.1 Descripción de la Startup](#_toc226040384)
+  - [1.1.2 Perfiles de integrantes del equipo](#_toc226040385)
 
-[**STUDENT OUTCOME **6\*\*\*\*](#_toc226040381)
+- [1.2 Solution Profile](#_toc226040386)
+  - [1.2.1 Antecedentes y problemática](#_toc226040387)
+  - [1.2.2 Lean UX Process](#_toc226040388)
+    - [1.2.2.1 Lean UX Problem Statements](#_toc226040389)
+    - [1.2.2.2 Lean UX Assumption](#_toc226040390)
+    - [1.2.2.3 Lean UX Hypothesis Statements](#_toc226040391)
+    - [1.2.2.4 Lean UX Canvas](#_toc226040392)
+
+- [1.3 Segmento Objetivo](#_toc226040393)
+
+# Capítulo II: Requirements Elicitation & Analysis
 
-[**CAPITULO I: INTRODUCTION **7\*\*\*\*](#_toc226040382)
+- [2.1 Competidores](#_toc226040395)
+  - [2.1.1 Analisis Competitivo](#_toc226040396)
+  - [2.1.2 Estrategia y tácticas frente a competidores](#_toc226040397)
 
-[1.1 Startup Profile 7](#_toc226040383)
+- [2.2 Entrevistas](#_toc226040398)
+  - [2.2.1 Diseño de entrevistas](#_toc226040399)
+  - [2.2.2 Registro de entrevista](#_toc226040400)
+  - [2.2.3 Analisis de entrevista](#_toc226040401)
 
-[*1.1.1 Descripción de la Startup *7\*\*](#_toc226040384)
+- [2.3 Needfinding](#_toc226040402)
+  - [2.3.1 User Personas](#_toc226040403)
+  - [2.3.2 User Task Matrix](#_toc226040404)
+  - [2.3.3 User Journey Mapping](#_toc226040405)
+  - [2.3.4 Empathy Mapping](#_toc226040406)
 
-[*1.1.2. Perfiles de integrantes del equipo *7\*\*](#_toc226040385)
+- [2.4 Big Picture Event Storming](#_toc226040407)
+- [2.5 Ubiquitous Language](#_toc226040408)
 
-[1.2. Solution Profile 7](#_toc226040386)
+# Capítulo III: Requirements Specification
 
-[*1.2.1 Antecedentes y problemática *7\*\*](#_toc226040387)
+- [3.1 User Stories](#_toc226040410)
+- [3.2 Impact Mapping](#_toc226040411)
+- [3.3 Product Backlog](#_toc226040412)
 
-[*1.2.2 Lean UX Process *7\*\*](#_toc226040388)
+# Capítulo IV: Product Design
 
-[1.2.2.1 Lean UX Problem Statements 7](#_toc226040389)
+- [4.1 Style Guidelines](#_toc226040414)
+  - [4.1.1 General Style Guidelines](#_toc226040415)
+  - [4.1.2 Web Style Guidelines](#_toc226040416)
 
-[1.2.2.2 Lean UX Assumption 7](#_toc226040390)
+- [4.2 Information Architecture](#_toc226040417)
+  - [4.2.1 Organization Systems](#_toc226040418)
+  - [4.2.2 Labeling Systems](#_toc226040419)
+  - [4.2.3 SEO Tags and Meta Tags](#_toc226040420)
+  - [4.2.4 Searching Systems](#_toc226040421)
+  - [4.2.5 Navigation Systems](#_toc226040422)
 
-[12.2.3 Lean UX Hypothesis Statements 7](#_toc226040391)
+- [4.3 Landing Page UI Design](#_toc226040423)
+  - [4.3.1 Landing Page Wireframe](#_toc226040424)
+  - [4.3.2 Landing Page Mock-up](#_toc226040425)
 
-[1.2.2.4 Lean UX Canvas 7](#_toc226040392)
+- [4.4 Web Applications UX/UI Design](#_toc226040426)
+  - [4.4.1 Web Applications Wireframes](#_toc226040427)
+  - [4.4.2 Web Applications Wireflow Diagrams](#_toc226040428)
+  - [4.4.3 Web Applications Mock-ups](#_toc226040429)
+  - [4.4.4 Web Applications User Flow Diagrams](#_toc226040430)
 
-[1.3 Segmento Objetivo 7](#_toc226040393)
+- [4.5 Web Applications Prototyping](#_toc226040431)
 
-[**CAPITULO II: REQUIREMENTS ELICITATION & ANALYSIS **7\*\*\*\*](#_toc226040394)
+- [4.6 Domain-Driven Software Architecture](#_toc226040432)
+  - [4.6.1 Design-Level Event Storming](#_toc226040433)
+  - [4.6.2 Software Architecture Context Diagram](#_toc226040434)
+  - [4.6.3 Software Architecture Container Diagrams](#_toc226040435)
+  - [4.6.4 Software Architecture Components Diagrams](#_toc226040436)
 
-[2.1 Competidores 7](#_toc226040395)
+- [4.7 Software Object-Oriented Design](#_toc226040437)
+  - [4.7.1 Class Diagrams](#_toc226040438)
 
-[*2.1.1 Analisis Competitivo *7\*\*](#_toc226040396)
+- [4.8 Database Design](#_toc226040439)
+  - [4.8.1 Database Diagrams](#_toc226040440)
 
-[*2.1.2 Estrategia y tácticas frente a competidores *7\*\*](#_toc226040397)
+# Capítulo V: Product Implementation, Validation & Deployment
 
-[2.2 Entrevistas 7](#_toc226040398)
+- [5.1 Software Configuration Management](#_toc226040442)
+  - [5.1.1 Software Development Environment Configuration](#_toc226040443)
+  - [5.1.2 Source Code Management](#_toc226040444)
+  - [5.1.3 Source Code Style Guide & Conventions](#_toc226040445)
+  - [5.1.4 Software Deployment Configuration](#_toc226040446)
 
-[*2.2.1 Diseño de entrevistas *7\*\*](#_toc226040399)
+- [5.2 Landing Page, Services & Applications Implementation](#_toc226040447)
 
-[*2.2.2 Registro de entrevista *7\*\*](#_toc226040400)
+## Sprint 1
 
-[*2.2.3 Analisis de entrevista *7\*\*](#_toc226040401)
+- [5.2.1 Sprint 1](#_toc226040448)
+  - [5.2.1.1 Sprint Planning 1](#_toc226040449)
+  - [5.2.1.2 Aspect Leaders and Collaborators](#_toc226040450)
+  - [5.2.1.3 Sprint Backlog 1](#_toc226040451)
+  - [5.2.1.4 Development Evidence for Sprint Review](#_toc226040452)
+  - [5.2.1.5 Execution Evidence for Sprint Review](#_toc226040453)
+  - [5.2.1.6 Services Documentation Evidence for Sprint Review](#_toc226040454)
+  - [5.2.1.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
+  - [5.2.1.8 Team Collaboration Insights during Sprint](#_toc226040456)
 
-[2.3 Needfinding 7](#_toc226040402)
+## Sprint 2
 
-[*2.3.1 User Personas *7\*\*](#_toc226040403)
+- [5.3.1 Sprint 2](#_toc226040448)
+  - [5.3.1.1 Sprint Planning 2](#_toc226040449)
+  - [5.3.1.2 Aspect Leaders and Collaborators](#_toc226040450)
+  - [5.3.1.3 Sprint Backlog 2](#_toc226040451)
+  - [5.3.1.4 Development Evidence for Sprint Review](#_toc226040452)
+  - [5.3.1.5 Execution Evidence for Sprint Review](#_toc226040453)
+  - [5.3.1.6 Services Documentation Evidence for Sprint Review](#_toc226040454)
+  - [5.3.1.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
+  - [5.3.1.8 Team Collaboration Insights during Sprint](#_toc226040456)
 
-[*2.3.2 User Task Matrix *7\*\*](#_toc226040404)
+# Conclusiones
 
-[*2.3.3 User Journey Mapping *7\*\*](#_toc226040405)
+- [Conclusiones y recomendaciones](#_toc226040463)
 
-[*2.3.4 Empathy Mapping *7\*\*](#_toc226040406)
+# Bibliografía
 
-[2.4 Big Picture Event Storming 7](#_toc226040407)
+- [Bibliografía](#_toc226040465)
 
-[2.5 Ubiquitous Language 7](#_toc226040408)
+# Anexos
 
-[**CAPITULO III: REQUIREMENTS SPECIFICATION **7\*\*\*\*](#_toc226040409)
+- [Anexos](#_toc226040466)
 
-[3.1 User Stories 7](#_toc226040410)
-
-[3.2 Impact Mapping 7](#_toc226040411)
-
-[3.3 Product Backlog 7](#_toc226040412)
-
-[**CAPITULO IV: PRODUCT DESIGN **8\*\*\*\*](#_toc226040413)
-
-[4.1. Style Guidelines. 8](#_toc226040414)
-
-[*4.1.1. General Style Guidelines. *8\*\*](#_toc226040415)
-
-[*4.1.2. Web Style Guidelines. *8\*\*](#_toc226040416)
-
-[4.2. Information Architecture. 8](#_toc226040417)
-
-[*4.2.1. Organization Systems. *8\*\*](#_toc226040418)
-
-[*4.2.2. Labeling Systems. *8\*\*](#_toc226040419)
-
-[*4.2.3. SEO Tags and Meta Tags *8\*\*](#_toc226040420)
-
-[*4.2.4. Searching Systems. *8\*\*](#_toc226040421)
-
-[*4.2.5. Navigation Systems. *8\*\*](#_toc226040422)
-
-[4.3. Landing Page UI Design. 8](#_toc226040423)
-
-[*4.3.1. Landing Page Wireframe. *8\*\*](#_toc226040424)
-
-[*4.3.2. Landing Page Mock-up. *8\*\*](#_toc226040425)
-
-[4.4. Web Applications UX/UI Design. 8](#_toc226040426)
-
-[*4.4.1. Web Applications Wireframes. *8\*\*](#_toc226040427)
-
-[*4.4.2. Web Applications Wireflow Diagrams. *8\*\*](#_toc226040428)
-
-[*4.4.2. Web Applications Mock-ups. *8\*\*](#_toc226040429)
-
-[*4.4.3. Web Applications User Flow Diagrams. *8\*\*](#_toc226040430)
-
-[4.5. Web Applications Prototyping. 8](#_toc226040431)
-
-[4.6. Domain-Driven Software Architecture. 8](#_toc226040432)
-
-[*4.6.1. Design-Level Event Storming. *8\*\*](#_toc226040433)
-
-[*4.6.2. Software Architecture Context Diagram. *8\*\*](#_toc226040434)
-
-[*4.6.3. Software Architecture Container Diagrams. *8\*\*](#_toc226040435)
-
-[*4.6.4. Software Architecture Components Diagrams. *8\*\*](#_toc226040436)
-
-[4.7. Software Object-Oriented Design. 8](#_toc226040437)
-
-[*4.7.1. Class Diagrams. *8\*\*](#_toc226040438)
-
-[4.8. Database Design. 8](#_toc226040439)
-
-[*4.8.1. Database Diagrams *8\*\*](#_toc226040440)
-
-[**CAPITULO V: PRODUCT IMPLEMENTATION, VALIDATION & DEPLOYMENT **8\*\*\*\*](#_toc226040441)
-
-[5.1. Software Configuration Management. 8](#_toc226040442)
-
-[*5.1.1. Software Development Environment Configuration. *8\*\*](#_toc226040443)
-
-[*5.1.2. Source Code Management. *8\*\*](#_toc226040444)
-
-[*5.1.3. Source Code Style Guide & Conventions. *8\*\*](#_toc226040445)
-
-[*5.1.4. Software Deployment Configuration. *8\*\*](#_toc226040446)
-
-[5.2. Landing Page, Services & Applications Implementation. 8](#_toc226040447)
-
-[*5.2.1. Sprint 1 *8\*\*](#_toc226040448)
-
-[*5.2.1.1. Sprint Planning 1. *8\*\*](#_toc226040449)
-
-[*5.2.1.2. Aspect Leaders and Collaborators. *8\*\*](#_toc226040450)
-
-[*5.2.1.3. Sprint Backlog 1. *8\*\*](#_toc226040451)
-
-[*5.2.1.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
-
-[*5.2.1.5. Execution Evidence for Sprint Review. *8\*\*](#_toc226040453)
-
-[*5.2.1.6. Services Documentation Evidence for Sprint Review. *8\*\*](#_toc226040454)
-
-[*5.2.1.7. Software Deployment Evidence for Sprint Review. *8\*\*](#_toc226040455)
-
-[*5.2.1.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
-
-
-[*5.3.1. Sprint 2\*\*](#_toc226040448)
-
-[*5.3.1.1. Sprint Planning 2. *8\*\*](#_toc226040449)
-
-[*5.3.1.2. Aspect Leaders and Collaborators. *8\*\*](#_toc226040450)
-
-[*5.3.1.3. Sprint Backlog 2. *8\*\*](#_toc226040451)
-
-[*5.3.1.4. Development Evidence for Sprint Review. *8\*\*](#_toc226040452)
-
-[*5.3.1.5. Execution Evidence for Sprint Review. *8\*\*](#_toc226040453)
-
-[*5.3.1.6. Services Documentation Evidence for Sprint Review. *8\*\*](#_toc226040454)
-
-[*5.3.1.7. Software Deployment Evidence for Sprint Review. *8\*\*](#_toc226040455)
-
-[*5.3.1.8. Team Collaboration Insights during Sprint. *8\*\*](#_toc226040456)
-
-[**CONCLUSIONES **8\*\*\*\*](#_toc226040462)
-
-[Conclusiones y recomendaciones 8](#_toc226040463)
-
-[**BIBLIOGRAFÍA **8\*\*\*\*](#_toc226040465)
-
-[**ANEXOS **9\*\*\*\*](#_toc226040466)
 
 # <a name="_toc226040381"></a>Student Outcome
 
-# <a name="_toc226040381"></a>Student Outcome
+El curso contribuye al cumplimiento del Student Outcome ABET:  
+**ABET – EAC - Student Outcome 3**
 
-| Criterio Específico                                                        | Acciones Realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |     |                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Proporciona Liderazgo y Planifica Tareas, Establece y Cumple Objetivos** | **AV1 - Jean Pool Alexander Arias Tasayco**<br/>Asumiendo un rol de liderazgo en IntegraVida, se planificó el desarrollo de la plataforma GlucoSmart utilizando el marco de trabajo Scrum para traducir los requerimientos médicos en un *Product Backlog*. Durante el Sprint 1, se cumplió la meta técnica al desplegar exitosamente la *Landing Page* en GitHub Pages, alcanzando 18 de los 20 *Story Points* estimados. La implementación de estas tareas críticas (Estructura base, Navbar, Hero, Formulario de Contacto y Servicio de Idioma) permitió validar de forma práctica las hipótesis del proceso Lean UX, estableciendo un primer hito sólido hacia la solución final de gestión de farmacovigilancia.                                       **TB1-Jean Pool Alexander Arias Tasayco**  -Asumi el rol de Team Leader y gestione todo el Spring2 en base a los requerimientos solicitados por los usuarios entrevistados asi el bounded Context Account Management y Glucose Monitoring en los cuales segui el requerimiento del diseño de arquitectura DDD y implemente satisfactoriamente en las paginas generales aparte me hice cargo de hacer el deploy de los 3 servicios el JSON SERVER, FrontEnd Service y la LandiingPage con las actualizaciones debidas asi como me encarque de hacer las reuniones con los usuarios entrevistados a mostrales el FrontEndServices                                                                     <br/><br/>**AV1 - Javier Oswaldo Tello Murga**<br/>Se elaboraron artefactos clave del informe del proyecto GlucoSmart, incluyendo el lenguaje ubicuo del dominio, el apoyo en la definición de épicas, historias de usuario y criterios de aceptación, así como la estimación y priorización del Product Backlog. Además, se desarrolló el diseño técnico de la solución mediante diagramas de clases y un diagrama entidad-relación, permitiendo representar las principales entidades, relaciones y estructuras necesarias para la futura implementación del sistema.<br/><br/>**AV1 - Abigail Nadhim Raymundo Villarroel**<br/>Lideré la fase de diseño visual y desarrollo de componentes de interfaz para la plataforma GlucoSmart. En la etapa de Product Design, planifiqué y ejecuté la creación de los wireframes y mockups de alta fidelidad, definiendo los lineamientos de estilo y la arquitectura de información. Durante la implementación técnica, desarrollé de manera integral la Landing Page utilizando Angular, asegurando la modularidad mediante componentes standalone y la integración de servicios de internacionalización. Asimismo, gestioné la resolución de conflictos técnicos en la integración de recursos externos y la sincronización de ramas en Git, logrando el cumplimiento de los objetivos de diseño y funcionalidad dentro del Sprint 1. | **AV1 - Jean Pool Alexander Arias Tasayco**<br/> - El cumplimiento de los objetivos establecidos demuestra la viabilidad técnica de la solución. La metodología de validación constante (implementación-despliegue) permitió obtener una versión del producto que satisface las necesidades de los usuarios finales y los estándares de ingeniería de software requeridos.                 **TB1 Jean Pool Alexander Arias Tasayco**El desarollo de los problemas planteados hacer ver que se aplican las tecnicas de resolucion segun la metodologia del curso y la validacion constante mediente el CI/CD para poder satisfacer al usuario final pudiendo entregarle una version de lo esperado<br/><br/>**AV1 - Javier Oswaldo Tello Murga**<br/> - El trabajo realizado permitió fortalecer la trazabilidad entre el análisis del dominio, los requerimientos funcionales, la planificación ágil y el diseño técnico de GlucoSmart. Asimismo, los artefactos desarrollados aportan una base clara y organizada para la implementación de la plataforma, asegurando coherencia entre las necesidades de los usuarios, el modelo orientado a objetos y el diseño de base de datos.<br/><br/>**AV1 - Abigail Nadhim Raymundo Villarroel**<br/> -  El desarrollo de la Landing Page permitió validar la usabilidad de la interfaz y la consistencia de la identidad de marca, asegurando que el producto final no solo cumpla con los requisitos técnicos, sino que proporcione una experiencia de usuario profesional y escalable para futuras fases del proyecto. |     | **Proporciona Liderazgo y Planifica Tareas, Establece y Cumple Objetivos** | **AV1 - Jose Antonio Muñoz Amasifuen**<br/>Durante el desarrollo del proyecto GlucoSmart, participé activamente en la fase de diseño de la Web Application y en la definición de la arquitectura del sistema. En el ámbito de UX/UI, desarrollé los wireframes, mockups, wireflows y user flows de la aplicación, estructurando la navegación y la experiencia de usuario centrada en pacientes con diabetes mellitus tipo 1 y tipo 2.<br/><br/>Asimismo, elaboré el prototipo interactivo utilizando Figma, permitiendo simular la navegación entre las pantallas principales del sistema, tales como dashboard, registro de glucosa, historial de salud, alertas y perfil del paciente. Este prototipo facilitó la validación de la usabilidad y la coherencia de la solución antes de su implementación.<br/><br/>En el ámbito de arquitectura de software, desarrollé el Event Storming para identificar los eventos clave del dominio, así como los diagramas basados en el modelo C4: Context Diagram, Container Diagram y Component Diagram, permitiendo definir la estructura del sistema y la interacción entre sus componentes, considerando tanto a pacientes como a profesionales de salud. | **AV1 - Jose Antonio Muñoz Amasifuen**<br/> - El desarrollo de los artefactos UX/UI permitió estructurar una experiencia de usuario clara, intuitiva y alineada con las necesidades del segmento objetivo, asegurando la correcta interacción del paciente con el sistema.<br/> - El prototipo interactivo facilitó la validación temprana de la solución, reduciendo riesgos en la etapa de implementación y mejorando la calidad del diseño.<br/> - La definición de la arquitectura mediante Event Storming y el modelo C4 permitió comprender el comportamiento del sistema a nivel de dominio y establecer una base sólida para su futura implementación.<br/> - El trabajo realizado evidencia la capacidad de integrar diseño, prototipado y arquitectura de software en el desarrollo de una solución web orientada al sector salud. |
+**Criterio:** Capacidad de comunicarse efectivamente con un rango de audiencias.
+
+En el siguiente cuadro se describen las acciones realizadas y conclusiones por parte del grupo, que permiten sustentar el logro del ABET – EAC - Student Outcome 3.
+
+| Criterio específico | Acciones realizadas | Conclusiones |
+| :--- | :--- | :--- |
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia.** | **Jean Pool Alexander Arias Tasayco**<br/>**AV1:** Participó activamente en reuniones de validación con usuarios entrevistados para presentar la propuesta de valor de GlucoSmart y recopilar retroalimentación relacionada con funcionalidades médicas y experiencia de usuario.<br/><br/>**TB1:** Lideró las reuniones de coordinación técnica del Sprint 2 explicando la arquitectura frontend, bounded contexts y despliegue de servicios a los integrantes del equipo y usuarios entrevistados.<br/><br/>**Abigail Nadhim Raymundo Villarroel**<br/>**AV1:** Presentó propuestas visuales mediante wireframes y mockups de alta fidelidad para comunicar la estructura visual de la Landing Page y validar la experiencia de usuario.<br/><br/>**TB1:** Explicó el funcionamiento del módulo Patient Profile Management mostrando la interacción entre interfaces, formularios y servicios REST durante las revisiones funcionales del Sprint 2.<br/><br/>**Javier Oswaldo Tello Murga**<br/>**AV1:** Expuso los artefactos de análisis como lenguaje ubicuo, historias de usuario y diagramas técnicos para comunicar la estructura funcional del sistema GlucoSmart.<br/><br/>**TB1:** Participó en reuniones técnicas explicando la lógica del bounded context Appointment Management y su integración con el frontend general.<br/><br/>**Jose Antonio Muñoz Amasifuen**<br/>**AV1:** Presentó el prototipo interactivo desarrollado en Figma y explicó el flujo de navegación de la Web Application orientada a pacientes y médicos.<br/><br/>**TB1:** Explicó la integración de servicios REST y la validación de endpoints utilizados por los módulos clínicos del sistema.<br/><br/>**Juan Sebastian Estupiñan**<br/>**TB1:** Participó en las revisiones funcionales del Sprint 2 explicando el funcionamiento del módulo Glucose Monitoring, historial clínico y gráficos médicos integrados al sistema. | El trabajo colaborativo realizado durante los Sprints permitió fortalecer las capacidades de comunicación oral del equipo al presentar propuestas visuales, avances funcionales, arquitectura técnica y validaciones del sistema frente a distintos tipos de audiencia. Asimismo, las reuniones de coordinación, revisiones funcionales y demostraciones del producto permitieron comunicar efectivamente ideas técnicas y funcionales relacionadas con el proyecto GlucoSmart. |
+| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Jean Pool Alexander Arias Tasayco**<br/>**AV1:** Elaboró secciones del informe relacionadas con Startup Profile, Lean UX, Sprint Planning y despliegue del proyecto.<br/><br/>**TB1:** Documentó la arquitectura frontend, servicios REST, configuración de despliegue y evidencias técnicas del Sprint 2.<br/><br/>**Abigail Nadhim Raymundo Villarroel**<br/>**AV1:** Elaboró documentación visual mediante wireframes y mockups para representar la estructura de la Landing Page y la experiencia de usuario.<br/><br/>**TB1:** Documentó el bounded context Patient Profile Management, evidencias de frontend, integración de componentes y mejoras visuales implementadas en la Web Application.<br/><br/>**Javier Oswaldo Tello Murga**<br/>**AV1:** Desarrolló documentación relacionada con historias de usuario, criterios de aceptación y diagramas técnicos del sistema.<br/><br/>**TB1:** Documentó funcionalidades relacionadas con Appointment Management y su integración dentro de la arquitectura modular del frontend.<br/><br/>**Jose Antonio Muñoz Amasifuen**<br/>**AV1:** Elaboró documentación UX/UI, Event Storming y diagramas C4 utilizados para representar la arquitectura del sistema.<br/><br/>**TB1:** Participó en la documentación técnica relacionada con endpoints REST, validaciones y arquitectura basada en bounded contexts.<br/><br/>**Juan Sebastian Estupiñan**<br/>**TB1:** Documentó funcionalidades relacionadas con el módulo Glucose Monitoring y evidencias funcionales del historial clínico y gráficos médicos implementados durante el Sprint 2. | La elaboración continua de documentación técnica, reportes de Sprint, diagramas, evidencias funcionales y artefactos de análisis permitió fortalecer la capacidad del equipo para comunicar información técnica y funcional de manera clara y organizada. Asimismo, la documentación desarrollada facilitó la comprensión del sistema tanto para usuarios como para integrantes técnicos del proyecto. |
+
+
 # <a name="_toc226040382"></a>Capitulo I: Introduction
 
 ## <a name="_toc226040383"></a>1.1 Startup Profile
