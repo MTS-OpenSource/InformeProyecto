@@ -1515,20 +1515,38 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 
 ### <a name="_toc226040449"></a>5.2.1.1. Sprint Planning 1.
 
-| Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                              |     |
-| :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| **Sprint Planning Background**   |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
-| Date                             | 01/042026                                                                                                                                                                                                                                                                                                                                                                                             |     |
-| Time                             | 6:00PM                                                                                                                                                                                                                                                                                                                                                                                                |     |
-| Location                         | Virtual - Discord                                                                                                                                                                                                                                                                                                                                                                                     |     |
-| Prepared By                      | Jean Pool Arias                                                                                                                                                                                                                                                                                                                                                                                       |     |
-| Attendees (To planning meeting)  | Jean Pool Arias, Abigail Raymundo                                                                                                                                                                                                                                                                                                                                                                     |     |
-| SprinT N-1 Review Summary        |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
-| SprinT N-1 Retrospective Summary |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
-| **Sprint Goal & User Stories**   |                                                                                                                                                                                                                                                                                                                                                                                                       |     |
-| Sprint N Goal                    | Our focus is on delivering the first version of the GlucoSmart Landing Page. We believe it delivers a clear and attractive presentation of the product to potential users and medical professionals. This will be confirmed when the Landing Page is successfully deployed and accessible via a public URL, displaying all key sections including hero, services, about us, testimonials and contact. |     |
-| Sprint N Velocity                | 20                                                                                                                                                                                                                                                                                                                                                                                                    |     |
-| Sum of Story Points              | 18                                                                                                                                                                                                                                                                                                                                                                                                    |     |
+| Sprint # | Sprint 1 |
+| :--- | :--- |
+| Sprint Planning Background |  |
+| Date | 01/04/2026 |
+| Time | 6:00 PM |
+| Location | Virtual - Discord |
+| Prepared By | Jean Pool Arias |
+| Attendees (To planning meeting) | Jean Pool Arias, Abigail Raymundo |
+| Sprint N-1 Review Summary | No aplica, debido a que corresponde al primer Sprint del proyecto. |
+| Sprint N-1 Retrospective Summary | No aplica, debido a que corresponde al primer Sprint del proyecto. |
+| Sprint Goal & User Stories |  |
+| Sprint N Goal | El enfoque principal del Sprint 1 fue desarrollar y desplegar la primera versión de la Landing Page de GlucoSmart. Durante este Sprint, únicamente Jean Pool Arias y Abigail Raymundo participaron en el proceso de diseño e implementación, enfocándose en construir la identidad visual de IntegraVida mediante Angular, componentes standalone, diseño responsive y despliegue en Firebase Hosting. El Sprint se considerará exitoso cuando la Landing Page esté desplegada y accesible mediante una URL pública mostrando correctamente las secciones principales como hero, servicios, about us, testimonios y contacto. |
+| Sprint N Velocity | 20 |
+| Sum of Story Points | 20 |
+
+### <a name="_toc226040449"></a>5.2.2.1. Sprint Planning 2.
+
+| Sprint # | Sprint 2 |
+| :--- | :--- |
+| Sprint Planning Background |  |
+| Date | 10/05/2026 |
+| Time | 7:00 PM |
+| Location | Virtual - Discord |
+| Prepared By | Jean Pool Arias |
+| Attendees (To planning meeting) | Jean Pool Arias, Abigail Raymundo, Javier Tello, Jose Muñoz, Juan Estupiñan |
+| Sprint N-1 Review Summary | Durante el Sprint 1, el equipo desarrolló y desplegó exitosamente la primera versión de la Landing Page de IntegraVida utilizando Angular y Firebase Hosting. Este Sprint permitió validar la identidad visual, el diseño responsive y la configuración inicial del entorno de desarrollo del proyecto. |
+| Sprint N-1 Retrospective Summary | El equipo identificó la necesidad de mejorar la integración colaborativa, la organización de ramas en Git y la escalabilidad del frontend. A partir de ello, se decidió adoptar una arquitectura modular basada en Bounded Contexts y una organización por capas para facilitar el desarrollo colaborativo durante el Sprint 2. |
+| Sprint Goal & User Stories |  |
+| Sprint N Goal | El enfoque principal del Sprint 2 fue implementar la primera versión funcional de la Frontend Web Application de IntegraVida. Durante este Sprint participaron todos los integrantes del equipo, distribuyendo el desarrollo en distintos Bounded Contexts como Authentication, Patient Profile Management, Medical Follow-up y Appointment Management. Asimismo, se organizó la arquitectura frontend siguiendo principios de Domain-Driven Design y una estructura por capas utilizando domain, application, infrastructure y presentation, permitiendo una mejor modularidad, escalabilidad e integración colaborativa entre funcionalidades. El Sprint se considerará exitoso cuando la aplicación frontend se encuentre desplegada y accesible mediante Firebase Hosting con los principales módulos funcionales integrados a servicios REST. |
+| Sprint N Velocity | 18 |
+| Sum of Story Points | 18 |
+
 
 ### <a name="_toc226040450"></a>5.2.1.2. Aspect Leaders and Collaborators.
 
