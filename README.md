@@ -1,31 +1,44 @@
+<h1 align="center">Informe del Trabajo Final</h1>
 
-![LOGO UPC](./Informe/assets/LogoUPC.png)
+<h3 align="center">Universidad Peruana de Ciencias Aplicadas</h3>
 
-Universidad Peruana de Ciencias Aplicadas
+<br/>
 
-**Facultad de Ingeniería**
+<div align="center">
+  <img src="./Informe/assets/LogoUPC.png" alt="UPC Logo" width="200">
+</div>
 
-Ingenieria de Software
+<br/>
 
-**Desarrollo de Aplicaciones Open Source - 1ASI0729 – 2610**
+<h5 align="center">Ingeniería de Software</h5>
 
-**Profesor: Juan Antonio Flores Moroco**
+<h5 align="center">Desarrollo de Aplicaciones Open Source - 1ASI0729 – 2610</h5>
 
-"Informe de Trabajo Final"
+<h5 align="center">Docente: Juan Antonio Flores Moroco</h5>
 
-Startup: IntegraVIda
+<h5 align="center">Startup: IntegraVida</h5>
 
-“GlucoSmart”
+<h5 align="center">Producto: GlucoSmart</h5>
 
-| Código | Integrante |
-| :---: | --- |
-| U202414054 | Jean Pool Alexander Arias Tasayco |
-| U202318001 | Abigail Nadhim Raymundo Villarroel |
-| U202223405 | Juan Sebastian Estupiñan Olortegui |
-| U202218387 | Javier Oswaldo Tello Murga |
-| U20231D385 | Jose Antonio Muñoz Amasifuen |
+## Team members:
 
-Abril 2026-10
+<div align="center">
+
+| Nombre | Código |
+| :--- | :---: |
+| Arias Tasayco, Jean Pool Alexander | U202414054 |
+| Raymundo Villarroel, Abigail Nadhim | U202318001 |
+| Estupiñan Olortegui, Juan Sebastian | U202223405 |
+| Tello Murga, Javier Oswaldo | U202218387 |
+| Muñoz Amasifuen, Jose Antonio | U20231D385 |
+
+</div>
+
+<h5 align="center">Ciclo 2026-10</h5>
+
+---
+
+<div align="center">
 
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
