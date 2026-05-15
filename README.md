@@ -1275,12 +1275,256 @@ Durante este Sprint la tareas fueron distribuidas equitativamente entre los do
 | Jean Pool Arias  | 14 commits |
 | Abigail Raymundo | 6 commits  |
 
+### <a name="_toc226040448"></a>5.3.1. Sprint 2
+
+### <a name="_toc226040449"></a>5.3.1.1. Sprint Planning 2.
+
+| Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| **Sprint Planning Background**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
+| Date                             | 04/05/2026                                                                                                                                                                                                                                                                                                                                                                                                                                     |     |
+| Time                             | 6:00PM                                                                                                                                                                                                                                                                                                                                                                                                                                         |     |
+| Location                         | Virtual - Discord                                                                                                                                                                                                                                                                                                                                                                                                                              |     |
+| Prepared By                      | Jean Pool Arias                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
+| Attendees (To planning meeting)  | Jean Pool Alexander Arias Tasayco<br>Abigail Nadhim Raymundo Villarroel <br>Juan Sebastian Estupiñan Olortegui<br>Javier Oswaldo Tello Murga<br>Jose Antonio Muñoz Amasifuen                                                                                                                                                                                                                                                                   |     |
+| SprinT N-1 Review Summary        | El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.                                                                                                                                                            |     |
+| SprinT N-1 Retrospective Summary | El equipo identificó como acierto la distribución clara de componentes entre los integrantes. Como oportunidad de mejora se señaló la necesidad de establecer convenciones de commits desde el inicio y mejorar la sincronización de ramas para evitar conflictos en Git. Para este Sprint se acordó usar prefijos feat/fix/chore en todos los commits.                                                                                        |     |
+| **Sprint Goal & User Stories**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
+| Sprint N Goal                    | Our focus is on delivering the core functional views of the GlucoSmart web application connected to a fake REST API. We believe it delivers a navigable and data-driven experience to patients managing their diabetes. This will be confirmed when patients can log in, register glucose readings, view their health history with charts, manage alerts and consult their profile — all consuming data from json-server via Angular services. |     |
+| Sprint N Velocity                | 45                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
+| Sum of Story Points              | 43                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
+
+### <a name="_toc226040450"></a>5.3.1.2. Aspect Leaders and Collaborators.
+En este Sprint los aspectos principales son: Authentication (login/register), Dashboard, Glucose Management, Health History, Alerts & Notifications y Patient Profile. Cada aspecto agrupa vistas y servicios relacionados.
+
+| Team Member      | GitHub Username | Login service | Glucose Lecture | Dashboard Service | Deploy | Design |
+| :--------------- | :-------------- | :------------ | :-------------- | :---------------- | :----- | ------ |
+| Jean Arias       | Jean-AT         | L             | L               | L                 | L      | C      |
+| Abigail Raymundo | AbigailRv       | C             | C               | C                 | C      | L      |
+| Juan Sebastian   | JuanSEstupinan  | C             | C               | C                 | C      | L      |
+| Javier Oswaldo   | JavierTello20   | C             | C               | C                 | C      | C      |
+| Jose Antonio     | joseam05        | C             | C               | C                 | C      | C      |
+
+### <a name="_toc226040451"></a>5.3.1.3. Sprint Backlog 2.
+El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.
+
+|Sprint#|Sprint 2|||||||
+|---|---|---|---|---|---|---|---|
+|**User Story**||**Work-Item/Task**||||||
+|**Id**|**Title**|**Id**|**Title**|**Description**|**Estimation**|**Assigned To**|**Status**|
+|US-04|Log in|T01|Crear LoginComponent|Implementar formulario de login con email/password, toggle show/hide password y botones Google/LinkedIn|3|Abigail|To-Do|
+|US-02|Registro de paciente|T02|Crear RegisterComponent|Implementar formulario de registro con tabs Login/Sign Up y validaciones reactivas|3|Abigail|To-Do|
+|US-06|Cerrar sesión|T03|Implementar logout en Sidebar|Agregar botón Sign Out en sidebar, limpiar localStorage y redirigir al login|1|Abigail|To-Do|
+|US-55|Visualizar resumen general|T04|Crear DashboardComponent|Implementar Health Summary con cards de Current Glucose, Treatment Status, Readings Today y HbA1c|5|Abigail|To-Do|
+|US-37|Gráficos de glucosa|T05|Implementar Glucose Trends chart|Integrar librería de gráficos con línea Actual vs Target de los últimos 7 días|5|Abigail|To-Do|
+|US-17|Visualizar tratamiento actual|T06|Crear Upcoming Doses widget|Implementar lista de medicamentos del día con estados Done/Next/Later en el dashboard|3|Abigail|To-Do|
+|US-41|Alertas en dashboard|T07|Crear Recent Alerts widget|Implementar sección Recent Alerts con badges High/Missed/Info en el dashboard|3|Abigail|To-Do|
+|US-11|Consultar perfil del paciente|T08|Crear PatientProfileComponent|Implementar vista de perfil con secciones: info médica, contacto y configuración|3|Abigail|To-Do|
+|US-08|Editar perfil de paciente|T09|Implementar edición de perfil|Habilitar botón Editar en secciones de info médica y contacto, con botón Guardar cambios|3|Abigail|To-Do|
+|US-12|Registrar nivel de glucosa|T10|Crear GlucoseLogComponent|Implementar formulario Nueva Lectura con valor mg/dL, fecha, hora, estado del paciente y comentarios|3|943775190|To-Do|
+|US-16|Alerta por glucosa fuera de rango|T11|Implementar lógica de color por rango|Mostrar badge Normal/Alto/Bajo según valor ingresado con colores semánticos en tiempo real|2|943775190|To-Do|
+|US-13|Visualizar historial de glucosa|T12|Crear HealthHistoryComponent|Implementar tabla de registros con columnas Fecha, Hora, Glucosa, Estado y paginación|3|943775190|To-Do|
+|US-38|Filtrar historial por fechas|T13|Implementar filtros en historial|Agregar filtros Desde/Hasta con accesos rápidos: Última semana, Último mes, 3 meses, 6 meses|3|943775190|To-Do|
+|US-37|Evolución de glucosa en historial|T14|Implementar gráfico en historial|Integrar gráfico de línea con límite superior e inferior, estadísticas TIR, hiper, hipo y CV|3|943775190|To-Do|
+|US-39|Editar registro de glucosa|T15|Implementar edición en tabla historial|Agregar botón editar en tabla, abrir modal con datos pre-cargados|2|943775190|To-Do|
+|US-40|Eliminar registro de glucosa|T16|Implementar eliminación en tabla|Agregar botón eliminar con confirmación modal en tabla del historial|1|943775190|To-Do|
+|US-41|Visualizar alertas y notificaciones|T17|Crear AlertsComponent|Implementar página de alertas con tabs Todas/Activas/Resueltas y lista con severidad|3|943775190|To-Do|
+|US-43|Marcar alerta como leída|T18|Implementar "Marcar como visto"|Agregar botón por alerta y botón global "Marcar todas como vistas"|2|943775190|To-Do|
+|US-42|Configurar rango de glucosa|T19|Implementar panel Configuración de Alertas|Agregar toggles para alertas de glucosa alta/baja y recordatorios en sidebar de alertas|2|943775190|To-Do|
+||Poblar base de datos|T20|~~Crear y poblar db.json~~|~~Estructurar db.json con datos fake para: users, patients, glucose_records, medications, medication_intakes, alerts, glucose_ranges~~|3| Jean Arias |**Done**|
+|US-04|Log in|T21|Crear AuthService - login()|GET /users, validar email+password, guardar sesión en localStorage|3|Jean Arias |Done|
+|US-06|Cerrar sesión|T22|Implementar logout() + AuthGuard|Limpiar localStorage, redirigir al login e implementar guard en rutas protegidas|1|Jean Arias |Done|
+|US-55|Dashboard data|T23|Crear DashboardService|Agregar llamadas a glucose_records, medications y alerts para armar resumen del dashboard|5|Jean Arias |Done|
+|US-13|Historial de glucosa|T24|Crear GlucoseService - GET|Método getReadings(patientId) GET /glucose_records?patientId=, ordenar por fecha desc|3|Jean Arias |Done|
+|US-16|Generar alerta automática|T25|Lógica de alerta en GlucoseService|Al guardar lectura evaluar vs glucose_ranges y hacer POST /alerts si está fuera de rango|3|Jean Arias |Done|
+|US-42|Rangos de glucosa|T26|AlertService - rangos|Métodos GET y PUT /glucose_ranges?patientId= para leer y guardar configuración|2|Jean Arias |Done|
+|US-02|Registro de paciente|T27|Implementar register() en AuthService|POST /users, verificar email duplicado antes de registrar|3|Josue|To-Do|
+|US-12|Registrar glucosa|T28|GlucoseService - POST|Método saveReading() POST /glucose_records con validación de rango incluida|3|Josue|To-Do|
+|US-39|Editar glucosa|T29|GlucoseService - PUT|Método updateReading() PUT /glucose_records/:id con validaciones|2|Josue|To-Do|
+|US-40|Eliminar glucosa|T30|GlucoseService - DELETE|Método deleteReading() DELETE /glucose_records/:id|1|Josue|To-Do|
+|US-19|Registrar toma de medicación|T31|MedicationService - logIntake()|POST /medication_intakes para confirmar toma de medicamento|2|Josue|To-Do|
+|US-38|Filtrar historial|T32|GlucoseService - filtros|Método getReadingsByDateRange(from, to) usando query params en json-server|2|935598887|To-Do|
+|US-41|Alertas|T33|Crear AlertService - GET|getAlerts(patientId) GET /alerts?patientId=, filtrar por status activo/resuelto|3|935598887|To-Do|
+|US-43|Marcar alerta leída|T34|AlertService - markAsRead()|PATCH /alerts/:id con { read: true, status: 'resolved' }|2|935598887|To-Do|
+|US-17|Medicación actual|T35|Crear MedicationService - GET|getMedications(patientId) GET /medications?patientId= filtrando activos|3|935598887|To-Do|
+|US-11|Perfil paciente|T36|Crear PatientService - GET|getProfile(patientId) GET /patients/:id con todos los datos clínicos|2|935598887|To-Do|
+|US-08|Editar perfil|T37|PatientService - updateProfile()|PUT /patients/:id para actualizar datos personales, médicos y configuración|3|935598887|To-Do|
+
+### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Integravida-FrontendServices | main | f24b0d08ac2c3ce093814aaf0e2c87fd417e4da6 | Initial commit | Initial Proyect & fake db added | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/loginService-US04 | 24a5e388b70a82b858878f5b274cbfca2d4ddbb7 | feat: Add Log UserApi & signIn() | feat: Add Log UserApi & signIn() | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/logOutService-US06 | e95291ab00b14a624dc027d24d8bda8a1c0408bf | feat: Implement AuthStore & signOut Service | feat: Implement AuthStore & signOut Service | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/logOutService-US06 | d32b6a6882c4b89dd12b369fcc0d234e5a5609fd | feat: Change the ApiURL & delete FakedbData | feat: Change the ApiURL & delete FakedbData | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/dashboardData-US55 | 81b1b2f5894fcfcb3355bd0a7535068ddbe1f8af | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/GlucoseReadings-US13 | 5204d51062bd47f8cfd1fdf6ea024608261845fa | feat: Implement glucoseReadings and testing in the dashboard test | feat: Implement glucoseReadings and testing in the dashboard test | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | 8d1abf1ccf5c433cf046ae26991f139117bdc32b | hotfix: explain needs code to run the fake data | hotfix: explain needs code to run the fake data | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | 095b016d4b13ad98d4c2a4736a63b84c8f3c8606 | Merge pull request #1 from MTS-OpenSource/feature/loginService-US04 | feat: Add Log UserApi & signIn() | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | ad206c1756829f2e5c79e0435af9056443e821c3 | Merge pull request #2 from MTS-OpenSource/feature/logOutService-US06 | Feature/log out service us06 | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | fba16e93fbc4404a00fb00f8d047898f879dd7d1 | Merge pull request #3 from MTS-OpenSource/feature/dashboardData-US55 | feat: Implement dashboardServices & testing to check the load data from a Json-ServerUrl | Mayo 14, 2026 |
+| Integravida-FrontendServices | development | 724b4215209f89c4c3864df985ad139a28717404 | Merge pull request #5 from MTS-OpenSource/feature/GlucoseReadings-US13 | feat: Implement glucoseReadings and testing in the dashboard test | Mayo 14, 2026 |
+| Integravida-FrontendServices | main | ad206c1756829f2e5c79e0435af90325325f325 | feat: fixed alert bugs | feat: fixed alert bugs | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/patient-profile-management-frontend | f2ea363ea7642b93d5f71fdbe14723928bb3aab3 | feat: add patient profile management flows | Added Patient Profile Management flows following layered frontend architecture using domain, application, infrastructure and presentation folders | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/frontend-ddd-cleanup-glucose | 1687481cf18e789c67bcb259b8cf22e65b8b94ab| Merge pull request #10 from MTS-OpenSource/feature/frontend-ddd-cleanup-glucose | Integrated frontend cleanup and bounded context organization using Domain-Driven Design architecture | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/Medical-Followup-Dashboard | b5bd92b63d18784f5613765dea6c8f05526a89c4 | Merge pull request #13 from MTS-OpenSource/feature/Medical-Followup-Dashboard | Integrated Medical Follow-up Dashboard module into development branch | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/appointment-management-javier | c937102e6aeb3fa2530804ca77ba18e12cb86298 | Merge pull request #12 from MTS-OpenSource/feature/appointment-management-javier | Integrated Appointment Management frontend module into the application | Mayo 14, 2026 |
+| Integravida-FrontendServices | feature/patient-profile-management-frontend | 94fd770ff0ff5717fbbc639faf90d323336639e2 | Improve patient profile UI and editing experience | Improved Patient Profile interface, responsive layout and profile editing experience for Patient Profile Management bounded context | Mayo 15, 2026 |
+
+### <a name="_toc226040453"></a>5.3.1.5. Execution Evidence for Sprint Review.
+
+![Demostracion](./Informe/assets/Demostracion1.png)
+![Demostracion|531](./Informe/assets/Demostracion2.png)
+![Demostracion](./Informe/assets/Demostracion3.png)
+![Demostracion](./Informe/assets/Demostracion4.png)
+![Demostracion](./Informe/assets/Demostracion5.png)
+
+En este Sprint se implementaron las principales vistas funcionales de la Web Application de GlucoSmart. Las secciones desarrolladas incluyen:
+
+- **Login / Register** — autenticación con validaciones y toggle de contraseña
+- **Dashboard** — resumen de salud con gráfico de tendencias y medicamentos del día
+- **Registro de Glucosa** — formulario con clasificación en tiempo real Normal/Alto/Bajo
+- **Historial de Salud** — tabla paginada con filtros de fecha y gráfico de evolución
+- **Alertas y Notificaciones** — gestión de alertas activas y resueltas con configuración de rangos
+- **Perfil del Paciente** — datos clínicos, contacto y configuración editable
+
+### Video Demonstration
+
+El siguiente video muestra la ejecución funcional de la Frontend Web Application de IntegraVida durante el Sprint 2, incluyendo autenticación, dashboard médico, Patient Profile Management, historial de glucosa y despliegue de la aplicación.
+
+https://youtu.be/_JOh925f1DE
+
+### <a name="_toc226040454"></a>5.3.1.6. Services Documentation Evidence for Sprint Review.
+
+### Services Documentation Evidence for Sprint Review
+
+Todos los endpoints se consumen mediante json-server corriendo en `https://integravida-data.onrender.com`.
+
+| Endpoint             | Verbo HTTP | Descripción                    | Parámetros                                    | Assigned Service  |
+| -------------------- | ---------- | ------------------------------ | --------------------------------------------- | ----------------- |
+| /users               | GET        | Obtener usuarios para login    | email, password (query)                       | AuthService       |
+| /users               | POST       | Registrar nuevo usuario        | body: { email, password, role }               | AuthService       |
+| /patients/:id        | GET        | Obtener perfil del paciente    | id (path)                                     | PatientService    |
+| /patients/:id        | PUT        | Actualizar perfil del paciente | id (path), body completo                      | PatientService    |
+| /glucose_records     | GET        | Obtener lecturas de glucosa    | patientId (query)                             | GlucoseService    |
+| /glucose_records     | POST       | Guardar nueva lectura          | body: { patientId, value, date, time, state } | GlucoseService    |
+| /glucose_records/:id | PUT        | Editar lectura existente       | id (path), body actualizado                   | GlucoseService    |
+| /glucose_records/:id | DELETE     | Eliminar lectura               | id (path)                                     | GlucoseService    |
+| /alerts              | GET        | Obtener alertas del paciente   | patientId (query)                             | AlertService      |
+| /alerts              | POST       | Crear alerta automática        | body: { patientId, type, value }              | AlertService      |
+| /alerts/:id          | PATCH      | Marcar alerta como leída       | id (path), body: { read: true }               | AlertService      |
+| /glucose_ranges      | GET        | Obtener rangos configurados    | patientId (query)                             | AlertService      |
+| /glucose_ranges/:id  | PUT        | Actualizar rangos de glucosa   | id (path), body: { min, max }                 | AlertService      |
+| /medications         | GET        | Obtener medicamentos activos   | patientId (query)                             | MedicationService |
+| /medication_intakes  | POST       | Registrar toma de medicamento  | body: { medicationId, patientId, takenAt }    | MedicationService |
+
+### <a name="_toc226040455"></a>5.3.1.7. Software Deployment Evidence for Sprint Review.
+
+Para este Sprint el despliegue contempla:
+
+1. Entrar a la pagina web https://integravida-appweb.web.app/ y verificar el frontEnd services desplegado
+2. Para ver el DB JSON entrar al siguiente link https://integravida-data.onrender.com/ y le saldran todas las tablas que se han desplegado con Render.com
+
+### <a name="_toc226040456"></a>5.3.1.8. Team Collaboration Insights during Sprint.
+
+Durante este Sprint, las tareas fueron distribuidas colaborativamente entre todos los integrantes del equipo de desarrollo utilizando GitHub Flow, Pull Requests y ramas independientes para cada funcionalidad. Jean Pool Arias lideró la integración general del frontend, la configuración de servicios y la arquitectura base del proyecto. Abigail Raymundo lideró el desarrollo del módulo Patient Profile Management, incluyendo la interfaz de perfil del paciente, edición de datos y mejoras visuales del frontend. Juan Sebastian Estupiñan participó en los módulos relacionados con el monitoreo y registro de glucosa. Javier Oswaldo Tello desarrolló funcionalidades relacionadas con Appointment Management, mientras que Jose Antonio Muñoz colaboró en la implementación de servicios y lógica de integración REST.
+
+Asimismo, el equipo organizó el frontend utilizando una arquitectura basada en Domain-Driven Design y separación por capas domain, application, infrastructure y presentation, permitiendo una mejor modularidad, escalabilidad e integración entre Bounded Contexts.
+
+| Team Member | GitHub Username | Commits | Insertions | Deletions |
+| :--- | :--- | :--- | :--- | :--- |
+| Jean Pool Arias | Jean-AT | 14 commits | 17,009 ++ | 1,972 -- |
+| Abigail Raymundo | AbigailRV | 7 commits | 3,118 ++ | 4,569 -- |
+| Juan Sebastian Estupiñan | JuanSEstupinan | 6 commits | 8,071 ++ | 8,090 -- |
+| Javier Oswaldo Tello | javiertellomurga-Dev | 1 commit | 1,106 ++ | 2,959 -- |
+| Jose Antonio Muñoz | joseam05 | 1 commit | 863 ++ | 1 -- |
+
 # <a name="_toc226040462"></a>Conclusiones
 
 ## <a name="_toc226040463"></a>Conclusiones y recomendaciones
 
-## <a name="_toc226040464"></a>Video About-the-Team
+#### Conclusiones
+
+- **Validación Temprana mediante Lean UX:** La aplicación del proceso Lean UX, respaldada por entrevistas a pacientes diabéticos y personal médico especialista, permitió validar que la fragmentación de la información clínica y la falta de seguimiento de la adherencia al tratamiento constituyen problemas críticos en el manejo de la diabetes. Esta validación orientada al usuario garantizó que la definición del Product Backlog se centrara en funcionalidades de alto valor real, como el módulo de farmacovigilancia, el registro de glucosa, las alertas médicas y el panel de control clínico, evitando el desarrollo de características de bajo impacto.
+
+- **Arquitectura Frontend Escalable y Modular:** La implementación de la Web Application mediante Angular y TypeScript, siguiendo una arquitectura basada en Domain-Driven Design con separación clara entre capas domain, application, infrastructure y presentation, permitió construir una base técnica sólida, mantenible y extensible. La estandarización de patrones como BaseApi, BaseAssembler y BaseEntity garantiza consistencia en el consumo de servicios y facilita la incorporación de nuevos bounded contexts en futuros sprints.
+
+- **Implementación de Bounded Contexts Funcionales:** La división del sistema en bounded contexts independientes como Authentication, Patient Profile Management, Medical Follow-up, Alerts y Appointment Management permitió distribuir el trabajo de forma colaborativa y reducir dependencias entre módulos. Esto facilitó la integración progresiva de funcionalidades sin afectar la estabilidad general del frontend.
+
+- **Entrega Funcional del Frontend en Sprint 2:** El Sprint 2 culminó con la implementación y despliegue exitoso de las principales vistas funcionales de GlucoSmart — autenticación, dashboard de salud, registro de glucosa, historial con gráficos, alertas y perfil del paciente — conectadas a una API REST desplegada en Render.com y con la Web Application disponible en Firebase Hosting. Esto demuestra la capacidad del equipo para cumplir ciclos de entrega completos, desde el desarrollo hasta el despliegue en producción.
+
+- **Integración Exitosa de Servicios REST:** La conexión entre Angular Services y los endpoints REST desplegados permitió validar correctamente operaciones CRUD para usuarios, pacientes, registros de glucosa, alertas y medicamentos. El uso de json-server como entorno de simulación facilitó las pruebas tempranas y la integración progresiva entre frontend y servicios.
+
+- **Mejora de la Experiencia de Usuario:** La construcción de interfaces responsive, dashboards visuales, formularios interactivos y componentes reutilizables permitió mejorar significativamente la experiencia de navegación del usuario final. Funcionalidades como edición de perfil, visualización de alertas y gráficos médicos contribuyen a una interacción más clara y accesible para pacientes y profesionales de salud.
+
+- **Colaboración Efectiva mediante GitHub Flow:** El uso de ramas feature, Pull Requests y procesos de merge permitió mantener una integración organizada del proyecto durante el Sprint 2. La distribución de tareas por módulos y bounded contexts facilitó el trabajo simultáneo entre integrantes, reduciendo conflictos de integración y fortaleciendo la colaboración técnica del equipo.
+
+- **Despliegue Continuo como Práctica Establecida:** La configuración de despliegue en plataformas cloud como Render.com para servicios y Firebase Hosting para la aplicación web estableció una base sólida de integración y entrega continua. Esto permitió validar funcionalidades en entornos accesibles públicamente y preparar la infraestructura para futuras iteraciones del proyecto.
+
+- **Aplicación de Buenas Prácticas de Ingeniería de Software:** El proyecto permitió aplicar principios reales de ingeniería de software como modularidad, separación de responsabilidades, arquitectura multicapa, control de versiones y metodologías ágiles Scrum, fortaleciendo tanto las capacidades técnicas como organizacionales del equipo de desarrollo.
+
+- **Base Sólida para Futuras Iteraciones:** La estructura técnica alcanzada durante los dos primeros sprints proporciona una base estable para continuar con funcionalidades más avanzadas relacionadas con analítica médica, notificaciones inteligentes, seguimiento automatizado de tratamientos y futuras integraciones con servicios externos de salud digital.
+
+#### Recomendaciones
+
+1. **Implementación de la Capa de Servicios (Backend):** Para los siguientes Sprints, se recomienda priorizar el diseño e implementación de la base de datos relacional y el desarrollo de servicios web (API RESTful). Esto es vital para dar vida a las historias de usuario de mayor impacto, permitiendo la persistencia de los registros de glucosa y la emisión automatizada de alertas de hipoglucemia hacia los médicos.
+   
+2. **Priorización de la Seguridad de Datos Clínicos:** Dado que **GlucoSmart** procesará información médica altamente sensible, se recomienda integrar requerimientos no funcionales de seguridad desde el inicio del desarrollo del backend. Esto incluye la encriptación de datos en tránsito y en reposo, autenticación robusta (ej. JSON Web Tokens) y el estricto cumplimiento de la Ley de Protección de Datos Personales vigente en el país.
+
+3. **Integración de Pruebas Automatizadas:** Se sugiere incorporar la automatización de pruebas (unitarias y de integración) en el flujo de trabajo del repositorio. Considerando que el sistema maneja alertas de riesgo vital para los pacientes, asegurar la calidad del código mediante la integración continua (CI) minimizará la probabilidad de fallos en el entorno de producción al momento de notificar reacciones adversas o crisis glucémicas.
+
+4. **Mejora Continua de la Experiencia de Usuario:** Se recomienda continuar refinando las interfaces de la Web Application mediante pruebas con usuarios reales, especialmente pacientes con diabetes y profesionales de salud. Esto permitirá detectar dificultades de navegación, mejorar la claridad de los formularios y asegurar que las funcionalidades sean fáciles de usar.
+
+5. **Validación Médica de las Funcionalidades:** Antes de ampliar el sistema, se recomienda validar los módulos de alertas, rangos de glucosa, farmacovigilancia y reportes médicos con especialistas en salud. Esto permitirá asegurar que la información presentada sea clínicamente útil y no genere interpretaciones incorrectas.
+
+6. **Implementación de Roles y Permisos:** Se recomienda fortalecer la gestión de usuarios mediante roles diferenciados para pacientes, médicos y administradores. Esto permitirá controlar el acceso a la información según el tipo de usuario y proteger datos sensibles dentro de la plataforma.
+
+7. **Optimización del Despliegue Continuo:** Se recomienda configurar un flujo CI/CD más automatizado para que cada cambio aprobado mediante Pull Request pueda ser validado, construido y desplegado de forma controlada. Esto reducirá errores manuales durante el proceso de publicación.
+
+8. **Migración desde json-server hacia una API Real:** Aunque json-server fue útil para validar la integración inicial, se recomienda reemplazarlo progresivamente por un backend real con una base de datos persistente, autenticación segura y lógica de negocio centralizada.
+
+9. **Documentación Técnica Más Detallada:** Se recomienda mantener actualizada la documentación de servicios, endpoints, estructura de carpetas, bounded contexts y convenciones de código. Esto facilitará la incorporación de nuevos integrantes y el mantenimiento del proyecto.
+
+10. **Incorporación de Pruebas de Usabilidad:** Se recomienda realizar pruebas de usabilidad con usuarios del segmento objetivo para evaluar si el flujo de registro de glucosa, visualización de alertas y edición del perfil del paciente resulta claro, rápido y comprensible.
+
+11. **Mejora del Manejo de Errores:** Se recomienda implementar mensajes de error más específicos en formularios, servicios y rutas protegidas. Esto permitirá que el usuario comprenda qué ocurrió y cómo solucionarlo sin abandonar la plataforma.
+
+12. **Fortalecimiento del Módulo Patient Profile Management:** Se recomienda ampliar el perfil del paciente incorporando datos médicos adicionales como alergias, contacto de emergencia, historial de diagnósticos, medicamentos activos y preferencias de notificación.
+
+13. **Implementación de Notificaciones Reales:** Se recomienda integrar un sistema real de notificaciones por correo electrónico, SMS o push notifications para alertar al paciente y al médico ante lecturas fuera de rango o eventos críticos.
+
+14. **Mejor Gestión del Product Backlog:** Se recomienda revisar y actualizar constantemente las historias de usuario, criterios de aceptación y estimaciones de story points, asegurando que el backlog refleje las prioridades reales del producto.
+
+15. **Mayor Control de Calidad en Pull Requests:** Se recomienda establecer una checklist de revisión para cada Pull Request, incluyendo compilación exitosa, revisión de código, consistencia visual, cumplimiento de arquitectura y pruebas básicas de funcionamiento.
 
 # <a name="_toc226040465"></a>Bibliografía
 
+- Carrillo-Larco, R. M., & Bernabé-Ortiz, A. (2019). Diabetes mellitus tipo 2 en Perú: Una revisión sistemática sobre la prevalencia e incidencia en población general. Revista Peruana de Medicina Experimental y Salud Pública. [https://doi.org/10.17843/rpmesp.2019.361.4027](https://doi.org/10.17843/rpmesp.2019.361.4027)
+
+- Lozano Ortiz, M., & Salazar González, B. C. (2007). Estrés percibido y adaptación en pacientes con diabetes mellitus tipo 2. [](http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1657-59972007000100007) [http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1657-59972007000100007](http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S1657-59972007000100007)
+
+- Mishra, L. N. (2024, 5 de agosto). Functional Requirements Analysis – Benefits, Steps and Challenges. Adaptive US. Recuperado el 14 de septiembre de 2025. [https://www.adaptiveus-com.translate.goog/blog/functional-requirements-analysis/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc](https://www.adaptiveus-com.translate.goog/blog/functional-requirements-analysis/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc)
+
+- Domínguez Reyes, M. Y., & Viamonte Pérez, Y. (2014). Ansiedad, depresión y vulnerabilidad al estrés ante el diagnóstico reciente de diabetes mellitus tipo 2. Gaceta Médica Espirituana. [http://scielo.sld.cu/scielo.php?pid=s1608-89212014000300009&script=sci_arttext&tlng=en](http://scielo.sld.cu/scielo.php?pid=s1608-89212014000300009&script=sci_arttext&tlng=en)
+
+- Organización Mundial de la Salud. (2024, 14 de noviembre). Diabetes. [https://www.who.int/news-room/fact-sheets/detail/diabetes](https://www.who.int/news-room/fact-sheets/detail/diabetes?utm_source=chatgpt.com) [Organización Mundial de la Salud](https://www.who.int/news-room/fact-sheets/detail/diabetes)
+
+- GBD 2021 Diabetes Collaborators. (2023). Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: A systematic analysis for the Global Burden of Disease Study 2021. The Lancet, 402(10397), 203–234. [Global, regional, and national burden of diabetes from 1990 to 2021, with projections of prevalence to 2050: a systematic analysis for the Global Burden of Disease Study 2021 - The Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736\(23\)01301-6/fulltext)
+
+- Yu, X., Wang, Z., Liu, S., & Jung, H. (2025). Technological functionality and system architecture of mobile health interventions for diabetes management: A systematic review and meta-analysis of randomized controlled trials. Frontiers in Public Health, 13, 1549568. [](https://doi.org/10.3389/fpubh.2025.1549568)[Frontiers | Technological functionality and system architecture of mobile health interventions for diabetes management: a systematic review and meta-analysis of randomized controlled trials  ](https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2025.1549568/full)
+
+- Organización Panamericana de la Salud. (s. f.). Farmacovigilancia. [https://www.paho.org/es/temas/farmacovigilancia](https://www.paho.org/es/temas/farmacovigilancia?utm_source=chatgpt.com)
+
+- Tang, Z., Zhao, L., Li, J., Yang, Y., Liu, F., Li, H., Yang, Z., Qin, S., & Li, X. (2024). Prognostic effectiveness of interactive vs. non-interactive mobile app interventions in type 2 diabetes: A systematic review and meta-analysis. Archives of Public Health, 82, 221. [](https://doi.org/10.1186/s13690-024-01450-x)[Prognostic effectiveness of interactive vs. non-interactive mobile app interventions in type 2 diabetes: a systematic review and meta-analysis | Archives of Public Health | Full Text](https://archpublichealth.biomedcentral.com/articles/10.1186/s13690-024-01450-x)
+
+- Oracle. (s. f.). What is MySQL? Oracle. Recuperado el 4 de octubre de 2025, de [](https://www.oracle.com/mysql/what-is-mysql/?utm_source=chatgpt.com)[https://www.oracle.com/mysql/what-is-mysql/](https://www.oracle.com/mysql/what-is-mysql/)
+
+- Amazon Web Services. (2024). Amazon DynamoDB documentation. [https://docs.aws.amazon.com/dynamodb/](https://docs.aws.amazon.com/dynamodb/)
 # <a name="_toc226040466"></a>Anexos
+
+Anexo 1: [LandignPage Desplegada](https://mts-opensource.github.io/IntegraVida/)
+Anexo 2: [Mockups - Wireframe](https://www.figma.com/design/lu1p4NLglhTYnbHWT8lDl4/GlucoSmart-Prototype?node-id=0-1&t=LGg8wMfqWMWoYlOB-1)
+Anexo 3: [Impact Mapping](https://miro.com/app/board/uXjVHdifA00=/?share_link_id=602434447345)
+Anexo 4:https://integravida-appweb.web.app/
+Anexo 5:https://integravida-data.onrender.com/
