@@ -38,8 +38,6 @@
 
 ---
 
-<div align="center">
-
 
 # <a name="_toc226040379"></a>Registro de Versiones del Informe
 
