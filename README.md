@@ -1713,6 +1713,9 @@ El objetivo principal de este Sprint es implementar las vistas funcionales de la
 | Integravida-FrontendServices | feature/Medical-Followup-Dashboard | b5bd92b63d18784f5613765dea6c8f05526a89c4 | Merge pull request #13 from MTS-OpenSource/feature/Medical-Followup-Dashboard | Integrated Medical Follow-up Dashboard module into development branch | Mayo 14, 2026 |
 | Integravida-FrontendServices | feature/appointment-management-javier | c937102e6aeb3fa2530804ca77ba18e12cb86298 | Merge pull request #12 from MTS-OpenSource/feature/appointment-management-javier | Integrated Appointment Management frontend module into the application | Mayo 14, 2026 |
 | Integravida-FrontendServices | feature/patient-profile-management-frontend | 94fd770ff0ff5717fbbc639faf90d323336639e2 | Improve patient profile UI and editing experience | Improved Patient Profile interface, responsive layout and profile editing experience for Patient Profile Management bounded context | Mayo 15, 2026 |
+| Integravida-FrontendServices | feature/Medical-Followup-Dashboard | 0a801d4aae1fb232caea198942142ed8fdc836d3 | Added files via upload | Revised TypeScript files for Medical Followup features in Dashboard | Mayo 15, 2026 |
+| Integravida-FrontendServices | feature/Medical-Followup-Dashboard | 269291a2c12d7e86ce9ccaa5980c1b095f47b430 | Added files via upload | Added modified components for dashboard and glucose charts | Mayo 15, 2026 |
+| Integravida-FrontendServices | feature/Medical-Followup-Dashboard | d55c27aa5d0bafb7b4b633d5e89ac3b69652b464 | Added files via upload from cloned repository | Added HTML changes for show Dashboard with the features of Medical Followup including Charts, Recent Alerts, and Medications List | Mayo 15, 2026 |
 
 ### <a name="_toc226040453"></a>5.3.1.5. Execution Evidence for Sprint Review.
 
