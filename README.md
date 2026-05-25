@@ -1614,6 +1614,8 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 
 ### <a name="_toc226040449"></a>5.2.1.1. Sprint Planning 1.
 
+Esta sección documenta la planificación del primer Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue diseñar e implementar la **Landing Page** de GlucoSmart, que sirve como punto de entrada público a la plataforma y comunica la propuesta de valor del producto a visitantes y potenciales usuarios. Al finalizar el Sprint, la Landing Page debía estar desplegada en una URL pública y ser completamente responsive.
+
 | Sprint # | Sprint 1 |
 | :--- | :--- |
 | Sprint Planning Background |  |
@@ -1633,6 +1635,8 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 
 ### <a name="_toc226040451"></a>5.2.1.2. Aspect Leaders and Collaborators.
 
+En el Sprint 1, los principales aspectos de trabajo fueron: la estructura base del proyecto Angular, la implementación del Navbar y Footer, el desarrollo del Hero y secciones de contenido (About, Testimonios, Servicios), la sección de Contacto y el despliegue en Firebase. Se indica con **L** al líder responsable de las decisiones técnicas del aspecto y con **C** al colaborador de apoyo.
+
 | Team Member | GitHub Username | Landing Page Structure | Navbar & Footer | Hero & Services | About & Testimonials | Contact Section | Firebase Deployment |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Jean Pool Arias | Jean-AT | L | L | C | C | C | L |
@@ -1641,6 +1645,10 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 
 
 ### <a name="_toc226040451"></a>5.2.1.3. Sprint Backlog 1.
+
+El objetivo principal del Sprint 1 fue desarrollar y desplegar la primera versión de la Landing Page de GlucoSmart. Esta página estática es el primer punto de contacto con el usuario y comunica claramente la propuesta de valor de la plataforma. Al finalizar el Sprint, la Landing Page debía estar desplegada en una URL pública, ser completamente responsive y mostrar correctamente las secciones de hero, servicios, about us, testimonios y contacto.
+
+**URL del Board del Sprint 1:** `[Pendiente: pegar URL pública del tablero Trello del Sprint 1]`
 
 | Sprint#    |                                   |                |                                                   |                                                                                                 |            |             |        |
 | :--------- | :-------------------------------- | :------------- | :------------------------------------------------ | :---------------------------------------------------------------------------------------------- | :--------- | ----------- | ------ |
@@ -1661,6 +1669,8 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 | US-32      | Cambiar el idioma del LandingPage | T13            | Agregar toggle de idioma en navbar                | Implementar boton EN/ES en el navbar para cambiar idioma                                        | 0.5        | Jean Pool   | To-Do  |
 
 ### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
+
+Durante el Sprint 1 se realizó la implementación completa de la Landing Page de GlucoSmart. Los principales avances incluyeron: la estructuración del repositorio con la aplicación de GitFlow, el desarrollo de todas las secciones de la Landing Page (navbar, hero, servicios, about us, testimonios, contacto y footer) con diseño responsive y soporte de internacionalización ES/EN, y el despliegue exitoso en Firebase Hosting. A continuación se presenta la tabla de commits realizados durante el Sprint.
 
 | Repository  | Branch                 | Commit Id                                | Commit Message                          | Commit Message Body                                                 | Committed on   |
 | :---------- | :--------------------- | :--------------------------------------- | :-------------------------------------- | :------------------------------------------------------------------ | :------------- |
@@ -1697,24 +1707,33 @@ En este Sprint no se implementaron Web Services. El enfoque fue exclusivamente 
 
 ### <a name="_toc226040455"></a>5.2.1.7. Software Deployment Evidence for Sprint Review.
 
-Para el despliegue del Landing Page se utilizó GitHub Page. 
+Durante el Sprint 1 se realizó el despliegue de la Landing Page de GlucoSmart, lo que permitió disponer de una URL pública accesible desde cualquier dispositivo. A continuación se detallan los pasos realizados durante el proceso de despliegue:
 
-Pasos realizados: 
+1. Se subió el código fuente al repositorio `IntegraVida` de la organización MTS-OpenSource en GitHub, asegurando que la rama `main` contuviera la versión final aprobada del proyecto.
+2. Se navegó a la sección **Settings** del repositorio en GitHub.
+3. Se seleccionó el apartado **Pages** en el menú lateral izquierdo.
+4. Se eligió la rama `main` y la carpeta `/root` como fuente de publicación.
+5. Se confirmó la configuración y se esperó a que GitHub generara la URL pública del sitio.
+6. Se accedió al enlace generado para verificar el correcto funcionamiento de la Landing Page y la carga de todos sus assets (CSS, imágenes, componentes Angular).
 
-1. Subif el codigo fuentede la organizacion MTS-OpenSource 
-2. Ir a Settings del repositorio 
-3. Seleccionar el apartado Pages 
-4. Eligir la rama ‘main’ y folder ‘/root’ 
-5. Confirmar el despliegue y acceder al link generado
+**URL de la Landing Page desplegada:** https://mts-opensource.github.io/IntegraVida/
+
+**[Pendiente: agregar screenshot del deployment exitoso en GitHub Pages]**
 
 ### <a name="_toc226040456"></a>5.2.1.8. Team Collaboration Insights during Sprint.
 
-Durante este Sprint la tareas fueron distribuidas equitativamente entre los dos integrantes del equipo de desarollo Jean Pool Arias lidero la estructura vase del proyecto, el navbar, el contact y el language service. Abigail Raymundo liero el hero, el about, los testimonio y los servicio 
+Durante el Sprint 1, las actividades de implementación fueron distribuidas entre los dos integrantes del equipo activos en este Sprint. Jean Pool Arias lideró la estructura base del proyecto Angular, la implementación del Navbar, la sección de Contacto con FormSubmit y el Language Service para internacionalización ES/EN. Abigail Raymundo lideró la implementación del Hero section, la sección About Us con misión y visión, los Testimonios y la sección de Servicios con carousel.
 
-| Team Member      | Commits    |
-| ---------------- | ---------- |
-| Jean Pool Arias  | 14 commits |
-| Abigail Raymundo | 11 commits  |
+El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en GitHub, donde cada integrante desarrolló su módulo de forma independiente y realizó commits descriptivos. La coordinación y toma de decisiones de diseño se realizó vía Discord.
+
+**[Pendiente: agregar screenshot de GitHub → IntegraVida → Insights → Contributors]**
+
+**[Pendiente: agregar screenshot del gráfico de commits del período del Sprint 1]**
+
+| Team Member      | Commits    |
+| :--- | :--- |
+| Jean Pool Arias  | 14 commits |
+| Abigail Raymundo | 11 commits |
 
 ### <a name="_toc226040448"></a>5.3.1. Sprint 2
 
