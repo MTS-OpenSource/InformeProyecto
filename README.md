@@ -1739,6 +1739,8 @@ El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en Git
 
 ### <a name="_toc226040449"></a>5.3.1.1. Sprint Planning 2.
 
+Esta sección documenta la planificación del segundo Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue desarrollar e implementar las vistas funcionales del **Frontend Web Application** conectadas a una **Fake RESTful API** (json-server), cubriendo los bounded contexts de autenticación, Patient Profile Management, Glucose Monitoring, Alerts y Appointment Management. Al finalizar el Sprint, los usuarios debían poder navegar por la aplicación, registrar lecturas de glucosa, ver su historial con gráficos y gestionar sus alertas.
+
 | Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                       |     |
 | :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | **Sprint Planning Background**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
@@ -1755,7 +1757,7 @@ El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en Git
 | Sum of Story Points              | 43                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
 
 ### <a name="_toc226040450"></a>5.3.1.2. Aspect Leaders and Collaborators.
-En este Sprint los aspectos principales son: Authentication (login/register), Dashboard, Glucose Management, Health History, Alerts & Notifications y Patient Profile. Cada aspecto agrupa vistas y servicios relacionados.
+En el Sprint 2, los principales aspectos de trabajo se organizaron por bounded context del Frontend Web Application. Los aspectos cubiertos fueron: Authentication (login/register/logout), Dashboard, Glucose Monitoring (registro, historial y gráficos), Alerts & Notifications, Patient Profile Management, Appointment Management, Services & Fake API y Deployment. Se indica con **L** al líder del aspecto y con **C** al colaborador de apoyo.
 
 | Team Member      | GitHub Username | Login service | Glucose Lecture | Dashboard Service | Deploy | Design |
 | :--------------- | :-------------- | :------------ | :-------------- | :---------------- | :----- | ------ |
@@ -1767,6 +1769,8 @@ En este Sprint los aspectos principales son: Authentication (login/register), Da
 
 ### <a name="_toc226040451"></a>5.3.1.3. Sprint Backlog 2.
 El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.
+
+**URL del Board del Sprint 2:** `[Pendiente: pegar URL pública del tablero Trello del Sprint 2]`
 
 |Sprint#|Sprint 2|||||||
 |---|---|---|---|---|---|---|---|
@@ -1811,6 +1815,7 @@ El objetivo principal de este Sprint es implementar las vistas funcionales de la
 |US-08|Editar perfil|T37|PatientService - updateProfile()|PUT /patients/:id para actualizar datos personales, médicos y configuración|3|935598887|To-Do|
 
 ### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
+Durante el Sprint 2 se implementaron los principales módulos del Frontend Web Application de GlucoSmart. Los avances más destacados incluyen: la implementación de los bounded contexts de autenticación, dashboard, perfil del paciente, monitoreo de glucosa (con historial y gráficos), panel de alertas y gestión de citas; la configuración completa del json-server con el `db.json` poblado con datos de prueba; el desarrollo de todos los servicios Angular para la comunicación con la Fake API; y el despliegue del frontend en Firebase Hosting y del json-server en Render. A continuación se presenta la tabla de commits realizados durante el Sprint.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1859,6 +1864,7 @@ El siguiente video muestra la ejecución funcional de la Frontend Web Applicatio
 https://youtu.be/_JOh925f1DE
 
 ### <a name="_toc226040454"></a>5.3.1.6. Services Documentation Evidence for Sprint Review.
+Durante el Sprint 2 se configuró e implementó la Fake RESTful API mediante json-server, utilizando el repositorio `JsondbData`. Este servidor expone todos los endpoints necesarios para que el frontend pueda realizar operaciones CRUD sobre las entidades del sistema. Los endpoints se consumen desde la URL base `https://integravida-data.onrender.com`. La tabla a continuación documenta cada endpoint disponible con su verbo HTTP, descripción, parámetros y servicio Angular asignado.
 
 ### Services Documentation Evidence for Sprint Review
 
@@ -1884,14 +1890,34 @@ Todos los endpoints se consumen mediante json-server corriendo en `https://integ
 
 ### <a name="_toc226040455"></a>5.3.1.7. Software Deployment Evidence for Sprint Review.
 
-Para este Sprint el despliegue contempla:
+Durante el Sprint 2 se realizaron dos despliegues: el **Frontend Web Application** en Firebase Hosting y el **json-server (Fake API)** en Render. Ambos servicios están disponibles públicamente y son consumidos de forma integrada.
 
-1. Entrar a la pagina web https://integravida-appweb.web.app/ y verificar el frontEnd services desplegado
-2. Para ver el DB JSON entrar al siguiente link https://integravida-data.onrender.com/ y le saldran todas las tablas que se han desplegado con Render.com
+**Despliegue del Frontend en Firebase Hosting:**
+
+1. Instalar Firebase CLI: `npm install -g firebase-tools`
+2. Autenticarse: `firebase login`
+3. Inicializar Firebase en el proyecto `Integravida-FrontendServices`: `firebase init hosting`
+   - Seleccionar el proyecto de Firebase de GlucoSmart.
+   - Public directory: `dist/integravida-frontend-services`
+   - Configurar como Single Page App: Sí
+4. Compilar Angular para producción: `ng build --configuration production`
+5. Desplegar: `firebase deploy --only hosting`
+6. URL generada: **https://integravida-appweb.web.app/**
+
+**Despliegue del json-server en Render:**
+
+1. Se aseguró que el repositorio `JsondbData` en GitHub tuviera el `db.json` y el `package.json` con el script: `"start": "json-server --watch db.json --port 3000"`.
+2. Se creó un nuevo servicio "Web Service" en Render apuntando al repositorio `JsondbData`.
+3. Se configuró: Environment: Node, Build Command: `npm install`, Start Command: `npm start`.
+4. Render generó la URL pública del servicio: **https://integravida-data.onrender.com/**
+5. Se actualizó la variable `API_BASE_URL` en el frontend con la URL de Render.
+
+**[Pendiente: agregar screenshot del output de `firebase deploy` y del dashboard de Render]**
+
 
 ### <a name="_toc226040456"></a>5.3.1.8. Team Collaboration Insights during Sprint.
 
-Durante este Sprint, las tareas fueron distribuidas colaborativamente entre todos los integrantes del equipo de desarrollo utilizando GitHub Flow, Pull Requests y ramas independientes para cada funcionalidad. Jean Pool Arias lideró la integración general del frontend, la configuración de servicios y la arquitectura base del proyecto. Abigail Raymundo lideró el desarrollo del módulo Patient Profile Management, incluyendo la interfaz de perfil del paciente, edición de datos y mejoras visuales del frontend. Juan Sebastian Estupiñan participó en los módulos relacionados con el monitoreo y registro de glucosa. Javier Oswaldo Tello desarrolló funcionalidades relacionadas con Appointment Management, mientras que Jose Antonio Muñoz colaboró en la implementación de servicios y lógica de integración REST.
+Durante el Sprint 2, las tareas fueron distribuidas colaborativamente entre todos los integrantes del equipo de desarrollo utilizando GitHub Flow, Pull Requests y ramas independientes por funcionalidad. Jean Pool Arias lideró la integración general del frontend, la configuración de servicios y la arquitectura base del proyecto. Abigail Raymundo lideró el desarrollo del módulo Patient Profile Management, incluyendo la interfaz de perfil, edición de datos y mejoras visuales. Juan Sebastian Estupiñan participó en los módulos de monitoreo y registro de glucosa. Javier Oswaldo Tello desarrolló funcionalidades del bounded context Appointment Management. Jose Antonio Muñoz colaboró en la implementación de servicios REST y lógica de integración.
 
 Asimismo, el equipo organizó el frontend utilizando una arquitectura basada en Domain-Driven Design y separación por capas domain, application, infrastructure y presentation, permitiendo una mejor modularidad, escalabilidad e integración entre Bounded Contexts.
 
@@ -1902,6 +1928,11 @@ Asimismo, el equipo organizó el frontend utilizando una arquitectura basada en 
 | Juan Sebastian Estupiñan | JuanSEstupinan | 6 commits | 8,071 ++ | 8,090 -- |
 | Javier Oswaldo Tello | javiertellomurga-Dev | 1 commit | 1,106 ++ | 2,959 -- |
 | Jose Antonio Muñoz | joseam05 | 1 commit | 863 ++ | 1 -- |
+
+**[Pendiente: agregar screenshot de GitHub → Integravida-FrontendServices → Insights → Contributors]**
+
+**[Pendiente: agregar screenshot del gráfico de commits del período del Sprint 2]**
+
 
 # <a name="_toc226040462"></a>Conclusiones
 
