@@ -57,7 +57,6 @@
 | 1.2 | 13/05 | Juan Sebastian Estupiñan | Implementación del bounded context Glucose Monitoring incluyendo registro de glucosa, historial clínico, filtros y gráficos médicos. |
 | 1.3 | 14/05 | Javier Tello | Desarrollo e integración del bounded context Appointment Management y mejoras de navegación dentro de la Web Application. |
 | 1.4 | 14/05 | Jose Muñoz | Implementación de servicios REST, validaciones y lógica de integración para módulos clínicos y alertas médicas. |
-| 1.5 | 25/05 | Abigail Raymundo | Actualización del Registro de Versiones del Informe con correcciones del avance anterior (Cap. I-V). |
 | 1.6 | 25/05 | Abigail Raymundo | Reordenamiento del Product Backlog por valor de negocio y adición de Technical Stories para el RESTful API (Cap. 3.4). |
 | 1.7 | 25/05 | Abigail Raymundo | Adición de explicaciones por bounded context en Class Diagrams y ampliación de Database Design con descripción por contexto (Cap. 4.7.1, 4.8, 4.8.1). |
 | 1.8 | 25/05 | Abigail Raymundo | Corrección de Software Configuration Management: herramientas con propósito y referencias, convenciones GitFlow y guías de estilo por lenguaje (Cap. 5.1.1, 5.1.2, 5.1.3). |
