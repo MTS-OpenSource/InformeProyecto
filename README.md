@@ -1025,65 +1025,75 @@ Para alcanzar esta meta, dependemos de los dos segmentos principales identificad
 
 ## <a name="_toc226040412"></a>3.3 Product Backlog
 
-El Product Backlog del proyecto **GlucoSmart** organiza las historias de usuario según su prioridad funcional y valor para el producto. El orden presentado considera el enfoque inicial del proyecto, comenzando por la validación de la propuesta de valor mediante el landing page y continuando con las funcionalidades principales del sistema orientadas al paciente y al doctor. La estimación técnica de cada historia se expresa mediante **Story Points**.
+El Product Backlog de **GlucoSmart** ha sido priorizado en función del valor de negocio que cada historia aporta al producto. El orden sigue la secuencia recomendada: primero las historias relacionadas con la **Landing Page** (visibilidad y propuesta de valor), luego los **CRUDs fundamentales** (autenticación y perfiles), después el **core de negocio** (monitoreo de glucosa, alertas y adherencia), seguido de las **Technical Stories** para el RESTful API y el despliegue, y finalmente las historias secundarias de gestión médica.
 
-| # Orden | User Story ID | Título                                       | Descripción                                                                                                                                         | Story Point |
-| ------- | ------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| 1       | US-01         | Hero section del Landing Page                | Como visitante, quiero visualizar la propuesta de valor principal de GlucoSmart para comprender rápidamente el propósito de la plataforma.          | 2           |
-| 2       | US-29         | Navegación por el Landing Page               | Como visitante, quiero navegar fácilmente entre las secciones del landing page para encontrar información del producto de manera rápida y ordenada. | 3           |
-| 3       | US-30         | Ver información de la Startup                | Como visitante, quiero visualizar información sobre IntegraVida y GlucoSmart para conocer el contexto y objetivo de la solución.                    | 2           |
-| 4       | US-31         | Conocer la misión y visión de la Startup     | Como visitante, quiero leer la misión y visión de la startup para entender su enfoque y compromiso con el manejo de la diabetes.                    | 2           |
-| 5       | US-32         | Cambiar idioma del Landing Page              | Como visitante, quiero cambiar el idioma del landing page para visualizar la información en el idioma de mi preferencia.                            | 3           |
-| 6       | US-33         | Contactar al equipo de soporte               | Como visitante, quiero enviar un mensaje al equipo de soporte para resolver dudas o solicitar información sobre la plataforma.                      | 3           |
-| 7       | US-02         | Registro de paciente                         | Como paciente, quiero registrarme en la plataforma para acceder a las funcionalidades de monitoreo y seguimiento de mi salud.                       | 5           |
-| 8       | US-03         | Registro de doctor                           | Como doctor, quiero registrarme en la plataforma para acceder a la información clínica de mis pacientes y realizar seguimiento médico.              | 5           |
-| 9       | US-04         | Log in                                       | Como usuario, quiero iniciar sesión con mis credenciales para acceder de forma segura a mi cuenta.                                                  | 3           |
-| 10      | US-05         | Recuperación de contraseña                   | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta si la he olvidado.                                                   | 3           |
-| 11      | US-06         | Cerrar sesión                                | Como usuario, quiero cerrar sesión de manera segura para proteger la privacidad de mi información.                                                  | 1           |
-| 12      | US-07         | Crear perfil de paciente                     | Como paciente, quiero completar mi perfil personal y clínico para contar con un registro base dentro de la plataforma.                              | 5           |
-| 13      | US-08         | Editar perfil de paciente                    | Como paciente, quiero actualizar mis datos personales y clínicos para mantener mi información correcta y vigente.                                   | 3           |
-| 14      | US-09         | Registrar antecedentes médicos               | Como paciente, quiero registrar mis antecedentes médicos relevantes para que el doctor disponga de mayor contexto clínico.                          | 3           |
-| 15      | US-11         | Consultar perfil y datos clínicos personales | Como paciente, quiero visualizar mi información personal y clínica consolidada para tener una visión general de mi estado de salud.                 | 2           |
-| 16      | US-12         | Registrar nivel de glucosa                   | Como paciente, quiero registrar mis niveles de glucosa para llevar control sobre mi estado diario de salud.                                         | 5           |
-| 17      | US-13         | Visualizar historial de glucosa              | Como paciente, quiero consultar el historial de mis mediciones de glucosa para identificar cambios y patrones en el tiempo.                         | 3           |
-| 18      | US-14         | Registrar síntomas                           | Como paciente, quiero registrar los síntomas que presento para complementar la información clínica de mi seguimiento.                               | 2           |
-| 19      | US-15         | Visualizar evolución de salud                | Como paciente, quiero visualizar el resumen de mi evolución de salud para entender mejor mi progreso y condición actual.                            | 5           |
-| 20      | US-16         | Recibir alerta por glucosa fuera de rango    | Como paciente, quiero recibir alertas cuando mis niveles de glucosa estén fuera de rango para actuar de manera oportuna ante un posible riesgo.     | 5           |
-| 21      | US-17         | Visualizar tratamiento actual                | Como paciente, quiero consultar mi tratamiento actual para saber qué indicaciones y medicamentos debo seguir.                                       | 3           |
-| 22      | US-18         | Registrar tratamiento prescrito              | Como doctor, quiero registrar el tratamiento prescrito del paciente para dejar definidas las indicaciones médicas dentro de la plataforma.          | 5           |
-| 23      | US-19         | Registrar toma de medicación                 | Como paciente, quiero registrar cada toma de mi medicación para llevar control del cumplimiento de mi tratamiento.                                  | 3           |
-| 24      | US-20         | Recibir recordatorio de medicación           | Como paciente, quiero recibir recordatorios de medicación para no olvidar mis tomas programadas.                                                    | 5           |
-| 25      | US-21         | Reportar efectos adversos                    | Como paciente, quiero reportar efectos adversos relacionados con mi medicación para que el doctor pueda evaluarlos oportunamente.                   | 3           |
-| 26      | US-22         | Consultar adherencia al tratamiento          | Como doctor, quiero consultar el nivel de adherencia del paciente a su tratamiento para evaluar si está cumpliendo correctamente las indicaciones.  | 5           |
-| 27      | US-23         | Revisar información clínica del paciente     | Como doctor, quiero revisar la información clínica registrada por el paciente para realizar un seguimiento adecuado de su estado de salud.          | 5           |
-| 28      | US-24         | Registrar observaciones médicas              | Como doctor, quiero registrar observaciones médicas sobre la evolución del paciente para dejar constancia del seguimiento clínico realizado.        | 3           |
-| 29      | US-25         | Emitir diagnóstico                           | Como doctor, quiero registrar un diagnóstico dentro de la plataforma para documentar formalmente la evaluación clínica del paciente.                | 3           |
-| 30      | US-26         | Generar reporte clínico del paciente         | Como doctor, quiero generar un reporte clínico del paciente para contar con un resumen organizado de su información médica.                         | 5           |
-| 31      | US-10         | Visualizar historial de salud                | Como paciente, quiero consultar mi historial de salud para revisar la evolución de mi condición a lo largo del tiempo.                              | 3           |
-| 32      | US-27         | Solicitar cita médica                        | Como paciente, quiero solicitar una cita médica para recibir atención y seguimiento por parte del doctor.                                           | 5           |
-| 33      | US-28         | Visualizar agenda de citas                   | Como usuario, quiero visualizar mis citas programadas para organizar mejor mi seguimiento médico.                                                   | 3           |
-| 34      | US-34         | Reprogramar cita médica                      | Como usuario, quiero reprogramar una cita médica para adaptar el seguimiento a mi disponibilidad.                                                   | 3           |
-| 35      | US-35         | Cancelar cita médica                         | Como usuario, quiero cancelar una cita médica para liberar el espacio cuando no pueda asistir.                                                      | 2           |
-| 36      | US-36         | Recibir recordatorio de cita                 | Como usuario, quiero recibir recordatorios de mis citas médicas para no olvidar mis atenciones programadas.                                         | 3           |
-| 37      | US-37         | Visualizar gráficos de glucosa               | Como paciente, quiero visualizar gráficos de mis niveles de glucosa para identificar patrones en mi evolución de salud. | 5 |
-| 38      | US-38         | Filtrar historial de glucosa                 | Como paciente, quiero filtrar mi historial de glucosa por fechas para analizar periodos específicos de mi evolución. | 3 |
-| 39      | US-39         | Editar registro de glucosa                   | Como paciente, quiero editar un registro de glucosa para corregir errores en la información ingresada. | 3 |
-| 40      | US-40         | Eliminar registro de glucosa                 | Como paciente, quiero eliminar un registro de glucosa para mantener mi historial limpio y preciso. | 2 |
-| 41      | US-41         | Visualizar alertas generadas                 | Como paciente, quiero ver el historial de alertas generadas para comprender eventos críticos anteriores. | 3 |
-| 42      | US-42         | Configurar rango de glucosa                  | Como paciente, quiero configurar mis rangos de glucosa personalizados para recibir alertas más precisas. | 5 |
-| 43      | US-43         | Confirmar lectura de alerta                  | Como paciente, quiero marcar una alerta como leída para llevar control de las notificaciones atendidas. | 2 |
-| 44      | US-44         | Visualizar efectos adversos registrados      | Como paciente, quiero consultar los efectos adversos registrados para llevar control de mis reacciones. | 3 |
-| 45      | US-45         | Evaluar efectos adversos                     | Como doctor, quiero analizar los efectos adversos reportados para ajustar el tratamiento del paciente. | 5 |
-| 46      | US-46         | Visualizar dashboard de pacientes            | Como doctor, quiero visualizar un listado de mis pacientes para acceder rápidamente a su información clínica. | 5 |
-| 47      | US-47         | Buscar paciente                              | Como doctor, quiero buscar pacientes por nombre o identificación para acceder rápidamente a su información. | 3 |
-| 48      | US-48         | Visualizar evolución gráfica del paciente    | Como doctor, quiero visualizar gráficos de evolución del paciente para analizar su progreso clínico. | 5 |
-| 49      | US-49         | Actualizar tratamiento                       | Como doctor, quiero modificar el tratamiento del paciente para adaptarlo a su evolución clínica. | 5 |
-| 50      | US-50         | Compartir información clínica                | Como paciente, quiero compartir mi información con mi doctor para facilitar el seguimiento médico. | 3 |
-| 51      | US-51         | Recibir recomendaciones médicas              | Como paciente, quiero recibir recomendaciones del doctor para mejorar el control de mi salud. | 3 |
-| 52      | US-52         | Notificar cancelación de cita                | Como usuario, quiero recibir una notificación cuando una cita sea cancelada para reorganizar mi agenda. | 2 |
-| 53      | US-53         | Validar disponibilidad de citas              | Como paciente, quiero ver horarios disponibles para agendar citas correctamente. | 3 |
-| 54      | US-54         | Confirmar cita médica                        | Como usuario, quiero confirmar una cita programada para asegurar mi atención médica. | 2 |
-| 55      | US-55         | Visualizar resumen general del sistema       | Como usuario, quiero ver un resumen general de mi información para tener una visión rápida de mi estado de salud. | 5 |
+**URL pública del Product Backlog:** `[Pendiente: pegar aquí el enlace público del tablero Trello/Jira/Pivotal]`
+
+La estimación técnica de cada historia se expresa mediante **Story Points**.
+
+| # Orden | User Story ID | Título | Descripción | Story Points | Prioridad |
+| :---: | :---: | :--- | :--- | :---: | :---: |
+| 1 | US-01 | Hero section del Landing Page | Como visitante, quiero visualizar la propuesta de valor principal de GlucoSmart para comprender rápidamente el propósito de la plataforma. | 2 | Alta |
+| 2 | US-29 | Navegación por el Landing Page | Como visitante, quiero navegar fácilmente entre las secciones del landing page para encontrar información del producto de manera rápida y ordenada. | 3 | Alta |
+| 3 | US-30 | Ver información de la Startup | Como visitante, quiero visualizar información sobre IntegraVida y GlucoSmart para conocer el contexto y objetivo de la solución. | 2 | Alta |
+| 4 | US-31 | Conocer la misión y visión de la Startup | Como visitante, quiero leer la misión y visión de la startup para entender su enfoque y compromiso con el manejo de la diabetes. | 2 | Alta |
+| 5 | US-32 | Cambiar idioma del Landing Page | Como visitante, quiero cambiar el idioma del landing page para visualizar la información en el idioma de mi preferencia. | 3 | Media |
+| 6 | US-33 | Contactar al equipo de soporte | Como visitante, quiero enviar un mensaje al equipo de soporte para resolver dudas o solicitar información sobre la plataforma. | 3 | Media |
+| 7 | US-02 | Registro de paciente | Como paciente, quiero registrarme en la plataforma para acceder a las funcionalidades de monitoreo y seguimiento de mi salud. | 5 | Alta |
+| 8 | US-03 | Registro de doctor | Como doctor, quiero registrarme en la plataforma para acceder a la información clínica de mis pacientes y realizar seguimiento médico. | 5 | Alta |
+| 9 | US-04 | Log in | Como usuario, quiero iniciar sesión con mis credenciales para acceder de forma segura a mi cuenta. | 3 | Alta |
+| 10 | US-06 | Cerrar sesión | Como usuario, quiero cerrar sesión de manera segura para proteger la privacidad de mi información. | 1 | Alta |
+| 11 | US-07 | Crear perfil de paciente | Como paciente, quiero completar mi perfil personal y clínico para contar con un registro base dentro de la plataforma. | 5 | Alta |
+| 12 | US-08 | Editar perfil de paciente | Como paciente, quiero actualizar mis datos personales y clínicos para mantener mi información correcta y vigente. | 3 | Alta |
+| 13 | US-11 | Consultar perfil y datos clínicos personales | Como paciente, quiero visualizar mi información personal y clínica consolidada para tener una visión general de mi estado de salud. | 2 | Alta |
+| 14 | US-12 | Registrar nivel de glucosa | Como paciente, quiero registrar mis niveles de glucosa para llevar control sobre mi estado diario de salud. | 5 | Alta |
+| 15 | US-13 | Visualizar historial de glucosa | Como paciente, quiero consultar el historial de mis mediciones de glucosa para identificar cambios y patrones en el tiempo. | 3 | Alta |
+| 16 | US-37 | Visualizar gráficos de glucosa | Como paciente, quiero visualizar gráficos de mis niveles de glucosa para identificar patrones en mi evolución de salud. | 5 | Alta |
+| 17 | US-38 | Filtrar historial de glucosa | Como paciente, quiero filtrar mi historial de glucosa por fechas para analizar periodos específicos de mi evolución. | 3 | Alta |
+| 18 | US-39 | Editar registro de glucosa | Como paciente, quiero editar un registro de glucosa para corregir errores en la información ingresada. | 3 | Media |
+| 19 | US-40 | Eliminar registro de glucosa | Como paciente, quiero eliminar un registro de glucosa para mantener mi historial limpio y preciso. | 2 | Media |
+| 20 | US-16 | Recibir alerta por glucosa fuera de rango | Como paciente, quiero recibir alertas cuando mis niveles de glucosa estén fuera de rango para actuar de manera oportuna ante un posible riesgo. | 5 | Alta |
+| 21 | US-41 | Visualizar alertas generadas | Como paciente, quiero ver el historial de alertas generadas para comprender eventos críticos anteriores. | 3 | Alta |
+| 22 | US-42 | Configurar rango de glucosa | Como paciente, quiero configurar mis rangos de glucosa personalizados para recibir alertas más precisas. | 5 | Alta |
+| 23 | US-43 | Confirmar lectura de alerta | Como paciente, quiero marcar una alerta como leída para llevar control de las notificaciones atendidas. | 2 | Media |
+| 24 | US-17 | Visualizar tratamiento actual | Como paciente, quiero consultar mi tratamiento actual para saber qué indicaciones y medicamentos debo seguir. | 3 | Alta |
+| 25 | US-19 | Registrar toma de medicación | Como paciente, quiero registrar cada toma de mi medicación para llevar control del cumplimiento de mi tratamiento. | 3 | Alta |
+| 26 | US-55 | Visualizar resumen general del sistema | Como usuario, quiero ver un resumen general de mi información para tener una visión rápida de mi estado de salud. | 5 | Alta |
+| 27 | TS-01 | Configurar json-server como Fake RESTful API | Como equipo de desarrollo necesitamos configurar un servidor fake con json-server que exponga los endpoints necesarios para el frontend. | 3 | Alta |
+| 28 | TS-02 | Implementar endpoints CRUD /users | Como equipo técnico necesitamos endpoints de autenticación GET y POST /users para implementar login y registro en el frontend. | 2 | Alta |
+| 29 | TS-03 | Implementar endpoints CRUD /patients | Como equipo técnico necesitamos endpoints de gestión de perfil de paciente para conectar el frontend con la capa de datos. | 3 | Alta |
+| 30 | TS-04 | Implementar endpoints CRUD /glucose_records | Como equipo técnico necesitamos endpoints de gestión de registros de glucosa para conectar el módulo de monitoreo. | 3 | Alta |
+| 31 | TS-05 | Implementar endpoints CRUD /alerts | Como equipo técnico necesitamos endpoints de gestión de alertas para conectar el módulo de notificaciones. | 2 | Alta |
+| 32 | TS-06 | Implementar endpoints GET/PUT /glucose_ranges | Como equipo técnico necesitamos endpoints de configuración de rangos para personalizar los umbrales de alerta por paciente. | 2 | Media |
+| 33 | TS-07 | Implementar endpoints CRUD /medications | Como equipo técnico necesitamos endpoints de gestión de medicamentos para el módulo de tratamiento. | 3 | Media |
+| 34 | TS-08 | Implementar endpoint POST /medication_intakes | Como equipo técnico necesitamos un endpoint de confirmación de tomas para el módulo de adherencia a la medicación. | 2 | Media |
+| 35 | TS-09 | Configurar despliegue en Firebase Hosting | Como equipo técnico necesitamos desplegar el frontend en Firebase Hosting para que esté disponible públicamente. | 3 | Alta |
+| 36 | TS-10 | Configurar despliegue de json-server en Render | Como equipo técnico necesitamos desplegar el servidor fake en Render para que el frontend pueda consumirlo en producción. | 3 | Alta |
+| 37 | US-05 | Recuperación de contraseña | Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta si la he olvidado. | 3 | Media |
+| 38 | US-09 | Registrar antecedentes médicos | Como paciente, quiero registrar mis antecedentes médicos relevantes para que el doctor disponga de mayor contexto clínico. | 3 | Media |
+| 39 | US-14 | Registrar síntomas | Como paciente, quiero registrar los síntomas que presento para complementar la información clínica de mi seguimiento. | 2 | Media |
+| 40 | US-15 | Visualizar evolución de salud | Como paciente, quiero visualizar el resumen de mi evolución de salud para entender mejor mi progreso y condición actual. | 5 | Media |
+| 41 | US-18 | Registrar tratamiento prescrito | Como doctor, quiero registrar el tratamiento prescrito del paciente para dejar definidas las indicaciones médicas dentro de la plataforma. | 5 | Media |
+| 42 | US-20 | Recibir recordatorio de medicación | Como paciente, quiero recibir recordatorios de medicación para no olvidar mis tomas programadas. | 5 | Media |
+| 43 | US-21 | Reportar efectos adversos | Como paciente, quiero reportar efectos adversos relacionados con mi medicación para que el doctor pueda evaluarlos oportunamente. | 3 | Media |
+| 44 | US-22 | Consultar adherencia al tratamiento | Como doctor, quiero consultar el nivel de adherencia del paciente a su tratamiento para evaluar si está cumpliendo correctamente las indicaciones. | 5 | Media |
+| 45 | US-23 | Revisar información clínica del paciente | Como doctor, quiero revisar la información clínica registrada por el paciente para realizar un seguimiento adecuado de su estado de salud. | 5 | Media |
+| 46 | US-24 | Registrar observaciones médicas | Como doctor, quiero registrar observaciones médicas sobre la evolución del paciente para dejar constancia del seguimiento clínico realizado. | 3 | Media |
+| 47 | US-25 | Emitir diagnóstico | Como doctor, quiero registrar un diagnóstico dentro de la plataforma para documentar formalmente la evaluación clínica del paciente. | 3 | Baja |
+| 48 | US-26 | Generar reporte clínico del paciente | Como doctor, quiero generar un reporte clínico del paciente para contar con un resumen organizado de su información médica. | 5 | Baja |
+| 49 | US-27 | Solicitar cita médica | Como paciente, quiero solicitar una cita médica para recibir atención y seguimiento por parte del doctor. | 5 | Media |
+| 50 | US-28 | Visualizar agenda de citas | Como usuario, quiero visualizar mis citas programadas para organizar mejor mi seguimiento médico. | 3 | Media |
+| 51 | US-34 | Reprogramar cita médica | Como usuario, quiero reprogramar una cita médica para adaptar el seguimiento a mi disponibilidad. | 3 | Baja |
+| 52 | US-35 | Cancelar cita médica | Como usuario, quiero cancelar una cita médica para liberar el espacio cuando no pueda asistir. | 2 | Baja |
+| 53 | US-36 | Recibir recordatorio de cita | Como usuario, quiero recibir recordatorios de mis citas médicas para no olvidar mis atenciones programadas. | 3 | Baja |
+| 54 | US-44 | Visualizar efectos adversos registrados | Como paciente, quiero consultar los efectos adversos registrados para llevar control de mis reacciones. | 3 | Baja |
+| 55 | US-45 | Evaluar efectos adversos | Como doctor, quiero analizar los efectos adversos reportados para ajustar el tratamiento del paciente. | 5 | Baja |
+| 56 | US-46 | Visualizar dashboard de pacientes | Como doctor, quiero visualizar un listado de mis pacientes para acceder rápidamente a su información clínica. | 5 | Baja |
+| 57 | US-47 | Buscar paciente | Como doctor, quiero buscar pacientes por nombre o identificación para acceder rápidamente a su información. | 3 | Baja |
+| 58 | US-48 | Visualizar evolución gráfica del paciente | Como doctor, quiero visualizar gráficos de evolución del paciente para analizar su progreso clínico. | 5 | Baja |
+| 59 | US-49 | Actualizar tratamiento | Como doctor, quiero modificar el tratamiento del paciente para adaptarlo a su evolución clínica. | 5 | Baja |
+| 60 | US-50 | Compartir información clínica | Como paciente, quiero compartir mi información con mi doctor para facilitar el seguimiento médico. | 3 | Baja |
+| 61 | US-10 | Visualizar historial de salud | Como paciente, quiero consultar mi historial de salud para revisar la evolución de mi condición a lo largo del tiempo. | 3 | Baja |
 
 
 # <a name="_toc226040413"></a>Capitulo IV: Product Design
