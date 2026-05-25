@@ -1412,29 +1412,49 @@ Esta estructura modular permite mantener una separación clara de responsabilida
 
 ### <a name="_toc226040438"></a>4.7.1. Class Diagrams.
 
-Para representar de manera más clara la estructura orientada a objetos del sistema **GlucoSmart**, el diseño fue dividido en dos diagramas de clases complementarios. Ambos diagramas pertenecen al mismo dominio del sistema y se encuentran relacionados principalmente a través de las clases **Patient** y **Doctor**, que actúan como entidades centrales del modelo.
+El siguiente diagrama de clases UML representa la arquitectura orientada a objetos del sistema **GlucoSmart**, organizada por bounded contexts identificados en el Event Storming. Cada bounded context agrupa un conjunto de clases con responsabilidades bien definidas, lo que facilita la separación de la lógica de negocio, el mantenimiento del sistema y su escalabilidad futura.
 
-El primer diagrama, **User & Clinical Management**, presenta la estructura relacionada con la gestión de usuarios y la información clínica del paciente, incluyendo el expediente clínico, historial médico, registros de glucosa, síntomas, diagnósticos, observaciones médicas y reportes clínicos.
+Se han modelado los siguientes bounded contexts:
 
-El segundo diagrama, **Treatment & Appointment Management**, presenta la estructura relacionada con la gestión de tratamientos, medicamentos, tomas de medicación, reportes de efectos adversos, alertas y citas médicas.
+**Bounded Context 1: Patient Profile Management**
 
-La separación en dos diagramas no implica una división del sistema en módulos independientes, sino una organización visual del mismo modelo orientado a objetos con el fin de mejorar la legibilidad, comprensión y trazabilidad del dominio.
+Este contexto agrupa las clases relacionadas con la identidad y los datos clínicos del paciente. La clase central es `Patient`, que contiene los atributos personales del usuario. Se relaciona con `User` (autenticación y roles) y con `MedicalProfile` (datos clínicos como tipo de diabetes, medicación base y fecha de diagnóstico). Esta separación permite que la autenticación evolucione de forma independiente al perfil clínico.
+
+**Bounded Context 2: Glucose Monitoring**
+
+Este contexto gestiona el ciclo de vida de las mediciones de glucosa. `GlucoseRecord` representa una lectura individual y se relaciona con `GlucoseRange` (umbrales personalizados del paciente) y con `Alert` (notificaciones generadas automáticamente cuando una lectura supera o cae por debajo del rango configurado). La lógica de evaluación de rango está encapsulada en `GlucoseService`, garantizando que el frontend no duplique reglas de negocio.
+
+**Bounded Context 3: Appointment Management**
+
+Este contexto gestiona las citas médicas entre pacientes y doctores. La clase `Appointment` relaciona a un `Patient` con un `Doctor` en un horario determinado. El estado de la cita sigue el ciclo: `SCHEDULED → CONFIRMED → COMPLETED / CANCELLED`. La clase `Doctor` se define en este contexto como referencia externa al bounded context de Patient Profile.
 
 #### Class Diagram 1: User & Clinical Management
 
 ![Class Diagram 1](./Informe/assets/class-diagram-1.png)
 
+> Este diagrama presenta las clases relacionadas con autenticación de usuarios, gestión del perfil del paciente e información clínica base (tipo de diabetes, HbA1c objetivo, medicación prescrita).
+
 #### Class Diagram 2: Treatment & Appointment Management
 
 ![Class Diagram 2](./Informe/assets/class-diagram-2.png)
 
+> Este diagrama presenta las clases relacionadas con el monitoreo de glucosa, generación de alertas, gestión de medicamentos, registro de tomas (adherencia) y gestión de citas médicas. Ambos diagramas se interrelacionan a través de las clases `Patient` y `Doctor`, que actúan como entidades centrales del dominio.
+
 ## <a name="_toc226040439"></a>4.8. Database Design.
+
+El diseño de base de datos de **GlucoSmart** sigue un modelo relacional organizado por bounded contexts, en coherencia con la arquitectura Domain-Driven Design del sistema. Cada contexto tiene sus propias tablas con claves primarias y foráneas que garantizan la integridad referencial. Las principales decisiones de diseño son: (1) separar la entidad `users` (autenticación) de `patients` (datos clínicos) para soportar múltiples roles; (2) almacenar los rangos de glucosa por paciente en una tabla independiente para facilitar la personalización de alertas; (3) registrar cada toma de medicamento en `medication_intakes` de forma separada para habilitar el módulo de farmacovigilancia y adherencia. El modelo actual se implementa como `db.json` en json-server y está diseñado para migrar a una base de datos relacional real (PostgreSQL o MySQL) en sprints futuros.
 
 ### <a name="_toc226040440"></a>4.8.1. Database Diagrams
 
-El siguiente diagrama entidad-relación representa el diseño de base de datos del sistema **GlucoSmart**, alineado con los diagramas de clases definidos previamente. El modelo relacional considera la gestión de usuarios, pacientes, doctores, expedientes clínicos, historial médico, registros de glucosa, síntomas, tratamientos, medicamentos, tomas de medicación, reportes de efectos adversos, alertas y citas médicas.
+Los siguientes diagramas de base de datos están organizados por bounded context, mostrando las tablas, atributos, tipos de datos y relaciones entre entidades para cada dominio del sistema GlucoSmart.
 
-La estructura propuesta permite mantener la integridad de los datos y asegurar la trazabilidad clínica del paciente, además de brindar soporte a las principales funcionalidades de monitoreo, tratamiento y seguimiento médico de la plataforma.
+**Bounded Context 1: Patient Profile Management** — incluye las tablas `users`, `patients` y `medical_profiles`, que gestionan la autenticación, los datos personales y el historial clínico base del paciente.
+
+**Bounded Context 2: Glucose Monitoring** — incluye las tablas `glucose_records`, `glucose_ranges` y `alerts`, que gestionan las lecturas de glucosa, los umbrales personalizados y las notificaciones automáticas generadas por el sistema.
+
+**Bounded Context 3: Medication & Adherence** — incluye las tablas `medications` y `medication_intakes`, que gestionan los medicamentos prescritos y el registro de cada toma para el módulo de adherencia terapéutica.
+
+**Bounded Context 4: Appointment Management** — incluye las tablas `appointments` y `doctors`, que gestionan las citas médicas programadas entre pacientes y especialistas.
 
 ![ERD - GlucoSmart](./Informe/assets/erd-database-diagram.png)
 
