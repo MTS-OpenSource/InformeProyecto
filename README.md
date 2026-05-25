@@ -1466,39 +1466,133 @@ La gestión de configuración del software del proyecto **IntegraVida** se defin
 
 ### <a name="_toc226040443"></a>5.1.1. Software Development Environment Configuration.
 
-Para el desarrollo del proyecto se configuró un entorno basado en tecnologías web modernas. La aplicación fue construida utilizando **Angular** como framework principal, con apoyo de **TypeScript** para la lógica de componentes y servicios, **HTML** para la estructura de las vistas y **CSS** para los estilos de la interfaz.
+Esta sección describe todas las herramientas y tecnologías utilizadas por el equipo de IntegraVida para el ciclo de vida completo del proyecto GlucoSmart, organizadas por categoría funcional. Para cada herramienta se indica su nombre, el propósito específico dentro del proyecto y la referencia o ruta de descarga.
 
-El entorno de desarrollo consideró la instalación de las siguientes herramientas:
+**Project Management**
 
-- **Node.js**, como entorno de ejecución para las dependencias del proyecto.
-- **npm**, para la administración de paquetes y librerías.
-- **Angular CLI**, para la creación, ejecución y compilación del proyecto.
-- **Git**, para el control de versiones distribuido.
-- **Visual Studio Code**, como editor de código recomendado para el equipo.
+| Herramienta | Propósito en el proyecto | Referencia |
+| :--- | :--- | :--- |
+| **Trello** | Gestión del Product Backlog y Sprint Backlogs. Se usan tableros con columnas To Do, In Process, To Review y Done para el seguimiento de tareas durante cada Sprint. | https://trello.com |
+| **Discord** | Comunicación sincrónica y asincrónica del equipo. Se usan canales separados por bounded context para coordinar decisiones técnicas. | https://discord.com |
+| **WhatsApp** | Coordinación rápida e informal entre integrantes para avisos y acuerdos de reuniones. | https://whatsapp.com |
 
-Para ejecutar el proyecto en entorno local, primero se instalan las dependencias con el comando `npm install` y luego se inicia el servidor de desarrollo con `ng serve`. Con ello, la Landing Page puede visualizarse desde un navegador web en un entorno local, permitiendo validar cambios de manera continua durante la etapa de implementación.
+**Requirements Management**
+
+| Herramienta | Propósito en el proyecto | Referencia |
+| :--- | :--- | :--- |
+| **GitHub (InformeProyecto)** | Repositorio donde se documenta el informe, incluyendo User Stories, Product Backlog, diagramas y evidencias de cada Sprint. | https://github.com/MTS-OpenSource/InformeProyecto |
+| **Miro** | Elaboración del Event Storming (Big Picture y Design Level) para identificar bounded contexts y eventos de dominio. | https://miro.com |
+
+**Product UX/UI Design**
+
+| Herramienta | Propósito en el proyecto | Referencia |
+| :--- | :--- | :--- |
+| **Figma** | Diseño de wireframes, mockups de alta fidelidad y prototipo interactivo de la Web Application (GlucoSmart). Permite colaboración en tiempo real entre los miembros del equipo. | https://figma.com |
+| **Lucidchart** | Elaboración de diagramas UML (Class Diagrams), diagramas C4 y diagramas de base de datos. | https://lucidchart.com |
+
+**Software Development**
+
+| Herramienta | Propósito en el proyecto | Referencia / Descarga |
+| :--- | :--- | :--- |
+| **Visual Studio Code** | Editor de código principal del equipo. Se usa para el desarrollo del frontend en Angular/TypeScript y la edición del informe en Markdown. | https://code.visualstudio.com |
+| **Node.js v18 LTS** | Entorno de ejecución de JavaScript necesario para ejecutar Angular CLI, json-server y las dependencias del proyecto frontend. | https://nodejs.org |
+| **Angular CLI v17** | Framework principal para el desarrollo del Frontend Web Application. Provee la estructura de componentes, servicios, módulos y routing del proyecto. | `npm install -g @angular/cli` |
+| **TypeScript 5.x** | Lenguaje de programación tipado utilizado en el frontend Angular. Aporta seguridad de tipos y mejor mantenibilidad del código. | Incluido con Angular CLI |
+| **json-server** | Herramienta que simula un servidor RESTful a partir del archivo `db.json`. Permite desarrollar el frontend con una API funcional sin necesidad de un backend real. | `npm install -g json-server` |
+| **Git 2.x** | Sistema de control de versiones distribuido. Permite el trabajo colaborativo mediante ramas, commits y pull requests. | https://git-scm.com |
+| **GitHub Desktop** | Cliente gráfico de Git que facilita la gestión de ramas y commits a los integrantes del equipo. | https://desktop.github.com |
+
+**Software Deployment**
+
+| Herramienta | Propósito en el proyecto | Referencia |
+| :--- | :--- | :--- |
+| **Firebase Hosting** | Plataforma de despliegue del Frontend Web Application (Integravida-FrontendServices). Provee hosting estático con HTTPS y CDN global. | https://firebase.google.com/products/hosting |
+| **Render** | Plataforma de despliegue del servidor json-server (Fake RESTful API). Expone el `db.json` como una API pública accesible desde el frontend desplegado. | https://render.com |
+| **Firebase CLI** | Herramienta de línea de comandos para desplegar el frontend en Firebase Hosting mediante los comandos `firebase login`, `firebase init` y `firebase deploy`. | `npm install -g firebase-tools` |
+
+**Software Documentation**
+
+| Herramienta | Propósito en el proyecto | Referencia |
+| :--- | :--- | :--- |
+| **GitHub (InformeProyecto)** | Repositorio central del informe del proyecto. El informe está escrito en Markdown y es editado colaborativamente por todos los integrantes. | https://github.com/MTS-OpenSource/InformeProyecto |
+| **Markdown** | Lenguaje de marcado ligero utilizado para redactar el informe del proyecto. Permite incluir tablas, imágenes, listas y código dentro de los archivos del repositorio. | https://www.markdownguide.org |
 
 ### <a name="_toc226040444"></a>5.1.2. Source Code Management.
 
-La administración del código fuente se realizó mediante **Git** y el repositorio remoto fue alojado en **GitHub**. Esta decisión permitió mantener un historial completo de cambios, facilitar la colaboración entre integrantes del equipo y asegurar la recuperación de versiones estables del producto.
+La administración del código fuente se realizó mediante **Git** y los repositorios remotos fueron alojados en **GitHub** bajo la organización [MTS-OpenSource](https://github.com/MTS-OpenSource). El equipo adopta **GitFlow** como workflow de gestión de ramas para todos los repositorios del proyecto.
 
-El flujo de trabajo adoptado se basó en el uso de una rama principal, desde la cual se publican las versiones consolidadas del proyecto, y ramas de trabajo creadas para el desarrollo de funcionalidades o ajustes específicos. Cada cambio realizado fue registrado mediante **commits** descriptivos, lo que permitió identificar con claridad el propósito de cada modificación.
+**Repositorios del proyecto:**
 
-Asimismo, GitHub fue utilizado como plataforma de integración del trabajo colaborativo, ya que centralizó el almacenamiento del repositorio, el seguimiento de avances y la preparación de la versión desplegable de la Landing Page.
+| Producto | Repositorio | URL |
+| :--- | :--- | :--- |
+| Landing Page | IntegraVida | https://github.com/MTS-OpenSource/IntegraVida |
+| Frontend Web Application | Integravida-FrontendServices | https://github.com/MTS-OpenSource/Integravida-FrontendServices |
+| Fake RESTful API (json-server) | JsondbData | https://github.com/MTS-OpenSource/JsondbData |
+| Informe del Proyecto | InformeProyecto | https://github.com/MTS-OpenSource/InformeProyecto |
+
+**Estructura de ramas (GitFlow):**
+
+| Tipo de rama | Nombre | Propósito |
+| :--- | :--- | :--- |
+| Producción | `main` | Código estable desplegado en producción. Solo recibe merges desde `release` o `hotfix`. |
+| Desarrollo | `develop` | Rama de integración principal. Todas las features se fusionan aquí antes de pasar a producción. |
+| Funcionalidades | `feature/<nombre-del-feature>` | Desarrollo de una nueva funcionalidad. Se crea desde `develop` y se fusiona de vuelta en `develop`. |
+| Lanzamientos | `release/<versión>` | Preparación para un nuevo release. Se crea desde `develop` cuando el Sprint está listo. |
+| Correcciones críticas | `hotfix/<descripción>` | Corrección de bugs críticos en producción. Se crea desde `main` y se fusiona en `main` y `develop`. |
+
+**Convenciones de nomenclatura para feature branches:**
+
+El nombre debe ser descriptivo, en minúsculas, con palabras separadas por guiones, siguiendo el patrón: `feature/<bounded-context>-<descripcion-corta>`.
+
+Ejemplos: `feature/glucose-monitoring-history-table`, `feature/patient-profile-edit-form`, `feature/auth-login-component`, `feature/alerts-mark-as-read`.
+
+**Convenciones para release branches:**
+
+Se aplica **Semantic Versioning (SemVer)**: `release/<MAJOR>.<MINOR>.<PATCH>`. Ejemplos: `release/1.0.0` (Sprint 1), `release/1.1.0` (Sprint 2), `release/1.1.1` (corrección menor).
+
+**Convenciones para hotfix branches:**
+
+Patrón: `hotfix/<descripcion-breve-del-bug>`. Ejemplos: `hotfix/glucose-record-null-pointer`, `hotfix/login-redirect-loop`, `hotfix/firebase-cors-config`.
+
+**Convenciones de commits (Conventional Commits):**
+
+Formato: `<tipo>(<alcance>): <descripción en imperativo, minúsculas>`. Tipos usados: `feat` (nueva funcionalidad), `fix` (corrección de bug), `docs` (documentación), `style` (formato), `refactor`, `test`, `chore` (mantenimiento).
+
+Ejemplos: `feat(glucose): add new reading form component`, `fix(auth): correct login redirect after logout`, `docs(sprint2): add development evidence table`.
 
 ### <a name="_toc226040445"></a>5.1.3. Source Code Style Guide & Conventions.
 
-Con el fin de mantener la legibilidad y uniformidad del proyecto, se aplicaron convenciones de desarrollo acordes con la estructura de Angular. Los componentes fueron organizados por responsabilidad funcional, separando secciones reutilizables y secciones propias de la Landing Page. De esta manera, el código quedó distribuido en carpetas orientadas a mejorar el mantenimiento y la escalabilidad del proyecto.
+El equipo adopta las siguientes guías de estilo y convenciones estándar de la industria para garantizar consistencia, legibilidad y mantenibilidad del código en todos los repositorios del proyecto.
 
-Las principales convenciones aplicadas fueron las siguientes:
+**HTML — Google HTML/CSS Style Guide**
 
-- Uso de **TypeScript** para la lógica de componentes y servicios.
-- Estructuración del proyecto por carpetas como `core`, `shared` y `components`.
-- Nombres de archivos y componentes descriptivos, alineados con su responsabilidad funcional.
-- Separación de responsabilidades entre estructura (`HTML`), presentación (`CSS`) y comportamiento (`TypeScript`).
-- Reutilización de componentes comunes para mantener consistencia visual y reducir duplicidad de código.
+Referencia: https://google.github.io/styleguide/htmlcssguide.html
 
-Estas convenciones permitieron que el proyecto conserve una base ordenada, fácil de comprender y preparada para futuras ampliaciones.
+Convenciones aplicadas: usar siempre minúsculas para nombres de elementos y atributos HTML; 2 espacios como indentación (no tabs); definir siempre el atributo `alt` en imágenes; atributos booleanos sin valor (`<input disabled>`); codificación UTF-8 declarada en el `<head>`.
+
+**CSS — Google HTML/CSS Style Guide**
+
+Referencia: https://google.github.io/styleguide/htmlcssguide.html
+
+Convenciones aplicadas: clases con minúsculas y guiones (`.glucose-card`, `.patient-header`); evitar IDs para estilos; propiedades CSS ordenadas alfabéticamente dentro de cada regla; uso de propiedades shorthand; variables CSS para colores y tipografías del sistema de diseño.
+
+**JavaScript — Airbnb JavaScript Style Guide**
+
+Referencia: https://github.com/airbnb/javascript
+
+Convenciones aplicadas: usar `const` por defecto y `let` solo cuando la variable cambia; arrow functions para funciones anónimas; template literals en lugar de concatenación; punto y coma obligatorio; nombres de variables en `camelCase`; nombres de clases en `PascalCase`; constantes globales en `UPPER_SNAKE_CASE`.
+
+**TypeScript — Angular Style Guide (oficial de Google)**
+
+Referencia: https://angular.io/guide/styleguide
+
+Convenciones aplicadas: componentes con sufijo `Component` (`GlucoseLogComponent`); servicios con sufijo `Service` (`GlucoseService`); un componente por archivo; imports ordenados (Angular → terceros → propios); uso explícito de `private` y `public`; inyección de dependencias siempre mediante el constructor. Estructura de carpetas: `core/` (singletons, guards), `shared/` (reutilizables), `features/<bounded-context>/` (módulos por dominio).
+
+**Java — Google Java Style Guide**
+
+Referencia: https://google.github.io/styleguide/javaguide.html
+
+Convenciones aplicadas (para el backend en sprints futuros): indentación de 2 espacios; clases en `UpperCamelCase`; métodos y variables en `lowerCamelCase`; constantes en `UPPER_SNAKE_CASE`; llaves `{}` obligatorias en todos los bloques; longitud máxima de línea de 100 caracteres.
 
 ### <a name="_toc226040446"></a>5.1.4. Software Deployment Configuration.
 
