@@ -1653,7 +1653,7 @@ En el Sprint 1, los principales aspectos de trabajo fueron: la estructura base d
 
 El objetivo principal del Sprint 1 fue desarrollar y desplegar la primera versión de la Landing Page de GlucoSmart. Esta página estática es el primer punto de contacto con el usuario y comunica claramente la propuesta de valor de la plataforma. Al finalizar el Sprint, la Landing Page debía estar desplegada en una URL pública, ser completamente responsive y mostrar correctamente las secciones de hero, servicios, about us, testimonios y contacto.
 
-![](assets/Linear.png)
+![](./Informe/assets/Linear.png)
 **URL del Board del Sprint 1:** `https://linear.app/aplicaciones-web/team/INT/all`
 
 | Sprint#    |                                   |                |                                                   |                                                                                                 |            |             |        |
@@ -1699,28 +1699,28 @@ En esta entrega el equipo ha desplegado con exito la primera version del La
 
 Las Secciones implementadas son: 
 
-![](assets/Hero.png)
+![](./Informe/assets/Hero.png)
 
 - Navbar con toggle de idioma ES/EN
 - Hero section con imagen principal 
 
-![](assets/Service.png)
+![](./Informe/assets/Service.png)
 
 - Servicios Especializados con carousel
 
-![](assets/AboutUS.png)
+![](./Informe/assets/AboutUS.png)
 
 - Sobre Nosotros con cards de Mision y Vision
 
- ![](assets/Testimonials.png)
+ ![](./Informe/assets/Testimonials.png)
 
 - Testimonio de usuarios 
 
-![](assets/Form.png)
+![](./Informe/assets/Form.png)
 
 - Formulario de Contacto 
 
-![](assets/Footer.png)
+![](./Informe/assets/Footer.png)
 
 - Footer con redes sociales
 
@@ -1741,7 +1741,7 @@ Durante el Sprint 1 se realizó el despliegue de la Landing Page de GlucoSmart, 
 
 **URL de la Landing Page desplegada:** https://mts-opensource.github.io/IntegraVida/
 
-![](assets/Built.png)
+![](./Informe/assets/Built.png)
 
 ### <a name="_toc226040456"></a>5.2.1.8. Team Collaboration Insights during Sprint.
 
@@ -1749,7 +1749,7 @@ Durante el Sprint 1, las actividades de implementación fueron distribuidas entr
 
 El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en GitHub, donde cada integrante desarrolló su módulo de forma independiente y realizó commits descriptivos. La coordinación y toma de decisiones de diseño se realizó vía Discord.
 
-![](assets/Commits.png)
+![](./Informe/assets/Commits.png)
 
 | Team Member      | Commits    |
 | :--- | :--- |
@@ -1776,6 +1776,7 @@ Esta sección documenta la planificación del segundo Sprint del proyecto GlucoS
 | Sprint N Goal                    | Our focus is on delivering the core functional views of the GlucoSmart web application connected to a fake REST API. We believe it delivers a navigable and data-driven experience to patients managing their diabetes. This will be confirmed when patients can log in, register glucose readings, view their health history with charts, manage alerts and consult their profile — all consuming data from json-server via Angular services. |     |
 | Sprint N Velocity                | 45                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
 | Sum of Story Points              | 43                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
+|                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
 
 ### <a name="_toc226040450"></a>5.3.1.2. Aspect Leaders and Collaborators.
 En el Sprint 2, los principales aspectos de trabajo se organizaron por bounded context del Frontend Web Application. Los aspectos cubiertos fueron: Authentication (login/register/logout), Dashboard, Glucose Monitoring (registro, historial y gráficos), Alerts & Notifications, Patient Profile Management, Appointment Management, Services & Fake API y Deployment. Se indica con **L** al líder del aspecto y con **C** al colaborador de apoyo.
