@@ -1621,20 +1621,20 @@ Esta configuración permitió contar con un mecanismo de despliegue simple, repr
 
 Esta sección documenta la planificación del primer Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue diseñar e implementar la **Landing Page** de GlucoSmart, que sirve como punto de entrada público a la plataforma y comunica la propuesta de valor del producto a visitantes y potenciales usuarios. Al finalizar el Sprint, la Landing Page debía estar desplegada en una URL pública y ser completamente responsive.
 
-| Sprint # | Sprint 1 |
-| :--- | :--- |
-| Sprint Planning Background |  |
-| Date | 01/04/2026 |
-| Time | 6:00 PM |
-| Location | Virtual - Discord |
-| Prepared By | Jean Pool Arias |
-| Attendees (To planning meeting) | Jean Pool Arias, Abigail Raymundo |
-| Sprint N-1 Review Summary | No aplica, debido a que corresponde al primer Sprint del proyecto. |
-| Sprint N-1 Retrospective Summary | No aplica, debido a que corresponde al primer Sprint del proyecto. |
-| Sprint Goal & User Stories |  |
-| Sprint N Goal | El enfoque principal del Sprint 1 fue desarrollar y desplegar la primera versión de la Landing Page de GlucoSmart. Durante este Sprint, únicamente Jean Pool Arias y Abigail Raymundo participaron en el proceso de diseño e implementación, enfocándose en construir la identidad visual de IntegraVida mediante Angular, componentes standalone, diseño responsive y despliegue en Firebase Hosting. El Sprint se considerará exitoso cuando la Landing Page esté desplegada y accesible mediante una URL pública mostrando correctamente las secciones principales como hero, servicios, about us, testimonios y contacto. |
-| Sprint N Velocity | 20 |
-| Sum of Story Points | 20 |
+| Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sprint Planning Background       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Date                             | 01/04/2026 - 25/04/2026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Time                             | 6:00 PM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Location                         | Virtual - Discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Prepared By                      | Jean Pool Arias                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Attendees (To planning meeting)  | Jean Pool Arias, Abigail Raymundo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Sprint N-1 Review Summary        | No aplica, debido a que corresponde al primer Sprint del proyecto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Sprint N-1 Retrospective Summary | No aplica, debido a que corresponde al primer Sprint del proyecto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Sprint Goal & User Stories       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Sprint N Goal                    | El enfoque principal del Sprint 1 fue desarrollar y desplegar la primera versión de la Landing Page de GlucoSmart. Durante este Sprint, únicamente Jean Pool Arias y Abigail Raymundo participaron en el proceso de diseño e implementación, enfocándose en construir la identidad visual de IntegraVida mediante Angular, componentes standalone, diseño responsive y despliegue en Firebase Hosting. El Sprint se considerará exitoso cuando la Landing Page esté desplegada y accesible mediante una URL pública mostrando correctamente las secciones principales como hero, servicios, about us, testimonios y contacto. |
+| Sprint N Velocity                | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Sum of Story Points              | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 
 
@@ -1653,7 +1653,8 @@ En el Sprint 1, los principales aspectos de trabajo fueron: la estructura base d
 
 El objetivo principal del Sprint 1 fue desarrollar y desplegar la primera versión de la Landing Page de GlucoSmart. Esta página estática es el primer punto de contacto con el usuario y comunica claramente la propuesta de valor de la plataforma. Al finalizar el Sprint, la Landing Page debía estar desplegada en una URL pública, ser completamente responsive y mostrar correctamente las secciones de hero, servicios, about us, testimonios y contacto.
 
-**URL del Board del Sprint 1:** `[Pendiente: pegar URL pública del tablero Trello del Sprint 1]`
+![[Pasted image 20260527185006.png]]
+**URL del Board del Sprint 1:** `https://linear.app/aplicaciones-web/team/INT/all`
 
 | Sprint#    |                                   |                |                                                   |                                                                                                 |            |             |        |
 | :--------- | :-------------------------------- | :------------- | :------------------------------------------------ | :---------------------------------------------------------------------------------------------- | :--------- | ----------- | ------ |
@@ -1661,17 +1662,17 @@ El objetivo principal del Sprint 1 fue desarrollar y desplegar la primera versi�
 | Id         | Title                             | Id             | Title                                             | Description                                                                                     | Estimation | Assignet To | Status |
 | US-29      | Navegacion por el Landing Page    | T01            | Crear estructura base del proyecto Angular        | Inicializar proyecto Angular con la estructura de carpetas definidas (shared,comoponents, core) | 1          | Jean Pool   | Done   |
 | US-29      | Navegacion por el LandingPage     | T02            | Implementar Navbar component                      | Crear el componente navbar con logo, link de navegacion y botones de accion                     | 1          | Jean Pool   | Done   |
-| US-29      | Navegación por el Landing Page    | T03            | Implementar Footer component                      | Crear el componente footer con logo, links, redes sociales y copyright                          | 1          | Abigail     | To-Do  |
-| US-29      | Navegación por el Landing Page    | T04            | Implementar navegación entre secciones            | Configurar scroll suave entre secciones del Landing Page                                        | 0.5        | Jean Pool   | To-Do  |
-| US-30      | Ver Información del Startup       | T05            | Implementar sección About                         | Crear el componente about con descripción, misión y visión de IntegraVida                       | 1          | Abigail     | To-Do  |
-| US-31      | Conocer la mision de la Startup   | T06            | Agregar cards de Msion y vision                   | Implementar las cards dentro del componente about con su contenido                              | 0.5        | Abigail     | To-Do  |
+| US-29      | Navegación por el Landing Page    | T03            | Implementar Footer component                      | Crear el componente footer con logo, links, redes sociales y copyright                          | 1          | Abigail     | Done   |
+| US-29      | Navegación por el Landing Page    | T04            | Implementar navegación entre secciones            | Configurar scroll suave entre secciones del Landing Page                                        | 0.5        | Jean Pool   | Done   |
+| US-30      | Ver Información del Startup       | T05            | Implementar sección About                         | Crear el componente about con descripción, misión y visión de IntegraVida                       | 1          | Abigail     | Done   |
+| US-31      | Conocer la mision de la Startup   | T06            | Agregar cards de Msion y vision                   | Implementar las cards dentro del componente about con su contenido                              | 0.5        | Abigail     | Done   |
 | US-33      | Contactar al equipo de soporte    | T07            | Implementar seccion contact                       | Crear el componente contact con el formulario e informacion de contacto                         | 2          | Jean Pool   | Done   |
-| US-01      | Hero section del Landing Page     | T08            | Implementar la seccion Hero                       | Crear el componente service con imagen y principal call to action                               | 1          | Abigail     | To-Do  |
-| US-01      | Hero section del LandingPage      | T09            | Implementar seccion Service                       | Crear el componente con carousel de servicio especializados                                     | 2          | Abigail     | To-Do  |
-| US-01      | Hero section del LandingPage      | 10             | Implementar Testimonios                           | Crear el componente testimonial con las cards de usuarios                                       | 1          | Abigai      | To-Do  |
+| US-01      | Hero section del Landing Page     | T08            | Implementar la seccion Hero                       | Crear el componente service con imagen y principal call to action                               | 1          | Abigail     | Done   |
+| US-01      | Hero section del LandingPage      | T09            | Implementar seccion Service                       | Crear el componente con carousel de servicio especializados                                     | 2          | Abigail     | Done   |
+| US-01      | Hero section del LandingPage      | 10             | Implementar Testimonios                           | Crear el componente testimonial con las cards de usuarios                                       | 1          | Abigai      | Done   |
 | US-32      | Cambiar el idioma del LandingPage | T11            | Implementar Lenguage Service                      | Crear el servicio de internacionalizacion con traduciones en ES y EN                            | 1.5        | Jean Pool   | Done   |
 | U-32       | Cambiar el idioma del LandingPage | T12            | Conectar Language Service a todos los componentes | Inyectar el servicio en cada componente y reemplazar textos estaticos                           | 1.5        | Jean Pool   | Done   |
-| US-32      | Cambiar el idioma del LandingPage | T13            | Agregar toggle de idioma en navbar                | Implementar boton EN/ES en el navbar para cambiar idioma                                        | 0.5        | Jean Pool   | To-Do  |
+| US-32      | Cambiar el idioma del LandingPage | T13            | Agregar toggle de idioma en navbar                | Implementar boton EN/ES en el navbar para cambiar idioma                                        | 0.5        | Jean Pool   | Done   |
 
 ### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
 
@@ -1694,16 +1695,33 @@ Durante el Sprint 1 se realizó la implementación completa de la Landing Page d
 
 En esta entrega el equipo ha desplegado con exito la primera version del LandingPage de IntegraVida 
 
-Enlace del Landing Page desplegado: 
+**URL de la Landing Page desplegada:** https://mts-opensource.github.io/IntegraVida/
 
 Las Secciones implementadas son: 
 
+![[Pasted image 20260527185319.png]]
+
 - Navbar con toggle de idioma ES/EN
 - Hero section con imagen principal 
+
+![[Pasted image 20260527185342.png|697]]
+
 - Servicios Especializados con carousel
+
+![[Pasted image 20260527185357.png]]
+
 - Sobre Nosotros con cards de Mision y Vision
+
+ ![[Pasted image 20260527185410.png]]
+
 - Testimonio de usuarios 
+
+![[Pasted image 20260527185421.png]]
+
 - Formulario de Contacto 
+
+![[Pasted image 20260527185432.png]]
+
 - Footer con redes sociales
 
 ### <a name="_toc226040454"></a>5.2.1.6. Services Documentation Evidence for Sprint Review.
@@ -1723,7 +1741,7 @@ Durante el Sprint 1 se realizó el despliegue de la Landing Page de GlucoSmart, 
 
 **URL de la Landing Page desplegada:** https://mts-opensource.github.io/IntegraVida/
 
-**[Pendiente: agregar screenshot del deployment exitoso en GitHub Pages]**
+![[Pasted image 20260527190117.png]]
 
 ### <a name="_toc226040456"></a>5.2.1.8. Team Collaboration Insights during Sprint.
 
@@ -1731,13 +1749,11 @@ Durante el Sprint 1, las actividades de implementación fueron distribuidas entr
 
 El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en GitHub, donde cada integrante desarrolló su módulo de forma independiente y realizó commits descriptivos. La coordinación y toma de decisiones de diseño se realizó vía Discord.
 
-**[Pendiente: agregar screenshot de GitHub → IntegraVida → Insights → Contributors]**
-
-**[Pendiente: agregar screenshot del gráfico de commits del período del Sprint 1]**
+![[Pasted image 20260527190215.png]]
 
 | Team Member      | Commits    |
 | :--- | :--- |
-| Jean Pool Arias  | 14 commits |
+| Jean Pool Arias  | 17 commits |
 | Abigail Raymundo | 11 commits |
 
 ### <a name="_toc226040448"></a>5.3.1. Sprint 2
