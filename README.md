@@ -1653,7 +1653,7 @@ En el Sprint 1, los principales aspectos de trabajo fueron: la estructura base d
 
 El objetivo principal del Sprint 1 fue desarrollar y desplegar la primera versión de la Landing Page de GlucoSmart. Esta página estática es el primer punto de contacto con el usuario y comunica claramente la propuesta de valor de la plataforma. Al finalizar el Sprint, la Landing Page debía estar desplegada en una URL pública, ser completamente responsive y mostrar correctamente las secciones de hero, servicios, about us, testimonios y contacto.
 
-![[Pasted image 20260527185006.png]]
+![[Linear.png]]
 **URL del Board del Sprint 1:** `https://linear.app/aplicaciones-web/team/INT/all`
 
 | Sprint#    |                                   |                |                                                   |                                                                                                 |            |             |        |
@@ -1699,28 +1699,28 @@ En esta entrega el equipo ha desplegado con exito la primera version del La
 
 Las Secciones implementadas son: 
 
-![[Pasted image 20260527185319.png]]
+![[Hero.png]]
 
 - Navbar con toggle de idioma ES/EN
 - Hero section con imagen principal 
 
-![[Pasted image 20260527185342.png|697]]
+![[Service.png]]
 
 - Servicios Especializados con carousel
 
-![[Pasted image 20260527185357.png]]
+![[AboutUS.png]]
 
 - Sobre Nosotros con cards de Mision y Vision
 
- ![[Pasted image 20260527185410.png]]
+ ![[Testimonials.png]]
 
 - Testimonio de usuarios 
 
-![[Pasted image 20260527185421.png]]
+![[Form.png]]
 
 - Formulario de Contacto 
 
-![[Pasted image 20260527185432.png]]
+![[Footer.png]]
 
 - Footer con redes sociales
 
@@ -1741,7 +1741,7 @@ Durante el Sprint 1 se realizó el despliegue de la Landing Page de GlucoSmart, 
 
 **URL de la Landing Page desplegada:** https://mts-opensource.github.io/IntegraVida/
 
-![[Pasted image 20260527190117.png]]
+![[Built.png]]
 
 ### <a name="_toc226040456"></a>5.2.1.8. Team Collaboration Insights during Sprint.
 
@@ -1749,7 +1749,7 @@ Durante el Sprint 1, las actividades de implementación fueron distribuidas entr
 
 El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en GitHub, donde cada integrante desarrolló su módulo de forma independiente y realizó commits descriptivos. La coordinación y toma de decisiones de diseño se realizó vía Discord.
 
-![[Pasted image 20260527190215.png]]
+![[Commits.png]]
 
 | Team Member      | Commits    |
 | :--- | :--- |
