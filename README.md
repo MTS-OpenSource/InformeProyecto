@@ -1762,11 +1762,11 @@ El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en Git
 
 Esta sección documenta la planificación del segundo Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue desarrollar e implementar las vistas funcionales del **Frontend Web Application** conectadas a una **Fake RESTful API** (json-server), cubriendo los bounded contexts de autenticación, Patient Profile Management, Glucose Monitoring, Alerts y Appointment Management. Al finalizar el Sprint, los usuarios debían poder navegar por la aplicación, registrar lecturas de glucosa, ver su historial con gráficos y gestionar sus alertas.
 
-| Sprint #                         | Sprint 1                                                                                                                                                                                                                                                                                                                                                                                                                                       |     |
+| Sprint #                         | Sprint 2                                                                                                                                                                                                                                                                                                                                                                                                                                       |     |
 | :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | **Sprint Planning Background**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
-| Date                             | 04/05/2026                                                                                                                                                                                                                                                                                                                                                                                                                                     |     |
-| Time                             | 6:00PM                                                                                                                                                                                                                                                                                                                                                                                                                                         |     |
+| Date                             | 04/05/2026 - 16/05/2026                                                                                                                                                                                                                                                                                                                                                                                                                        |     |
+| Time                             | 11:00PM                                                                                                                                                                                                                                                                                                                                                                                                                                        |     |
 | Location                         | Virtual - Discord                                                                                                                                                                                                                                                                                                                                                                                                                              |     |
 | Prepared By                      | Jean Pool Arias                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
 | Attendees (To planning meeting)  | Jean Pool Alexander Arias Tasayco<br>Abigail Nadhim Raymundo Villarroel <br>Juan Sebastian Estupiñan Olortegui<br>Javier Oswaldo Tello Murga<br>Jose Antonio Muñoz Amasifuen                                                                                                                                                                                                                                                                   |     |
@@ -1792,7 +1792,8 @@ En el Sprint 2, los principales aspectos de trabajo se organizaron por bounded c
 ### <a name="_toc226040451"></a>5.3.1.3. Sprint Backlog 2.
 El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.
 
-**URL del Board del Sprint 2:** `[Pendiente: pegar URL pública del tablero Trello del Sprint 2]`
+![](./Informe/assets/Spring2.png)
+**URL del Board del Sprint 1:** `https://linear.app/aplicaciones-web/team/INT/all`
 
 |Sprint#|Sprint 2|||||||
 |---|---|---|---|---|---|---|---|
@@ -1836,7 +1837,7 @@ El objetivo principal de este Sprint es implementar las vistas funcionales de la
 |US-11|Perfil paciente|T36|Crear PatientService - GET|getProfile(patientId) GET /patients/:id con todos los datos clínicos|2|935598887|To-Do|
 |US-08|Editar perfil|T37|PatientService - updateProfile()|PUT /patients/:id para actualizar datos personales, médicos y configuración|3|935598887|To-Do|
 
-### <a name="_toc226040452"></a>5.2.1.4. Development Evidence for Sprint Review.
+### <a name="_toc226040452"></a>5.3.1.4. Development Evidence for Sprint Review.
 Durante el Sprint 2 se implementaron los principales módulos del Frontend Web Application de GlucoSmart. Los avances más destacados incluyen: la implementación de los bounded contexts de autenticación, dashboard, perfil del paciente, monitoreo de glucosa (con historial y gráficos), panel de alertas y gestión de citas; la configuración completa del json-server con el `db.json` poblado con datos de prueba; el desarrollo de todos los servicios Angular para la comunicación con la Fake API; y el despliegue del frontend en Firebase Hosting y del json-server en Render. A continuación se presenta la tabla de commits realizados durante el Sprint.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
@@ -1879,6 +1880,7 @@ En este Sprint se implementaron las principales vistas funcionales de la Web App
 - **Alertas y Notificaciones** — gestión de alertas activas y resueltas con configuración de rangos
 - **Perfil del Paciente** — datos clínicos, contacto y configuración editable
 
+URL del FrontEnd Desplegado: **https://integravida-appweb.web.app/**
 ### Video Demonstration
 
 El siguiente video muestra la ejecución funcional de la Frontend Web Application de IntegraVida durante el Sprint 2, incluyendo autenticación, dashboard médico, Patient Profile Management, historial de glucosa y despliegue de la aplicación.
@@ -1890,7 +1892,7 @@ Durante el Sprint 2 se configuró e implementó la Fake RESTful API mediante jso
 
 ### Services Documentation Evidence for Sprint Review
 
-Todos los endpoints se consumen mediante json-server corriendo en `https://integravida-data.onrender.com`.
+Todos los endpoints se consumen mediante json-server corriendo en https://integravida-data.onrender.com.
 
 | Endpoint             | Verbo HTTP | Descripción                    | Parámetros                                    | Assigned Service  |
 | -------------------- | ---------- | ------------------------------ | --------------------------------------------- | ----------------- |
@@ -1916,6 +1918,8 @@ Durante el Sprint 2 se realizaron dos despliegues: el **Frontend Web Application
 
 **Despliegue del Frontend en Firebase Hosting:**
 
+![](./Informe/assets/Firebase.png)
+
 1. Instalar Firebase CLI: `npm install -g firebase-tools`
 2. Autenticarse: `firebase login`
 3. Inicializar Firebase en el proyecto `Integravida-FrontendServices`: `firebase init hosting`
@@ -1928,13 +1932,14 @@ Durante el Sprint 2 se realizaron dos despliegues: el **Frontend Web Application
 
 **Despliegue del json-server en Render:**
 
+![](./Informe/assets/Render.png)
+
 1. Se aseguró que el repositorio `JsondbData` en GitHub tuviera el `db.json` y el `package.json` con el script: `"start": "json-server --watch db.json --port 3000"`.
 2. Se creó un nuevo servicio "Web Service" en Render apuntando al repositorio `JsondbData`.
 3. Se configuró: Environment: Node, Build Command: `npm install`, Start Command: `npm start`.
 4. Render generó la URL pública del servicio: **https://integravida-data.onrender.com/**
 5. Se actualizó la variable `API_BASE_URL` en el frontend con la URL de Render.
 
-**[Pendiente: agregar screenshot del output de `firebase deploy` y del dashboard de Render]**
 
 
 ### <a name="_toc226040456"></a>5.3.1.8. Team Collaboration Insights during Sprint.
@@ -1943,17 +1948,18 @@ Durante el Sprint 2, las tareas fueron distribuidas colaborativamente entre todo
 
 Asimismo, el equipo organizó el frontend utilizando una arquitectura basada en Domain-Driven Design y separación por capas domain, application, infrastructure y presentation, permitiendo una mejor modularidad, escalabilidad e integración entre Bounded Contexts.
 
-| Team Member | GitHub Username | Commits | Insertions | Deletions |
-| :--- | :--- | :--- | :--- | :--- |
-| Jean Pool Arias | Jean-AT | 14 commits | 17,009 ++ | 1,972 -- |
-| Abigail Raymundo | AbigailRV | 7 commits | 3,118 ++ | 4,569 -- |
-| Juan Sebastian Estupiñan | JuanSEstupinan | 6 commits | 8,071 ++ | 8,090 -- |
-| Javier Oswaldo Tello | javiertellomurga-Dev | 1 commit | 1,106 ++ | 2,959 -- |
-| Jose Antonio Muñoz | joseam05 | 1 commit | 863 ++ | 1 -- |
+| Team Member              | GitHub Username      | Commits    | Insertions | Deletions |
+| :----------------------- | :------------------- | :--------- | :--------- | :-------- |
+| Jean Pool Arias          | Jean-AT              | 14 commits | 17,009 ++  | 1,972 --  |
+| Abigail Raymundo         | AbigailRV            | 7 commits  | 3,118 ++   | 4,569 --  |
+| Juan Sebastian Estupiñan | JuanSEstupinan       | 6 commits  | 8,071 ++   | 8,090 --  |
+| Javier Oswaldo Tello     | javiertellomurga-Dev | 1 commit   | 1,106 ++   | 2,959 --  |
+| Jose Antonio Muñoz       | joseam05             | 1 commit   | 863 ++     | 1 --      |
+|                          |                      |            |            |           |
 
-**[Pendiente: agregar screenshot de GitHub → Integravida-FrontendServices → Insights → Contributors]**
+![](./Informe/assets/CommitsLanding.png)
 
-**[Pendiente: agregar screenshot del gráfico de commits del período del Sprint 2]**
+![](./Informe/assets/CommitsGrap.png)
 
 
 # <a name="_toc226040462"></a>Conclusiones
