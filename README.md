@@ -205,6 +205,18 @@
   - [5.3.1.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
   - [5.3.1.8 Team Collaboration Insights during Sprint](#_toc226040456)
 
+## Sprint 3
+
+- [5.3.1 Sprint 3](#_toc226040448)
+  - [5.3.1.1 Sprint Planning 3](#_toc226040449)
+  - [5.3.1.2 Aspect Leaders and Collaborators](#_toc226040450)
+  - [5.3.1.3 Sprint Backlog 3](#_toc226040451)
+  - [5.3.1.4 Development Evidence for Sprint Review](#_toc226040452)
+  - [5.3.1.5 Execution Evidence for Sprint Review](#_toc226040453)
+  - [5.3.1.6 Services Documentation Evidence for Sprint Review](#_toc226040454)
+  - [5.3.1.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
+  - [5.3.1.8 Team Collaboration Insights during Sprint](#_toc226040456)
+
 # Conclusiones
 
 - [Conclusiones y recomendaciones](#_toc226040463)
@@ -1961,6 +1973,261 @@ Asimismo, el equipo organizó el frontend utilizando una arquitectura basada en 
 
 ![](./Informe/assets/CommitsGrap.png)
 
+# Sprint 3
+
+## 5.4.1. Sprint Planning 3
+
+Esta sección documenta la planificación del tercer Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue implementar el **backend RESTful API** en Spring Boot siguiendo arquitectura DDD + CQRS distribuido en los 5 bounded contexts (IAM, Profiles, Patients, Medical, Monitoring), migrar la persistencia desde json-server hacia **PostgreSQL** desplegado mediante **Docker**, documentar todos los endpoints con **Swagger/OpenAPI**, y completar las vistas pendientes del **Frontend Web Application** que quedaron fuera del alcance del Sprint 2. Al finalizar el Sprint, el sistema debía operar de punta a punta: Angular consumiendo la API real de Spring Boot, con persistencia en PostgreSQL y documentación interactiva disponible en Swagger UI.
+
+|Sprint #|Sprint 3|
+|:--|:--|
+|**Sprint Planning Background**||
+|Date|03/06/2026 - 18/06/2026|
+|Time|7:00 PM|
+|Location|Virtual - Discord|
+|Prepared By|Jean Pool Arias|
+|Attendees (To planning meeting)|Jean Pool Alexander Arias Tasayco<br>Abigail Nadhim Raymundo Villarroel<br>Juan Sebastian Estupiñan Olortegui<br>Javier Oswaldo Tello Murga<br>Jose Antonio Muñoz Amasifuen|
+|Sprint N-1 Review Summary|El Sprint 2 culminó con la implementación exitosa de las vistas funcionales del Frontend Web Application conectadas a json-server, incluyendo autenticación, dashboard, monitoreo de glucosa, alertas y perfil del paciente. El equipo identificó que el siguiente paso crítico era reemplazar la Fake API por un backend real en Spring Boot con persistencia relacional, además de completar las vistas pendientes del lado del médico (Doctor Dashboard, diagnósticos, reportes clínicos) y de citas médicas.|
+|Sprint N-1 Retrospective Summary|El equipo identificó como acierto la organización del frontend en capas DDD (domain, application, infrastructure, presentation), lo que facilitó la incorporación de nuevos bounded contexts. Como oportunidad de mejora se señaló la necesidad de definir contratos de API (DTOs y endpoints) antes de iniciar el desarrollo paralelo de frontend y backend, para evitar reproceso al momento de la integración real.|
+|**Sprint Goal & User Stories**||
+|Sprint N Goal|Our focus is on delivering a fully functional backend RESTful API built with Spring Boot following Domain-Driven Design and CQRS principles, persisted on PostgreSQL via Docker, and documented through Swagger. We believe it provides a production-ready service layer for IntegraVida. This will be confirmed when the Angular frontend consumes the real Spring Boot API instead of json-server, all five bounded contexts (IAM, Profiles, Patients, Medical, Monitoring) expose working endpoints, and the remaining frontend views (Doctor Dashboard, Appointments, Clinical Reports) are completed and integrated.|
+|Sprint N Velocity|230|
+|Sum of Story Points|230|
+
+---
+
+## 5.4.2. Aspect Leaders and Collaborators
+
+En el Sprint 3, los principales aspectos de trabajo se dividieron entre la implementación del backend Spring Boot por bounded context y la finalización de las vistas pendientes del Frontend Web Application. Se indica con **L** al líder responsable de las decisiones técnicas del aspecto y con **C** al colaborador de apoyo.
+
+| Team Member              | GitHub Username | IAM Backend | Profiles Backend | Patients Backend | Medical Backend | Monitoring Backend | Frontend Completion | DB & Docker | Swagger Docs |
+| :----------------------- | :-------------- | :---------- | :--------------- | :--------------- | :-------------- | :----------------- | :------------------ | :---------- | :----------- |
+| Jean Pool Arias          | Jean-AT         | C           | C                | C                | C               | L                  | L                   | L           | L            |
+| Abigail Raymundo         | AbigailRv       | C           | L                | C                | C               | C                  | C                   | C           | C            |
+| Juan Sebastian Estupiñan | JuanSEstupinan  | C           | C                | C                | L               | C                  | C                   | C           | C            |
+| Javier Oswaldo Tello     | JavierTello20   | C           | C                | L                | C               | C                  | C                   | C           | C            |
+| Jose Antonio Muñoz       | joseam05        | C           | C                | C                | L               | L                  | C                   | C           | C            |
+
+---
+
+## 5.4.3. Sprint Backlog 3
+
+El objetivo principal de este Sprint es migrar el sistema GlucoSmart desde una Fake API (json-server) hacia un backend real desarrollado en Spring Boot con arquitectura DDD + CQRS, persistido en PostgreSQL mediante contenedores Docker y documentado con Swagger/OpenAPI. En paralelo, se completan las vistas pendientes del Frontend Web Application, principalmente las orientadas al rol de médico (Doctor Dashboard, diagnósticos, reportes clínicos) y al módulo de citas.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/Sprint3.png` Captura: vista del Board de Linear del Sprint 3 con las columnas Backlog/To-Do/In Progress/Done y los 5 Parent Issues visibles (IAM, Profiles, Patients, Medical, Monitoring, Frontend).
+
+**URL del Board del Sprint 3:** `https://linear.app/integravida/team/INT/all`
+
+|Sprint#|Sprint 3|||||||
+|---|---|---|---|---|---|---|---|
+|**User Story**||**Work-Item/Task**||||||
+|**Id**|**Title**|**Id**|**Title**|**Description**|**Estimation**|**Assigned To**|**Status**|
+|US-02, US-03|Registro de paciente / doctor|T01|Create DDD package structure|Inicializar estructura de paquetes interfaces, application, domain, infrastructure para el contexto IAM|1|Jean Pool|To-Do|
+|US-02, US-03|Registro de paciente / doctor|T02|Implement User aggregate with value objects|Crear el aggregate User con value objects de Roles (Patient/Doctor)|3|Jean Pool|To-Do|
+|US-02, US-03, US-04|Registro y login|T03|Implement UserCommandService + UserQueryService|Servicios CQRS para creación y consulta de usuarios|3|Jean Pool|To-Do|
+|US-04, US-06|Log in / Cerrar sesión|T04|Configure JWT filter + SecurityConfig|Filtro de seguridad stateless con JWT y configuración de Spring Security|3|Jean Pool|To-Do|
+|US-02, US-03, US-04|Registro y login|T05|Implement endpoints POST /api/v1/authentication/sign-up and sign-in|Endpoints de registro y autenticación que retornan JWT|3|Jean Pool|To-Do|
+|—|—|T06|Create IamContextFacade ACL|Facade de acceso controlado para que otros contextos consulten datos de IAM|2|Jean Pool|To-Do|
+|US-07, US-08, US-11|Perfil del paciente|T07|Implement Profile aggregate with value objects|Aggregate Profile con PersonName, EmailAddress, DateOfBirth|3|Abigail|To-Do|
+|US-07, US-08|Crear / editar perfil|T08|Implement ProfileCommandService + ProfileQueryService|Servicios CQRS para gestión de perfiles|3|Abigail|To-Do|
+|—|—|T09|Create ProfilesContextFacade ACL|Facade de acceso para que Patients consuma datos de Profiles|2|Abigail|To-Do|
+|US-07, US-08, US-11|Perfil del paciente|T10|Implement endpoints GET/POST/PUT /api/v1/profiles|Endpoints REST de creación, consulta y edición de perfil|3|Abigail|To-Do|
+|US-07, US-08, US-11|Perfil del paciente|T11|Implement Patient aggregate|Aggregate Patient vinculado al perfil mediante ProfileId|3|Javier|To-Do|
+|US-17, US-18, US-49|Tratamiento|T12|Implement Treatment aggregate with TreatmentStatus|Aggregate Treatment con value object TreatmentStatus (Active/Completed)|3|Javier|To-Do|
+|US-17, US-19, US-20|Medicación|T13|Implement Medication aggregate with MedicationSchedule|Aggregate Medication con horarios y dosis programadas|3|Javier|To-Do|
+|—|—|T14|Implement ExternalProfileService ACL outbound|Servicio de salida que consulta ProfilesContextFacade|2|Javier|To-Do|
+|US-07, US-08, US-11|Perfil del paciente|T15|Implement endpoints GET/POST /api/v1/patients|Endpoints REST de pacientes|3|Javier|To-Do|
+|US-17, US-18, US-49|Tratamiento|T16|Implement endpoints GET/POST/PUT /api/v1/treatments|Endpoints REST de tratamientos|3|Javier|To-Do|
+|US-17, US-19, US-20|Medicación|T17|Implement endpoints GET/POST /api/v1/medications|Endpoints REST de medicamentos|3|Javier|To-Do|
+|US-19|Toma de medicación|T18|Implement endpoint POST /api/v1/medication-intakes|Endpoint para confirmar la toma de un medicamento|2|Javier|To-Do|
+|US-25|Diagnóstico|T19|Implement Diagnosis aggregate|Aggregate Diagnosis con DiagnosisCode|2|Jose Antonio|To-Do|
+|US-26|Reporte clínico|T20|Implement ClinicalReport aggregate|Aggregate ClinicalReport con resumen estructurado|3|Jose Antonio|To-Do|
+|US-27, US-28, US-34, US-35|Citas médicas|T21|Implement Appointment aggregate with AppointmentStatus|Aggregate Appointment con ciclo Scheduled→Confirmed→Completed/Cancelled|5|Jose Antonio|To-Do|
+|—|—|T22|Implement ExternalPatientService + ExternalMonitoringService ACL outbound|Servicios de salida para consultar Patients y Monitoring|2|Jose Antonio|To-Do|
+|US-25|Diagnóstico|T23|Implement endpoints GET/POST /api/v1/diagnoses|Endpoints REST de diagnósticos|2|Jose Antonio|To-Do|
+|US-26|Reporte clínico|T24|Implement endpoints GET/POST /api/v1/clinical-reports|Endpoints REST de reportes clínicos|3|Jose Antonio|To-Do|
+|US-27, US-28, US-34, US-35, US-36|Citas médicas|T25|Implement endpoints GET/POST/PUT/DELETE /api/v1/appointments|Endpoints REST completos de citas médicas|5|Jose Antonio|To-Do|
+|US-12, US-13, US-39, US-40|Glucosa|T26|Implement GlucoseRecord aggregate with command and query services|Aggregate GlucoseRecord con CRUD CQRS completo|5|Juan Sebastian|To-Do|
+|US-16, US-41, US-43|Alertas|T27|Implement Alert aggregate with auto-generation logic when glucose is out of range|Aggregate Alert que se dispara automáticamente al evaluar GlucoseValue fuera de rango|5|Juan Sebastian|To-Do|
+|US-42|Rango de glucosa|T28|Implement GlucoseRange aggregate with command and query services|Aggregate GlucoseRange configurable por paciente|3|Juan Sebastian|To-Do|
+|US-24|Observaciones médicas|T29|Implement ClinicalObservation aggregate with command and query services|Aggregate ClinicalObservation vinculado al paciente|3|Juan Sebastian|To-Do|
+|—|—|T30|Implement ExternalPatientService ACL outbound|Servicio de salida para validar existencia del paciente|2|Juan Sebastian|To-Do|
+|US-12, US-13, US-39, US-40|Glucosa|T31|Implement endpoints GET/POST/PUT/DELETE /api/v1/glucose-records|Endpoints REST completos de registros de glucosa|5|Juan Sebastian|To-Do|
+|US-37, US-38|Gráficos / Filtros|T32|Implement endpoints GET /api/v1/glucose-records with date range filter|Endpoint con query params from/to para filtrado histórico|3|Juan Sebastian|To-Do|
+|US-41, US-43|Alertas|T33|Implement endpoints GET/PATCH /api/v1/alerts|Endpoints REST de alertas y marcado como leída|3|Juan Sebastian|To-Do|
+|US-42|Rango de glucosa|T34|Implement endpoints GET/PUT /api/v1/glucose-ranges|Endpoints REST de configuración de rangos|3|Juan Sebastian|To-Do|
+|US-24|Observaciones médicas|T35|Implement endpoints GET/POST /api/v1/clinical-observations|Endpoints REST de observaciones clínicas|3|Juan Sebastian|To-Do|
+|US-12, US-16, US-41, US-42|Glucosa / Alertas|T36|Implement unit and integration tests for GlucoseRecord, Alert and GlucoseRange|Pruebas unitarias e integración del core clínico|3|Juan Sebastian|To-Do|
+|US-02, US-03, US-04|Login / Registro|T37|Implement Login and Register views with reactive form validations and role selector|Vista de login y registro con selector Patient/Doctor|5|Abigail|To-Do|
+|US-05|Recuperar contraseña|T38|Implement forgot password view and recovery flow|Vista de recuperación de contraseña vía email|2|Abigail|To-Do|
+|US-04, US-06|Sesión|T39|Implement AuthGuard and route protection for private views|Guard de Angular para proteger rutas privadas|1|Abigail|To-Do|
+|US-07, US-11|Perfil|T40|Implement Patient Profile view with personal and clinical data display|Vista de perfil consolidada|3|Abigail|To-Do|
+|US-08|Editar perfil|T41|Implement Patient Profile edit form with save and cancel actions|Formulario de edición de perfil|3|Abigail|To-Do|
+|US-09, US-10|Antecedentes médicos|T42|Implement Medical History section inside Patient Profile|Sección de antecedentes médicos dentro del perfil|2|Abigail|To-Do|
+|US-55|Resumen general|T43|Implement Dashboard summary cards|Cards de Current Glucose, HbA1c, Readings Today, Treatment Status|5|Abigail|To-Do|
+|US-37|Gráficos de glucosa|T44|Implement Glucose Trends chart with actual vs target line for last 7 days|Gráfico de línea de tendencias de los últimos 7 días|5|Abigail|To-Do|
+|US-17, US-20|Tratamiento / Recordatorios|T45|Implement Upcoming Doses widget with medication status|Widget de próximas dosis con estados Done/Next/Later|3|Abigail|To-Do|
+|US-41|Alertas|T46|Implement Recent Alerts widget inside Dashboard|Widget de alertas recientes en el dashboard|2|Abigail|To-Do|
+|US-12|Registrar glucosa|T47|Implement Glucose Log form with value, date, time, state and notes|Formulario de nueva lectura de glucosa|3|Juan Sebastian|To-Do|
+|US-16|Alerta por rango|T48|Implement real-time color badge classification on glucose input|Badge en tiempo real Normal/Alto/Bajo|2|Juan Sebastian|To-Do|
+|US-13|Historial de glucosa|T49|Implement Health History table with paginated glucose records|Tabla paginada de historial de glucosa|3|Juan Sebastian|To-Do|
+|US-38|Filtro por fechas|T50|Implement date range filters in Health History|Filtros rápidos: última semana, mes, 3 y 6 meses|3|Juan Sebastian|To-Do|
+|US-37, US-15|Evolución de salud|T51|Implement evolution chart in Health History with TIR stats|Gráfico de evolución con estadísticas TIR/hiper/hipo/CV|5|Juan Sebastian|To-Do|
+|US-39|Editar registro|T52|Implement edit glucose record modal with pre-loaded data|Modal de edición de registro de glucosa|2|Juan Sebastian|To-Do|
+|US-40|Eliminar registro|T53|Implement delete glucose record with confirmation modal|Confirmación de eliminación de registro|1|Juan Sebastian|To-Do|
+|US-41|Alertas|T54|Implement Alerts view with tabs All, Active and Resolved|Vista de alertas con tabs por estado|3|Juan Sebastian|To-Do|
+|US-43|Marcar leída|T55|Implement mark single alert as read and mark all as read actions|Acciones de marcado individual y masivo|2|Juan Sebastian|To-Do|
+|US-42|Configurar rango|T56|Implement glucose range configuration panel|Panel de configuración de rangos min/max|2|Juan Sebastian|To-Do|
+|US-21, US-44|Efectos adversos|T57|Implement Adverse Effects register form and history list|Formulario y listado de farmacovigilancia|3|Javier|To-Do|
+|US-17|Tratamiento actual|T58|Implement current treatment view with active medications list|Vista de tratamiento activo|2|Javier|To-Do|
+|US-19|Confirmar toma|T59|Implement medication intake confirmation button per dose|Botón de confirmación de toma por dosis|2|Javier|To-Do|
+|US-27|Solicitar cita|T60|Implement Appointment request form with date, time and doctor selector|Formulario de solicitud de cita|3|Javier|To-Do|
+|US-28|Agenda de citas|T61|Implement Appointments agenda view with scheduled appointments|Vista de agenda cronológica|3|Javier|To-Do|
+|US-34|Reprogramar cita|T62|Implement reschedule appointment modal|Modal de reprogramación de cita|2|Javier|To-Do|
+|US-35|Cancelar cita|T63|Implement cancel appointment action with confirmation dialog|Confirmación de cancelación de cita|1|Javier|To-Do|
+|US-46|Dashboard médico|T64|Implement Doctor Dashboard with patient list and quick access|Dashboard del médico con listado de pacientes|5|Javier|To-Do|
+|US-47|Buscar paciente|T65|Implement patient search by name or ID inside Doctor Dashboard|Búsqueda de pacientes por nombre o DNI|2|Javier|To-Do|
+|US-48|Evolución gráfica|T66|Implement patient glucose evolution chart view for Doctor|Vista de evolución de glucosa para el médico|3|Javier|To-Do|
+|US-24|Observación médica|T67|Implement medical observation register form inside patient record|Formulario de observaciones médicas|2|Jose Antonio|To-Do|
+|US-25|Diagnóstico|T68|Implement diagnosis register form inside patient clinical history|Formulario de diagnóstico|2|Jose Antonio|To-Do|
+|US-26|Reporte clínico|T69|Implement clinical report generator view with structured summary|Generador de reporte clínico estructurado|5|Jose Antonio|To-Do|
+|US-49|Actualizar tratamiento|T70|Implement treatment update form for Doctor to modify prescriptions|Formulario de ajuste terapéutico para el médico|3|Jose Antonio|To-Do|
+|US-45|Evaluar efectos adversos|T71|Implement adverse effects evaluation view for Doctor|Vista de evaluación de efectos adversos|3|Jose Antonio|To-Do|
+|US-22|Adherencia|T72|Implement treatment adherence view for Doctor with compliance percentage|Vista de porcentaje de adherencia al tratamiento|3|Jose Antonio|To-Do|
+|US-50|Compartir información|T73|Implement shared clinical information access flow between Patient and Doctor|Flujo de compartición de datos clínicos|3|Jose Antonio|To-Do|
+|US-51|Recomendaciones|T74|Implement doctor recommendations notification view for Patient|Vista de notificación de recomendaciones médicas|2|Abigail|To-Do|
+|US-52|Notificar cancelación|T75|Implement appointment cancellation notification for Patient and Doctor|Notificación de cancelación de cita|2|Abigail|To-Do|
+|US-53|Disponibilidad de citas|T76|Implement available appointment slots validation before scheduling|Validación de horarios disponibles|2|Abigail|To-Do|
+|US-54|Confirmar cita|T77|Implement appointment confirmation action with status update|Confirmación de cita con cambio de estado|1|Abigail|To-Do|
+|US-02, US-03, US-04, US-12, US-13, US-16, US-41, US-42|Integración general|T78|Implement Angular services connection to backend REST API replacing json-server|Reemplazo completo de json-server por la API real de Spring Boot|5|Jean Pool|To-Do|
+|US-02, US-04, US-12|Manejo de errores|T79|Implement global error handler and HTTP interceptor for API error responses|Interceptor HTTP y manejo centralizado de errores|3|Jean Pool|To-Do|
+|US-01, US-29|Responsive|T80|Implement responsive layout adjustments for all views|Ajustes responsive para mobile y tablet en todas las vistas|3|Abigail|To-Do|
+|—|—|T81|Configure PostgreSQL database via Docker container|Definir `docker-compose.yml` con servicio PostgreSQL, volumen persistente y variables de entorno|3|Jean Pool|To-Do|
+|—|—|T82|Configure Spring Boot datasource connection to PostgreSQL|Configurar `application-prod.properties` con credenciales y URL de conexión JDBC|2|Jean Pool|To-Do|
+|—|—|T83|Configure SpringDoc OpenAPI / Swagger UI|Integrar dependencia `springdoc-openapi` y exponer `/swagger-ui/index.html`|2|Jean Pool|To-Do|
+|—|—|T84|Document all REST endpoints with OpenAPI annotations|Anotar controllers con `@Operation`, `@ApiResponse` y esquemas de DTOs|3|Jean Pool|To-Do|
+
+---
+
+## 5.4.4. Development Evidence for Sprint Review
+
+Durante el Sprint 3 se implementó el backend completo de GlucoSmart en Spring Boot, organizado en los 5 bounded contexts definidos (IAM, Profiles, Patients, Medical, Monitoring), siguiendo el patrón DDD + CQRS ya validado en el proyecto base. Se migró la persistencia desde json-server hacia **PostgreSQL**, desplegado mediante un contenedor **Docker**, y se documentaron todos los endpoints mediante **Swagger/OpenAPI**. En paralelo, se completaron las vistas pendientes del Frontend Web Application orientadas al médico (Doctor Dashboard, diagnósticos, reportes clínicos, adherencia) y al módulo de citas médicas, además de reemplazar las llamadas a json-server por la API real.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/CommitsSprint3.png` Captura: listado de commits del Sprint 3 en GitHub (similar al de Sprint 2), mostrando ramas feature por bounded context.
+
+|Repository|Branch|Commit Id|Commit Message|Commit Message Body|Committed on|
+|:--|:--|:--|:--|:--|:--|
+|Integravida-BackendServices|main|_(pendiente)_|Initial commit|Estructura base del proyecto Spring Boot con Maven y dependencias DDD|Junio 03, 2026|
+|Integravida-BackendServices|feature/iam-context|_(pendiente)_|feat(iam): implement User aggregate and JWT auth|Implementación del contexto IAM con autenticación JWT|Junio 05, 2026|
+|Integravida-BackendServices|feature/profiles-context|_(pendiente)_|feat(profiles): implement Profile aggregate and endpoints|Implementación del contexto Profiles|Junio 06, 2026|
+|Integravida-BackendServices|feature/patients-context|_(pendiente)_|feat(patients): implement Patient, Treatment, Medication aggregates|Implementación del contexto Patients|Junio 08, 2026|
+|Integravida-BackendServices|feature/monitoring-context|_(pendiente)_|feat(monitoring): implement GlucoseRecord, Alert, GlucoseRange|Implementación del contexto Monitoring con lógica de alertas automáticas|Junio 10, 2026|
+|Integravida-BackendServices|feature/medical-context|_(pendiente)_|feat(medical): implement Diagnosis, ClinicalReport, Appointment|Implementación del contexto Medical|Junio 11, 2026|
+|Integravida-BackendServices|feature/postgres-docker|_(pendiente)_|chore: configure PostgreSQL via Docker|Configuración de docker-compose con PostgreSQL|Junio 12, 2026|
+|Integravida-BackendServices|feature/swagger-docs|_(pendiente)_|docs: add OpenAPI annotations to all controllers|Documentación Swagger de todos los endpoints|Junio 13, 2026|
+|Integravida-FrontendServices|feature/doctor-dashboard|_(pendiente)_|feat: implement Doctor Dashboard module|Dashboard del médico con listado y búsqueda de pacientes|Junio 14, 2026|
+|Integravida-FrontendServices|feature/appointments-module|_(pendiente)_|feat: implement Appointment Management views|Vistas de solicitud, agenda, reprogramación y cancelación de citas|Junio 15, 2026|
+|Integravida-FrontendServices|feature/api-integration|_(pendiente)_|feat: replace json-server calls with real backend API|Reemplazo de Fake API por la API real de Spring Boot|Junio 17, 2026|
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/PullRequestsSprint3.png` Captura: listado de Pull Requests fusionados durante el Sprint 3 en GitHub, organizados por bounded context.
+
+---
+
+## 5.4.5. Execution Evidence for Sprint Review
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/SwaggerUI.png` Captura: pantalla de Swagger UI (`/swagger-ui/index.html`) mostrando los 5 grupos de endpoints por bounded context.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/DoctorDashboard.png` Captura: vista del Doctor Dashboard funcionando en el frontend con el listado de pacientes.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/AppointmentsModule.png` Captura: vista del módulo de citas médicas (agenda, solicitud o reprogramación).
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/GlucoseAPIIntegration.png` Captura: Postman o navegador mostrando una petición real al endpoint `/api/v1/glucose-records` del backend Spring Boot, con respuesta JSON.
+
+En este Sprint se completó la migración del sistema hacia un backend real:
+
+- **Backend Spring Boot** — los 5 bounded contexts (IAM, Profiles, Patients, Medical, Monitoring) implementados con arquitectura DDD + CQRS
+- **Base de datos PostgreSQL** — desplegada mediante contenedor Docker, reemplazando el `db.json` de json-server
+- **Documentación Swagger** — todos los endpoints documentados e interactivos en Swagger UI
+- **Doctor Dashboard** — listado de pacientes, búsqueda y evolución gráfica para el médico
+- **Módulo de Citas** — solicitud, agenda, reprogramación y cancelación de citas médicas
+- **Integración real** — el frontend Angular consume la API de Spring Boot en lugar de json-server
+
+URL del Backend desplegado: **[Pendiente: URL de despliegue del backend]** URL del Frontend actualizado: **https://integravida-appweb.web.app/**
+
+### Video Demonstration
+
+_(Pendiente: enlace al video de YouTube no listado mostrando la ejecución del Sprint 3, incluyendo Swagger UI, el flujo completo de autenticación contra PostgreSQL, el Doctor Dashboard y el módulo de citas)._
+
+---
+
+## 5.4.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 3 se reemplazó el servidor json-server por una **RESTful API real construida en Spring Boot**, persistida en **PostgreSQL** y desplegada mediante **Docker**. La documentación de los endpoints ya no se mantiene manualmente en una tabla del informe, sino que se genera automáticamente mediante **SpringDoc OpenAPI**, disponible en tiempo real en `/swagger-ui/index.html`.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/SwaggerEndpointsIAM.png` Captura: sección de Swagger UI correspondiente a los endpoints de `/api/v1/authentication` y `/api/v1/users`.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/SwaggerEndpointsMonitoring.png` Captura: sección de Swagger UI correspondiente a los endpoints de `/api/v1/glucose-records`, `/api/v1/alerts` y `/api/v1/glucose-ranges`.
+
+A continuación se documentan los endpoints principales por bounded context, ya migrados desde la Fake API hacia el backend real:
+
+|Endpoint|Verbo HTTP|Descripción|Bounded Context|
+|:--|:--|:--|:--|
+|/api/v1/authentication/sign-up|POST|Registrar nuevo usuario|IAM|
+|/api/v1/authentication/sign-in|POST|Autenticar y obtener JWT|IAM|
+|/api/v1/profiles|GET/POST/PUT|Gestión de perfiles de usuario|Profiles|
+|/api/v1/patients|GET/POST|Gestión de pacientes|Patients|
+|/api/v1/treatments|GET/POST/PUT|Gestión de tratamientos|Patients|
+|/api/v1/medications|GET/POST|Gestión de medicamentos|Patients|
+|/api/v1/medication-intakes|POST|Registro de toma de medicación|Patients|
+|/api/v1/glucose-records|GET/POST/PUT/DELETE|CRUD de registros de glucosa|Monitoring|
+|/api/v1/alerts|GET/PATCH|Consulta y marcado de alertas|Monitoring|
+|/api/v1/glucose-ranges|GET/PUT|Configuración de rangos de glucosa|Monitoring|
+|/api/v1/clinical-observations|GET/POST|Observaciones médicas|Monitoring|
+|/api/v1/diagnoses|GET/POST|Diagnósticos médicos|Medical|
+|/api/v1/clinical-reports|GET/POST|Reportes clínicos|Medical|
+|/api/v1/appointments|GET/POST/PUT/DELETE|Gestión de citas médicas|Medical|
+
+---
+
+## 5.4.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 3 se configuró el despliegue de la base de datos **PostgreSQL** mediante un contenedor **Docker**, y se actualizó la configuración de Spring Boot para conectarse a dicha base de datos en lugar de la configuración por defecto en memoria.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/DockerPostgres.png` Captura: terminal mostrando `docker ps` con el contenedor de PostgreSQL corriendo, o Docker Desktop con el contenedor activo.
+
+**Despliegue de PostgreSQL mediante Docker:**
+
+1. Se definió un archivo `docker-compose.yml` en la raíz del repositorio `Integravida-BackendServices` con el servicio de PostgreSQL, exponiendo el puerto `5432` y definiendo un volumen persistente para los datos.
+2. Se configuraron las variables de entorno `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER` y `DATABASE_PASSWORD` consistentes con `application-prod.properties`.
+3. Se levantó el contenedor con `docker compose up -d`, validando la conexión mediante un cliente PostgreSQL (pgAdmin o `psql`).
+4. Se actualizó `application-prod.properties` en el backend Spring Boot apuntando al contenedor local o a la instancia desplegada.
+5. Se ejecutó `./mvnw clean spring-boot:run` con el perfil `prod` activo, validando que las tablas se generaran correctamente mediante Hibernate (`ddl-auto`).
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/PgAdminTables.png` Captura: pgAdmin o consola psql mostrando las tablas generadas en PostgreSQL para los 5 bounded contexts.
+
+**Despliegue del backend Spring Boot:**
+
+_(Pendiente: definir si el backend se despliega en Render, Railway u otro proveedor cloud, y documentar el proceso paso a paso una vez decidido)._
+
+---
+
+## 5.4.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 3, las tareas fueron distribuidas colaborativamente entre los 5 integrantes del equipo, separando el trabajo de backend (Spring Boot + PostgreSQL + Swagger) del trabajo de finalización del frontend (Doctor Dashboard, citas, integración real con la API). Jean Pool Arias lideró el bounded context IAM, la configuración de Docker/PostgreSQL, la documentación Swagger y la integración final del frontend con la API real. Abigail Raymundo lideró el bounded context Profiles en el backend y completó las vistas restantes de Patient Profile Management y notificaciones en el frontend. Juan Sebastian Estupiñan lideró el bounded context Monitoring, el núcleo clínico más crítico del sistema (glucosa, alertas y rangos), tanto en backend como en las vistas asociadas del frontend. Javier Oswaldo Tello lideró el bounded context Patients en el backend y el Doctor Dashboard junto con el módulo de Appointment Management en el frontend. Jose Antonio Muñoz lideró el bounded context Medical (diagnósticos, reportes clínicos y citas) y las vistas de seguimiento médico en el frontend.
+
+La coordinación se realizó íntegramente vía **Discord**, mediante reuniones de sincronización y canales separados por bounded context para resolver bloqueos técnicos durante la migración de json-server hacia la API real.
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/DiscordSprint3.png` Captura: canal de Discord del equipo mostrando la coordinación de tareas del Sprint 3.
+
+|Team Member|Commits|
+|:--|:--|
+|Jean Pool Arias|_(pendiente)_|
+|Abigail Raymundo|_(pendiente)_|
+|Juan Sebastian Estupiñan|_(pendiente)_|
+|Javier Oswaldo Tello|_(pendiente)_|
+|Jose Antonio Muñoz|_(pendiente)_|
+
+> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/CommitsGraphSprint3.png` Captura: gráfico de contribuciones de GitHub (Insights → Contributors) del repositorio `Integravida-BackendServices` y `Integravida-FrontendServices` durante el periodo del Sprint 3.
 
 # <a name="_toc226040462"></a>Conclusiones
 
