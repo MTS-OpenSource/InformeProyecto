@@ -2014,9 +2014,9 @@ En el Sprint 3, los principales aspectos de trabajo se dividieron entre la imple
 
 El objetivo principal de este Sprint es migrar el sistema GlucoSmart desde una Fake API (json-server) hacia un backend real desarrollado en Spring Boot con arquitectura DDD + CQRS, persistido en PostgreSQL mediante contenedores Docker y documentado con Swagger/OpenAPI. En paralelo, se completan las vistas pendientes del Frontend Web Application, principalmente las orientadas al rol de médico (Doctor Dashboard, diagnósticos, reportes clínicos) y al módulo de citas.
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/Sprint3.png` Captura: vista del Board de Linear del Sprint 3 con las columnas Backlog/To-Do/In Progress/Done y los 5 Parent Issues visibles (IAM, Profiles, Patients, Medical, Monitoring, Frontend).
+![](./Informe/assets/Spring3.png)
 
-**URL del Board del Sprint 3:** `https://linear.app/integravida/team/INT/all`
+**URL del Board del Sprint 3:** [`https://linear.app/integravida/team/INT/all`](https://linear.app/aplicaciones-web/team/INT/all)
 
 |Sprint#|Sprint 3|||||||
 |---|---|---|---|---|---|---|---|
@@ -2113,7 +2113,7 @@ El objetivo principal de este Sprint es migrar el sistema GlucoSmart desde una F
 
 Durante el Sprint 3 se implementó el backend completo de GlucoSmart en Spring Boot, organizado en los 5 bounded contexts definidos (IAM, Profiles, Patients, Medical, Monitoring), siguiendo el patrón DDD + CQRS ya validado en el proyecto base. Se migró la persistencia desde json-server hacia **PostgreSQL**, desplegado mediante un contenedor **Docker**, y se documentaron todos los endpoints mediante **Swagger/OpenAPI**. En paralelo, se completaron las vistas pendientes del Frontend Web Application orientadas al médico (Doctor Dashboard, diagnósticos, reportes clínicos, adherencia) y al módulo de citas médicas, además de reemplazar las llamadas a json-server por la API real.
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/CommitsSprint3.png` Captura: listado de commits del Sprint 3 en GitHub (similar al de Sprint 2), mostrando ramas feature por bounded context.
+![](./Informe/assets/commitSpring3.png)
 
 |Repository|Branch|Commit Id|Commit Message|Commit Message Body|Committed on|
 |:--|:--|:--|:--|:--|:--|
@@ -2129,13 +2129,15 @@ Durante el Sprint 3 se implementó el backend completo de GlucoSmart en Spring B
 |Integravida-FrontendServices|feature/appointments-module|_(pendiente)_|feat: implement Appointment Management views|Vistas de solicitud, agenda, reprogramación y cancelación de citas|Junio 15, 2026|
 |Integravida-FrontendServices|feature/api-integration|_(pendiente)_|feat: replace json-server calls with real backend API|Reemplazo de Fake API por la API real de Spring Boot|Junio 17, 2026|
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/PullRequestsSprint3.png` Captura: listado de Pull Requests fusionados durante el Sprint 3 en GitHub, organizados por bounded context.
+![](./Informe/assets/PullRequestsSprint3.png)
 
 ---
 
 ## 5.4.5. Execution Evidence for Sprint Review
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/SwaggerUI.png` Captura: pantalla de Swagger UI (`/swagger-ui/index.html`) mostrando los 5 grupos de endpoints por bounded context.
+![](./Informe/assets/SwaggerUI.png)
+Captura: pantalla de Swagger UI (`/swagger-ui/index.html`) mostrando los 5 grupos de endpoints por bounded context.
+
 
 > 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/DoctorDashboard.png` Captura: vista del Doctor Dashboard funcionando en el frontend con el listado de pacientes.
 
@@ -2152,7 +2154,8 @@ En este Sprint se completó la migración del sistema hacia un backend real:
 - **Módulo de Citas** — solicitud, agenda, reprogramación y cancelación de citas médicas
 - **Integración real** — el frontend Angular consume la API de Spring Boot en lugar de json-server
 
-URL del Backend desplegado: **[Pendiente: URL de despliegue del backend]** URL del Frontend actualizado: **https://integravida-appweb.web.app/**
+URL del Backend desplegado: **[Pendiente: URL de despliegue del backend]** 
+URL del Frontend actualizado: **https://integravida-appweb.web.app/**
 
 ### Video Demonstration
 
@@ -2164,28 +2167,30 @@ _(Pendiente: enlace al video de YouTube no listado mostrando la ejecución del S
 
 Durante el Sprint 3 se reemplazó el servidor json-server por una **RESTful API real construida en Spring Boot**, persistida en **PostgreSQL** y desplegada mediante **Docker**. La documentación de los endpoints ya no se mantiene manualmente en una tabla del informe, sino que se genera automáticamente mediante **SpringDoc OpenAPI**, disponible en tiempo real en `/swagger-ui/index.html`.
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/SwaggerEndpointsIAM.png` Captura: sección de Swagger UI correspondiente a los endpoints de `/api/v1/authentication` y `/api/v1/users`.
+![](./Informe/assets/SwaggerEndpointsIAM.png)
+Captura: sección de Swagger UI correspondiente a los endpoints de `/api/v1/authentication` y `/api/v1/users`.
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/SwaggerEndpointsMonitoring.png` Captura: sección de Swagger UI correspondiente a los endpoints de `/api/v1/glucose-records`, `/api/v1/alerts` y `/api/v1/glucose-ranges`.
+![](./Informe/assets/SwaggerEndpointsMonitoring.png)
+Captura: sección de Swagger UI correspondiente a los endpoints de `/api/v1/glucose-records`, `/api/v1/alerts` y `/api/v1/glucose-ranges`.
 
 A continuación se documentan los endpoints principales por bounded context, ya migrados desde la Fake API hacia el backend real:
 
-|Endpoint|Verbo HTTP|Descripción|Bounded Context|
-|:--|:--|:--|:--|
-|/api/v1/authentication/sign-up|POST|Registrar nuevo usuario|IAM|
-|/api/v1/authentication/sign-in|POST|Autenticar y obtener JWT|IAM|
-|/api/v1/profiles|GET/POST/PUT|Gestión de perfiles de usuario|Profiles|
-|/api/v1/patients|GET/POST|Gestión de pacientes|Patients|
-|/api/v1/treatments|GET/POST/PUT|Gestión de tratamientos|Patients|
-|/api/v1/medications|GET/POST|Gestión de medicamentos|Patients|
-|/api/v1/medication-intakes|POST|Registro de toma de medicación|Patients|
-|/api/v1/glucose-records|GET/POST/PUT/DELETE|CRUD de registros de glucosa|Monitoring|
-|/api/v1/alerts|GET/PATCH|Consulta y marcado de alertas|Monitoring|
-|/api/v1/glucose-ranges|GET/PUT|Configuración de rangos de glucosa|Monitoring|
-|/api/v1/clinical-observations|GET/POST|Observaciones médicas|Monitoring|
-|/api/v1/diagnoses|GET/POST|Diagnósticos médicos|Medical|
-|/api/v1/clinical-reports|GET/POST|Reportes clínicos|Medical|
-|/api/v1/appointments|GET/POST/PUT/DELETE|Gestión de citas médicas|Medical|
+| Endpoint                       | Verbo HTTP          | Descripción                        | Bounded Context |
+| :----------------------------- | :------------------ | :--------------------------------- | :-------------- |
+| /api/v1/authentication/sign-up | POST                | Registrar nuevo usuario            | IAM             |
+| /api/v1/authentication/sign-in | POST                | Autenticar sin JWT                 | IAM             |
+| /api/v1/profiles               | GET/POST/PUT        | Gestión de perfiles de usuario     | Profiles        |
+| /api/v1/patients               | GET/POST            | Gestión de pacientes               | Patients        |
+| /api/v1/treatments             | GET/POST/PUT        | Gestión de tratamientos            | Patients        |
+| /api/v1/medications            | GET/POST            | Gestión de medicamentos            | Patients        |
+| /api/v1/medication-intakes     | POST                | Registro de toma de medicación     | Patients        |
+| /api/v1/glucose-records        | GET/POST/PUT/DELETE | CRUD de registros de glucosa       | Monitoring      |
+| /api/v1/alerts                 | GET/PATCH           | Consulta y marcado de alertas      | Monitoring      |
+| /api/v1/glucose-ranges         | GET/PUT             | Configuración de rangos de glucosa | Monitoring      |
+| /api/v1/clinical-observations  | GET/POST            | Observaciones médicas              | Monitoring      |
+| /api/v1/diagnoses              | GET/POST            | Diagnósticos médicos               | Medical         |
+| /api/v1/clinical-reports       | GET/POST            | Reportes clínicos                  | Medical         |
+| /api/v1/appointments           | GET/POST/PUT/DELETE | Gestión de citas médicas           | Medical         |
 
 ---
 
@@ -2193,7 +2198,8 @@ A continuación se documentan los endpoints principales por bounded context, ya 
 
 Durante el Sprint 3 se configuró el despliegue de la base de datos **PostgreSQL** mediante un contenedor **Docker**, y se actualizó la configuración de Spring Boot para conectarse a dicha base de datos en lugar de la configuración por defecto en memoria.
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/DockerPostgres.png` Captura: terminal mostrando `docker ps` con el contenedor de PostgreSQL corriendo, o Docker Desktop con el contenedor activo.
+![](./Informe/assets/DockerPostgres.png)
+Captura: terminal mostrando `docker ps` con el contenedor de PostgreSQL corriendo, o Docker Desktop con el contenedor activo.
 
 **Despliegue de PostgreSQL mediante Docker:**
 
@@ -2203,7 +2209,8 @@ Durante el Sprint 3 se configuró el despliegue de la base de datos **PostgreSQL
 4. Se actualizó `application-prod.properties` en el backend Spring Boot apuntando al contenedor local o a la instancia desplegada.
 5. Se ejecutó `./mvnw clean spring-boot:run` con el perfil `prod` activo, validando que las tablas se generaran correctamente mediante Hibernate (`ddl-auto`).
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/PgAdminTables.png` Captura: pgAdmin o consola psql mostrando las tablas generadas en PostgreSQL para los 5 bounded contexts.
+![](./Informe/assets/PgAdminTables.png)
+Captura: pgAdmin o consola psql mostrando las tablas generadas en PostgreSQL para los 5 bounded contexts.
 
 **Despliegue del backend Spring Boot:**
 
@@ -2217,17 +2224,15 @@ Durante el Sprint 3, las tareas fueron distribuidas colaborativamente entre los 
 
 La coordinación se realizó íntegramente vía **Discord**, mediante reuniones de sincronización y canales separados por bounded context para resolver bloqueos técnicos durante la migración de json-server hacia la API real.
 
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/DiscordSprint3.png` Captura: canal de Discord del equipo mostrando la coordinación de tareas del Sprint 3.
+| Team Member              | Commits |
+| :----------------------- | :------ |
+| Jean Pool Arias          | 12      |
+| Abigail Raymundo         | 9       |
+| Juan Sebastian Estupiñan | 7       |
+| Javier Oswaldo Tello     | 1       |
+| Jose Antonio Muñoz       | 3       |
 
-|Team Member|Commits|
-|:--|:--|
-|Jean Pool Arias|_(pendiente)_|
-|Abigail Raymundo|_(pendiente)_|
-|Juan Sebastian Estupiñan|_(pendiente)_|
-|Javier Oswaldo Tello|_(pendiente)_|
-|Jose Antonio Muñoz|_(pendiente)_|
-
-> 📸 **[AGREGAR CAPTURA AQUÍ]** — Nombre de archivo sugerido: `./Informe/assets/CommitsGraphSprint3.png` Captura: gráfico de contribuciones de GitHub (Insights → Contributors) del repositorio `Integravida-BackendServices` y `Integravida-FrontendServices` durante el periodo del Sprint 3.
+![](./Informe/assets/commitSpring3.png)
 
 # <a name="_toc226040462"></a>Conclusiones
 
