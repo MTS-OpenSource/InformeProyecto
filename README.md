@@ -1433,6 +1433,8 @@ El siguiente diagrama de clases UML representa la arquitectura orientada a objet
 
 Se han modelado los siguientes bounded contexts:
 
+![](./Informe/assets/DiagramDDD.png)
+
 **Bounded Context 1: Patient Profile Management**
 
 Este contexto agrupa las clases relacionadas con la identidad y los datos clínicos del paciente. La clase central es `Patient`, que contiene los atributos personales del usuario. Se relaciona con `User` (autenticación y roles) y con `MedicalProfile` (datos clínicos como tipo de diabetes, medicación base y fecha de diagnóstico). Esta separación permite que la autenticación evolucione de forma independiente al perfil clínico.
