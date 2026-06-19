@@ -63,7 +63,7 @@
 |   1.9   | 25/05 | Abigail Raymundo         | Corrección de Sprint 1: introducción en Sprint Planning, Aspect Leaders, Sprint Backlog, Development Evidence, Deployment Evidence y Team Collaboration (Cap. 5.2.1.1–5.2.1.8).                                   |
 |   2.0   | 25/05 | Abigail Raymundo         | Corrección de Sprint 2: introducción en Sprint Planning, Aspect Leaders, Sprint Backlog, Development Evidence, Services Documentation, Deployment Evidence y Team Collaboration (Cap. 5.3.1.1–5.3.1.8).           |
 |   2.1   | 18/06 | Jean Pool Arias          | Implementacion del Sprint 3                                                                                                                                                                                       |
-|   2.2   | 18/06 | Abigail Raymundo         | Implementación del bounded context Profiles (backend Spring Boot: domain, application, infrastructure, interfaces) e integración con el frontend Angular consumiendo `/api/v1/profiles` (Cap. 5.2.3, 5.4.6).   |
+|   2.2   | 18/06 | Abigail Raymundo         | Implementación del bounded context Profiles (backend Spring Boot: domain, application, infrastructure, interfaces) e integración con el frontend Angular consumiendo `/api/v1/profiles` (Cap. 5.2.3, 5.2.3.6).   |
 
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
@@ -198,27 +198,27 @@
 
 ## Sprint 2
 
-- [5.3.1 Sprint 2](#_toc226040448)
-  - [5.3.1.1 Sprint Planning 2](#_toc226040449)
-  - [5.3.1.2 Aspect Leaders and Collaborators](#_toc226040450)
-  - [5.3.1.3 Sprint Backlog 2](#_toc226040451)
-  - [5.3.1.4 Development Evidence for Sprint Review](#_toc226040452)
-  - [5.3.1.5 Execution Evidence for Sprint Review](#_toc226040453)
-  - [5.3.1.6 Services Documentation Evidence for Sprint Review](#_toc226040454)
-  - [5.3.1.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
-  - [5.3.1.8 Team Collaboration Insights during Sprint](#_toc226040456)
+- [5.2.2 Sprint 2](#_toc226040448)
+  - [5.2.2.1 Sprint Planning 2](#_toc226040449)
+  - [5.2.2.2 Aspect Leaders and Collaborators](#_toc226040450)
+  - [5.2.2.3 Sprint Backlog 2](#_toc226040451)
+  - [5.2.2.4 Development Evidence for Sprint Review](#_toc226040452)
+  - [5.2.2.5 Execution Evidence for Sprint Review](#_toc226040453)
+  - [5.2.2.6 Services Documentation Evidence for Sprint Review](#_toc226040454)
+  - [5.2.2.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
+  - [5.2.2.8 Team Collaboration Insights during Sprint](#_toc226040456)
 
 ## Sprint 3
 
-- [5.3.1 Sprint 3](#_toc226040448)
-  - [5.3.1.1 Sprint Planning 3](#_toc226040449)
-  - [5.3.1.2 Aspect Leaders and Collaborators](#_toc226040450)
-  - [5.3.1.3 Sprint Backlog 3](#_toc226040451)
-  - [5.3.1.4 Development Evidence for Sprint Review](#_toc226040452)
-  - [5.3.1.5 Execution Evidence for Sprint Review](#_toc226040453)
-  - [5.3.1.6 Services Documentation Evidence for Sprint Review](#_toc226040454)
-  - [5.3.1.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
-  - [5.3.1.8 Team Collaboration Insights during Sprint](#_toc226040456)
+- [5.2.3 Sprint 3](#_toc226040448)
+  - [5.2.3.1 Sprint Planning 3](#_toc226040449)
+  - [5.2.3.2 Aspect Leaders and Collaborators](#_toc226040450)
+  - [5.2.3.3 Sprint Backlog 3](#_toc226040451)
+  - [5.2.3.4 Development Evidence for Sprint Review](#_toc226040452)
+  - [5.2.3.5 Execution Evidence for Sprint Review](#_toc226040453)
+  - [5.2.3.6 Services Documentation Evidence for Sprint Review](#_toc226040454)
+  - [5.2.3.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
+  - [5.2.3.8 Team Collaboration Insights during Sprint](#_toc226040456)
 
 # Conclusiones
 
@@ -1773,9 +1773,9 @@ El trabajo colaborativo se llevó a cabo mediante el uso de ramas feature en Git
 | Jean Pool Arias  | 17 commits |
 | Abigail Raymundo | 11 commits |
 
-### <a name="_toc226040448"></a>5.3.1. Sprint 2
+### <a name="_toc226040448"></a>5.2.2. Sprint 2
 
-### <a name="_toc226040449"></a>5.3.1.1. Sprint Planning 2.
+### <a name="_toc226040449"></a>5.2.2.1. Sprint Planning 2.
 
 Esta sección documenta la planificación del segundo Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue desarrollar e implementar las vistas funcionales del **Frontend Web Application** conectadas a una **Fake RESTful API** (json-server), cubriendo los bounded contexts de autenticación, Patient Profile Management, Glucose Monitoring, Alerts y Appointment Management. Al finalizar el Sprint, los usuarios debían poder navegar por la aplicación, registrar lecturas de glucosa, ver su historial con gráficos y gestionar sus alertas.
 
@@ -1795,7 +1795,7 @@ Esta sección documenta la planificación del segundo Sprint del proyecto GlucoS
 | Sum of Story Points              | 43                                                                                                                                                                                                                                                                                                                                                                                                                                             |     |
 |                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                |     |
 
-### <a name="_toc226040450"></a>5.3.1.2. Aspect Leaders and Collaborators.
+### <a name="_toc226040450"></a>5.2.2.2. Aspect Leaders and Collaborators.
 En el Sprint 2, los principales aspectos de trabajo se organizaron por bounded context del Frontend Web Application. Los aspectos cubiertos fueron: Authentication (login/register/logout), Dashboard, Glucose Monitoring (registro, historial y gráficos), Alerts & Notifications, Patient Profile Management, Appointment Management, Services & Fake API y Deployment. Se indica con **L** al líder del aspecto y con **C** al colaborador de apoyo.
 
 | Team Member      | GitHub Username | Login service | Glucose Lecture | Dashboard Service | Deploy | Design |
@@ -1806,7 +1806,7 @@ En el Sprint 2, los principales aspectos de trabajo se organizaron por bounded c
 | Javier Oswaldo   | JavierTello20   | C             | C               | C                 | C      | C      |
 | Jose Antonio     | joseam05        | C             | C               | C                 | C      | C      |
 
-### <a name="_toc226040451"></a>5.3.1.3. Sprint Backlog 2.
+### <a name="_toc226040451"></a>5.2.2.3. Sprint Backlog 2.
 El objetivo principal de este Sprint es implementar las vistas funcionales de la Web Application de GlucoSmart conectadas a json-server mediante servicios Angular, cubriendo los flujos de autenticación, monitoreo de glucosa, historial de salud, alertas y perfil del paciente.
 
 ![](./Informe/assets/Spring2.png)
@@ -1854,7 +1854,7 @@ El objetivo principal de este Sprint es implementar las vistas funcionales de la
 |US-11|Perfil paciente|T36|Crear PatientService - GET|getProfile(patientId) GET /patients/:id con todos los datos clínicos|2|935598887|To-Do|
 |US-08|Editar perfil|T37|PatientService - updateProfile()|PUT /patients/:id para actualizar datos personales, médicos y configuración|3|935598887|To-Do|
 
-### <a name="_toc226040452"></a>5.3.1.4. Development Evidence for Sprint Review.
+### <a name="_toc226040452"></a>5.2.2.4. Development Evidence for Sprint Review.
 Durante el Sprint 2 se implementaron los principales módulos del Frontend Web Application de GlucoSmart. Los avances más destacados incluyen: la implementación de los bounded contexts de autenticación, dashboard, perfil del paciente, monitoreo de glucosa (con historial y gráficos), panel de alertas y gestión de citas; la configuración completa del json-server con el `db.json` poblado con datos de prueba; el desarrollo de todos los servicios Angular para la comunicación con la Fake API; y el despliegue del frontend en Firebase Hosting y del json-server en Render. A continuación se presenta la tabla de commits realizados durante el Sprint.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
@@ -1880,7 +1880,7 @@ Durante el Sprint 2 se implementaron los principales módulos del Frontend Web A
 | Integravida-FrontendServices | feature/Medical-Followup-Dashboard | 269291a2c12d7e86ce9ccaa5980c1b095f47b430 | Added files via upload | Added modified components for dashboard and glucose charts | Mayo 15, 2026 |
 | Integravida-FrontendServices | feature/Medical-Followup-Dashboard | d55c27aa5d0bafb7b4b633d5e89ac3b69652b464 | Added files via upload from cloned repository | Added HTML changes for show Dashboard with the features of Medical Followup including Charts, Recent Alerts, and Medications List | Mayo 15, 2026 |
 
-### <a name="_toc226040453"></a>5.3.1.5. Execution Evidence for Sprint Review.
+### <a name="_toc226040453"></a>5.2.2.5. Execution Evidence for Sprint Review.
 
 ![Demostracion](./Informe/assets/Demostracion1.png)
 ![Demostracion|531](./Informe/assets/Demostracion2.png)
@@ -1904,7 +1904,7 @@ El siguiente video muestra la ejecución funcional de la Frontend Web Applicatio
 
 https://youtu.be/_JOh925f1DE
 
-### <a name="_toc226040454"></a>5.3.1.6. Services Documentation Evidence for Sprint Review.
+### <a name="_toc226040454"></a>5.2.2.6. Services Documentation Evidence for Sprint Review.
 Durante el Sprint 2 se configuró e implementó la Fake RESTful API mediante json-server, utilizando el repositorio `JsondbData`. Este servidor expone todos los endpoints necesarios para que el frontend pueda realizar operaciones CRUD sobre las entidades del sistema. Los endpoints se consumen desde la URL base `https://integravida-data.onrender.com`. La tabla a continuación documenta cada endpoint disponible con su verbo HTTP, descripción, parámetros y servicio Angular asignado.
 
 ### Services Documentation Evidence for Sprint Review
@@ -1929,7 +1929,7 @@ Todos los endpoints se consumen mediante json-server corriendo en https://integr
 | /medications         | GET        | Obtener medicamentos activos   | patientId (query)                             | MedicationService |
 | /medication_intakes  | POST       | Registrar toma de medicamento  | body: { medicationId, patientId, takenAt }    | MedicationService |
 
-### <a name="_toc226040455"></a>5.3.1.7. Software Deployment Evidence for Sprint Review.
+### <a name="_toc226040455"></a>5.2.2.7. Software Deployment Evidence for Sprint Review.
 
 Durante el Sprint 2 se realizaron dos despliegues: el **Frontend Web Application** en Firebase Hosting y el **json-server (Fake API)** en Render. Ambos servicios están disponibles públicamente y son consumidos de forma integrada.
 
@@ -1959,7 +1959,7 @@ Durante el Sprint 2 se realizaron dos despliegues: el **Frontend Web Application
 
 
 
-### <a name="_toc226040456"></a>5.3.1.8. Team Collaboration Insights during Sprint.
+### <a name="_toc226040456"></a>5.2.2.8. Team Collaboration Insights during Sprint.
 
 Durante el Sprint 2, las tareas fueron distribuidas colaborativamente entre todos los integrantes del equipo de desarrollo utilizando GitHub Flow, Pull Requests y ramas independientes por funcionalidad. Jean Pool Arias lideró la integración general del frontend, la configuración de servicios y la arquitectura base del proyecto. Abigail Raymundo lideró el desarrollo del módulo Patient Profile Management, incluyendo la interfaz de perfil, edición de datos y mejoras visuales. Juan Sebastian Estupiñan participó en los módulos de monitoreo y registro de glucosa. Javier Oswaldo Tello desarrolló funcionalidades del bounded context Appointment Management. Jose Antonio Muñoz colaboró en la implementación de servicios REST y lógica de integración.
 
@@ -1978,9 +1978,9 @@ Asimismo, el equipo organizó el frontend utilizando una arquitectura basada en 
 
 ![](./Informe/assets/CommitsGrap.png)
 
-# Sprint 3
+### <a name="_toc226040448"></a>5.2.3. Sprint 3
 
-## 5.4.1. Sprint Planning 3
+## 5.2.3.1. Sprint Planning 3
 
 Esta sección documenta la planificación del tercer Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue implementar el **backend RESTful API** en Spring Boot siguiendo arquitectura DDD + CQRS distribuido en los 5 bounded contexts (IAM, Profiles, Patients, Medical, Monitoring), migrar la persistencia desde json-server hacia **PostgreSQL** desplegado mediante **Docker**, documentar todos los endpoints con **Swagger/OpenAPI**, y completar las vistas pendientes del **Frontend Web Application** que quedaron fuera del alcance del Sprint 2. Al finalizar el Sprint, el sistema debía operar de punta a punta: Angular consumiendo la API real de Spring Boot, con persistencia en PostgreSQL y documentación interactiva disponible en Swagger UI.
 
@@ -2001,7 +2001,7 @@ Esta sección documenta la planificación del tercer Sprint del proyecto GlucoSm
 
 ---
 
-## 5.4.2. Aspect Leaders and Collaborators
+## 5.2.3.2. Aspect Leaders and Collaborators
 
 En el Sprint 3, los principales aspectos de trabajo se dividieron entre la implementación del backend Spring Boot por bounded context y la finalización de las vistas pendientes del Frontend Web Application. Se indica con **L** al líder responsable de las decisiones técnicas del aspecto y con **C** al colaborador de apoyo.
 
@@ -2015,7 +2015,7 @@ En el Sprint 3, los principales aspectos de trabajo se dividieron entre la imple
 
 ---
 
-## 5.4.3. Sprint Backlog 3
+## 5.2.3.3. Sprint Backlog 3
 
 El objetivo principal de este Sprint es migrar el sistema GlucoSmart desde una Fake API (json-server) hacia un backend real desarrollado en Spring Boot con arquitectura DDD + CQRS, persistido en PostgreSQL mediante contenedores Docker y documentado con Swagger/OpenAPI. En paralelo, se completan las vistas pendientes del Frontend Web Application, principalmente las orientadas al rol de médico (Doctor Dashboard, diagnósticos, reportes clínicos) y al módulo de citas.
 
@@ -2114,7 +2114,7 @@ El objetivo principal de este Sprint es migrar el sistema GlucoSmart desde una F
 
 ---
 
-## 5.4.4. Development Evidence for Sprint Review
+## 5.2.3.4. Development Evidence for Sprint Review
 
 Durante el Sprint 3 se implementó el backend completo de GlucoSmart en Spring Boot, organizado en los 5 bounded contexts definidos (IAM, Profiles, Patients, Medical, Monitoring), siguiendo el patrón DDD + CQRS ya validado en el proyecto base. Se migró la persistencia desde json-server hacia **PostgreSQL**, desplegado mediante un contenedor **Docker**, y se documentaron todos los endpoints mediante **Swagger/OpenAPI**. En paralelo, se completaron las vistas pendientes del Frontend Web Application orientadas al médico (Doctor Dashboard, diagnósticos, reportes clínicos, adherencia) y al módulo de citas médicas, además de reemplazar las llamadas a json-server por la API real.
 
@@ -2138,7 +2138,7 @@ Durante el Sprint 3 se implementó el backend completo de GlucoSmart en Spring B
 
 ---
 
-## 5.4.5. Execution Evidence for Sprint Review
+## 5.2.3.5. Execution Evidence for Sprint Review
 
 ![](./Informe/assets/SwaggerUI.png)
 Captura: pantalla de Swagger UI (`/swagger-ui/index.html`) mostrando los 5 grupos de endpoints por bounded context.
@@ -2172,7 +2172,7 @@ https://youtu.be/a06rm4RD69A?si=0fuZAe-IBr8WJ01h
 
 ---
 
-## 5.4.6. Services Documentation Evidence for Sprint Review
+## 5.2.3.6. Services Documentation Evidence for Sprint Review
 
 Durante el Sprint 3 se reemplazó el servidor json-server por una **RESTful API real construida en Spring Boot**, persistida en **PostgreSQL** y desplegada mediante **Docker**. La documentación de los endpoints ya no se mantiene manualmente en una tabla del informe, sino que se genera automáticamente mediante **SpringDoc OpenAPI**, disponible en tiempo real en `/swagger-ui/index.html`.
 
@@ -2206,7 +2206,7 @@ A continuación se documentan los endpoints principales por bounded context, ya 
 
 ---
 
-## 5.4.7. Software Deployment Evidence for Sprint Review
+## 5.2.3.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 3 se configuró el despliegue de la base de datos **PostgreSQL** mediante un contenedor **Docker**, y se actualizó la configuración de Spring Boot para conectarse a dicha base de datos en lugar de la configuración por defecto en memoria.
 
@@ -2230,7 +2230,7 @@ _(Pendiente: definir si el backend se despliega en Render, Railway u otro provee
 
 ---
 
-## 5.4.8. Team Collaboration Insights during Sprint
+## 5.2.3.8. Team Collaboration Insights during Sprint
 
 Durante el Sprint 3, las tareas fueron distribuidas colaborativamente entre los 5 integrantes del equipo, separando el trabajo de backend (Spring Boot + PostgreSQL + Swagger) del trabajo de finalización del frontend (Doctor Dashboard, citas, integración real con la API). Jean Pool Arias lideró el bounded context IAM, la configuración de Docker/PostgreSQL, la documentación Swagger y la integración final del frontend con la API real. Abigail Raymundo lideró el bounded context Profiles en el backend y completó las vistas restantes de Patient Profile Management y notificaciones en el frontend. Juan Sebastian Estupiñan lideró el bounded context Monitoring, el núcleo clínico más crítico del sistema (glucosa, alertas y rangos), tanto en backend como en las vistas asociadas del frontend. Javier Oswaldo Tello lideró el bounded context Patients en el backend y el Doctor Dashboard junto con el módulo de Appointment Management en el frontend. Jose Antonio Muñoz lideró el bounded context Medical (diagnósticos, reportes clínicos y citas) y las vistas de seguimiento médico en el frontend.
 
