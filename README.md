@@ -63,8 +63,10 @@
 |   1.9   | 25/05 | Abigail Raymundo         | Corrección de Sprint 1: introducción en Sprint Planning, Aspect Leaders, Sprint Backlog, Development Evidence, Deployment Evidence y Team Collaboration (Cap. 5.2.1.1–5.2.1.8).                                   |
 |   2.0   | 25/05 | Abigail Raymundo         | Corrección de Sprint 2: introducción en Sprint Planning, Aspect Leaders, Sprint Backlog, Development Evidence, Services Documentation, Deployment Evidence y Team Collaboration (Cap. 5.3.1.1–5.3.1.8).           |
 |   2.1   | 18/06 | Jean Pool Arias          | Implementacion del Sprint 3                                                                                                                                                                                       |
-|   2.2   | 18/06 | Abigail Raymundo         | Implementación del bounded context Profiles (backend Spring Boot: domain, application, infrastructure, interfaces) e integración con el frontend Angular consumiendo `/api/v1/profiles` (Cap. 5.2.3, 5.2.3.6).   |
-
+|   2.2   | 18/06 | Abigail Raymundo         | Implementación del bounded context Profiles (backend Spring Boot: domain, application, infrastructure, interfaces) e integración con el frontend Angular consumiendo `/api/v1/profiles` (Cap. 5.2.3, 5.2.3.6).
+	|
+|   2.3   | 18/06 | Javier Tello             | Implementación del bounded context Medical (backend Spring Boot: domain, application, infrastructure e interfaces) e integración del frontend Angular Appointment Management consumiendo `/api/v1/appointments` en localhost.
+	|
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
