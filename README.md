@@ -1048,6 +1048,9 @@ Para alcanzar esta meta, dependemos de los dos segmentos principales identificad
 El Product Backlog de **GlucoSmart** ha sido priorizado en función del valor de negocio que cada historia aporta al producto. El orden sigue la secuencia recomendada: primero las historias relacionadas con la **Landing Page** (visibilidad y propuesta de valor), luego los **CRUDs fundamentales** (autenticación y perfiles), después el **core de negocio** (monitoreo de glucosa, alertas y adherencia), seguido de las **Technical Stories** para el RESTful API y el despliegue, y finalmente las historias secundarias de gestión médica.
 
 **URL pública del Product Backlog:** [`https://linear.app/aplicaciones-web/team/INT/all`](https://linear.app/aplicaciones-web/team/INT/all)
+*(Nota: Linear requiere inicio de sesión con cuenta del workspace para visualizar el contenido. Se incluye captura de evidencia a continuación.)*
+
+![](./Informe/assets/ProductBacklogLinear.png)
 
 La estimación técnica de cada historia se expresa mediante **Story Points**.
 
