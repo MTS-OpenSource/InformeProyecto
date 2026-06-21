@@ -2357,9 +2357,17 @@ La coordinación se realizó íntegramente vía **Discord**, mediante reuniones 
 
 - **Base Sólida para Futuras Iteraciones:** La estructura técnica alcanzada durante los dos primeros sprints proporciona una base estable para continuar con funcionalidades más avanzadas relacionadas con analítica médica, notificaciones inteligentes, seguimiento automatizado de tratamientos y futuras integraciones con servicios externos de salud digital.
 
+- **Implementación del Backend Real en Spring Boot:** Durante el Sprint 3 se reemplazó la simulación inicial con json-server por un backend real desarrollado en Spring Boot, estructurado en cinco bounded contexts (IAM, Profiles, Patients, Monitoring y Medical) siguiendo Domain-Driven Design con separación en capas domain, application, infrastructure e interfaces. Esto permitió implementar persistencia real en PostgreSQL, lógica de negocio centralizada y comunicación entre contextos mediante Domain Events y Anti-Corruption Layers (ACL Facades), cumpliendo así una de las recomendaciones identificadas tras el Sprint 2.
+
+- **Documentación de Servicios mediante OpenAPI/Swagger:** Todos los endpoints del backend fueron documentados automáticamente mediante Swagger UI, permitiendo probar cada operación CRUD de forma interactiva y validar las respuestas reales del servidor antes de conectar el frontend, lo que redujo errores de integración entre ambos equipos de trabajo.
+
+- **Integración Real Frontend-Backend:** Se migró progresivamente el consumo de datos del frontend Angular desde el Fake API (json-server) hacia los endpoints reales del backend Spring Boot, resolviendo en el proceso desafíos técnicos reales como la configuración de políticas CORS entre servidores en distintos puertos, evidenciando la capacidad del equipo para diagnosticar y resolver problemas de integración en un entorno de microservicios.
+
+- **Despliegue Completo en Producción:** Al finalizar el Sprint 3, los tres componentes de la solución — Landing Page, Frontend Web Application y Web Services (backend) — se encuentran desplegados en plataformas cloud (GitHub Pages, Firebase Hosting y Render.com respectivamente), completando el ciclo de entrega continua iniciado en sprints anteriores y demostrando la viabilidad técnica end-to-end de GlucoSmart.
+
 #### Recomendaciones
 
-1. **Implementación de la Capa de Servicios (Backend):** Para los siguientes Sprints, se recomienda priorizar el diseño e implementación de la base de datos relacional y el desarrollo de servicios web (API RESTful). Esto es vital para dar vida a las historias de usuario de mayor impacto, permitiendo la persistencia de los registros de glucosa y la emisión automatizada de alertas de hipoglucemia hacia los médicos.
+1. **Fortalecimiento de la Seguridad y Autenticación del Backend:** Con la capa de servicios ya implementada en Spring Boot, se recomienda priorizar para el siguiente sprint la finalización del bounded context IAM con autenticación robusta basada en JSON Web Tokens (JWT), de forma que todos los endpoints de Profiles, Patients, Monitoring y Medical queden protegidos según el rol del usuario (paciente o médico).
    
 2. **Priorización de la Seguridad de Datos Clínicos:** Dado que **GlucoSmart** procesará información médica altamente sensible, se recomienda integrar requerimientos no funcionales de seguridad desde el inicio del desarrollo del backend. Esto incluye la encriptación de datos en tránsito y en reposo, autenticación robusta (ej. JSON Web Tokens) y el estricto cumplimiento de la Ley de Protección de Datos Personales vigente en el país.
 
@@ -2373,7 +2381,7 @@ La coordinación se realizó íntegramente vía **Discord**, mediante reuniones 
 
 7. **Optimización del Despliegue Continuo:** Se recomienda configurar un flujo CI/CD más automatizado para que cada cambio aprobado mediante Pull Request pueda ser validado, construido y desplegado de forma controlada. Esto reducirá errores manuales durante el proceso de publicación.
 
-8. **Migración desde json-server hacia una API Real:** Aunque json-server fue útil para validar la integración inicial, se recomienda reemplazarlo progresivamente por un backend real con una base de datos persistente, autenticación segura y lógica de negocio centralizada.
+8. **Migración Completa de los Bounded Contexts Restantes:** El bounded context Profiles ya fue migrado exitosamente del Fake API (json-server) al backend real en Spring Boot. Se recomienda completar esta misma migración para los bounded contexts de Monitoring y Medical, de forma que el frontend consuma exclusivamente datos reales en todos sus módulos antes de la entrega final.
 
 9. **Documentación Técnica Más Detallada:** Se recomienda mantener actualizada la documentación de servicios, endpoints, estructura de carpetas, bounded contexts y convenciones de código. Esto facilitará la incorporación de nuevos integrantes y el mantenimiento del proyecto.
 
@@ -2419,3 +2427,4 @@ Anexo 2: [Mockups - Wireframe](https://www.figma.com/design/lu1p4NLglhTYnbHWT8lD
 Anexo 3: [Impact Mapping](https://miro.com/app/board/uXjVHdifA00=/?share_link_id=602434447345)
 Anexo 4:https://integravida-appweb.web.app/
 Anexo 5:https://integravida-data.onrender.com/
+Anexo 6: [Web Services (Backend) Desplegado](https://integravida-backendservices.onrender.com) | [Swagger UI](https://integravida-backendservices.onrender.com/swagger-ui/index.html#/)
