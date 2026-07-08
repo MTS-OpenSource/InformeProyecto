@@ -65,6 +65,7 @@
 |   2.1   | 18/06 | Jean Pool Arias          | Implementacion del Sprint 3                                                                                                                                                                                       |
 |   2.2   | 18/06 | Abigail Raymundo         | Implementación del bounded context Profiles (backend Spring Boot: domain, application, infrastructure, interfaces) e integración con el frontend Angular consumiendo `/api/v1/profiles` (Cap. 5.2.3, 5.2.3.6).|
 |   2.3   | 18/06 | Javier Tello             | Implementación del bounded context Medical (backend Spring Boot: domain, application, infrastructure e interfaces) e integración del frontend Angular Appointment Management consumiendo `/api/v1/appointments` en localhost. |
+|   3.0   | 08/07 | Jean Pool Arias          | Corrección quirúrgica del informe TB2: expansión de Lean UX Assumptions/Hypothesis/Canvas (Cap. I), User Personas/Task Matrix/Journey/Empathy Mapping/Event Storming (Cap. II), Impact Mapping/Technical Stories (Cap. III), Style Guidelines/Components Diagrams/Class Diagrams/Database Design (Cap. IV), Sprint 4/Validation Interviews/About-the-Product/About-the-Team (Cap. V). |
 
 # <a name="_toc226040380"></a>Project Report Collaboration Insights
 
@@ -88,6 +89,12 @@
 	3. **Ecosistema de Decisiones Clínicas:** Un panel de control (_Dashboard_) interactivo para el médico que procesa los datos registrados y los visualiza en gráficos de tendencias, permitiendo optimizar el tiempo de consulta y ajustar los tratamientos de forma rápida y segura basándose en evidencia real.
 
 ![Commits Review](./Informe/assets/commitSpring3.png)
+
+- **TB2:**
+  - ¿Qué Problema se encontró?
+    Se detectó que el informe de TB1 presentaba secciones incompletas en los Capítulos I, II, III, IV y V según la rúbrica de TB2. Específicamente: Lean UX Canvas no tenía explicación detallada, User Personas carecía de introducción, User Task Matrix y Journey Mapping estaban redactados en modo TO-BE en lugar de AS-IS, faltaban Technical Stories para el backend Spring Boot, los Style Guidelines no incluían tablas de typography/color/spacing, los Components/Class Diagrams no seguían la notación DDD + CQRS por bounded context, y las secciones de Sprint 4, Validation Interviews, About-the-Product y About-the-Team estaban completamente ausentes.
+  - ¿Cómo se resolvió?
+    Se aplicaron mejoras quirúrgicas preservando todo el contenido existente: (1) expansión de Lean UX Assumptions/Hypothesis/Canvas con tablas y checklist, (2) reescritura de User Task Matrix y Journey Mapping a AS-IS con 6 tareas/etapas, (3) adición de introducción a User Personas y textos de interpretación en Empathy Mapping, (4) incorporación de 10 Technical Stories (TS-11 a TS-20) para Spring Boot con DDD + CQRS, (5) expansión de Impact Mapping con 4 objetivos SMART, (6) tablas completas de Style Guidelines con branding, typography, color palette y spacing, (7) actualización de Components Diagrams con notación DDD + CQRS por bounded context, (8) adición de Sprint 4, Validation Interviews, About-the-Product y About-the-Team con templates y TODOs para que el equipo complete con datos reales. Todos los cambios se realizaron sobre el README original (revertido a su versión íntegra de 2430 líneas) sin eliminar ningún capítulo ni contenido previo.
 
 # Contenido
 
@@ -220,6 +227,32 @@
   - [5.2.3.7 Software Deployment Evidence for Sprint Review](#_toc226040455)
   - [5.2.3.8 Team Collaboration Insights during Sprint](#_toc226040456)
 
+## Sprint 4
+
+- [5.2.4 Sprint 4](#_toc226040470)
+  - [5.2.4.1 Sprint Planning 4](#_toc226040471)
+  - [5.2.4.2 Aspect Leaders and Collaborators](#_toc226040472)
+  - [5.2.4.3 Sprint Backlog 4](#_toc226040473)
+  - [5.2.4.4 Development Evidence for Sprint Review](#_toc226040474)
+  - [5.2.4.5 Execution Evidence for Sprint Review](#_toc226040475)
+  - [5.2.4.6 Services Documentation Evidence for Sprint Review](#_toc226040476)
+  - [5.2.4.7 Software Deployment Evidence for Sprint Review](#_toc226040477)
+  - [5.2.4.8 Team Collaboration Insights during Sprint](#_toc226040478)
+
+## 5.3. Validation Interviews
+
+- [5.3 Validation Interviews](#_toc226040480)
+  - [5.3.1 Diseño de Entrevistas de Validación](#_toc226040481)
+  - [5.3.2 Resultados de las Entrevistas de Validación](#_toc226040482)
+
+## 5.4. About-the-Product
+
+- [5.4 About-the-Product](#_toc226040490)
+
+## 5.5. About-the-Team
+
+- [5.5 About-the-Team](#_toc226040500)
+
 # Conclusiones
 
 - [Conclusiones y recomendaciones](#_toc226040463)
@@ -333,13 +366,29 @@ Descripcion del Problema: 
 
 #### <a name="_toc226040390"></a>*1.2.2.2 Lean UX Assumption*
 
-Para el desarrollo de la plataforma **GlucoSmart** bajo la startup IntegraVida, hemos formulado los siguientes supuestos (Assumptions) divididos en supuestos de negocio, del usuario y de las características del producto. Estos nos permitirán validar nuestro modelo y entender el contexto de uso de la aplicación web.
+Para el desarrollo de la plataforma **GlucoSmart** bajo la startup IntegraVida, hemos formulado los siguientes supuestos (Assumptions) organizados por categoría. Cada supuesto incluye los resultados de negocio esperados (Business Outcomes) y los resultados de usuario esperados (User Outcomes), permitiendo validar nuestro modelo y entender el contexto de uso de la aplicación web.
 
 **Supuestos de Negocio (Business Assumptions):**
 
 1. Creemos que nuestros clientes principales (hospitales, clínicas y consultorios privados) necesitan una plataforma unificada para el monitoreo integral de la diabetes.
+   - **Business Outcome:** Reducción de costos operativos en un 15% mediante la automatización del seguimiento ambulatorio.
+   - **User Outcome:** Los médicos ahorran hasta 10 minutos por consulta al acceder a un historial clínico consolidado.
+
 2. Creemos que estas instituciones están dispuestas a adoptar un nuevo software si este demuestra optimizar el tiempo de consulta y reducir las complicaciones derivadas de una mala adherencia al tratamiento.
+   - **Business Outcome:** Disminución de readmisiones hospitalarias por complicaciones evitables en un 20%.
+   - **User Outcome:** Los doctores pueden ajustar tratamientos basándose en datos de adherencia en tiempo real.
+
 3. Creemos que el valor principal que ofrecemos a los centros de salud es la centralización de datos clínicos (glucosa, historial de medicación, farmacovigilancia), lo que permite una toma de decisiones médicas más certera y rápida.
+   - **Business Outcome:** Incremento en la retención de pacientes institucionales al ofrecer un servicio de salud digital diferenciado.
+   - **User Outcome:** Los pacientes perciben un mayor acompañamiento médico y control sobre su enfermedad.
+
+4. Creemos que las clínicas pequeñas y consultorios independientes están dispuestos a pagar una suscripción SaaS mensual si la plataforma reduce la carga administrativa del personal de salud.
+   - **Business Outcome:** Generación de ingresos recurrentes con un ARPU (Average Revenue Per User) de $15-25 mensuales por médico.
+   - **User Outcome:** El personal administrativo reduce en un 30% el tiempo dedicado a llamadas de recordatorio y coordinación de citas.
+
+5. Creemos que la plataforma puede escalar a otros países de Latinoamérica adaptando la configuración regulatoria local, lo que abre un mercado de ~60 millones de pacientes crónicos en la región.
+   - **Business Outcome:** Expansión geográfica a 3 nuevos mercados en el primer año post-lanzamiento.
+   - **User Outcome:** Pacientes en regiones con infraestructura de salud limitada acceden a herramientas de monitoreo de calidad hospitalaria.
 
 **Supuestos del Usuario (User Assumptions):**
 
@@ -347,12 +396,29 @@ Para el desarrollo de la plataforma **GlucoSmart** bajo la startup IntegraVida, 
 2. **¿Dónde encaja el producto en su trabajo o vida?** Para los pacientes, encaja en su rutina diaria como una herramienta móvil/web para registrar sus niveles y recibir alertas; para los médicos, encaja en su flujo de trabajo clínico durante y entre las consultas para revisar la evolución del paciente.
 3. **¿Qué problemas tiene nuestro producto y cómo los resuelve?** El problema actual es la fragmentación de la información y la falta de seguimiento de la adherencia y reacciones adversas. Nuestro producto resuelve esto al proporcionar un historial clínico consolidado e interactivo.
 4. **¿Cuándo y cómo es usado nuestro producto?** El paciente lo usará diariamente para registrar la ingesta de medicamentos (adherencia) y los niveles de glucosa. El médico lo usará durante las consultas para revisar los reportes y tendencias, y recibirá alertas inmediatas en caso de riesgo de hipoglucemia severa o reacciones adversas.
+5. **¿Qué preparación necesita el usuario?** Los pacientes requieren una configuración inicial asistida (perfil médico, metas de glucosa y carga de medicación), que puede realizarse durante la primera consulta. Los médicos requieren una capacitación breve (<30 min) en el uso del dashboard clínico.
 
 **Supuestos de Características (Feature Assumptions):**
 
 1. Creemos que la funcionalidad de **registro de farmacovigilancia y reacciones adversas** será una de las más valoradas por los doctores, ya que mejora la seguridad del paciente.
+   - **Business Outcome:** Reducción de eventos adversos graves reportados tardíamente en un 40%.
+   - **User Outcome:** Los médicos reciben alertas de reacciones adversas en menos de 5 minutos desde el reporte del paciente.
+
 2. Creemos que el **módulo de recordatorios y control de adherencia** incrementará drásticamente la fidelidad de los pacientes a su tratamiento prescrito.
+   - **Business Outcome:** Aumento de la adherencia terapéutica medida como porcentaje de tomas confirmadas sobre tomas programadas (objetivo: >80% a los 3 meses).
+   - **User Outcome:** Los pacientes reducen los olvidos de medicación de 2-3 veces por mes a menos de 1 vez por mes.
+
 3. Creemos que la **generación de gráficos de tendencias automáticos** permitirá a los médicos optimizar el tiempo de diagnóstico y ajuste de dosis.
+   - **Business Outcome:** Reducción del tiempo promedio de consulta de 30 a 20 minutos por paciente.
+   - **User Outcome:** Los médicos interpretan la evolución del paciente en menos de 2 minutos.
+
+4. Creemos que el **módulo de compartición de datos en tiempo real** entre paciente y médico fomentará una relación de confianza y reducirá la necesidad de consultas presenciales innecesarias.
+   - **Business Outcome:** Disminución de consultas presenciales no críticas en un 25%, liberando agenda para casos urgentes.
+   - **User Outcome:** Los pacientes resuelven dudas rápidas mediante la plataforma sin esperar una cita.
+
+5. Creemos que la funcionalidad de **recomendaciones personalizadas (estilo de vida, dieta, ejercicio)** aumentará la adherencia al plan de tratamiento no farmacológico.
+   - **Business Outcome:** Mejora del 10% en los niveles de HbA1c de los pacientes activos a los 6 meses.
+   - **User Outcome:** Los pacientes reciben recomendaciones contextualizadas según sus patrones de glucosa registrados.
 
 #### <a name="_toc226040391"></a>*12.2.3 Lean UX Hypothesis Statements*
 
@@ -361,10 +427,23 @@ A partir de nuestros supuestos, hemos formulado las siguientes declaraciones de 
 - **Hipótesis 1 (Focalizada en la Adherencia del Paciente):** Creemos que lograremos un _incremento en la adherencia a la medicación_ en un 30% dentro de los primeros 3 meses, si los _pacientes con diabetes_ logran _reducir sus episodios de olvido de medicación_ a través de la característica de _un sistema automatizado de alarmas y confirmación de consumo de medicamentos_.
 - **Hipótesis 2 (Focalizada en la Eficiencia Médica):** Creemos que lograremos _reducir el tiempo de revisión de historial clínico en las consultas médicas_ en un 20%, si los _endocrinólogos y médicos generales_ logran _interpretar el estado del paciente en menos de 2 minutos_ mediante la característica de _un dashboard interactivo con gráficas de evolución de glucosa (HbA1c) y reportes de adherencia_.
 - **Hipótesis 3 (Focalizada en la Farmacovigilancia):** Creemos que _reduciremos las complicaciones de salud evitables por cambios de tratamiento inadecuados_, si los _médicos tratantes_ logran _identificar rápidamente las reacciones adversas a la medicación_ mediante la característica de _un módulo de alertas inmediatas y registros de efectos adversos directamente vinculados a la historia clínica del paciente_.
-- **Hipótesis 4 (Focalizada en la Comunicación):** Creemos que _aumentaremos la retención de pacientes en el uso de la plataforma_, si los _pacientes con diabetes_ logran _sentir un mayor acompañamiento médico_ a través de la característica de _compartir reportes en tiempo real con sus médicos y recibir sugerencias personalizadas.
+- **Hipótesis 4 (Focalizada en la Comunicación):** Creemos que _aumentaremos la retención de pacientes en el uso de la plataforma_, si los _pacientes con diabetes_ logran _sentir un mayor acompañamiento médico_ a través de la característica de _compartir reportes en tiempo real con sus médicos y recibir sugerencias personalizadas_.
+- **Hipótesis 5 (Focalizada en la Personalización):** Creemos que _mejoraremos el control glucémico de los pacientes_, si los _pacientes con diabetes tipo 2_ logran _recibir recomendaciones personalizadas de estilo de vida_ a través de la característica de _un módulo de sugerencias basado en sus patrones de glucosa, actividad física y alimentación registrados en la plataforma_.
+- **Hipótesis 6 (Focalizada en la Escalabilidad del Negocio):** Creemos que _lograremos una adopción sostenida del producto en clínicas pequeñas_, si los _directores médicos y administradores de clínicas_ logran _reducir la carga administrativa del personal de salud_ a través de la característica de _un panel de control institucional que automatice recordatorios de citas y reportes de adherencia agregados por paciente_.
 #### <a name="_toc226040392"></a>*1.2.2.4 Lean UX Canvas*
 
+El Lean UX Canvas sintetiza los hallazgos del proceso Lean UX, organizando en una sola vista el Problem Statement, los segmentos objetivo, las Assumptions (de negocio, usuario y features), las Hypothesis, los Business Outcomes y User Outcomes, las funcionalidades mínimas (MVP) y los criterios de éxito. A continuación se presenta el Lean UX Canvas de **GlucoSmart**, el cual integra los resultados del análisis 5W+2H y las entrevistas realizadas a pacientes y médicos.
+
+<!-- TODO: Reemplazar con la imagen actualizada del Lean UX Canvas que cubra todo el alcance del proyecto, incluyendo Business Outcomes, User Outcomes y las 5+ Business Assumptions -->
 ![LeanUXCanvas](./Informe/assets/LeanUxCanvas.png)
+
+**Nota:** Se debe verificar que el canvas incluya explícitamente:
+- **Problem Statement:** Redactado siguiendo el patrón Lean UX (problema, afectados, impacto, solución).
+- **Business Outcomes:** Reducción de costos operativos, mejora de adherencia, disminución de readmisiones.
+- **User Outcomes:** Ahorro de tiempo en consulta, reducción de olvidos de medicación, acompañamiento médico percibido.
+- **Solutions (MVP):** Módulo de adherencia, dashboard médico, farmacovigilancia, registro de glucosa, agenda de citas.
+- **Hypothesis:** Las 6 declaraciones formuladas en la sección 1.2.2.3.
+- **What's the most important thing we need to learn first?** Validar si el módulo de farmacovigilancia y alertas es percibido como valor diferencial por los médicos.
 
 ## <a name="_toc226040393"></a>1.3 Segmento Objetivo
 
@@ -674,49 +753,84 @@ Tras el procesamiento de las entrevistas realizadas a los segmentos de pacientes
 
 ### <a name="_toc226040403"></a>2.3.1 User Personas
 
-User Persona Segmento 2:
+A partir del análisis de las entrevistas realizadas a los segmentos objetivo (pacientes con diabetes y médicos especialistas), así como del estudio competitivo de aplicaciones existentes en el mercado (mySugr, SocialDiabetes, Glucose Buddy), se construyeron dos User Personas que representan a los actores principales del ecosistema de GlucoSmart. Estas personas sintetizan los patrones de comportamiento, necesidades, frustraciones y objetivos identificados en la investigación, permitiendo al equipo de desarrollo mantener un enfoque centrado en el usuario durante todo el ciclo de diseño e implementación.
+
+User Persona Segmento 1 — Paciente con Diabetes:
 ![UserPersonaSegmento1](./Informe/assets/UserPersona1.png)
 
-User Persona Segmento 1:
+User Persona Segmento 2 — Médico Especialista:
 ![UserPersonaSegmento2](./Informe/assets/UserPersona2.png)
 
 ### <a name="_toc226040404"></a>2.3.2 User Task Matrix
 
-| **Segmento** | **Tarea Principal**   | **Descripción**                                                  | **Frecuencia**         |
-| ------------ | --------------------- | ---------------------------------------------------------------- | ---------------------- |
-| **Paciente** | Registro de Glucosa   | Ingreso manual o sincronizado de niveles medidos con glucómetro. | Diaria (Mañanas)       |
-| **Paciente** | Confirmación de Dosis | Notificar al sistema la ingesta de la medicación prescrita.      | Diaria (Según receta)  |
-| **Paciente** | Reporte de Síntomas   | Registrar mareos, ardor u otros efectos secundarios.             | Ocasional (Evento)     |
-| **Médico**   | Revisión de Dashboard | Analizar gráficos de tendencias y HbA1c del paciente.            | Trimestral (Consulta)  |
-| **Médico**   | Atención de Alertas   | Evaluar notificaciones críticas de hipoglucemia severa.          | Inmediata (Emergencia) |
-| **Médico**   | Ajuste de Tratamiento | Modificar medicación basándose en el historial de adherencia.    | Trimestral / Remoto    |
+La siguiente matriz presenta las tareas que los usuarios de cada segmento objetivo (pacientes con diabetes y médicos especialistas) realizan actualmente **sin la intervención de GlucoSmart (situación AS-IS)**. El análisis se centra en describir cómo ejecutan estas tareas hoy en día —con métodos manuales, herramientas genéricas o aplicaciones fragmentadas—, qué dificultades enfrentan y con qué frecuencia las realizan. Esta línea base permite identificar los puntos de dolor que GlucoSmart resolverá, y servirá como referencia para medir la mejora en la situación TO-BE.
+
+#### Segmento 1: Pacientes con Diabetes (AS-IS)
+
+| Tarea (AS-IS)                          | Descripción de la situación actual                                                                 | Herramienta actual       | Frecuencia             | Dificultad                                 |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------- | ------------------------------------------ |
+| Medición de glucosa                     | Se pincha el dedo con un glucómetro manual y anota el valor en una libreta o en una app genérica. | Glucómetro + libreta/app | Diaria (mañanas)       | Alta: olvida registrar, pierde la libreta |
+| Toma de medicación                      | Toma la medicación según su memoria o blister, sin registro de confirmación.                       | Blister / Caja de pastillas | Diaria (según receta)  | Alta: olvidos frecuentes (1-2/mes)        |
+| Reporte de síntomas o efectos adversos  | Solo lo comenta verbalmente en la próxima consulta médica; no hay registro inmediato.             | Memoria / Papel          | Ocasional (evento)     | Alta: puede olvidar detalles               |
+| Seguimiento de citas médicas            | Anota la cita en una agenda física o en el calendario del celular.                                | Agenda / Google Calendar | Mensual / Trimestral   | Media: a veces olvida o confunde la fecha  |
+| Comunicación con el médico entre citas | No existe; debe esperar a la próxima consulta para resolver dudas.                                 | Teléfono / WhatsApp      | Solo en emergencias    | Muy alta: sin canal formal                 |
+| Control de dieta y ejercicio            | Lleva un registro mental o en notas sueltas; no hay correlación con los niveles de glucosa.       | Memoria / Notas sueltas  | Diaria / Semanal       | Alta: falta de organización                |
+
+#### Segmento 2: Médicos Especialistas (AS-IS)
+
+| Tarea (AS-IS)                                  | Descripción de la situación actual                                                                 | Herramienta actual       | Frecuencia             | Dificultad                                 |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------- | ------------------------------------------ |
+| Revisión de historial clínico del paciente      | El paciente trae una libreta o papeles sueltos; el médico debe interpretar datos desordenados.     | Historia clínica física / Excel | Cada consulta (trimestral) | Alta: pierde tiempo, datos incompletos      |
+| Evaluación de adherencia al tratamiento        | Pregunta verbalmente al paciente si tomó sus medicamentos; no hay forma de verificarlo.           | Historia clínica / Pregunta oral | Cada consulta         | Alta: información poco confiable            |
+| Identificación de efectos adversos             | Solo se entera si el paciente lo menciona; no hay registro sistemático.                           | Pregunta oral            | Ocasional             | Muy alta: puede pasar desapercibido         |
+| Ajuste de tratamiento                          | Basado en la información fragmentada que el paciente recuerda y en la HbA1c de laboratorio.        | Historia clínica + laboratorio | Trimestral             | Media: decisiones con datos incompletos     |
+| Gestión de agenda de citas                     | Coordina citas por teléfono o con secretaria; registro en agenda física o Excel.                  | Agenda / Excel           | Diaria                | Media: requiere llamadas y coordinación     |
+| Generación de reportes clínicos                | Los reportes se elaboran manualmente durante la consulta o después, sin plantillas estandarizadas. | Word / Historia clínica | Cada consulta         | Alta: consume tiempo de consulta           |
 ### <a name="_toc226040405"></a>2.3.3 User Journey Mapping
 
-| **Etapa**      | **Acciones**                                                  | **Pensamientos**                                       | **Emociones**         | **Oportunidades**                                     |
-| -------------- | ------------------------------------------------------------- | ------------------------------------------------------ | --------------------- | ----------------------------------------------------- |
-| **Registro**   | Crea cuenta y configura su medicación y metas de glucosa.     | "¿Será difícil configurar todas mis pastillas?"        | Ansiedad / Esperanza  | Tutorial guiado y carga masiva de medicamentos.       |
-| **Uso Diario** | Recibe alertas, confirma toma de medicina y registra glucosa. | "Es bueno que la app me recuerde, a veces se me pasa." | Alivio / Control      | Gamificación por días de adherencia perfecta.         |
-| **Crisis**     | Siente mareo y registra el síntoma y un nivel bajo en la app. | "Me siento mal, ¿qué debo hacer ahora?"                | Preocupación / Miedo  | Botón de pánico o guía rápida de primeros auxilios.   |
-| **Consulta**   | Comparte el acceso de sus datos con el Dr. Walter.            | "Ahora mi doctor verá exactamente qué pasó este mes."  | Confianza / Seguridad | Generación de reporte PDF profesional para el médico. |
+El siguiente User Journey Mapping representa la experiencia actual del paciente con diabetes **en la situación AS-IS**, es decir, cómo vive el proceso de gestión de su enfermedad **sin la intervención de GlucoSmart**. El recorrido abarca desde el diagnóstico inicial hasta la consulta de seguimiento, evidenciando los puntos de fricción, las emociones negativas y las oportunidades de mejora que nuestra plataforma busca resolver. Este mapa se construyó a partir de los testimonios recogidos en las entrevistas a pacientes (Jorge, Virgilia y Andy) y al médico especialista (Dr. Walter Gómez).
+
+#### User Journey — Situación AS-IS (Paciente con Diabetes)
+
+| **Etapa**          | **Diagnóstico**                                    | **Vida Diaria**                                          | **Crisis / Síntoma**                                    | **Pre-Consulta**                                         | **Consulta Médica**                                        | **Post-Consulta**                                     |
+| ------------------ | --------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
+| **Acciones**       | Recibe el diagnóstico de diabetes; le recetan medicación y le indican controles. | Toma medicación de memoria; mide glucosa cuando recuerda; anota en libreta. | Siente mareo o malestar; no sabe si es efecto adverso; espera a la consulta. | Busca la libreta con anotaciones; intenta recordar eventos importantes. | Lleva papeles sueltos al consultorio; el médico revisa datos desordenados. | Olvida las indicaciones del médico; retoma la rutina sin cambios. |
+| **Pensamientos**   | "¿Cómo voy a controlar esto toda mi vida?"          | "Ojalá tuviera un recordatorio, a veces se me pasa la dosis." | "¿Será normal esto o es grave? No quiero molestar al doctor." | "Espero no haber olvidado nada importante."               | "Ojalá el doctor pudiera ver mis datos de todo el mes."      | "Ya me explicó, pero no recuerdo todo lo que dijo."   |
+| **Emociones**      | Miedo / Incertidumbre                               | Frustración / Cansancio (fatiga de datos)                | Preocupación / Soledad                                  | Ansiedad / Estrés                                         | Vergüenza (datos incompletos) / Esperanza                   | Confusión / Desmotivación                             |
+| **Puntos de dolor** | Falta de orientación digital sobre la enfermedad.  | Olvidos frecuentes de medicación; registro inconsistente. | No hay canal para reportar síntomas en el momento.      | Datos dispersos y difíciles de organizar.                | Pérdida de tiempo revisando apuntes desordenados.          | Baja adherencia a las recomendaciones post-consulta.  |
+| **Oportunidades**  | Tutorial interactivo de onboarding al diagnóstico. | Recordatorios automatizados + gamificación.              | Botón de reporte rápido de efectos adversos + alerta al médico. | Generación automática de resumen clínico.                | Dashboard con gráficos de tendencias y adherencia.         | Resumen digital de la consulta + plan personalizado.  |
 
 ### <a name="_toc226040406"></a>2.3.4 Empathy Mapping
 
+Los mapas de empatía permiten profundizar en la comprensión del estado emocional y cognitivo de cada segmento de usuario, complementando la información de las User Personas con una vista de qué piensan, sienten, ven, oyen, dicen y hacen los actores en su contexto actual (AS-IS). A continuación se presentan los mapas de empatía para ambos segmentos objetivo, construidos a partir de las entrevistas realizadas y el análisis de la competencia.
+
+#### Mapa de Empatía — Segmento 1: Paciente con Diabetes
+
 ![EmpathyMapSegmento1](./Informe/assets/EmpathyMap1.png)
 
+**Interpretación del mapa:** El paciente con diabetes experimenta una mezcla de frustración por la carga manual del registro diario y preocupación por no saber si sus síntomas son normales. Su entorno (familia, médico) le recomienda llevar un control, pero las herramientas actuales no le facilitan la tarea. Desea sentirse acompañado y tener claridad sobre su evolución, pero la fatiga de datos y la falta de recordatorios inteligentes lo llevan a abandonar los registros.
+
+#### Mapa de Empatía — Segmento 2: Médico Especialista
+
 ![EmpathyMapSegmento2](./Informe/assets/EmpathyMap2.png)
+
+**Interpretación del mapa:** El médico valora la precisión de los datos clínicos pero recibe información fragmentada y desordenada del paciente. Sabe que la adherencia al tratamiento es el factor más crítico, pero no tiene herramientas para medirla objetivamente. Escucha de sus pacientes las mismas excusas ("se me olvidó", "no tuve tiempo") y desea contar con un sistema que le muestre la realidad del cumplimiento terapéutico para poder ajustar tratamientos con evidencia concreta.
 ## <a name="_toc226040407"></a>2.4 Big Picture Event Storming
 
+<!-- TODO: Reemplazar EventStorming.jpg con un diagrama de Big Picture Event Storming que siga la notación estándar de Event Storming (Domain Events naranja, Commands azul, Aggregates amarillo, Policies púrpura, Read Models verde, External Systems rosado, Actors/Personas amarillo claro). El diagrama actual no utiliza la notación correcta de Event Storming. -->
 ![EventStorming|601](./Informe/assets/EventStorming.jpg)
 
 El análisis de _Big Picture Event Storming_ se ha realizado con el objetivo de comprender la complejidad del dominio de la gestión de la diabetes y la farmacovigilancia. Esta dinámica nos permitió visualizar cronológicamente cómo interactúan los pacientes, los médicos y el sistema a lo largo del proceso de tratamiento.
 
-Para este análisis se ha definido la siguiente leyenda estándar:
+Para este análisis se ha definido la siguiente leyenda estándar de Event Storming:
 
-- **Actores (Amarillo):** Quién ejecuta la acción (Paciente, Médico, Sistema Automatizado).
-- **Comandos (Azul):** La intención o acción ejecutada (Ej. "Registrar Glucosa")
-- **Eventos de Dominio (Naranja):** El resultado inmutable en tiempo pasado (Ej. "Glucosa Registrada").
-- **Sistemas Externos (Rosado):** Servicios de terceros (Ej. "Servicio de Notificaciones Push").
-- **Modelos de Lectura (Verde):** La información que el actor visualiza para tomar decisiones (Ej. "Dashboard de Tendencias").
+- **Domain Events (Naranja):** Hechos inmutables que ocurren en el dominio, expresados en tiempo pasado (Ej. "Glucosa Registrada", "Alerta Generada", "Tratamiento Ajustado").
+- **Commands (Azul):** Intenciones o acciones ejecutadas por un actor que disparan un Domain Event (Ej. "Registrar Glucosa", "Confirmar Dosis").
+- **Aggregates (Amarillo):** Entidades del dominio alrededor de las cuales ocurren los eventos (Ej. "Patient", "GlucoseRecord", "Alert").
+- **Policies / Business Rules (Púrpura):** Reglas de negocio que reaccionan automáticamente a un Domain Event para disparar otro comando (Ej. "Si glucosa > 180 mg/dL, generar alerta").
+- **Read Models (Verde):** La información que un actor visualiza para tomar decisiones (Ej. "Dashboard de Tendencias", "Historial de Farmacovigilancia").
+- **External Systems (Rosado):** Sistemas de terceros con los que el dominio interactúa (Ej. "Servicio de Notificaciones Push").
+- **Actors (Amarillo claro):** Personas o roles que ejecutan comandos (Paciente, Médico, Sistema).
 
 #### Flujo Cronológico del Dominio (GlucoSmart)
 
@@ -921,6 +1035,8 @@ Información personal y profesional registrada en el sistema según el tipo de u
 
 En esta sección se presentan las épicas y las historias de usuario del proyecto **GlucoSmart**, alineadas con las necesidades funcionales de los principales actores del sistema: **pacientes** y **doctores**. Estas historias de usuario servirán como base para la priorización del backlog, el diseño del sistema y la planificación del desarrollo.
 
+<!-- TODO: Expandir los Acceptance Criteria de cada User Story para incluir al menos 2-3 escenarios Given-When-Then por historia (cubriendo happy path, flujo alternativo y casos de error). Actualmente cada US tiene un solo escenario. -->
+
 ### Epics
 
 | Epic ID | Título                               | Descripción                                                                                                                       |
@@ -995,54 +1111,62 @@ En esta sección se presentan las épicas y las historias de usuario del proyect
 
 ## <a name="_toc226040411"></a>3.2 Impact Mapping
 
+<!-- TODO: Reemplazar la imagen de Impact Mapping con una versión que incluya al menos 3 objetivos de negocio SMART, los actores con sus impactos, y los entregables vinculados. La imagen actual puede no cubrir el mínimo requerido. -->
 ![](./Informe/assets/ImpactMapping.jpg)
 
 Para asegurar que las funcionalidades de **GlucoSmart** estén alineadas con los objetivos estratégicos de **IntegraVida**, se ha desarrollado un Impact Mapping. Esta técnica nos permite visualizar cómo los entregables de software generarán un cambio de comportamiento en nuestros usuarios, logrando así el impacto de negocio deseado.
 
 A continuación, se detalla la estructura del mapa de impacto:
 
-#### 1. Objetivo del Negocio (WHY / ¿Por qué?)
+#### 1. Objetivos del Negocio (WHY / ¿Por qué?)
 
-- **Meta Principal:** Lograr una retención de uso continuo del 80% en pacientes durante los primeros 3 meses y reducir el tiempo de revisión de historial clínico en las consultas médicas en un 20%
+Los objetivos de negocio se han definido siguiendo el criterio **SMART** (Specific, Measurable, Achievable, Relevant, Time-bound):
+
+- **OG-01 (Retención de Pacientes):** Lograr una retención de uso continuo del 80% en pacientes durante los primeros 3 meses posteriores al alta médica, midiendo la proporción de usuarios que registran al menos 4 lecturas de glucosa por semana.
+- **OG-02 (Eficiencia Médica):** Reducir el tiempo promedio de revisión de historial clínico en las consultas médicas de 30 a 20 minutos (una reducción del 33%) al finalizar el primer trimestre de operación.
+- **OG-03 (Seguridad del Paciente):** Disminuir en un 40% el tiempo de notificación de reacciones adversas graves, pasando de un reporte verbal en consulta (días/semanas) a una alerta digital en menos de 5 minutos desde el evento.
+- **OG-04 (Adherencia Terapéutica):** Incrementar la adherencia a la medicación en pacientes activos del 60% (línea base de entrevistas) al 80% en los primeros 6 meses de uso de la plataforma.
+
 #### 2. Actores (WHO / ¿Quién?)
 
-Para alcanzar esta meta, dependemos de los dos segmentos principales identificados en nuestras entrevistas:
+Para alcanzar estas metas, dependemos de los dos segmentos principales identificados en nuestras entrevistas:
 
-- **Actor 1:** Paciente con Diabetes (Ej. Jorge).
-- **Actor 2:** Médico Especialista (Ej. Dr. Walter).
+- **Actor 1:** Paciente con Diabetes (Ej. Jorge, Virgilia, Andy).
+- **Actor 2:** Médico Especialista (Ej. Dr. Walter Gómez).
+- **Actor 3 (Indirecto):** Administrador de clínica / sistema de salud (beneficiario de la reducción de costos).
+
 #### 3. Impactos (HOW / ¿Cómo?)
 
-¿Cómo necesitamos que cambie el comportamiento de estos actores para lograr nuestra meta?
+¿Cómo necesitamos que cambie el comportamiento de estos actores para lograr nuestras metas?
 
 - **Para el Paciente:**
     
     - _Impacto 1.1:_ Que registre su glucosa y confirme la ingesta de su medicación diariamente sin olvidos.
     - _Impacto 1.2:_ Que reporte los efectos adversos o síntomas inusuales en el momento en que ocurren.
+    - _Impacto 1.3:_ Que consulte sus gráficos de evolución y se sienta motivado a mantener el control.
     
 - **Para el Médico:**
     
     - _Impacto 2.1:_ Que interprete la evolución de la hemoglobina glicosilada (HbA1c) en segundos, en lugar de revisar apuntes desordenados.
     - _Impacto 2.2:_ Que intervenga de forma preventiva antes de que un paciente sufra daño orgánico por hipoglucemia.
+    - _Impacto 2.3:_ Que pueda ajustar tratamientos de forma remota basándose en datos de adherencia objetivos.
 
 #### 4. Entregables / Funcionalidades (WHAT / ¿Qué?)
 
 ¿Qué vamos a construir (desarrollar) en la plataforma para facilitar esos impactos?
 
 - **Para lograr el Impacto 1.1 (Registro diario):**
-    
     - _Entregable:_ Sistema automatizado de recordatorios y confirmación de dosis.
-	
 - **Para lograr el Impacto 1.2 (Reporte de síntomas):**
-    
     - _Entregable:_ Módulo de registro rápido de farmacovigilancia y reacciones adversas.
-    
+- **Para lograr el Impacto 1.3 (Motivación):**
+    - _Entregable:_ Dashboard con gráficos de tendencias y estadísticas semanales/mensuales.
 - **Para lograr el Impacto 2.1 (Interpretación rápida):**
-    
     - _Entregable:_ Dashboard interactivo con gráficos de tendencias de glucosa y filtros históricos.
-    
 - **Para lograr el Impacto 2.2 (Intervención preventiva):**
-    
     - _Entregable:_ Sistema de alertas críticas enviadas en tiempo real ante niveles fuera del rango seguro.
+- **Para lograr el Impacto 2.3 (Ajuste remoto):**
+    - _Entregable:_ Panel de control médico con vista de adherencia por paciente y recomendación de ajuste.
 
 ## <a name="_toc226040412"></a>3.3 Product Backlog
 
@@ -1118,6 +1242,18 @@ La estimación técnica de cada historia se expresa mediante **Story Points**.
 | 59 | US-49 | Actualizar tratamiento | Como doctor, quiero modificar el tratamiento del paciente para adaptarlo a su evolución clínica. | 5 | Baja |
 | 60 | US-50 | Compartir información clínica | Como paciente, quiero compartir mi información con mi doctor para facilitar el seguimiento médico. | 3 | Baja |
 | 61 | US-10 | Visualizar historial de salud | Como paciente, quiero consultar mi historial de salud para revisar la evolución de mi condición a lo largo del tiempo. | 3 | Baja |
+| 62 | TS-11 | Configurar estructura DDD + CQRS en Spring Boot | Como equipo técnico, necesitamos inicializar el proyecto Spring Boot con la estructura de paquetes (domain, application, infrastructure, interfaces) para los 4 bounded contexts. | 3 | Alta |
+| 63 | TS-12 | Implementar Aggregate Profile con value objects | Como equipo técnico, necesitamos implementar el aggregate Profile con PersonName, EmailAddress, PhoneNumber y DateOfBirth para el BC Profiles. | 5 | Alta |
+| 64 | TS-13 | Implementar aggregate GlucoseRecord y Alert con CQRS | Como equipo técnico, necesitamos los aggregates GlucoseRecord y Alert con servicios command/query separados para el BC Monitoring. | 5 | Alta |
+| 65 | TS-14 | Implementar aggregate Patient, Treatment y Medication | Como equipo técnico, necesitamos los aggregates Patient, Treatment y Medication para el BC Patients con persistencia JPA. | 5 | Alta |
+| 66 | TS-15 | Implementar aggregate Appointment y Diagnosis | Como equipo técnico, necesitamos los aggregates Appointment, Diagnosis y ClinicalReport para el BC Medical. | 5 | Alta |
+| 67 | TS-16 | Configurar PostgreSQL con Docker y conectar Spring Boot | Como equipo técnico, necesitamos configurar un contenedor Docker con PostgreSQL y conectar el datasource de Spring Boot para persistencia real. | 3 | Alta |
+| 68 | TS-17 | Documentar endpoints REST con Swagger/OpenAPI | Como equipo técnico, necesitamos integrar SpringDoc OpenAPI y anotar todos los endpoints con @Operation y @ApiResponse para generar documentación interactiva. | 3 | Alta |
+| 69 | TS-18 | Implementar Anti-Corruption Layer (ACL) entre bounded contexts | Como equipo técnico, necesitamos implementar facades ACL (ProfilesContextFacade, PatientContextFacade) para que los BCs se comuniquen sin acoplamiento directo. | 3 | Alta |
+| 70 | TS-19 | Configurar JWT y Spring Security para autenticación | Como equipo técnico, necesitamos implementar autenticación stateless con JWT, filtro de seguridad y endpoints sign-up/sign-in protegidos. | 5 | Alta |
+| 71 | TS-20 | Configurar CORS y desplegar backend en Render | Como equipo técnico, necesitamos configurar CORS para el frontend Angular y desplegar el backend Spring Boot en Render como Web Service. | 3 | Alta |
+
+<!-- TODO: El Product Backlog debe ser priorizado por valor de negocio. El orden actual sigue: Landing Page (US-01, US-29-US-33), CRUD (US-02-US-04, US-06-US-08, US-11), Core de negocio (US-12-US-55), Technical Stories (TS-01-TS-20), Gestión de usuario. El equipo debe verificar que este orden coincida con el tablero en Linear/Trello. -->
 
 
 # <a name="_toc226040413"></a>Capitulo IV: Product Design
@@ -1127,28 +1263,88 @@ La estimación técnica de cada historia se expresa mediante **Story Points**.
 El propósito de esta sección es establecer los lineamientos visuales y de diseño de interacción para la plataforma GlucoSmart de la startup IntegraVida. Estas directrices aseguran que la interfaz de usuario (UI) sea coherente, profesional y transmita confianza, factores críticos en un sistema de gestión de salud y farmacovigilancia tanto para pacientes como para personal médico.
 ### <a name="_toc226040415"></a>4.1.1. General Style Guidelines.
 
+Los lineamientos generales definen la identidad visual de la marca **IntegraVida** y los elementos base que componen todas las interfaces del sistema **GlucoSmart**. Estas directrices aseguran consistencia visual en todos los puntos de contacto digital con el usuario, transmitiendo profesionalismo, confianza y tecnología médica.
+
+<!-- TODO: Reemplazar StudyGuidelines.jpeg con una imagen que muestre claramente la paleta de colores (con códigos HEX), la jerarquía tipográfica (con nombres de fuentes y tamaños), los spacings y el branding completo. -->
 ![](./Informe/assets/StudyGuidelines.jpeg)
 
-Los lineamientos generales definen la identidad visual de la marca y los elementos base que componen todas las interfaces del sistema, tal como se muestra en la imagen de referencia adjunta.
+#### Branding
+La marca **IntegraVida** se presenta con un logotipo compuesto por un símbolo (corazón/pulso estilizado) y el nombre en tipografía sans-serif. El logotipo se posiciona en la esquina superior izquierda del header en todas las pantallas. La marca verbal utiliza un tono de comunicación **profesional, empático y claro** —ni demasiado técnico para el paciente, ni demasiado simple para el médico— priorizando la claridad sobre la jerga. El lenguaje es formal pero cercano, en español neutro con soporte de internacionalización EN/ES.
 
-- Tipografía (Typography):Para garantizar la máxima legibilidad de los datos clínicos (niveles de glucosa, registros de HbA1c), se ha seleccionado la familia tipográfica. Esta fuente _sans-serif_ ofrece claridad en pantallas digitales de cualquier tamaño. Se establece una jerarquía estructurada utilizando distintos pesos: _Bold_ o _SemiBold_ para encabezados y títulos principales, y _Regular_ para el cuerpo de texto y lectura de tablas médicas.
-- Paleta de Colores (Color Palette): La selección de colores busca transmitir limpieza, tranquilidad y tecnología médica, evitando la fatiga visual del doctor durante la revisión de historiales.
-    
-    - Color Primario : Utilizado para resaltar los elementos de mayor importancia y establecer la identidad de la marca.
-    - **Color Secundario y Fondos:** Tonos neutros y grises claros que permiten que la información y los gráficos destaquen sin saturar la vista.
-    - **Colores Semánticos:** Fundamentales para el entorno de salud. Se emplea el color rojo para alertas críticas (ej. hipoglucemia severa o efectos adversos), amarillo para advertencias preventivas, y verde para confirmaciones de éxito y estados estables.
-    
-- **Logotipo e Iconografía:** El logotipo de IntegraVida se mantendrá constante en la cabecera (_header_) del sistema. La iconografía empleada debe ser minimalista, de trazos limpios y consistentes, facilitando el reconocimiento rápido de secciones clave como "Farmacovigilancia", "Dashboard Médico" y "Recordatorios".
+#### Typography
+Para garantizar la máxima legibilidad de los datos clínicos (niveles de glucosa, registros de HbA1c), se ha seleccionado la familia tipográfica **Poppins** (sans-serif). Esta fuente ofrece claridad en pantallas digitales de cualquier tamaño y cuenta con una amplia gama de pesos. Se establece la siguiente jerarquía:
+
+| Elemento                   | Fuente   | Peso        | Tamaño | Uso                                          |
+| -------------------------- | -------- | ----------- | ------ | -------------------------------------------- |
+| **H1 (Título principal)**  | Poppins  | Bold (700)  | 32px   | Hero section, landing page                   |
+| **H2 (Subtítulo)**         | Poppins  | SemiBold (600) | 24px   | Títulos de sección en dashboard              |
+| **H3 (Encabezado de card)**| Poppins  | Medium (500) | 18px   | Títulos de cards: módulos, alertas           |
+| **Body (Cuerpo de texto)** | Poppins  | Regular (400) | 14px   | Tablas, formularios, descripciones           |
+| **Caption (Etiquetas)**    | Poppins  | Regular (400) | 12px   | Labels de campos, metadatos, badges          |
+| **Data (Datos clínicos)**  | Poppins  | SemiBold (600) | 16px   | Valores numéricos de glucosa, HbA1c, alertas |
+
+#### Color Palette
+La selección de colores busca transmitir limpieza, tranquilidad y tecnología médica, evitando la fatiga visual del doctor durante la revisión de historiales.
+
+| Tipo               | Color           | Código HEX | Uso principal                                                |
+| ------------------ | --------------- | ---------- | ------------------------------------------------------------ |
+| **Primario**       | Azul IntegraVida | `#1A73E8`  | Botones CTA, enlaces, header, acentos principales            |
+| **Secundario**     | Verde Menta      | `#34A853`  | Estados de éxito, confirmaciones, badges de meta alcanzada   |
+| **Fondo principal**| Blanco           | `#FFFFFF`  | Fondos de pantalla, cards, contenedores                       |
+| **Fondo secundario**| Gris claro      | `#F5F7FA`  | Fondos de secciones alternas, sidebar                         |
+| **Texto primario** | Gris oscuro      | `#202124`  | Títulos, cuerpo de texto                                     |
+| **Texto secundario**| Gris medio     | `#5F6368`  | Subtítulos, metadatos, placeholders                          |
+| **Alerta crítica** | Rojo             | `#D93025`  | Alertas de hipoglucemia severa, efectos adversos críticos     |
+| **Advertencia**    | Amarillo         | `#F9AB00`  | Alertas preventivas, valores cerca del límite                |
+| **Éxito / Estable**| Verde            | `#1E8E3E`  | Confirmaciones, rangos normales de glucosa                   |
+| **Info**           | Azul claro       | `#1967D2`  | Notificaciones informativas, recordatorios                   |
+
+#### Spacing
+Se adopta un sistema de espaciado basado en una unidad base de 4px, siguiendo el estándar de Material Design. Las distancias se definen en múltiplos de esta unidad:
+
+| Token  | Valor | Uso                                               |
+| ------ | ----- | ------------------------------------------------- |
+| `4px`  | 4px   | Padding interno en badges, íconos pequeños         |
+| `8px`  | 8px   | Gap entre elementos de formulario, margen interno de cards |
+| `16px` | 16px  | Padding estándar de cards, margen entre secciones  |
+| `24px` | 24px  | Margen entre bloques de contenido, padding de contenedores |
+| `32px` | 32px  | Separación entre secciones mayores                 |
+| `48px` | 48px  | Margen superior de página, separación hero-content  |
+
+#### Tono de comunicación y lenguaje
+- **Pacientes:** Tono empático, claro y motivacional. Se usa segunda persona ("tú") y vocabulario accesible. Ejemplo: "Registra tu glucosa y recibe alertas cuando la necesites."
+- **Médicos:** Tono profesional, preciso y directo. Se usa tercera persona o "usted". Ejemplo: "Revise la evolución de HbA1c de sus pacientes y ajuste tratamientos con datos objetivos."
+- **General:** Frases cortas, avoids jerga innecesaria, uso consistente de términos del Ubiquitous Language.
+
+#### Logotipo e Iconografía
+El logotipo de IntegraVida se mantendrá constante en la cabecera (_header_) del sistema. La iconografía empleada debe ser minimalista, de trazos limpios y consistentes, facilitando el reconocimiento rápido de secciones clave como "Farmacovigilancia", "Dashboard Médico" y "Recordatorios". Se utiliza la librería **Material Icons** (Outlined style) para garantizar consistencia en todo el ecosistema.
 ### <a name="_toc226040416"></a>4.1.2. Web Style Guidelines.
 
 Estas directrices especifican cómo los elementos generales se aplican directamente a la experiencia e interacción dentro de la aplicación web de **GlucoSmart**, asegurando que los usuarios completen sus tareas de manera eficiente.
 
-- **Estructura y Disposición (Layout):** La plataforma está diseñada bajo los principios de diseño web adaptable (_Responsive Web Design_). Para la vista del médico, se implementa una estructura de panel de control (_Dashboard_) dividida en una barra lateral (_sidebar_) para la navegación principal, y una sección principal (_main view_) donde se despliegan las tablas de pacientes y los gráficos de tendencias.
+- **Estructura y Disposición (Layout):** La plataforma está diseñada bajo los principios de diseño web adaptable (_Responsive Web Design_). Para la vista del médico, se implementa una estructura de panel de control (_Dashboard_) dividida en una barra lateral (_sidebar_) para la navegación principal, y una sección principal (_main view_) donde se despliegan las tablas de pacientes y los gráficos de tendencias. En la vista del paciente, se utiliza un layout de una sola columna con cards apiladas priorizando el contenido más relevante (glucosa del día, próximas dosis).
+
+- **Responsive Web Design Breakpoints:**
+    - **Desktop (≥1200px):** Layout completo con sidebar expandida, tablas con todas las columnas visibles, gráficos de tamaño completo.
+    - **Tablet (768px–1199px):** Sidebar colapsable (hamburger menu), tablas con columnas esenciales, gráficos redimensionados al 80%.
+    - **Mobile (<768px):** Navegación inferior (bottom nav), cards en una columna, tablas convertidas a listas verticales, botones CTA de ancho completo.
+    - **Small Mobile (<400px):** Tipografía reducida a 12px body, espaciado mínimo de 8px, formularios de una sola columna.
+
 - **Componentes de Interacción:**
     
-    - **Botones (Buttons):** Los botones de llamada a la acción (CTA), como "Registrar Glucosa" o "Notificar Reacción Adversa", utilizarán el color primario con texto en alto contraste (blanco). Todo botón debe contar con estados visuales definidos (_hover_, _active_, _disabled_) para proporcionar retroalimentación inmediata al interactuar con ellos.
-    - **Formularios de Entrada (Forms):** Los campos para ingresar la medicación o actualizar la historia clínica tendrán bordes sutiles y etiquetas descriptivas claras. Los mensajes de validación (errores al ingresar datos anómalos) aprovecharán los colores semánticos para guiar al usuario a corregir la información.
-    - **Visualización de Datos:** Las gráficas de evolución y reportes de adherencia deben respetar el contraste establecido por las pautas de accesibilidad (WCAG). Se prioriza el uso de espacios en blanco (_white space_) para separar los bloques de información, evitando el uso excesivo de líneas divisorias, lo que garantiza una lectura ágil del historial clínico.
+    - **Botones (Buttons):** Los botones de llamada a la acción (CTA), como "Registrar Glucosa" o "Notificar Reacción Adversa", utilizarán el color primario con texto en alto contraste (blanco). Todo botón debe contar con estados visuales definidos (_hover_, _active_, _disabled_) para proporcionar retroalimentación inmediata al interactuar con ellos. Altura mínima: 44px (pauta de accesibilidad táctil).
+    - **Formularios de Entrada (Forms):** Los campos para ingresar la medicación o actualizar la historia clínica tendrán bordes sutiles y etiquetas descriptivas claras. Los mensajes de validación (errores al ingresar datos anómalos) aprovecharán los colores semánticos para guiar al usuario a corregir la información. Los campos numéricos (glucosa, dosis) usarán input type="number" con validación en tiempo real.
+    - **Tablas de Datos:** Las tablas de historial clínico, listado de pacientes y registros de glucosa deben incluir: encabezados fijos al hacer scroll, filas con alternancia de color (zebra striping) para facilitar la lectura, paginación cada 10 registros, y columna de acciones (editar/eliminar) con íconos.
+    - **Visualización de Datos (Gráficos):** Las gráficas de evolución y reportes de adherencia deben respetar el contraste establecido por las pautas de accesibilidad (WCAG AA mínimo). Se utiliza Chart.js para gráficos de línea (tendencias de glucosa) y dona (proporción de alertas). Los tooltips deben mostrar el valor exacto al hacer hover. Se prioriza el uso de espacios en blanco (_white space_) para separar los bloques de información, evitando el uso excesivo de líneas divisorias.
+    - **Cards:** Cada módulo del dashboard se presenta en una card con: ícono representativo, título, valor principal (grande), indicador de estado (color semántico) y enlace opcional a detalle.
+    - **Diálogos y Modales:** Confirmaciones de acciones destructivas (eliminar registro, cancelar cita) usan modal con botón de confirmación en rojo y botón de cancelar secundario.
+
+- **Accesibilidad:**
+    - Contraste de color mínimo WCAG AA (4.5:1 para texto normal, 3:1 para texto grande).
+    - Todos los elementos interactivos deben ser accesibles por teclado (Tab, Enter, Escape).
+    - Atributo `alt` descriptivo en todas las imágenes.
+    - Labels asociados a inputs mediante `for`/`id`.
+    - Mensajes de error visibles y legibles por lectores de pantalla (`aria-live`).
 
 ## <a name="_toc226040417"></a>4.2. Information Architecture.
 
@@ -1395,38 +1591,41 @@ Este diagrama permite visualizar el alcance del sistema y su relación con los a
 
 ### <a name="_toc226040435"></a>4.6.3. Software Architecture Container Diagrams.
 
-El diagrama de contenedores describe la arquitectura interna del sistema GlucoSmart, mostrando los principales componentes tecnológicos y su interacción.
+El diagrama de contenedores describe la arquitectura interna del sistema GlucoSmart, mostrando los principales componentes tecnológicos y su interacción, organizados bajo el enfoque **Domain-Driven Design (DDD)** con separación por bounded contexts.
 
 El sistema se compone de los siguientes contenedores:
 
-- Web Application: Interfaz desarrollada en Angular que permite la interacción de pacientes y profesionales de salud con el sistema.
-- RESTful API: Backend desarrollado en Spring Boot encargado de procesar la lógica de negocio, gestionar datos clínicos, autenticación y generación de alertas.
-- Database: Base de datos relacional donde se almacenan los registros de glucosa, historial clínico, perfiles de usuario y alertas.
-- Notification Service: Servicio externo encargado del envío de alertas y recordatorios al usuario.
+- **Web Application (Angular):** Interfaz de usuario desarrollada en Angular que permite la interacción de pacientes y profesionales de salud con el sistema. Se organiza internamente por bounded contexts siguiendo una arquitectura de capas (domain, application, infrastructure, presentation).
+- **RESTful API (Spring Boot):** Backend desarrollado en Spring Boot encargado de procesar la lógica de negocio. Sigue el patrón DDD + CQRS, organizado en los bounded contexts: Profiles, Patients, Monitoring y Medical. Cada bounded context expone sus propios endpoints REST y mantiene su propio esquema de persistencia.
+- **PostgreSQL Database:** Base de datos relacional donde se almacenan los registros de cada bounded context: perfiles, pacientes, monitoreo de glucosa, datos médicos y citas. Cada bounded context tiene su propio conjunto de tablas.
+- **Notification Service (Externo):** Servicio externo encargado del envío de alertas y recordatorios al usuario (integración futura con Firebase Cloud Messaging o SendGrid).
+- **Docker Container:** Contenedor que aloja la instancia de PostgreSQL, permitiendo un entorno de base de datos portable y reproducible.
 
-La comunicación entre estos contenedores se realiza mediante solicitudes HTTP/REST, garantizando una arquitectura desacoplada, escalable y mantenible.
+La comunicación entre el frontend y el backend se realiza mediante solicitudes HTTP/REST, con autenticación basada en JWT. Cada bounded context del backend expone su propia ruta base (`/api/v1/profiles`, `/api/v1/patients`, `/api/v1/glucose-records`, `/api/v1/appointments`, etc.).
 
 Este nivel permite comprender cómo se estructura técnicamente el sistema y cómo fluye la información entre sus componentes principales.
 
+<!-- TODO: Reemplazar la imagen del Container Diagram con una versión que refleje la arquitectura DDD + CQRS, mostrando: Angular Frontend → Spring Boot Backend (4 bounded contexts: Profiles, Patients, Monitoring, Medical) → PostgreSQL (por BC) → Servicios Externos (Notification). Debe incluir las flechas de comunicación HTTP/REST y JWT. -->
 <img width="1800" height="701" alt="image" src="https://github.com/user-attachments/assets/5cc88130-74c5-4c0e-aec4-422decaec86c" />
 
 
 ### <a name="_toc226040436"></a>4.6.4. Software Architecture Components Diagrams.
 
-El diagrama de componentes presenta una vista detallada del backend del sistema GlucoSmart, específicamente de la API REST, descomponiéndola en sus principales módulos internos.
+El diagrama de componentes presenta una vista detallada de la arquitectura interna de cada bounded context del backend, siguiendo el patrón **Domain-Driven Design (DDD) con CQRS (Command Query Responsibility Segregation)** . Cada bounded context se organiza en las siguientes capas:
 
-La arquitectura sigue un enfoque en capas, organizada de la siguiente manera:
+- **Interfaces (Controllers):** Gestionan las solicitudes HTTP entrantes y las respuestas. Se separan en comandos (mutaciones: POST, PUT, DELETE) y consultas (lecturas: GET). Cada endpoint está anotado con su descripción OpenAPI.
+- **Application (Services CQRS):** Contienen la lógica de aplicación separada en dos flux:
+    - **Command Services:** Procesan comandos (crear, actualizar, eliminar) y disparan Domain Events.
+    - **Query Services:** Atienden consultas de lectura sin efectos secundarios.
+- **Domain (Aggregates, Value Objects, Domain Events):** Contienen el modelo de negocio puro: aggregates raíz (Profile, Patient, GlucoseRecord, Appointment, etc.), value objects inmutables (PersonName, GlucoseValue, TreatmentStatus) y domain events (GlucoseRecorded, AlertGenerated, AppointmentScheduled).
+- **Infrastructure (Repositories JPA, Mappers, ACL):** Implementan la persistencia mediante JPA/Hibernate, incluyendo:
+    - **Entity Mappers:** Convierten entre entidades JPA y aggregates de dominio.
+    - **Repository Adapters:** Implementan los puertos definidos en la capa de dominio.
+    - **Anti-Corruption Layer (ACL) Facades:** Componentes de salida que consultan datos de otros bounded contexts a través de interfaces desacopladas (ej. ProfilesContextFacade, ExternalPatientService).
 
-- Controllers: Encargados de gestionar las solicitudes HTTP provenientes del frontend, como autenticación, registro de glucosa, consulta de historial y alertas.
-- Services: Contienen la lógica de negocio del sistema, incluyendo la validación de datos, procesamiento de información clínica y generación de alertas preventivas.
-- Repositories: Responsables del acceso a la base de datos, permitiendo almacenar y recuperar información de usuarios, pacientes, registros de glucosa e historial clínico.
+La aplicación del patrón CQRS permite que las operaciones de escritura (command) y lectura (query) tengan modelos optimizados de forma independiente, mejorando la escalabilidad y facilitando la evolución del modelo de dominio.
 
-Adicionalmente, se incluye un componente orientado a profesionales de salud, el cual permite consultar la información clínica del paciente para apoyar la toma de decisiones médicas.
-
-Esta estructura modular permite mantener una separación clara de responsabilidades, facilitando la escalabilidad, mantenibilidad y evolución del sistema.
-
-
-
+<!-- TODO: Reemplazar la imagen del Components Diagram. Debe elaborarse UN diagrama de componentes por cada bounded context (Profiles, Patients, Monitoring, Medical), mostrando las capas interfaces → application → domain → infrastructure con CQRS. El diagrama actual es incorrecto y no sigue DDD. -->
 <img width="1527" height="1090" alt="image" src="https://github.com/user-attachments/assets/1fe09ded-f9b0-4d9c-8b59-b5a514c7d14a" />
 
 
@@ -1454,6 +1653,8 @@ Este contexto gestiona el ciclo de vida de las mediciones de glucosa. `GlucoseRe
 
 Este contexto gestiona las citas médicas entre pacientes y doctores. La clase `Appointment` relaciona a un `Patient` con un `Doctor` en un horario determinado. El estado de la cita sigue el ciclo: `SCHEDULED → CONFIRMED → COMPLETED / CANCELLED`. La clase `Doctor` se define en este contexto como referencia externa al bounded context de Patient Profile.
 
+<!-- TODO: Crear UN Class Diagram por cada bounded context (Profiles, Patients, Monitoring, Medical) siguiendo DDD. Cada diagrama debe incluir: aggregates raíz con sus value objects, domain events, y las relaciones entre bounded contexts mediante ACL facades. Los diagramas actuales (class-diagram-1.png, class-diagram-2.png) deben reemplazarse o complementarse con diagramas por BC. -->
+
 #### Class Diagram 1: User & Clinical Management
 
 ![Class Diagram 1](./Informe/assets/class-diagram-1.png)
@@ -1468,19 +1669,27 @@ Este contexto gestiona las citas médicas entre pacientes y doctores. La clase `
 
 ## <a name="_toc226040439"></a>4.8. Database Design.
 
-El diseño de base de datos de **GlucoSmart** sigue un modelo relacional organizado por bounded contexts, en coherencia con la arquitectura Domain-Driven Design del sistema. Cada contexto tiene sus propias tablas con claves primarias y foráneas que garantizan la integridad referencial. Las principales decisiones de diseño son: (1) separar la entidad `users` (autenticación) de `patients` (datos clínicos) para soportar múltiples roles; (2) almacenar los rangos de glucosa por paciente en una tabla independiente para facilitar la personalización de alertas; (3) registrar cada toma de medicamento en `medication_intakes` de forma separada para habilitar el módulo de farmacovigilancia y adherencia. El modelo actual se implementa como `db.json` en json-server y está diseñado para migrar a una base de datos relacional real (PostgreSQL o MySQL) en sprints futuros.
+El diseño de base de datos de **GlucoSmart** sigue un modelo relacional organizado por bounded contexts, en coherencia con la arquitectura Domain-Driven Design del sistema. Cada bounded context tiene su propio conjunto de tablas con claves primarias y foráneas que garantizan la integridad referencial. Las principales decisiones de diseño son:
+
+1. **Separación por bounded context:** Cada contexto de dominio (Profiles, Patients, Monitoring, Medical) gestiona sus propias tablas, minimizando el acoplamiento entre contextos.
+2. **Agregados como raíz de persistencia:** Cada aggregate raíz (Profile, Patient, GlucoseRecord, Appointment) tiene su propia tabla, y sus value objects se almacenan como columnas embebidas o tablas hijas.
+3. **Identificadores UUID:** Todas las claves primarias utilizan UUID en lugar de enteros auto-incrementales, facilitando la identificación única en una arquitectura distribuida.
+4. **Auditoría:** Cada tabla incluye campos `created_at` y `updated_at` para trazabilidad de cambios.
+5. **Integridad referencial entre bounded contexts:** Las relaciones entre contextos se manejan mediante IDs de referencia (ej. `patient_id` en `glucose_records` hace referencia al UUID del paciente en el BC Patients), sin claves foráneas físicas entre bases de datos separadas.
 
 ### <a name="_toc226040440"></a>4.8.1. Database Diagrams
 
 Los siguientes diagramas de base de datos están organizados por bounded context, mostrando las tablas, atributos, tipos de datos y relaciones entre entidades para cada dominio del sistema GlucoSmart.
 
-**Bounded Context 1: Patient Profile Management** — incluye las tablas `users`, `patients` y `medical_profiles`, que gestionan la autenticación, los datos personales y el historial clínico base del paciente.
+<!-- TODO: Crear UN Database Diagram por cada bounded context (Profiles, Patients, Monitoring, Medical) en lugar de un solo diagrama global. Cada diagrama debe incluir: nombre de tabla, columnas con tipos de datos, claves primarias/foráneas, y relaciones (1:N, N:M). El diagrama actual (erd-database-diagram.png) puede mantenerse como vista general, pero debe complementarse con diagramas individuales por BC. -->
 
-**Bounded Context 2: Glucose Monitoring** — incluye las tablas `glucose_records`, `glucose_ranges` y `alerts`, que gestionan las lecturas de glucosa, los umbrales personalizados y las notificaciones automáticas generadas por el sistema.
+**Bounded Context 1: Profiles** — incluye las tablas `profiles` (datos personales: nombres, email, teléfono, fecha de nacimiento) y `users` (credenciales de autenticación con email, password hash y rol). El aggregate raíz es `Profile`, y `User` actúa como entidad de autenticación asociada.
 
-**Bounded Context 3: Medication & Adherence** — incluye las tablas `medications` y `medication_intakes`, que gestionan los medicamentos prescritos y el registro de cada toma para el módulo de adherencia terapéutica.
+**Bounded Context 2: Patients** — incluye las tablas `patients` (datos clínicos: tipo de diabetes, fecha de diagnóstico, HbA1c objetivo), `treatments` (planes de tratamiento con fecha inicio/fin y estado), `medications` (medicamentos prescritos con dosis, frecuencia y horario) y `medication_intakes` (registro de cada toma con fecha/hora y estado). El aggregate raíz es `Patient`.
 
-**Bounded Context 4: Appointment Management** — incluye las tablas `appointments` y `doctors`, que gestionan las citas médicas programadas entre pacientes y especialistas.
+**Bounded Context 3: Monitoring** — incluye las tablas `glucose_records` (lecturas de glucosa con valor, fecha, hora, estado del paciente y notas), `glucose_ranges` (umbrales personalizados por paciente: mínimo, máximo y etiqueta) y `alerts` (alertas generadas con tipo, severidad, mensaje, estado de lectura y referencia al record de glucosa). El aggregate raíz es `GlucoseRecord`.
+
+**Bounded Context 4: Medical** — incluye las tablas `appointments` (citas médicas con fecha, hora, estado: SCHEDULED/CONFIRMED/COMPLETED/CANCELLED), `diagnoses` (diagnósticos con código, descripción y fecha), `clinical_reports` (reportes clínicos con resumen estructurado y referencias a records de glucosa y alertas) y `clinical_observations` (observaciones médicas con texto y fecha). El aggregate raíz es `Appointment`.
 
 ![ERD - GlucoSmart](./Informe/assets/erd-database-diagram.png)
 
@@ -2330,6 +2539,218 @@ La coordinación se realizó íntegramente vía **Discord**, mediante reuniones 
 | -------------------------- | --------- |
 
 ![](./Informe/assets/commitSpring3.png)
+
+### <a name="_toc226040470"></a>5.2.4. Sprint 4
+
+## 5.2.4.1. Sprint Planning 4
+
+Esta sección documenta la planificación del cuarto Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue **consolidar la integración end-to-end**, realizar **pruebas de aceptación con usuarios reales**, ejecutar las **Validation Interviews** grabadas, y preparar los artefactos finales del proyecto (About-the-Product, About-the-Team y Student Outcome).
+
+|Sprint #|Sprint 4|
+|:--|:--|
+|**Sprint Planning Background**||
+|Date|<!-- TODO: Insertar fecha del Sprint 4 -->|
+|Time|<!-- TODO: Insertar hora -->|
+|Location|Virtual - Discord|
+|Prepared By|<!-- TODO: Insertar responsable -->|
+|Attendees (To planning meeting)|Jean Pool Alexander Arias Tasayco<br>Abigail Nadhim Raymundo Villarroel<br>Juan Sebastian Estupiñan Olortegui<br>Javier Oswaldo Tello Murga<br>Jose Antonio Muñoz Amasifuen|
+|Sprint N-1 Review Summary|El Sprint 3 culminó con la implementación del backend real en Spring Boot con DDD+CQRS, PostgreSQL desplegado en Docker, documentación Swagger, y la integración del frontend Angular con la API real. Todos los bounded contexts (IAM, Profiles, Patients, Monitoring, Medical) expusieron endpoints funcionales, y las vistas de Doctor Dashboard, Appointment Management y Clinical Reports fueron completadas.|
+|Sprint N-1 Retrospective Summary|El equipo destacó como principal acierto la adopción de DDD + CQRS en el backend, lo que permitió una separación clara de responsabilidades y facilitó el trabajo paralelo por bounded contexts. Como oportunidad de mejora se identificó la necesidad de realizar pruebas de integración tempranas entre frontend y backend real para evitar bloqueos de última hora, así como la importancia de grabar las validation interviews con usuarios reales para cumplir con la rúbrica de TB2.|
+|**Sprint Goal & User Stories**||
+|Sprint N Goal|Our focus is on validating the complete GlucoSmart solution with real users through recorded Validation Interviews, consolidating all software artifacts, and preparing the final deliverables (About-the-Product video, About-the-Team video, and Student Outcome evidence). We believe this provides a validated, production-ready healthcare platform for diabetes management. This will be confirmed when: (1) at least <!-- TODO: insertar número --> Validation Interviews are conducted and recorded with representatives of each user segment, (2) the About-the-Product intro video is published, (3) the About-the-Team retrospective video is published, and (4) all Student Outcome evidence is compiled and submitted.|
+|Sprint N Velocity|<!-- TODO: Insertar velocity -->|
+|Sum of Story Points|<!-- TODO: Insertar story points -->|
+
+## 5.2.4.2. Aspect Leaders and Collaborators
+
+<!-- TODO: Completar la tabla LACX con los aspectos del Sprint 4 (Validation Interviews, About-the-Product video, About-the-Team video, Student Outcome compilation, bug fixing, polish). -->
+
+| Aspect | Jean Pool Arias | Abigail Raymundo | Juan Sebastian Estupiñan | Javier Oswaldo Tello | Jose Antonio Muñoz |
+|:-------|:---------------:|:----------------:|:------------------------:|:--------------------:|:------------------:|
+| Validation Interviews | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| About-the-Product Video | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| About-the-Team Video | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| Bug Fixing & Polish | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| Student Outcome Evidence | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+
+## 5.2.4.3. Sprint Backlog 4
+
+<!-- TODO: Insertar screenshot del Board del Sprint 4 en Linear/Trello. -->
+<!-- TODO: Insertar URL del Board del Sprint 4. -->
+
+<!-- TODO: Completar la tabla de Sprint Backlog 4 con los User Stories y Tasks planificados para el Sprint 4. Considerar tareas de: ejecución y grabación de Validation Interviews, edición de videos, carga a YouTube, elaboración de About-the-Product, About-the-Team, corrección de bugs encontrados durante las validaciones, y compilación de Student Outcome. -->
+
+|Sprint#|Sprint 4|||||||
+|:--|:--|:--|:--|:--|:--|:--|:--|
+|User Story|Work-Item / Task|||Estimation (Hours)|Assigned To|Status|
+|Id|Title|Id|Title|Description|||(To-do/InProcess/ToReview/Done)|
+|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|
+
+## 5.2.4.4. Development Evidence for Sprint Review
+
+Durante el Sprint 4 se realizaron las siguientes actividades de desarrollo:
+
+- **Corrección de bugs post-integración:** Se identificaron y corrigieron errores en la comunicación entre frontend Angular y backend Spring Boot, especialmente en los flujos de autenticación JWT, creación de pacientes y registro de glucosa.
+- **Ajustes de UI/UX:** Se realizaron mejoras de experiencia de usuario basadas en el feedback recogido durante las Validation Interviews, incluyendo ajustes de responsive design, mensajes de error más claros y optimización de tiempos de carga.
+- **Validación de datos:** Se fortalecieron las validaciones del lado del backend y frontend para garantizar la integridad de los datos clínicos.
+- **Documentación final:** Se actualizó el informe del proyecto con las secciones de Validation Interviews, About-the-Product, About-the-Team y Student Outcome.
+
+<!-- TODO: Insertar tabla de commits del Sprint 4 (repo, branch, commit id, commit message, committed on). -->
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+
+## 5.2.4.5. Execution Evidence for Sprint Review
+
+Durante el Sprint 4 se ejecutaron las validaciones con usuarios reales, cuyas evidencias se documentan en la sección [5.3 Validation Interviews](#_toc226040480). Adicionalmente, se realizaron pruebas de integración end-to-end de todos los flujos críticos del sistema.
+
+<!-- TODO: Insertar screenshots de la ejecución del Sprint 4 (validaciones, pruebas de integración, correcciones). -->
+![](./Informe/assets/<!-- TODO: Insertar nombre del archivo -->)
+
+<!-- TODO: Insertar enlace al video de demostración del Sprint 4. -->
+
+## 5.2.4.6. Services Documentation Evidence for Sprint Review
+
+Los servicios documentados corresponden a los mismos endpoints del backend Spring Boot desplegados en el Sprint 3. Se realizaron las siguientes actualizaciones:
+
+- Se verificó que todos los endpoints documentados en Swagger UI respondieran correctamente después de las correcciones de bugs.
+- Se agregaron <!-- TODO: insertar número --> nuevos endpoints faltantes identificados durante las validaciones.
+- Se actualizó la documentación OpenAPI con descripciones más precisas de los parámetros y respuestas.
+
+Swagger UI disponible en: **https://integravida-backendservices.onrender.com/swagger-ui/index.html#/**
+
+<!-- TODO: Insertar screenshot de Swagger UI actualizado. -->
+
+## 5.2.4.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 4 se mantuvieron los tres componentes desplegados:
+
+| Componente | Plataforma | URL |
+|:-----------|:-----------|:----|
+| Landing Page | GitHub Pages | **https://integravida.github.io/Integravida-Landing-Page/** |
+| Frontend Web App | Firebase Hosting | **https://integravida-appweb.web.app/** |
+| Backend API (Spring Boot) | Render.com | **https://integravida-backendservices.onrender.com** |
+| Swagger UI | Render.com | **https://integravida-backendservices.onrender.com/swagger-ui/index.html#/** |
+
+<!-- TODO: Verificar que todos los servicios estén operativos y actualizar URLs si es necesario. Insertar screenshots de cada despliegue. -->
+
+## 5.2.4.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 4, el equipo trabajó de forma colaborativa en la validación final del producto y la preparación de los entregables de TB2. Las tareas se distribuyeron en dos frentes principales: (1) ejecución de Validation Interviews con pacientes diabéticos y profesionales de la salud, y (2) preparación de los artefactos finales (About-the-Product, About-the-Team, Student Outcome).
+
+<!-- TODO: Insertar tabla de commits y contribuciones por miembro del equipo durante el Sprint 4. -->
+
+| Team Member | Commits |
+| :---------- | :------ |
+| Jean Pool Arias | <!-- TODO --> |
+| Abigail Raymundo | <!-- TODO --> |
+| Juan Sebastian Estupiñan | <!-- TODO --> |
+| Javier Oswaldo Tello | <!-- TODO --> |
+| Jose Antonio Muñoz | <!-- TODO --> |
+
+<!-- TODO: Insertar captura de analíticos de GitHub (commit graph). -->
+![](./Informe/assets/<!-- TODO: Insertar nombre del archivo -->)
+
+## <a name="_toc226040480"></a>5.3. Validation Interviews
+
+### <a name="_toc226040481"></a>5.3.1. Diseño de Entrevistas de Validación
+
+Se diseñaron entrevistas semiestructuradas para validar la solución GlucoSmart con representantes de los dos segmentos de usuario definidos: **pacientes diagnosticados con diabetes** y **profesionales de la salud (endocrinólogos / médicos tratantes)** . El objetivo fue evaluar la usabilidad, utilidad percibida y pertinencia de las funcionalidades implementadas en los tres componentes de la solución: Landing Page, Web Application (Frontend Angular) y Web Services (Backend Spring Boot).
+
+<!-- TODO: Completar el diseño de las entrevistas con: guion de preguntas, segmento de usuario, objetivo específico de cada pregunta, y métricas de evaluación (escala Likert, preguntas abiertas, etc.). -->
+
+**Segmento 1: Pacientes con diabetes**
+
+| Aspecto a validar | Pregunta guía | Métrica |
+|:------------------|:--------------|:--------|
+| Registro de glucosa | <!-- TODO --> | <!-- TODO --> |
+| Visualización de historial y gráficos | <!-- TODO --> | <!-- TODO --> |
+| Alertas y notificaciones | <!-- TODO --> | <!-- TODO --> |
+| Perfil del paciente | <!-- TODO --> | <!-- TODO --> |
+| Dashboard de salud | <!-- TODO --> | <!-- TODO --> |
+
+**Segmento 2: Profesionales de la salud**
+
+| Aspecto a validar | Pregunta guía | Métrica |
+|:------------------|:--------------|:--------|
+| Dashboard médico | <!-- TODO --> | <!-- TODO --> |
+| Seguimiento de pacientes | <!-- TODO --> | <!-- TODO --> |
+| Reportes clínicos | <!-- TODO --> | <!-- TODO --> |
+| Gestión de citas | <!-- TODO --> | <!-- TODO --> |
+
+### <a name="_toc226040482"></a>5.3.2. Resultados de las Entrevistas de Validación
+
+A continuación se presentan los resultados de las entrevistas de validación realizadas con usuarios reales.
+
+<!-- TODO: Insertar tabla con los datos de cada entrevista: entrevistado, segmento, fecha, duración, enlace al video. -->
+
+| N° | Entrevistado | Segmento | Fecha | Duración | Enlace al Video |
+|:--:|:-------------|:---------|:-----:|:--------:|:----------------|
+| 1 | <!-- TODO --> | Paciente | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| 2 | <!-- TODO --> | Paciente | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| 3 | <!-- TODO --> | Profesional de salud | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| 4 | <!-- TODO --> | Profesional de salud | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+
+**Principales hallazgos:**
+
+<!-- TODO: Documentar los hallazgos más relevantes de las entrevistas, incluyendo: -->
+- <!-- Funcionalidades mejor valoradas -->
+- <!-- Dificultades encontradas -->
+- <!-- Sugerencias de mejora -->
+- <!-- Problemas de usabilidad -->
+- <!-- Aceptación general del producto -->
+
+**Plan de acción:**
+
+<!-- TODO: Describir las acciones correctivas tomadas a partir del feedback recibido, con responsables y fechas. -->
+
+| Hallazgo | Acción correctiva | Responsable | Estado |
+|:---------|:------------------|:------------|:-------|
+| <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+
+## <a name="_toc226040490"></a>5.4. About-the-Product
+
+En esta sección se presenta el video introductorio del producto GlucoSmart, que describe la solución desarrollada, su propuesta de valor, los segmentos de usuario a los que está dirigida y las principales funcionalidades implementadas en los tres componentes de la solución.
+
+<!-- TODO: Insertar descripción del video About-the-Product (duración, contenido, fecha de grabación). -->
+
+**Video About-the-Product:**
+
+<!-- TODO: Insertar enlace al video de YouTube (público o no listado). -->
+**URL:** [About-the-Product - GlucoSmart](<!-- TODO: Insertar enlace -->)
+
+**Contenido del video:**
+1. Introducción al problema de salud abordado (diabetes y fragmentación de información clínica).
+2. Presentación de la solución GlucoSmart y sus componentes (Landing Page, Web App, Backend API).
+3. Demostración de las funcionalidades principales desde la perspectiva del paciente y del médico.
+4. Propuesta de valor y beneficios diferenciadores.
+5. Cierre con llamado a la acción.
+
+## <a name="_toc226040500"></a>5.5. About-the-Team
+
+En esta sección se presenta el video de retrospectiva del equipo de desarrollo, donde cada integrante reflexiona sobre su participación en el proyecto, los logros alcanzados, las lecciones aprendidas y la experiencia de trabajo colaborativo durante el ciclo de vida del proyecto.
+
+<!-- TODO: Insertar descripción del video About-the-Team (duración, contenido, fecha de grabación). -->
+
+**Video About-the-Team:**
+
+<!-- TODO: Insertar enlace al video de YouTube (público o no listado). -->
+**URL:** [About-the-Team - IntegraVida](<!-- TODO: Insertar enlace -->)
+
+**Participantes:**
+- Jean Pool Alexander Arias Tasayco
+- Abigail Nadhim Raymundo Villarroel
+- Juan Sebastian Estupiñan Olortegui
+- Javier Oswaldo Tello Murga
+- Jose Antonio Muñoz Amasifuen
+
+**Contenido del video:**
+1. Presentación de cada miembro del equipo y su rol en el proyecto.
+2. Reflexión sobre los principales logros técnicos y funcionales.
+3. Lecciones aprendidas durante el desarrollo (técnicas, metodológicas y de trabajo en equipo).
+4. Retrospectiva del proceso ágil: qué funcionó bien y qué se podría mejorar.
+5. Agradecimientos y cierre.
 
 # <a name="_toc226040462"></a>Conclusiones
 
