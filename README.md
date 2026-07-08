@@ -1730,39 +1730,43 @@ El prototipo representa el flujo completo de uso diario del paciente, asegurando
 
 ### <a name="_toc226040433"></a>4.6.1. Design-Level Event Storming.
 
-<!-- TODO: Complementar Design-Level Event Storming con evidencia del proceso: foto/captura del tablero, leyenda de notación usada, comandos, eventos de dominio, aggregates, policies, read models y relación explícita con bounded contexts. -->
+Se aplicó la técnica de **Design-Level Event Storming** con el objetivo de identificar los principales comandos, eventos de dominio, entidades centrales y políticas de negocio del sistema **GlucoSmart**. Esta técnica permitió analizar el comportamiento del sistema desde una perspectiva de negocio antes de pasar al diseño técnico de la arquitectura.
 
-Se aplicó la técnica de Event Storming a nivel de diseño con el objetivo de identificar y modelar los principales eventos del dominio en la aplicación GlucoSmart, orientada al monitoreo de pacientes con diabetes mellitus tipo 1 y tipo 2, así como al apoyo de profesionales de salud en su seguimiento clínico.
+GlucoSmart es una solución HealthTech orientada al monitoreo de pacientes con diabetes mellitus tipo 1 y tipo 2, permitiendo el registro de niveles de glucosa, seguimiento clínico, generación de alertas, reporte de efectos adversos y gestión de citas médicas con profesionales de salud.
 
-El proceso permitió comprender el comportamiento del sistema desde la perspectiva del negocio, identificando las acciones del usuario (comandos), los resultados generados por el sistema (eventos) y las reglas que gobiernan estos procesos (políticas).
+Para organizar el dominio, el Event Storming fue dividido en seis áreas funcionales principales:
 
-Para facilitar el análisis, el dominio fue dividido en los siguientes módulos o *bounded contexts*:
+- **Account Management**
+- **Patient Profile Management**
+- **Glucose Monitoring**
+- **Alerts & Pharmacovigilance**
+- **Medical Follow-up**
+- **Appointment Management**
 
-- Account Management
-- Patient Profile Management
-- Glucose Monitoring
-- Alerts & Pharmacovigilance
-- Medical Follow-up
-- Appointment Management
+Cada área representa un conjunto de responsabilidades relacionadas dentro del sistema. En el tablero se utilizaron notas adhesivas de diferentes colores para diferenciar los elementos del modelo:
 
-Dentro de cada contexto se definieron entidades centrales, como *User*, *Patient*, *Glucose Record*, *Alert*, *Clinical Record* y *Appointment*, alrededor de las cuales se organizaron los comandos y eventos asociados.
+- Las notas **azules** representan comandos o acciones ejecutadas por los usuarios.
+- Las notas **naranjas** representan eventos de dominio, es decir, hechos que ocurren después de ejecutar una acción.
+- Las notas **amarillas** representan entidades o aggregates principales del dominio.
+- Las notas **moradas** representan políticas o reglas de negocio.
 
-Entre los eventos más relevantes identificados se encuentran:
+En el contexto de **Account Management**, se identificó la entidad principal **User**, relacionada con comandos como `Register user`, `Log in`, `Recover password` y `Logout`. Estos comandos generan eventos como `User registered`, `User logged in`, `Password recovered` y `Session closed`. Además, se consideraron políticas como la validación de credenciales y la emisión de tokens JWT para manejar la autenticación del usuario.
 
-- Glucose recorded
-- History updated
-- Alert generated
-- Adverse effect reported
-- Treatment updated
-- Appointment scheduled
+En **Patient Profile Management**, se identificaron las entidades **Patient** y **Profile**, asociadas a comandos como `Create profile`, `Update profile` y `Add medical history`. Como resultado de estas acciones se generan eventos como `Profile created`, `Profile updated` y `Medical history added`. Este contexto permite gestionar la información personal y clínica inicial del paciente.
 
-Asimismo, se identificaron políticas clave del sistema, como la evaluación automática de los niveles de glucosa y la generación de alertas cuando los valores se encuentran fuera de rango, lo que constituye una funcionalidad crítica del sistema.
+En **Glucose Monitoring**, la entidad principal es **Glucose Record**, encargada de representar las mediciones de glucosa registradas por el paciente. Dentro de este contexto se identificaron comandos como `Register glucose level`, `Edit glucose record`, `Delete glucose record` y `Evaluate glucose level`. Estos comandos generan eventos como `Glucose recorded`, `Glucose updated`, `Glucose deleted` y `Glucose level evaluated`. Además, se establecieron políticas para evaluar los niveles de glucosa frente al rango configurado y activar alertas cuando los valores se encuentren fuera de los límites permitidos.
 
-El Event Storming permitió estructurar la lógica del dominio antes del diseño técnico, sirviendo como base para la definición de la arquitectura del sistema mediante el modelo C4.
+En **Alerts & Pharmacovigilance**, se identificaron las entidades **Alert**, **Glucose Range** y **Adverse Effect Report**. Este contexto permite configurar rangos de glucosa, reportar efectos adversos y marcar alertas como leídas. Entre los eventos generados se encuentran `Glucose range configured`, `Alert generated`, `Alert acknowledged` y `Adverse effect reported`. Las políticas principales de este contexto están relacionadas con la generación de alertas cuando los niveles de glucosa están fuera de rango y el envío de notificaciones al usuario.
 
-<img width="1330" height="860" alt="image" src="https://github.com/user-attachments/assets/78a7e57e-e6ae-40bc-9561-d1c62d2580a3" />
+En **Medical Follow-up**, se identificaron entidades como **Clinical Record**, **Diagnosis**, **Clinical Report** y **Treatment**. Este contexto agrupa acciones realizadas por el profesional de salud, como revisar datos del paciente, agregar observaciones médicas, crear diagnósticos, generar reportes clínicos y actualizar tratamientos. Los eventos resultantes incluyen `Patient data reviewed`, `Observation recorded`, `Diagnosis created`, `Clinical report generated` y `Treatment updated`. También se consideraron políticas como la verificación de la relación doctor-paciente y el uso del historial de glucosa para apoyar la revisión clínica.
 
+Finalmente, en **Appointment Management**, la entidad principal es **Appointment**, encargada de representar las citas médicas entre pacientes y profesionales de salud. En este contexto se identificaron comandos como `Schedule appointment`, `Reschedule appointment`, `Cancel appointment`, `Confirm appointment` y `Complete appointment`. Estos comandos generan eventos como `Appointment scheduled`, `Appointment updated`, `Appointment cancelled`, `Appointment confirmed` y `Appointment completed`. Asimismo, se definieron políticas importantes como resolver la identidad del paciente mediante JWT y verificar la existencia de un doctor asignado antes de programar una cita.
 
+El Design-Level Event Storming permitió comprender mejor el flujo de eventos del sistema, identificar responsabilidades por contexto y definir una base sólida para la arquitectura posterior basada en **Domain-Driven Design (DDD)**. Además, sirvió como insumo para la elaboración de los diagramas C4 y los diagramas de clases UML, asegurando que el diseño técnico del sistema esté alineado con las reglas y procesos principales del dominio.
+
+![Design-Level Event Storming del sistema GlucoSmart](./Informe/assets/design-level-storming.jpg)
+
+**Figura 4.6.1. Design-Level Event Storming del sistema GlucoSmart.**
 
 ### <a name="_toc226040434"></a>4.6.2. Software Architecture Context Diagram.
 
