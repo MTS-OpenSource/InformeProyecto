@@ -1843,39 +1843,68 @@ La aplicación del patrón CQRS permite que las operaciones de escritura (comman
 
 ## <a name="_toc226040437"></a>4.7. Software Object-Oriented Design.
 
-### <a name="_toc226040438"></a>4.7.1. Class Diagrams.
+### 4.7.1. Class Diagrams
 
-El siguiente diagrama de clases UML representa la arquitectura orientada a objetos del sistema **GlucoSmart**, organizada por bounded contexts identificados en el Event Storming. Cada bounded context agrupa un conjunto de clases con responsabilidades bien definidas, lo que facilita la separación de la lógica de negocio, el mantenimiento del sistema y su escalabilidad futura.
+El diseño orientado a objetos de GlucoSmart se representa mediante diagramas de clases UML organizados por bounded context. A diferencia de un único diagrama general, esta separación permite visualizar con mayor claridad las responsabilidades internas de cada contexto, manteniendo coherencia con el enfoque Domain-Driven Design aplicado en la arquitectura del sistema.
 
-Se han modelado los siguientes bounded contexts:
+Cada diagrama incluye los aggregates raíz, value objects, domain events, repositorios y relaciones con otros bounded contexts mediante ACL Facades. Esta estructura evita el acoplamiento directo entre contextos y permite que cada módulo evolucione de manera independiente.
 
-![](./Informe/assets/DiagramDDD.png)
+Los bounded contexts modelados son:
 
-**Bounded Context 1: Patient Profile Management**
+- **Profiles Bounded Context**
+- **Patients Bounded Context**
+- **Monitoring Bounded Context**
+- **Medical Bounded Context**
 
-Este contexto agrupa las clases relacionadas con la identidad y los datos clínicos del paciente. La clase central es `Patient`, que contiene los atributos personales del usuario. Se relaciona con `User` (autenticación y roles) y con `MedicalProfile` (datos clínicos como tipo de diabetes, medicación base y fecha de diagnóstico). Esta separación permite que la autenticación evolucione de forma independiente al perfil clínico.
+#### Profiles Bounded Context
 
-**Bounded Context 2: Glucose Monitoring**
+El **Profiles Bounded Context** gestiona la información personal del usuario, como nombres, correo electrónico, número telefónico y fecha de nacimiento. Su aggregate raíz principal es `Profile`, el cual encapsula value objects como `PersonName`, `EmailAddress`, `PhoneNumber` y `DateOfBirth`.
 
-Este contexto gestiona el ciclo de vida de las mediciones de glucosa. `GlucoseRecord` representa una lectura individual y se relaciona con `GlucoseRange` (umbrales personalizados del paciente) y con `Alert` (notificaciones generadas automáticamente cuando una lectura supera o cae por debajo del rango configurado). La lógica de evaluación de rango está encapsulada en `GlucoseService`, garantizando que el frontend no duplique reglas de negocio.
+Este contexto publica eventos como `ProfileCreatedEvent` y `ProfileUpdatedEvent`, los cuales representan cambios importantes en el perfil del usuario. Además, se comunica con el contexto de IAM mediante `IamContextFacade`, evitando un acoplamiento directo con la lógica de autenticación.
 
-**Bounded Context 3: Appointment Management**
+![Profiles Bounded Context Class Diagram](./Informe/assets/class-diagram-profiles-bc.png)
 
-Este contexto gestiona las citas médicas entre pacientes y doctores. La clase `Appointment` relaciona a un `Patient` con un `Doctor` en un horario determinado. El estado de la cita sigue el ciclo: `SCHEDULED → CONFIRMED → COMPLETED / CANCELLED`. La clase `Doctor` se define en este contexto como referencia externa al bounded context de Patient Profile.
+**Figura 4.7.1. Profiles Bounded Context Class Diagram.**
 
-<!-- TODO: Crear UN Class Diagram por cada bounded context (Profiles, Patients, Monitoring, Medical) siguiendo DDD. Cada diagrama debe incluir: aggregates raíz con sus value objects, domain events, y las relaciones entre bounded contexts mediante ACL facades. Los diagramas actuales (class-diagram-1.png, class-diagram-2.png) deben reemplazarse o complementarse con diagramas por BC. -->
+#### Patients Bounded Context
 
-#### Class Diagram 1: User & Clinical Management
+El **Patients Bounded Context** contiene la información clínica base del paciente y las relaciones necesarias para su seguimiento médico. Sus aggregates principales son `Patient`, `PatientDoctor` y `Treatment`.
 
-![Class Diagram 1](./Informe/assets/class-diagram-1.png)
+El aggregate `PatientDoctor` representa la asignación entre un paciente y un doctor, relación necesaria para procesos como la gestión de citas médicas. Asimismo, `Treatment` modela los tratamientos asignados al paciente y se relaciona con la entidad `Medication`.
 
-> Este diagrama presenta las clases relacionadas con autenticación de usuarios, gestión del perfil del paciente e información clínica base (tipo de diabetes, HbA1c objetivo, medicación prescrita).
+Este contexto utiliza value objects como `PatientId` y `DoctorId`, y publica eventos como `PatientRegisteredEvent`, `DoctorAssignedToPatientEvent` y `TreatmentUpdatedEvent`. También se comunica con otros contextos mediante `ProfilesContextFacade` e `IamContextFacade`.
 
-#### Class Diagram 2: Treatment & Appointment Management
+![Patients Bounded Context Class Diagram](./Informe/assets/class-diagram-patients-bc.png)
 
-![Class Diagram 2](./Informe/assets/class-diagram-2.png)
+**Figura 4.7.2. Patients Bounded Context Class Diagram.**
 
-> Este diagrama presenta las clases relacionadas con el monitoreo de glucosa, generación de alertas, gestión de medicamentos, registro de tomas (adherencia) y gestión de citas médicas. Ambos diagramas se interrelacionan a través de las clases `Patient` y `Doctor`, que actúan como entidades centrales del dominio.
+#### Monitoring Bounded Context
+
+El **Monitoring Bounded Context** gestiona el registro y evaluación de mediciones de glucosa. Sus aggregates principales son `GlucoseRecord`, `GlucoseRange` y `Alert`.
+
+`GlucoseRecord` representa una medición de glucosa registrada por el paciente y se compone de value objects como `GlucoseValue`, `MealContext` y `PatientId`. La medición es evaluada contra un rango configurado mediante `GlucoseRange`. Si el valor se encuentra fuera del rango permitido, se genera una alerta mediante el aggregate `Alert`.
+
+Este contexto publica eventos como `GlucoseRecordedEvent`, `GlucoseLevelEvaluatedEvent` y `AlertGeneratedEvent`. Además, consulta la existencia del paciente mediante `PatientsContextFacade` y puede comunicarse con un servicio externo de notificaciones mediante `NotificationServiceFacade`.
+
+![Monitoring Bounded Context Class Diagram](./Informe/assets/class-diagram-monitoring-bc.png)
+
+**Figura 4.7.3. Monitoring Bounded Context Class Diagram.**
+
+#### Medical Bounded Context
+
+El **Medical Bounded Context** agrupa la lógica relacionada con citas médicas, diagnósticos y reportes clínicos. Sus aggregates principales son `Appointment`, `Diagnosis` y `ClinicalReport`.
+
+`Appointment` representa una cita médica entre un paciente y un doctor, incluyendo la fecha programada, motivo y estado de la cita. `Diagnosis` permite registrar diagnósticos médicos y recomendaciones, mientras que `ClinicalReport` permite generar reportes clínicos a partir de la información del paciente.
+
+Este contexto utiliza value objects como `PatientId` y `DoctorId`, así como enumeraciones de estado como `AppointmentStatus`, `DiagnosisStatus` y `ClinicalReportStatus`. También publica eventos como `AppointmentScheduledEvent`, `AppointmentUpdatedEvent`, `AppointmentCancelledEvent`, `DiagnosisCreatedEvent` y `ClinicalReportGeneratedEvent`.
+
+La relación con otros bounded contexts se realiza mediante ACL Facades. `PatientsContextFacade` permite verificar la existencia del paciente y obtener el doctor asignado, mientras que `MonitoringContextFacade` permite consultar el historial de glucosa para apoyar diagnósticos y reportes clínicos. Además, el contexto médico utiliza `JwtClaimsExtractor` para resolver la identidad del usuario autenticado mediante JWT.
+
+En la gestión de citas, el frontend no solicita manualmente `patientId` ni `doctorId`. El `patientId` se obtiene desde el JWT del paciente autenticado y el `doctorId` se obtiene a partir de la relación doctor-paciente existente. Esto mejora la seguridad, reduce errores de entrada y evita exponer identificadores técnicos al usuario final.
+
+![Medical Bounded Context Class Diagram](./Informe/assets/class-diagram-medical-bc.png)
+
+**Figura 4.7.4. Medical Bounded Context Class Diagram.**
 
 ## <a name="_toc226040439"></a>4.8. Database Design.
 
