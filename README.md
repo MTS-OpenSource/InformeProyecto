@@ -1,40 +1,31 @@
-<h1 align="center">Informe del Trabajo Final</h1>
-
-<h3 align="center">Universidad Peruana de Ciencias Aplicadas</h3>
-
-<br/>
-
 <div align="center">
   <img src="./Informe/assets/LogoUPC.png" alt="UPC Logo" width="200">
 </div>
-
-<br/>
-
-<h5 align="center">Ingeniería de Software</h5>
-
-<h5 align="center">Desarrollo de Aplicaciones Open Source - 1ASI0729 – 2610</h5>
-
-<h5 align="center">Docente: Juan Antonio Flores Moroco</h5>
-
-<h5 align="center">Startup: IntegraVida</h5>
-
-<h5 align="center">Producto: GlucoSmart</h5>
-
-## Team members:
-
-<div align="center">
-
-| Nombre | Código |
-| :--- | :---: |
-| Arias Tasayco, Jean Pool Alexander | U202414054 |
-| Estupiñan Olortegui, Juan Sebastian | U202223405 |
-| Tello Murga, Javier Oswaldo | U202218387 |
+<h3 align="center">Universidad Peruana de Ciencias Aplicadas</h3>
+<h5 align="center">Carrrera de Ingeniería de Software</h5>
 
 
-</div>
+<h1 align="center">1ASI0729 – 2610</h1>
+<h1 align="center">Desarrollo de Aplicaciones Open Source</h1>
+<h5 align="center">NRC</h5>
+<h1 align="center">2610</h1>
+<h2 align="center">Informe del Trabajo Final</h2>
+<h5 align="center">Docente</h5>
+<h4 align="center">Juan Antonio Flores Moroco</h4>
+
+<h5 align="center">Equipo</h5>
+<h3 align="center">GlucoSmart</h3>
+<h5 align="center">Equipo</h5>
+<h3 align="center">IntegraVida</h3>
+
+<h4 align="center">Integrantes</h4><h5 align="center">Codigo           Apellidos y Nombres</h5>
+<p align="center">U202414054  Arias Tasayco, Jean Pool Alexander</p>
+<p align="center">U202218387  Tello Murga, Javier Oswaldo</p>
+<p align="center">U202223405  Estupiñan Olortegui, Juan Sebastian</p>
 
 
-<h5 align="center">Ciclo 2026-10</h5>
+<h5 align="center">Periodo 2026-10</h5>
+<h5 align="center">Junio 2026</h5>
 
 ---
 
@@ -3302,3 +3293,5 @@ Anexo 4:https://integravida-appweb.web.app/
 Anexo 5:https://integravida-data.onrender.com/
 Anexo 6: [Web Services (Backend) Desplegado](https://integravida-backendservices.onrender.com) | [Swagger UI](https://integravida-backendservices.onrender.com/swagger-ui/index.html#/)
 Anexo 7:https://miro.com/app/board/uXjVH9-y8M8=/?share_link_id=910309606422
+Anexo 8:https://trello.com/invite/b/6a4e64494b5bffc899ec3b0e/ATTI4356e6f50a007be86b2cf9b2aca5dcac26194524/integravida
+
