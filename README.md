@@ -33,7 +33,6 @@
 
 </div>
 
-<!-- TODO: Verificar que la tabla de integrantes incluya a todos los miembros evaluados en el informe y en la rúbrica, incluyendo código de estudiante, nombres completos consistentes y foto/perfil cuando corresponda. -->
 
 <h5 align="center">Ciclo 2026-10</h5>
 
@@ -76,28 +75,70 @@
 	- https://github.com/MTS-OpenSource/Integravida-FrontendServices.git
 	- https://github.com/MTS-OpenSource/IntegraVida-BackendServices.git
 
-<!-- TODO: Completar Project Report Collaboration Insights con evidencias por entrega del repositorio InformeProyecto: descripción de cómo se elaboró el informe, participación de cada integrante, capturas de analíticos de commits/contribuciones y coherencia con el Registro de Versiones del Informe. -->
+![Commits Review](./Informe/assets/commitGraphSprint4.png)
 
-- AV3:
-  - ¿Qué Problema se encontró?
-	  Se identificó una alta fragmentación y deficiencia en la gestión de la información clínica de pacientes diagnosticados con Diabetes Mellitus. Actualmente, el registro de métricas vitales (como los niveles de glucosa y hemoglobina glicosilada - HbA1c) y el control de la medicación se realizan, en su mayoría, de forma manual, aislada o dependiente de la memoria del paciente. Esta situación genera dos problemas críticos:
-		1. **En el paciente:** Una baja adherencia al tratamiento debido a olvidos frecuentes de las dosis, sumado a la incertidumbre y falta de un canal directo para reportar efectos secundarios de los fármacos.
-		2. **En el personal médico:** Pérdida de tiempo valioso durante las consultas al tener que unificar e interpretar historiales desordenados (en papel o Excel). Además, existe una nula capacidad de **farmacovigilancia activa**, lo que impide a los doctores intervenir preventivamente antes de que un paciente sufra una crisis de hipoglucemia severa o daño orgánico.
-	
-- ¿Cómo se resolverá?
-	El problema se resolverá mediante el desarrollo y despliegue de IntegraVida una plataforma web B2B2C respaldada por una arquitectura de base de datos relacional robusta. Esta solución centralizará la información y conectará en tiempo real a los pacientes con sus médicos tratantes, resolviendo la problemática a través de tres pilares tecnológicos:
-	
-	1. **Sistema de Adherencia Automatizado:** Notificaciones y confirmaciones de toma de medicación que reducen drásticamente los olvidos en los pacientes.
-	2. **Módulo de Farmacovigilancia y Alertas Críticas:** Un canal de registro rápido donde los pacientes reportan reacciones adversas, el cual dispara alertas inmediatas al médico si los parámetros indican un riesgo vital.
-	3. **Ecosistema de Decisiones Clínicas:** Un panel de control (_Dashboard_) interactivo para el médico que procesa los datos registrados y los visualiza en gráficos de tendencias, permitiendo optimizar el tiempo de consulta y ajustar los tratamientos de forma rápida y segura basándose en evidencia real.
+### AV1
 
-![Commits Review](./Informe/assets/commitSpring3.png)
+**¿Qué Problema se encontró?**
 
-- **TB2:**
-  - ¿Qué Problema se encontró?
-    Se detectó que el informe de TB1 presentaba secciones incompletas en los Capítulos I, II, III, IV y V según la rúbrica de TB2. Específicamente: Lean UX Canvas no tenía explicación detallada, User Personas carecía de introducción, User Task Matrix y Journey Mapping estaban redactados en modo TO-BE en lugar de AS-IS, faltaban Technical Stories para el backend Spring Boot, los Style Guidelines no incluían tablas de typography/color/spacing, los Components/Class Diagrams no seguían la notación DDD + CQRS por bounded context, y las secciones de Sprint 4, Validation Interviews, About-the-Product y About-the-Team estaban completamente ausentes.
-  - ¿Cómo se resolvió?
-    Se aplicaron mejoras quirúrgicas preservando todo el contenido existente: (1) expansión de Lean UX Assumptions/Hypothesis/Canvas con tablas y checklist, (2) reescritura de User Task Matrix y Journey Mapping a AS-IS con 6 tareas/etapas, (3) adición de introducción a User Personas y textos de interpretación en Empathy Mapping, (4) incorporación de 10 Technical Stories (TS-11 a TS-20) para Spring Boot con DDD + CQRS, (5) expansión de Impact Mapping con 4 objetivos SMART, (6) tablas completas de Style Guidelines con branding, typography, color palette y spacing, (7) actualización de Components Diagrams con notación DDD + CQRS por bounded context, (8) adición de Sprint 4, Validation Interviews, About-the-Product y About-the-Team con templates y TODOs para que el equipo complete con datos reales. Todos los cambios se realizaron sobre el README original (revertido a su versión íntegra de 2430 líneas) sin eliminar ningún capítulo ni contenido previo.
+Se detectó una total desarticulación en la fase inicial del proyecto respecto al entendimiento del ecosistema del paciente con diabetes. El equipo carecía de un perfil unificado del negocio (Startup Profile) y no se habían estructurado los supuestos básicos ni hipótesis de valor. En el ámbito técnico, el repositorio del informe no seguía estándares profesionales, careciendo de la implementación de GitFlow, convenciones de idioma y mensajes bajo la especificación de _Conventional Commits_. Además, la propuesta de valor comercial no contaba con una Landing Page estática desplegada para capturar el interés inicial de los dos segmentos objetivo (Pacientes y Médicos).
+
+**¿Cómo se resolverá?**
+
+El problema se resolverá mediante el establecimiento de las bases metodológicas y el despliegue del canal de marketing inicial de la startup a través de las siguientes acciones:
+
+- **Estructuración del Solution Profile:** Definición rigurosa de la problemática utilizando la técnica de las 5 'W's y 2 'H's, y desarrollo completo del proceso Lean UX (Problem Statements, Assumptions, Hypothesis Statements y el Lean UX Canvas inicial).
+- **Despliegue de la Landing Page:** Implementación de un sitio web estático responsivo estructurado con HTML5, CSS3 y JavaScript, basado en las guías visuales de Material Design, y desplegado exitosamente en producción.
+- **Configuración del Entorno de Gestión de Configuración (SCM):** Establecimiento del flujo de trabajo con GitFlow en GitHub, adoptando nomenclaturas estrictas en inglés y el estándar de _Conventional Commits_ para asegurar la trazabilidad y la colaboración del equipo desde el Sprint 1.
+
+### TB1
+
+**¿Qué Problema se encontró?**
+
+Se identificó que tras el despliegue de la Landing Page en el hito AV1, el informe presentaba una severa desconexión entre la investigación de campo y los requisitos técnicos del sistema. Específicamente, las entrevistas a los segmentos de usuario (Pacientes y Médicos) no contaban con un análisis cuantitativo que respaldara la creación de los arquetipos. Los artefactos de diseño (User Personas, Task Matrix, Journey Mapping y Empathy Maps) se encontraban desordenados o incompletos. Asimismo, la arquitectura de información de la aplicación web carecía de pautas de SEO/Meta Tags, y no se disponía de la primera versión del Frontend funcional en Angular integrado con las historias de usuario priorizadas.
+
+**¿Cómo se resolvió?**
+
+Se ejecutó un proceso profundo de Requirements Elicitation & Analysis y de Product Design estructurado de la siguiente manera:
+
+1. **Consolidación del UX Research:** Registro detallado y descriptivo de las bitácoras de entrevistas (de Jorge, Virgilia, Andy y el Dr. Walter Gómez), analizando patrones críticos en porcentajes estadísticos que justificaron directamente las épicas del Product Backlog.
+2. **Especificación de Requisitos y Mockups:** Redacción formal de las User Stories en formato Gherkin (Given-When-Then) e implementación de Wireframes, Wireflows y Mockups adaptativos de alta fidelidad en Figma.
+3. **Despliegue de la Frontend Web Application:** Desarrollo del componente inicial transaccional en Angular Framework utilizando TypeScript y la biblioteca Angular Material. Esta primera iteración (Sprint 2) fue desplegada satisfactoriamente en Firebase Hosting, integrando los Call-To-Action (CTA) esenciales validados de la Landing Page para redirigir correctamente a las vistas de inicio de sesión y registro de mediciones.
+
+### AV2
+
+**¿Qué Problema se encontró?**
+
+Se identificó una alta fragmentación y deficiencia en la gestión de la información clínica de pacientes diagnosticados con Diabetes Mellitus. Actualmente, el registro de métricas vitales (como los niveles de glucosa y hemoglobina glicosilada - HbA1c) y el control de la medicación se realizan, en su mayoría, de forma manual, aislada o dependiente de la memoria del paciente. Esta situación genera dos problemas críticos:
+
+1. **En el paciente:** Una baja adherencia al tratamiento debido a olvidos frecuentes de las dosis, sumado a la incertidumbre y falta de un canal directo para reportar efectos secundarios de los fármacos.
+2. **En el personal médico:** Pérdida de tiempo valioso durante las consultas al tener que unificar e interpretar historiales desordenados (en papel o Excel). Además, existe una nula capacidad de farmacovigilancia activa, lo que impide a los doctores intervenir preventivamente antes de que un paciente sufra una crisis de hipoglucemia severa o daño orgánico.
+
+**¿Cómo se resolverá?**
+
+El problema se resolverá mediante el desarrollo y despliegue de **IntegraVida (GlucoSmart)**, una plataforma web B2B2C respaldada por una arquitectura de base de datos relacional robusta. Esta solución centralizará la información y conectará en tiempo real a los pacientes con sus médicos tratantes, resolviendo la problemática a través de tres pilares tecnológicos:
+
+- **Sistema de Adherencia Automatizado:** Notificaciones y confirmaciones de toma de medicación que reducen drásticamente los olvidos en los pacientes, implementadas en la interfaz de Angular.
+- **Módulo de Farmacovigilancia y Alertas Críticas:** Un canal de registro rápido donde los pacientes reportan reacciones adversas, el cual dispara alertas inmediatas en tiempo real al médico mediante servicios en Spring Boot si los parámetros indican un riesgo vital.
+- **Ecosistema de Decisiones Clínicas:** Un panel de control (Dashboard) interactivo para el médico que procesa los datos registrados y los visualiza en gráficos de tendencias, permitiendo optimizar el tiempo de consulta y ajustar los tratamientos de forma rápida y segura basándose en evidencia real estructurada en PostgreSQL.
+
+### TB2
+
+**¿Qué Problema se encontró?**
+
+Se detectó que el informe de TB1 presentaba secciones incompletas en los Capítulos I, II, III, IV y V según la rúbrica de evaluación para la entrega final. Específicamente: Lean UX Canvas no tenía explicación detallada, User Personas carecía de introducción, User Task Matrix y Journey Mapping estaban redactados de forma errónea en modo TO-BE en lugar de AS-IS, faltaban Technical Stories para el backend de Spring Boot, los Style Guidelines no incluían tablas detalladas de tipografía/color/espaciado, los diagramas de componentes y clases de software no seguían la notación Domain-Driven Design (DDD) con segregación CQRS por bounded context, y las secciones críticas del Sprint 4, Validation Interviews (Entrevistas de Validación según Heurísticas de Usabilidad), About-the-Product y About-the-Team estaban completamente ausentes.
+
+**¿Cómo se resolvió?**
+
+Se aplicaron mejoras quirúrgicas estructurales preservando todo el contenido técnico existente:
+
+1. **Expansión de Lean UX:** Se detallaron los Assumptions, Hypothesis Statements y el Lean UX Canvas incorporando tablas explicativas y un checklist de validación.
+2. **Reescritura Metodológica a AS-IS:** Se reformularon por completo el User Task Matrix y los User Journey Maps para reflejar el viaje actual de los pacientes (Jorge, Virgilia y Andy) sin el software, mapeando un flujo real de 6 etapas críticas de dolor.
+3. **Introducciones y Marcos Conceptuales:** Se adicionaron las introducciones requeridas para las fichas de User Personas y textos de interpretación cualitativa dentro de los Empathy Maps.
+4. **Especificación de Requisitos Técnicos:** Se incorporaron 10 Technical Stories (de la TS-11 a la TS-20) enfocadas en la infraestructura del API RESTful de Spring Boot utilizando patrones de DDD y CQRS, además de expandir el Impact Mapping con 4 objetivos de negocio bajo el estándar SMART.
+5. **Estandarización de Diseño Visual:** Se estructuraron tablas completas de Web Style Guidelines que definen el branding institucional, paleta cromática, escala tipográfica y la matriz de espaciado adaptativo (spacing).
+6. **Arquitectura Dirigida por el Dominio:** Se actualizaron y expandieron los Component Diagrams bajo el estándar del Modelo C4 acoplándolos a la delimitación de contextos (Bounded Contexts) y segregación de lectura/escritura (CQRS).
+7. **Cierre de Ciclo de Vida del Software:** Se incorporó en su totalidad el bloque del Sprint 4, el diseño, registro de bitácoras y tablas de evaluación heurística de usabilidad de las Entrevistas de Validación (Sección 5.3) y los esquemas temporales de contenido (timing) para los videos About-the-Product y About-the-Team. Todos los cambios se consolidaron sobre el archivo markdown principal sin eliminar ninguna sección o capítulo previo.
 
 # Contenido
 
@@ -279,14 +320,10 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 En el siguiente cuadro se describen las acciones realizadas y conclusiones por parte del grupo, que permiten sustentar el logro del ABET – EAC - Student Outcome 3.
 
-<!-- TODO: Revisar el Student Outcome contra el enunciado oficial del curso y el Anexo A de REQUERIMIENTOS.md. Asegurar que cada integrante tenga acciones específicas por entrega (AV1, TB1, AV2/TB2/TF según corresponda), incluyendo evidencias alineadas con el video About-the-Team. -->
-
-| Criterio específico                                                        | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |     |
-| :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
-| **Comunica oralmente con efectividad a diferentes rangos de audiencia.**   | **Jean Pool Alexander Arias Tasayco**<br/>**AV1:** Participó activamente en reuniones de validación con usuarios entrevistados para presentar la propuesta de valor de GlucoSmart y recopilar retroalimentación relacionada con funcionalidades médicas y experiencia de usuario.<br/><br/>**TB1:** Lideró las reuniones de coordinación técnica del Sprint 2 explicando la arquitectura frontend, bounded contexts y despliegue de servicios a los integrantes del equipo y usuarios entrevistados.                                                **AV2:** Participó activamente en el desarrollo del backend de GlucoSmart durante el Sprint 3, implementando aggregates y endpoints para la gestión de pacientes, tratamientos y medicamentos, asegurando la correcta integración de reglas de negocio vinculadas al seguimiento clínico.<br/><br/>**Abigail Nadhim Raymundo Villarroel**<br/>**AV1:** Presentó propuestas visuales mediante wireframes y mockups de alta fidelidad para comunicar la estructura visual de la Landing Page y validar la experiencia de usuario.<br/><br/>**TB1:** Explicó el funcionamiento del módulo Patient Profile Management mostrando la interacción entre interfaces, formularios y servicios REST durante las revisiones funcionales del Sprint 2.<br/><br/>**AV2:** Explicó ante el equipo la arquitectura del bounded context Profiles implementado en Spring Boot (capas domain, application, infrastructure e interfaces) y demostró la integración del frontend Angular con los endpoints reales `/api/v1/profiles`, sustentando las decisiones de diseño DDD adoptadas (agregados, value objects y ACL facade). Adicionalmente, grabó y expuso la Lección 6 del curso de fundamentos de Java sobre Clases y Objetos para la audiencia estudiantil del equipo.<br/><br/>**Javier Oswaldo Tello Murga**<br/>**AV1:** Expuso los artefactos de análisis como lenguaje ubicuo, historias de usuario y diagramas técnicos para comunicar la estructura funcional del sistema GlucoSmart.<br/><br/>**TB1:** Participó en reuniones técnicas explicando la lógica del bounded context Appointment Management y su integración con el frontend general.<br/><br/>**Jose Antonio Muñoz Amasifuen**<br/>**AV1:** Presentó el prototipo interactivo desarrollado en Figma y explicó el flujo de navegación de la Web Application orientada a pacientes y médicos.<br/><br/>**TB1:** Explicó la integración de servicios REST y la validación de endpoints utilizados por los módulos clínicos del sistema.<br/><br/>**Juan Sebastian Estupiñan**<br/>**TB1:** Participó en las revisiones funcionales del Sprint 2 explicando el funcionamiento del módulo Glucose Monitoring, historial clínico y gráficos médicos integrados al sistema. | El trabajo colaborativo realizado durante los Sprints permitió fortalecer las capacidades de comunicación oral del equipo al presentar propuestas visuales, avances funcionales, arquitectura técnica y validaciones del sistema frente a distintos tipos de audiencia. Asimismo, las reuniones de coordinación, revisiones funcionales y demostraciones del producto permitieron comunicar efectivamente ideas técnicas y funcionales relacionadas con el proyecto GlucoSmart. |     |
-| **Comunica por escrito con efectividad a diferentes rangos de audiencia.** | **Jean Pool Alexander Arias Tasayco**<br/>**AV1:** Elaboró secciones del informe relacionadas con Startup Profile, Lean UX, Sprint Planning y despliegue del proyecto.<br/><br/>**TB1:** Documentó la arquitectura frontend, servicios REST, configuración de despliegue y evidencias técnicas del Sprint 2.                                                      **AV2:** Elaboró secciones del informe relacionadas con la implementación del backend del Sprint 3, incluyendo el desarrollo de funcionalidades para la gestión de pacientes, tratamientos y medicamentos, así como la integración de servicios del sistema.<br/><br/>**Abigail Nadhim Raymundo Villarroel**<br/>**AV1:** Elaboró documentación visual mediante wireframes y mockups para representar la estructura de la Landing Page y la experiencia de usuario.<br/><br/>**TB1:** Documentó el bounded context Patient Profile Management, evidencias de frontend, integración de componentes y mejoras visuales implementadas en la Web Application.<br/><br/>**AV2:** Documentó la implementación completa del bounded context Profiles en el backend (aggregate Profile, value objects PersonName/EmailAddress/PhoneNumber/DateOfBirth, ProfileCommandService, ProfileQueryService y ProfilesContextFacade), incluyendo la especificación de sus 4 endpoints REST y su documentación en Swagger UI. Redactó además el material didáctico (código completo, archivo starter con TODOs guiados y guion de video) de la Lección 6 del curso de fundamentos de Java.<br/><br/>**Javier Oswaldo Tello Murga**<br/>**AV1:** Desarrolló documentación relacionada con historias de usuario, criterios de aceptación y diagramas técnicos del sistema.<br/><br/>**TB1:** Documentó funcionalidades relacionadas con Appointment Management y su integración dentro de la arquitectura modular del frontend.<br/><br/>**Juan Sebastian Estupiñan**<br/>**TB1:** Documentó funcionalidades relacionadas con el módulo Glucose Monitoring y evidencias funcionales del historial clínico y gráficos médicos implementados durante el Sprint 2.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | La elaboración continua de documentación técnica, reportes de Sprint, diagramas, evidencias funcionales y artefactos de análisis permitió fortalecer la capacidad del equipo para comunicar información técnica y funcional de manera clara y organizada. Asimismo, la documentación desarrollada facilitó la comprensión del sistema tanto para usuarios como para integrantes técnicos del proyecto.                                                                          |     |
-|                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |     |
-
+| **Criterio específico**                                                   | **Acciones realizadas**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | **Conclusiones**                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Comunica oralmente con efectividad a diferentes rangos de audiencia.**  | **Jean Pool Alexander Arias Tasayco**<br><br>  <br><br>**AV1:** Participó activamente en reuniones de validación con usuarios entrevistados para presentar la propuesta de valor de GlucoSmart y recopilar retroalimentación relacionada con funcionalidades médicas y experiencia de usuario.<br><br>  <br><br>**TB1:** Lideró las reuniones de coordinación técnica del Sprint 2 explicando la arquitectura frontend, bounded contexts y despliegue de servicios a los integrantes del equipo y usuarios entrevistados.<br><br>  <br><br>**AV2:** Participó activamente en el desarrollo del backend de GlucoSmart durante el Sprint 3, implementando aggregates y endpoints para la gestión de pacientes, tratamientos y medicamentos, asegurando la correcta integración de reglas de negocio vinculadas al seguimiento clínico.<br><br>  <br><br>**TB2:** Sustentó ante el jurado el proceso de integración continua y el despliegue de los Web Services de Spring Boot en Render, detallando la resolución de latencias mediante parches de corrección urgente (_hotfixes_) en PostgreSQL y la aprobación de Pull Requests (PR) basados en _Conventional Commits_.<br><br>  <br>  <br><br>**Abigail Nadhim Raymundo Villarroel**<br><br>  <br><br>**AV1:** Presentó propuestas visuales mediante wireframes y mockups de alta fidelidad para comunicar la estructura visual de la Landing Page y validar la experiencia de usuario.<br><br>  <br><br>**TB1:** Explicó el funcionamiento del módulo Patient Profile Management mostrando la interacción entre interfaces, formularios y servicios REST durante las revisiones funcionales del Sprint 2.<br><br>  <br><br>**AV2:** Explicó ante el equipo la arquitectura del bounded context Profiles implementado en Spring Boot (capas domain, application, infrastructure e interfaces) y demostró la integración del frontend Angular con los endpoints reales /api/v1/profiles, sustentando las decisiones de diseño DDD adoptadas (agregados, value objects y ACL facade). Adicionalmente, grabó y expuso la Lección 6 del curso de fundamentos de Java sobre Clases y Objetos para la audiencia estudiantil del equipo.<br><br>  <br><br>**TB2:** Expuso oralmente los resultados de las entrevistas de validación heurística aplicadas a los segmentos de pacientes y médicos, sustentando las acciones del plan de acción frente a problemas de accesibilidad del Frontend y demostrando la navegación en vivo de la aplicación web alojada en Firebase Hosting.<br><br>  <br>  <br><br>**Javier Oswaldo Tello Murga**<br><br>  <br><br>**AV1:** Expuso los artefactos de análisis como lenguaje ubicuo, historias de usuario y diagramas técnicos para comunicar la estructura funcional del sistema GlucoSmart.<br><br>  <br><br>**TB1:** Participó en reuniones técnicas explicando la lógica del bounded context Appointment Management y su integración con el frontend general.<br><br>  <br><br>**TB2:** Presentó en la sustentación síncrona final el mapeo de los flujos de usuario (Wireflows) del Sprint 4, explicando a la audiencia técnica cómo la segregación de consultas y comandos (CQRS) facilitó la interoperabilidad del sistema transaccional.<br><br>  <br>  <br><br>**Jose Antonio Muñoz Amasifuen**<br><br>  <br><br>**AV1:** Presentó el prototipo interactivo desarrollado en Figma y explicó el flujo de navegación de la Web Application orientada a pacientes y médicos.<br><br>  <br><br>**TB1:** Explicó la integración de servicios REST y la validación de endpoints utilizados por los módulos clínicos del sistema.<br><br>  <br><br>**TB2:** Realizó la demostración interactiva final (_demo_) del ecosistema médico, detallando el funcionamiento del Dashboard en Angular para el monitoreo de pacientes y el disparo de alertas de hipoglucemia en tiempo real.<br><br>  <br>  <br><br>**Juan Sebastian Estupiñan**<br><br>  <br><br>**TB1:** Participó en las revisiones funcionales del Sprint 2 explicando el funcionamiento del módulo Glucose Monitoring, historial clínico y gráficos médicos integrados al sistema.<br><br>  <br><br>**TB2:** Explicó de forma presencial las pruebas de aceptación y la validación de la lógica del negocio correspondiente al Bounded Context de Monitoreo Clínico durante la revisión final del Sprint 4. | El trabajo colaborativo realizado durante los Sprints permitió fortalecer las capacidades de comunicación oral del equipo al presentar propuestas visuales, avances funcionales, arquitectura técnica y validaciones del sistema frente a distintos tipos de audiencia. Asimismo, las reuniones de coordinación, revisiones funcionales y demostraciones del producto permitieron comunicar efectivamente ideas técnicas y funcionales relacionadas con el proyecto GlucoSmart. |
+| **Comunica por escrito con efectividad a diferentes rangos de audiencia** | **Jean Pool Alexander Arias Tasayco**<br><br>  <br><br>**AV1:** Elaboró secciones del informe relacionadas con Startup Profile, Lean UX, Sprint Planning y despliegue del proyecto.<br><br>  <br><br>**TB1:** Documentó la arquitectura frontend, servicios REST, configuración de despliegue y evidencias técnicas del Sprint 2.<br><br>  <br><br>**AV2:** Elaboró secciones del informe relacionadas con la implementación del backend del Sprint 3, incluyendo el desarrollo de funcionalidades para la gestión de pacientes, tratamientos y medicamentos, así como la integración de servicios del sistema.<br><br>  <br><br>**TB2:** Redactó la documentación técnica de despliegue del software en la nube, el archivo de configuración Docker Compose para PostgreSQL, y documentó las bitácoras del Sprint 4 junto con el registro de Pull Requests (PR) validados en GitHub.<br><br>  <br>  <br><br>**Abigail Nadhim Raymundo Villarroel**<br><br>  <br><br>**AV1:** Elaboró documentación visual mediante wireframes y mockups para representar la estructura de la Landing Page y la experiencia de usuario.<br><br>  <br><br>**TB1:** Documentó el bounded context Patient Profile Management, evidencias de frontend, integración de componentes y mejoras visuales implementadas en la Web Application.<br><br>  <br><br>**AV2:** Documentó la implementación completa del bounded context Profiles en el backend (aggregate Profile, value objects PersonName/EmailAddress/PhoneNumber/DateOfBirth, ProfileCommandService, ProfileQueryService y ProfilesContextFacade), incluyendo la especificación de sus 4 endpoints REST y su documentación en Swagger UI. Redactó además el material didáctico (código completo, archivo starter con TODOs guiados y guion de video) de la Lección 6 del curso de fundamentos de Java.<br><br>  <br><br>**TB2:** Redactó formalmente la reescritura metodológica a la situación actual (AS-IS) del User Task Matrix y del User Journey Map. Elaboró los cuadros de evaluación heurística de usabilidad del Anexo D, el plan de acción correctivo y estructuró el guion con las pautas de tiempo (_timing_) del video About-the-Product.<br><br>  <br>  <br><br>**Javier Oswaldo Tello Murga**<br><br>  <br><br>**AV1:** Desarrolló documentación relacionada con historias de usuario, criterios de aceptación y diagramas técnicos del sistema.<br><br>  <br><br>**TB1:** Documentó funcionalidades relacionadas con Appointment Management y su integración dentro de la arquitectura modular del frontend.<br><br>  <br><br>**TB2:** Estructuró los diagramas UML de Clases y los Component Diagrams bajo el Modelo C4 para el Sprint 4, especificando por escrito los contratos de software y las relaciones relacionales de las tablas en PostgreSQL.<br><br>  <br>  <br><br>**Juan Sebastian Estupiñan**<br><br>  <br><br>**TB1:** Documentó funcionalidades relacionadas con el módulo Glucose Monitoring y evidencias funcionales del historial clínico y gráficos médicos implementados durante el Sprint 2.<br><br>  <br><br>**TB2:** Completó la especificación técnica de las 10 Historias Técnicas (TS-11 a TS-20) en Spring Boot utilizando la notación DDD, detallando los criterios de aceptación en formato Gherkin para el API RESTful.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | La elaboración continua de documentación técnica, reportes de Sprint, diagramas, evidencias funcionales y artefactos de análisis permitió fortalecer la capacidad del equipo para comunicar información técnica y funcional de manera clara y organizada. Asimismo, la documentación desarrollada facilitó la comprensión del sistema tanto para usuarios como para integrantes técnicos del proyecto.                                                                          |
 
 # <a name="_toc226040382"></a>Capitulo I: Introduction
 
@@ -316,10 +353,7 @@ El valor diferencial de la startup radica en combinar tecnología, enfoque centr
 
 ### <a name="_toc226040385"></a>1.1.2. Perfiles de integrantes del equipo
 
-Estudiante: **Arias Tasayco, Jean Pool Alexander**<br>Carrera:**Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software. Me considero un apasionado por la tecnología y me dedico a transformar ideas en soluciones digitales eficientes y escalables.<br><br>Durante mi formación, he adquirido habilidades en el desarrollo de software y en la creación de soluciones que no solo cumplen con su propósito, sino que buscan innovar. Mi objetivo es utilizar mis conocimientos para resolver problemas reales y generar un impacto positivo a través de la tecnología. <br><br>
-
-Estudiante: **Raymundo Villarroel, Abigail Nadhimr**<br>Carrera:**Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software.Actualmente estoy cursando el 5° ciclo de Ingeniería de Software, avanzando algunos cursos del ciclo superior. Desde siempre me ha apasionado crear, diseñar y programar para ofrecer soluciones, me gusta aprender constantemente para ampliar mis conocimientos y perfil profesional. Me comprometo a aportar con responsabilidad al equipo, trabajar de manera colaborativa y contribuir a que juntos podamos desarrollar un proyecto sobresaliente. Mis principales habilidades incluyen creatividad, disciplina y trabajo en equipo, cualidades que aplico para lograr resultados efectivos y de calidad. <br><br>
-
+Estudiante: **Arias Tasayco, Jean Pool Alexander**<br>Carrera:**Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software. Me considero un apasionado por la tecnología y me dedico a transformar ideas en soluciones digitales eficientes y escalables.<br><br>Durante mi formación, he adquirido habilidades en el desarrollo de software y en la creación de soluciones que no solo cumplen con su propósito, sino que buscan innovar. Mi objetivo es utilizar mis conocimientos para resolver problemas reales y generar un impacto positivo a través de la tecnología. <br><br><br>
 Estudiante: **Tello Murga, Javier Oswaldo**<br>Carrera: **Ingeniería de Software**<br>Soy un estudiante de la carrera de Ingeniería de Software, actualmente cursando el 6.º ciclo. Me considero una persona responsable, perseverante y comprometida con mi aprendizaje. Me interesa el desarrollo de software y la creación de soluciones digitales que puedan resolver problemas reales. A través del trabajo en equipo, busco aportar con organización, análisis y compromiso para contribuir al desarrollo de un proyecto sólido y de calidad.<br><br>                                                                                                                                                                                                                                                                                         
 
 ## <a name="_toc226040386"></a>1.2. Solution Profile
@@ -2732,45 +2766,101 @@ La coordinación se realizó íntegramente vía **Discord**, mediante reuniones 
 
 Esta sección documenta la planificación del cuarto Sprint del proyecto GlucoSmart. El objetivo principal de este Sprint fue **consolidar la integración end-to-end**, realizar **pruebas de aceptación con usuarios reales**, ejecutar las **Validation Interviews** grabadas, y preparar los artefactos finales del proyecto (About-the-Product, About-the-Team y Student Outcome).
 
-|Sprint #|Sprint 4|
-|:--|:--|
-|**Sprint Planning Background**||
-|Date|<!-- TODO: Insertar fecha del Sprint 4 -->|
-|Time|<!-- TODO: Insertar hora -->|
-|Location|Virtual - Discord|
-|Prepared By|<!-- TODO: Insertar responsable -->|
-|Attendees (To planning meeting)|Jean Pool Alexander Arias Tasayco<br>Abigail Nadhim Raymundo Villarroel<br>Juan Sebastian Estupiñan Olortegui<br>Javier Oswaldo Tello Murga<br>Jose Antonio Muñoz Amasifuen|
-|Sprint N-1 Review Summary|El Sprint 3 culminó con la implementación del backend real en Spring Boot con DDD+CQRS, PostgreSQL desplegado en Docker, documentación Swagger, y la integración del frontend Angular con la API real. Todos los bounded contexts (IAM, Profiles, Patients, Monitoring, Medical) expusieron endpoints funcionales, y las vistas de Doctor Dashboard, Appointment Management y Clinical Reports fueron completadas.|
-|Sprint N-1 Retrospective Summary|El equipo destacó como principal acierto la adopción de DDD + CQRS en el backend, lo que permitió una separación clara de responsabilidades y facilitó el trabajo paralelo por bounded contexts. Como oportunidad de mejora se identificó la necesidad de realizar pruebas de integración tempranas entre frontend y backend real para evitar bloqueos de última hora, así como la importancia de grabar las validation interviews con usuarios reales para cumplir con la rúbrica de TB2.|
-|**Sprint Goal & User Stories**||
-|Sprint N Goal|Our focus is on validating the complete GlucoSmart solution with real users through recorded Validation Interviews, consolidating all software artifacts, and preparing the final deliverables (About-the-Product video, About-the-Team video, and Student Outcome evidence). We believe this provides a validated, production-ready healthcare platform for diabetes management. This will be confirmed when: (1) at least <!-- TODO: insertar número --> Validation Interviews are conducted and recorded with representatives of each user segment, (2) the About-the-Product intro video is published, (3) the About-the-Team retrospective video is published, and (4) all Student Outcome evidence is compiled and submitted.|
-|Sprint N Velocity|<!-- TODO: Insertar velocity -->|
-|Sum of Story Points|<!-- TODO: Insertar story points -->|
+| Sprint #                         | Sprint 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sprint Planning Background**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Date                             | 28/06 - 06/07                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Time                             | 11:59PM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Location                         | Virtual - Discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Prepared By                      | Jean Pool Alexander Arias Tasayco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Attendees (To planning meeting)  | Jean Pool Alexander Arias Tasayco<br>Juan Sebastian Estupiñan Olortegui<br>Javier Oswaldo Tello Murga                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Sprint N-1 Review Summary        | El Sprint 3 culminó con la implementación del backend real en Spring Boot con DDD+CQRS, PostgreSQL desplegado en Docker, documentación Swagger, y la integración del frontend Angular con la API real. Todos los bounded contexts (IAM, Profiles, Patients, Monitoring, Medical) expusieron endpoints funcionales, y las vistas de Doctor Dashboard, Appointment Management y Clinical Reports fueron completadas.                                                                                                                                                                                                                                                                                                                  |
+| Sprint N-1 Retrospective Summary | El equipo destacó como principal acierto la adopción de DDD + CQRS en el backend, lo que permitió una separación clara de responsabilidades y facilitó el trabajo paralelo por bounded contexts. Como oportunidad de mejora se identificó la necesidad de realizar pruebas de integración tempranas entre frontend y backend real para evitar bloqueos de última hora, así como la importancia de grabar las validation interviews con usuarios reales para cumplir con la rúbrica de TB2.                                                                                                                                                                                                                                          |
+| **Sprint Goal & User Stories**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Sprint N Goal                    | Our focus is on validating the complete GlucoSmart solution with real users through recorded Validation Interviews, consolidating all software artifacts, and preparing the final deliverables (About-the-Product video, About-the-Team video, and Student Outcome evidence). We believe this provides a validated, production-ready healthcare platform for diabetes management. This will be confirmed when: (1) at least <!-- TODO: insertar número --> Validation Interviews are conducted and recorded with representatives of each user segment, (2) the About-the-Product intro video is published, (3) the About-the-Team retrospective video is published, and (4) all Student Outcome evidence is compiled and submitted. |
+| Sprint 4 Velocity                | 35                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Sum of Story Points              | 41                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## 5.2.4.2. Aspect Leaders and Collaborators
 
-<!-- TODO: Completar la tabla LACX con los aspectos del Sprint 4 (Validation Interviews, About-the-Product video, About-the-Team video, Student Outcome compilation, bug fixing, polish). -->
-
-| Aspect | Jean Pool Arias | Abigail Raymundo | Juan Sebastian Estupiñan | Javier Oswaldo Tello | Jose Antonio Muñoz |
-|:-------|:---------------:|:----------------:|:------------------------:|:--------------------:|:------------------:|
-| Validation Interviews | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-| About-the-Product Video | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-| About-the-Team Video | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-| Bug Fixing & Polish | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-| Student Outcome Evidence | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| Aspect                   | Jean Pool Arias | Juan Sebastian Estupiñan | Javier Oswaldo Tello |
+| :----------------------- | :-------------: | :----------------------: | :------------------: |
+| Validation Interviews    |        L        |            C             |          C           |
+| About-the-Product Video  |        L        |            C             |          C           |
+| About-the-Team Video     |        L        |            C             |          C           |
+| Bug Fixing & Polish      |        L        |            C             |          C           |
+| Student Outcome Evidence |        C        |            C             |          C           |
 
 ## 5.2.4.3. Sprint Backlog 4
 
-<!-- TODO: Insertar screenshot del Board del Sprint 4 en Linear/Trello. -->
-<!-- TODO: Insertar URL del Board del Sprint 4. -->
+![Commits Review](./Informe/assets/ProductBacklogLinear.png)
+**URL pública del Board Sprint 4:** https://trello.com/invite/b/6a4e64494b5bffc899ec3b0e/ATTI4356e6f50a007be86b2cf9b2aca5dcac26194524/integravida
 
-<!-- TODO: Completar la tabla de Sprint Backlog 4 con los User Stories y Tasks planificados para el Sprint 4. Considerar tareas de: ejecución y grabación de Validation Interviews, edición de videos, carga a YouTube, elaboración de About-the-Product, About-the-Team, corrección de bugs encontrados durante las validaciones, y compilación de Student Outcome. -->
-
-|Sprint#|Sprint 4|||||||
-|:--|:--|:--|:--|:--|:--|:--|:--|
-|User Story|Work-Item / Task|||Estimation (Hours)|Assigned To|Status|
-|Id|Title|Id|Title|Description|||(To-do/InProcess/ToReview/Done)|
-|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|<!-- TODO -->|
+| Sprint#  | User Story                                      | Work-Item / Task | Assigned To                    | Status | Id      | Title                                                                                                                                    |
+| -------- | ----------------------------------------------- | ---------------- | ------------------------------ | ------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Sprint 4 | —                                               | Work-Item        | u202223405@upc.edu.pe          | Done   | INT-205 | [IAM] IAM Bounded Context - JWT Enhancement & Claims Integration                                                                         |
+| Sprint 4 | US-04, US-06                                    | Task             | u202223405@upc.edu.pe          | Done   | INT-211 | T01 - Extend JWT claims to include userId, role, profileId, patientId and doctorId (conditional on role)                                 |
+| Sprint 4 | US-04, US-06                                    | Task             | u202223405@upc.edu.pe          | Done   | INT-212 | T02 - Update TokenService to sign and extract extended claims from JWT                                                                   |
+| Sprint 4 | US-04, US-06                                    | Task             | u202223405@upc.edu.pe          | Done   | INT-213 | T03 - Create JwtClaimsExtractor utility to resolve userId, role, patientId, profileId and doctorId from SecurityContext                  |
+| Sprint 4 | US-04                                           | Task             | u202223405@upc.edu.pe          | Done   | INT-214 | T04 - Update sign-in endpoint to populate all required claims at authentication time                                                     |
+| Sprint 4 | US-02, US-03                                    | Task             | u202223405@upc.edu.pe          | Done   | INT-215 | T05 - Update sign-up flow to assign role-specific context (patientId or doctorId) before issuing the token                               |
+| Sprint 4 | US-04, US-06                                    | Task             | u202223405@upc.edu.pe          | Done   | INT-216 | T06 - Validate JWT claims integrity on protected endpoints using JwtClaimsExtractor                                                      |
+| Sprint 4 | —                                               | Work-Item        | jeanpoolariass2020@hotmail.com | Done   | INT-206 | [PROFILES] Profiles Bounded Context - JWT Integration Update                                                                             |
+| Sprint 4 | US-07, US-08                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-217 | T10 - Refactor ProfileCommandService to resolve profileId from JWT claims instead of request body                                        |
+| Sprint 4 | US-07, US-11                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-218 | T11 - Refactor ProfileQueryService to filter by profileId extracted from JWT                                                             |
+| Sprint 4 | US-07, US-08, US-11                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-219 | T12 - Remove profileId from all profile request DTOs and resolve it exclusively from JWT                                                 |
+| Sprint 4 | —                                               | Work-Item        | jeanpoolariass2020@hotmail.com | Done   | INT-207 | [PATIENTS] Patients Bounded Context - JWT Integration Update                                                                             |
+| Sprint 4 | US-07, US-08                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-220 | T13 - Refactor PatientCommandService to resolve patientId from JWT claims instead of request body                                        |
+| Sprint 4 | US-17, US-18, US-49                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-221 | T14 - Refactor TreatmentCommandService and TreatmentQueryService to scope all operations to the patientId from JWT                       |
+| Sprint 4 | US-17, US-19, US-20                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-222 | T15 - Refactor MedicationCommandService and MedicationQueryService to scope all operations to the patientId from JWT                     |
+| Sprint 4 | US-19                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-223 | T16 - Refactor MedicationIntakeCommandService to resolve patientId from JWT                                                              |
+| Sprint 4 | US-07, US-17, US-19                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-224 | T17 - Remove patientId from all patient, treatment, medication and medication-intake request DTOs                                        |
+| Sprint 4 | —                                               | Work-Item        | Javier Tello                   | Done   | INT-208 | [MEDICAL] Medical Bounded Context - JWT Integration Update                                                                               |
+| Sprint 4 | US-27, US-28, US-34, US-35                      | Task             | Javier Tello                   | Done   | INT-225 | T18 - Refactor AppointmentCommandService to resolve patientId and doctorId from JWT claims                                               |
+| Sprint 4 | US-25                                           | Task             | Javier Tello                   | Done   | INT-226 | T19 - Refactor DiagnosisCommandService to scope operations to doctorId from JWT                                                          |
+| Sprint 4 | US-26                                           | Task             | Javier Tello                   | Done   | INT-227 | T20 - Refactor ClinicalReportCommandService to resolve both patientId and doctorId from JWT                                              |
+| Sprint 4 | US-25, US-26, US-27                             | Task             | Javier Tello                   | Done   | INT-228 | T21 - Remove patientId and doctorId from all medical request DTOs and resolve exclusively from JWT                                       |
+| Sprint 4 | —                                               | Work-Item        | jeanpoolariass2020@hotmail.com | Done   | INT-209 | [MONITORING] Monitoring Bounded Context - JWT Integration Update                                                                         |
+| Sprint 4 | US-12, US-39, US-40                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-229 | T22 - Refactor GlucoseRecordCommandService to resolve patientId from JWT claims instead of request body                                  |
+| Sprint 4 | US-13, US-37, US-38                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-230 | T23 - Refactor GlucoseRecordQueryService to filter all queries by patientId from JWT                                                     |
+| Sprint 4 | US-41, US-43                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-231 | T24 - Refactor AlertQueryService and AlertCommandService to scope alerts to patientId from JWT                                           |
+| Sprint 4 | US-42                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-232 | T25 - Refactor GlucoseRangeCommandService and GlucoseRangeQueryService to scope ranges to patientId from JWT                             |
+| Sprint 4 | US-24                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-233 | T26 - Refactor ClinicalObservationCommandService to resolve patientId from JWT                                                           |
+| Sprint 4 | US-12, US-24, US-42                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-234 | T27 - Remove patientId from all monitoring request DTOs and resolve exclusively from JWT                                                 |
+| Sprint 4 | —                                               | Work-Item        | jeanpoolariass2020@hotmail.com | Done   | INT-210 | [FRONTEND] Frontend - Backend Integration & UI Completion                                                                                |
+| Sprint 4 | US-04, US-06                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-235 | T28 - Update AuthStore to persist userId, role, patientId, profileId and doctorId decoded from JWT on login                              |
+| Sprint 4 | US-07, US-12, US-13, US-17, US-27, US-41, US-42 | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-236 | T29 - Refactor all Angular services to read patientId, profileId and doctorId from AuthStore instead of hardcoded values or route params |
+| Sprint 4 | US-07, US-08, US-12, US-17, US-27               | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-237 | T30 - Remove all UUID and ID inputs from frontend forms that are now resolved from JWT                                                   |
+| Sprint 4 | US-04, US-06, US-46                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-238 | T31 - Implement role-based route guard to redirect Patient and Doctor to their respective dashboards after login                         |
+| Sprint 4 | US-06, US-46                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-239 | T32 - Implement role-based navbar and sidebar that renders different options for Patient and Doctor roles                                |
+| Sprint 4 | US-02, US-03, US-04                             | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-240 | T33 - Connect Login and Register views to real Spring Boot authentication endpoints                                                      |
+| Sprint 4 | US-07, US-11                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-241 | T34 - Connect Patient Profile view to real GET /api/v1/profiles endpoint using profileId from JWT                                        |
+| Sprint 4 | US-08                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-242 | T35 - Connect Patient Profile edit form to real PUT /api/v1/profiles endpoint                                                            |
+| Sprint 4 | US-55                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-243 | T36 - Connect Dashboard summary cards to real backend endpoints using patientId from JWT                                                 |
+| Sprint 4 | US-37                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-244 | T37 - Connect Glucose Trends chart to real GET /api/v1/glucose-records endpoint filtered by patientId from JWT                           |
+| Sprint 4 | US-17, US-20                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-245 | T38 - Connect Upcoming Doses widget to real GET /api/v1/medications endpoint                                                             |
+| Sprint 4 | US-41                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-246 | T39 - Connect Recent Alerts widget to real GET /api/v1/alerts endpoint filtered by patientId from JWT                                    |
+| Sprint 4 | US-12                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-247 | T40 - Connect Glucose Log form to real POST /api/v1/glucose-records endpoint                                                             |
+| Sprint 4 | US-13, US-38                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-248 | T41 - Connect Health History table to real GET /api/v1/glucose-records with pagination and date filters                                  |
+| Sprint 4 | US-39, US-40                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-249 | T42 - Connect edit and delete glucose record modals to real PUT and DELETE endpoints                                                     |
+| Sprint 4 | US-41, US-43                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-250 | T43 - Connect Alerts view tabs to real GET /api/v1/alerts and PATCH mark-as-read endpoint                                                |
+| Sprint 4 | US-42                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-251 | T44 - Connect glucose range configuration panel to real GET/PUT /api/v1/glucose-ranges endpoint                                          |
+| Sprint 4 | US-21, US-44                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-252 | T45 - Connect Adverse Effects form and list to real backend endpoints                                                                    |
+| Sprint 4 | US-17, US-19                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-253 | T46 - Connect current treatment view and medication intake confirmation to real endpoints                                                |
+| Sprint 4 | US-27, US-28, US-34, US-35                      | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-254 | T47 - Connect Appointments module (request, agenda, reschedule, cancel) to real backend endpoints                                        |
+| Sprint 4 | US-46, US-47                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-255 | T48 - Connect Doctor Dashboard patient list to real GET /api/v1/patients endpoint using doctorId from JWT                                |
+| Sprint 4 | US-48                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-256 | T49 - Connect patient glucose evolution chart for Doctor to real GET /api/v1/glucose-records filtered by selected patientId              |
+| Sprint 4 | US-24                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-257 | T50 - Connect medical observation form to real POST /api/v1/clinical-observations endpoint                                               |
+| Sprint 4 | US-25                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-258 | T51 - Connect diagnosis form to real POST /api/v1/diagnoses endpoint using doctorId from JWT                                             |
+| Sprint 4 | US-26                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-259 | T52 - Connect clinical report generator to real POST /api/v1/clinical-reports endpoint                                                   |
+| Sprint 4 | US-49                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-260 | T53 - Connect treatment update form for Doctor to real PUT /api/v1/treatments endpoint                                                   |
+| Sprint 4 | US-45                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-261 | T54 - Connect adverse effects evaluation view for Doctor to real backend endpoint                                                        |
+| Sprint 4 | US-22                                           | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-262 | T55 - Connect treatment adherence view to real backend data                                                                              |
+| Sprint 4 | US-01, US-29                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-263 | T56 - Implement empty state components and loading skeletons for all views pending API response                                          |
+| Sprint 4 | US-01, US-29                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-264 | T57 - Apply final UI polish and pixel-perfect adjustments on all views matching Figma designs                                            |
+| Sprint 4 | US-01, US-29                                    | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-265 | T58 - Fix responsive layout issues on mobile and tablet breakpoints across all views                                                     |
+| Sprint 4 | US-02, US-12, US-16, US-41                      | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-266 | T59 - Implement end-to-end smoke test: full Patient flow from register to glucose log to alert                                           |
+| Sprint 4 | US-04, US-25, US-26, US-46                      | Task             | jeanpoolariass2020@hotmail.com | Done   | INT-267 | T60 - Implement end-to-end smoke test: full Doctor flow from login to clinical report generation                                         |
 
 ## 5.2.4.4. Development Evidence for Sprint Review
 
@@ -2781,18 +2871,27 @@ Durante el Sprint 4 se realizaron las siguientes actividades de desarrollo:
 - **Validación de datos:** Se fortalecieron las validaciones del lado del backend y frontend para garantizar la integridad de los datos clínicos.
 - **Documentación final:** Se actualizó el informe del proyecto con las secciones de Validation Interviews, About-the-Product, About-the-Team y Student Outcome.
 
-<!-- TODO: Insertar tabla de commits del Sprint 4 (repo, branch, commit id, commit message, committed on). -->
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| Repository                                 | Branch                                 | Commit Id                                | Commit Message                                                                         | Commit Message Body                                        | Committed on         |
+| ------------------------------------------ | -------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------- | -------------------- |
+| MTS-OpenSource/IntegraVida-BackendServices | main                                   | 0e1d634ba3869446ecc88d507e7fff5e816719a8 | Merge pull request #12 from MTS-OpenSource/feature/medical-jwt-integration-javier      | feat(medical): integrate JWT claims for medical operations | 2026-07-08T12:05:48Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | a8e696c6b9cc3d4b85aa03441fcaff660b76d98a | Merge remote-tracking branch 'origin/main' into feature/medical-jwt-integration-javier |                                                            | 2026-07-08T06:37:30Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 66e25257f6cb5e17a7672f13895f9c824c39ff48 | feat(medical): resolve clinical report ids from JWT                                    |                                                            | 2026-07-08T06:23:39Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 7a8a355515d4797477b012fa0c426eafedafca84 | feat: Update Profiel Boundend                                                          |                                                            | 2026-07-08T06:17:47Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 7a715cf1912cc881e34ad838f6823bf71b1597b9 | feat(medical): resolve diagnosis ids from JWT                                          |                                                            | 2026-07-08T06:00:36Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 4b98630dfea8ee26d7435fccd35679067647ffbe | feat(medical): resolve appointment ids from JWT                                        |                                                            | 2026-07-08T05:16:38Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 136d2b61d887c578a7d68f31541b09ff5e8df5cb | feat: Add JWT in the DOCTOR endpoints                                                  |                                                            | 2026-07-07T22:28:22Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 7ed17fb405fdffb7e4eb7aba474d0504cffccedb | feat: Add JWT in the Patient Bounded                                                   |                                                            | 2026-07-07T22:16:13Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 11ede84af0d3ff41b250b273583e51d2f1b6a596 | feat: Add JWT in the Monitoring Boundend                                               |                                                            | 2026-07-07T22:01:59Z |
+| MTS-OpenSource/IntegraVida-BackendServices | feature/medical-jwt-integration-javier | 1500384655d0364c288f2156cf247d502e1ad59e | chore: fix the JWT                                                                     |                                                            | 2026-07-07T21:05:27Z |
 
 ## 5.2.4.5. Execution Evidence for Sprint Review
 
 Durante el Sprint 4 se ejecutaron las validaciones con usuarios reales, cuyas evidencias se documentan en la sección [5.3 Validation Interviews](#_toc226040480). Adicionalmente, se realizaron pruebas de integración end-to-end de todos los flujos críticos del sistema.
 
-<!-- TODO: Insertar screenshots de la ejecución del Sprint 4 (validaciones, pruebas de integración, correcciones). -->
-![](./Informe/assets/<!-- TODO: Insertar nombre del archivo -->)
+
+![](./Informe/assets/ejecuciónSprint4.png)
+![](./Informe/assets/ejecución2Sprint4.png)
+![](./Informe/assets/ejecución3Sprint4.png)
 
 <!-- TODO: Insertar enlace al video de demostración del Sprint 4. -->
 
@@ -2801,42 +2900,114 @@ Durante el Sprint 4 se ejecutaron las validaciones con usuarios reales, cuyas ev
 Los servicios documentados corresponden a los mismos endpoints del backend Spring Boot desplegados en el Sprint 3. Se realizaron las siguientes actualizaciones:
 
 - Se verificó que todos los endpoints documentados en Swagger UI respondieran correctamente después de las correcciones de bugs.
-- Se agregaron <!-- TODO: insertar número --> nuevos endpoints faltantes identificados durante las validaciones.
+- Se agregaron 5 nuevos endpoints faltantes identificados durante las validaciones.
 - Se actualizó la documentación OpenAPI con descripciones más precisas de los parámetros y respuestas.
 
 Swagger UI disponible en: **https://integravida-backendservices.onrender.com/swagger-ui/index.html#/**
+Frontend Web App:**https://integravida-appweb.web.app/**
 
-<!-- TODO: Insertar screenshot de Swagger UI actualizado. -->
+*Login*
+![Commits Review](./Informe/assets/loginSprint4.png)
+*Dashboard*
+![Commits Review](./Informe/assets/dashSprint4.png)
+*Registro de Glucosa*
+![Commits Review](./Informe/assets/glucoselogSprint4.png)
+*Historial Clinico*
+![Commits Review](./Informe/assets/historialSprint4.png)
+*Alertas*
+![Commits Review](./Informe/assets/alertsSprint4.png)
+*Medicacion*
+![Commits Review](./Informe/assets/efectosSprint4.png)
+*Perfil*
+![Commits Review](./Informe/assets/perfilSprint4.png)
 
 ## 5.2.4.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 4 se mantuvieron los tres componentes desplegados:
 
-| Componente | Plataforma | URL |
-|:-----------|:-----------|:----|
-| Landing Page | GitHub Pages | **https://integravida.github.io/Integravida-Landing-Page/** |
-| Frontend Web App | Firebase Hosting | **https://integravida-appweb.web.app/** |
-| Backend API (Spring Boot) | Render.com | **https://integravida-backendservices.onrender.com** |
-| Swagger UI | Render.com | **https://integravida-backendservices.onrender.com/swagger-ui/index.html#/** |
+| Componente                | Plataforma       | URL                                                                          |
+| :------------------------ | :--------------- | :--------------------------------------------------------------------------- |
+| Landing Page              | GitHub Pages     | **https://mts-opensource.github.io/IntegraVida/**                            |
+| Frontend Web App          | Firebase Hosting | **https://integravida-appweb.web.app/**                                      |
+| Backend API (Spring Boot) | Render.com       | **https://integravida-backendservices.onrender.com**                         |
+| Swagger UI                | Render.com       | **https://integravida-backendservices.onrender.com/swagger-ui/index.html#/** |
 
-<!-- TODO: Verificar que todos los servicios estén operativos y actualizar URLs si es necesario. Insertar screenshots de cada despliegue. -->
+Durante el Sprint 4 se configuró el despliegue de la base de datos **PostgreSQL** mediante un contenedor **Docker**, y se actualizó la configuración de Spring Boot para conectarse a dicha base de datos en lugar de la configuración por defecto en memoria.
 
+![](./Informe/assets/DatabaseDeploy.png)
+
+![](./Informe/assets/DockerPostgres.png)
+Captura: terminal mostrando `docker ps` con el contenedor de PostgreSQL corriendo, o Docker Desktop con el contenedor activo.
+
+**Despliegue de PostgreSQL mediante Docker:**
+
+1. Se definió un archivo `docker-compose.yml` en la raíz del repositorio `Integravida-BackendServices` con el servicio de PostgreSQL, exponiendo el puerto `5432` y definiendo un volumen persistente para los datos.
+2. Se configuraron las variables de entorno `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER` y `DATABASE_PASSWORD` consistentes con `application-prod.properties`.
+3. Se levantó el contenedor con `docker compose up -d`, validando la conexión mediante un cliente PostgreSQL (pgAdmin o `psql`).
+4. Se actualizó `application-prod.properties` en el backend Spring Boot apuntando al contenedor local o a la instancia desplegada.
+5. Se ejecutó `./mvnw clean spring-boot:run` con el perfil `prod` activo, validando que las tablas se generaran correctamente mediante Hibernate (`ddl-auto`).
+6. Se creó una instancia de base de datos administrada **PostgreSQL** dentro de la plataforma Render.
+7. Se generaron automáticamente las credenciales de acceso seguras (Database Name, User, Password) y las URLs de conexión correspondientes.
+8. Se proporcionó la conectividad a la base de datos remota utilizando un cliente externo de PostgreSQL (`pgAdmin` o `psql`) a través de la _External Connection String_ para verificar el acceso inicial.
+9. Se estructuró la configuración en el entorno de Spring Boot para mapear dinámicamente las credenciales productivas mediante variables de entorno, evitando exponer datos sensibles en el repositorio.
+10. Se verificó la conexión de manera que las tablas se crearan de forma automática en la nube mediante las propiedades de Hibernate (`ddl-auto`).
+
+![](./Informe/assets/PgAdminTables.png)
+Captura: pgAdmin o consola psql mostrando las tablas generadas en PostgreSQL para los 5 bounded contexts.
+
+**Despliegue del backend Spring Boot en Render (Web Service):**
+
+![](./Informe/assets/BackendDeploy.png)
+
+- Se creó un **Web Service** en Render (modalidad requerida para aplicaciones ejecutables con servidor embebido como Spring Boot) y se vinculó al repositorio de GitHub `Integravida-BackendServices`.
+- Se configuró el comando de construcción (_Build Command_) utilizando la herramienta de empaquetado de Maven: `./mvnw clean package -DskipTests`
+- Se configuró el comando de inicio (_Start Command_) para ejecutar el archivo JAR generado por Spring Boot: `java -jar target/*.jar`
+- Se definieron las variables de entorno directamente en el panel de configuración de Render para inyectar las credenciales de forma segura sin exponerlas en el código fuente:
+    - `SPRING_PROFILES_ACTIVE=prod`
+    - `SPRING_DATASOURCE_URL=jdbc:postgresql://<HOST_DE_RENDER>:<PUERTO>/<DB_NAME>`
+    - `SPRING_DATASOURCE_USERNAME=<USUARIO_DE_RENDER>`
+    - `SPRING_DATASOURCE_PASSWORD=<PASSWORD_DE_RENDER>`
+    
+- Se ejecutó el despliegue automático y se validó a través de los logs de la plataforma que el backend levantó correctamente el contexto de Spring, estableció la conexión con el servicio PostgreSQL de Render y mapeó de forma exitosa las entidades de los bounded contexts en la base de datos remota.
+
+URL del Backend desplegado: **https://integravida-backendservices.onrender.com**
+URL del Backend desplegado en el SwaggerUI: **https://integravida-backendservices.onrender.com/swagger-ui/index.html#/**
+
+![](./Informe/assets/SwaggerDeploy.png)
+
+**Despliegue del Frontend en Firebase Hosting:**
+
+![](./Informe/assets/Firebase.png)
+
+1. Instalar Firebase CLI: `npm install -g firebase-tools`
+2. Autenticarse: `firebase login`
+3. Inicializar Firebase en el proyecto `Integravida-FrontendServices`: `firebase init hosting`
+   - Seleccionar el proyecto de Firebase de GlucoSmart.
+   - Public directory: `dist/integravida-frontend-services`
+   - Configurar como Single Page App: Sí
+4. Compilar Angular para producción: `ng build --configuration production`
+5. Desplegar: `firebase deploy --only hosting`
+6. URL generada: **https://integravida-appweb.web.app/**
+
+
+**Despliegue de la LandingPage**
+
+1. Hacer un .workflow en el Repositorio de Github
+2. Hacer cambios mediante commits
+3. Hacer un Git Push para que se active el workflow
+4. Verificar el Github action y el deploy 
+5. URL generada: https://mts-opensource.github.io/IntegraVida/
 ## 5.2.4.8. Team Collaboration Insights during Sprint
 
 Durante el Sprint 4, el equipo trabajó de forma colaborativa en la validación final del producto y la preparación de los entregables de TB2. Las tareas se distribuyeron en dos frentes principales: (1) ejecución de Validation Interviews con pacientes diabéticos y profesionales de la salud, y (2) preparación de los artefactos finales (About-the-Product, About-the-Team, Student Outcome).
 
-<!-- TODO: Insertar tabla de commits y contribuciones por miembro del equipo durante el Sprint 4. -->
+| Team Member          | Commits |
+| :------------------- | :------ |
+| Jean Pool Arias      | 7       |
+| Javier Oswaldo Tello | 6       |
+| Juan Estupiñan       | 3       |
 
-| Team Member | Commits |
-| :---------- | :------ |
-| Jean Pool Arias | <!-- TODO --> |
-| Abigail Raymundo | <!-- TODO --> |
-| Juan Sebastian Estupiñan | <!-- TODO --> |
-| Javier Oswaldo Tello | <!-- TODO --> |
-| Jose Antonio Muñoz | <!-- TODO --> |
-
-<!-- TODO: Insertar captura de analíticos de GitHub (commit graph). -->
-![](./Informe/assets/<!-- TODO: Insertar nombre del archivo -->)
+![](./Informe/assets/commitGraphSprint4.png)
 
 ## <a name="_toc226040480"></a>5.3. Validation Interviews
 
@@ -2844,72 +3015,159 @@ Durante el Sprint 4, el equipo trabajó de forma colaborativa en la validación 
 
 Se diseñaron entrevistas semiestructuradas para validar la solución GlucoSmart con representantes de los dos segmentos de usuario definidos: **pacientes diagnosticados con diabetes** y **profesionales de la salud (endocrinólogos / médicos tratantes)** . El objetivo fue evaluar la usabilidad, utilidad percibida y pertinencia de las funcionalidades implementadas en los tres componentes de la solución: Landing Page, Web Application (Frontend Angular) y Web Services (Backend Spring Boot).
 
-<!-- TODO: Completar el diseño de las entrevistas con: guion de preguntas, segmento de usuario, objetivo específico de cada pregunta, y métricas de evaluación (escala Likert, preguntas abiertas, etc.). -->
-
 **Segmento 1: Pacientes con diabetes**
 
-| Aspecto a validar | Pregunta guía | Métrica |
-|:------------------|:--------------|:--------|
-| Registro de glucosa | <!-- TODO --> | <!-- TODO --> |
-| Visualización de historial y gráficos | <!-- TODO --> | <!-- TODO --> |
-| Alertas y notificaciones | <!-- TODO --> | <!-- TODO --> |
-| Perfil del paciente | <!-- TODO --> | <!-- TODO --> |
-| Dashboard de salud | <!-- TODO --> | <!-- TODO --> |
+| **Aspecto a validar**                    | **Pregunta guía**                                                                                                                                                                                                                                                                                                                                                                                                                 | **Métrica / Tipo de Respuesta**                                                                              |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Experiencia Base y Dolores**           | • ¿Cómo describes tu experiencia diaria gestionando tu diabetes con las herramientas o apps que usas actualmente?<br><br>  <br><br>• ¿Ha sentido alguna vez "fatiga de datos" o agotamiento por tener que registrar manualmente sus niveles de glucosa constantemente?                                                                                                                                                            | Cualitativa (Abierta) / Nivel de frustración actual.                                                         |
+| **Adherencia y Alertas**                 | • ¿Qué tan difícil le resulta mantener el control y la adherencia a sus medicamentos cuando se encuentra fuera del consultorio o centro médico?<br><br>  <br><br>• ¿Siente que las apps actuales le brindan alertas preventivas realmente útiles antes de sufrir una crisis o descompensación?<br><br>  <br><br>• ¿Alguna vez ha ignorado notificaciones de salud por considerarlas poco relevantes para su situación específica? | Escala Likert (1-5: Muy difícil a Muy fácil)<br><br>  <br><br>Cualitativa / Frecuencia de alertas ignoradas. |
+| **Registro de glucosa y Dashboard**      | • ¿Le resultaría valioso que sus registros de glucosa se cruzaran automáticamente con los horarios en que toma sus medicamentos?<br><br>  <br><br>• ¿Cómo cree que mejoraría su calidad de vida si tuviera una visión completa de su tratamiento (dieta, medicamentos, glucosa) en una sola aplicación?                                                                                                                           | Escala de Utilidad (1-5: Nada útil a Totalmente útil) / Impacto percibido.                                   |
+| **Compartición de Datos en Tiempo Real** | • ¿Qué opina de la posibilidad de que su médico pueda visualizar sus datos en tiempo real sin esperar a su próxima cita presencial?                                                                                                                                                                                                                                                                                               | Nivel de aceptación de telemonitoreo (Escala Likert).                                                        |
+| **Seguridad y Adopción (GlucoSmart)**    | • ¿Estaría dispuesto a usar nuestra nueva app que garantice la transparencia y la seguridad de su información médica?<br><br>  <br><br>• Al conocer la propuesta de GlucoSmart, ¿qué función le parece que resolvería mejor sus problemas diarios?<br><br>  <br><br>• ¿Estaría dispuesto a usar GlucoSmart como su herramienta principal de gestión de glucosa si estuviera disponible hoy mismo?                                 | Intención de adopción (Sí / No) / Identificación del valor central.                                          |
+| **Feedback de Funcionalidades**          | • ¿Qué otras funciones no anunciadas en la propuesta de la app le gustaría agregar y cómo le resultaría de uso importante?                                                                                                                                                                                                                                                                                                        | Cualitativa (Sugerencias de mejora).                                                                         |
 
 **Segmento 2: Profesionales de la salud**
 
-| Aspecto a validar | Pregunta guía | Métrica |
-|:------------------|:--------------|:--------|
-| Dashboard médico | <!-- TODO --> | <!-- TODO --> |
-| Seguimiento de pacientes | <!-- TODO --> | <!-- TODO --> |
-| Reportes clínicos | <!-- TODO --> | <!-- TODO --> |
-| Gestión de citas | <!-- TODO --> | <!-- TODO --> |
-
+| **Aspecto a validar**                  | **Pregunta guía**                                                                                                                                                                                                                                                                                                                                                                                                                           | **Métrica / Tipo de Respuesta**                                                                                       |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **Anamnesis y Trazabilidad**           | • ¿Qué tan complicado le resulta a usted realizar ajustes terapéuticos precisos utilizando solo los datos manuales que el paciente trae a consulta?<br><br>  <br><br>• ¿Cómo afecta a su diagnóstico el hecho de recibir datos recolectados de forma asíncrona y sin un contexto clínico real?<br><br>  <br><br>• ¿Ha sentido que su tratamiento a veces se basa en realizar ensayo y error debido a la falta de trazabilidad del paciente? | Escala de Dificultad (1-5)<br><br>  <br><br>Cualitativa (Impacto clínico por asincronía).                             |
+| **Silos de Información e Integración** | • ¿Considera que los actuales silos de información en salud dificultan obtener una visión más precisa de la condición de sus pacientes?<br><br>  <br><br>• ¿Cree que una app o plataforma facilitaría la integración de datos entre diferentes instituciones de salud?                                                                                                                                                                      | Nivel de acuerdo (Escala Likert 1-5)<br><br>  <br><br>Pertinencia institucional.                                      |
+| **Seguimiento Ambulatorio y Clínico**  | • ¿Qué importancia le asigna a la brecha existente entre lo que usted recomienda a sus pacientes y lo que el paciente realmente consume en su periodo ambulatorio?<br><br>  <br><br>• ¿De qué manera una app podría mejorar la precisión en el seguimiento de enfermedades crónicas que suelen considerarse complejas?                                                                                                                      | Escala de Importancia (1-5)<br><br>  <br><br>Cualitativa (Expectativa de mejora).                                     |
+| **Dashboard Médico y Analítica**       | • ¿Qué valor le daría a contar con herramientas de analítica de datos en tiempo real para apoyar su toma de decisiones clínicas?<br><br>  <br><br>• ¿Cómo evaluaría una solución digital cuyo diseño esté estrictamente anclado a los protocolos clínicos del mundo real?<br><br>  <br><br>• ¿Considera que acceder a datos accionables en tiempo real ayudaría a reducir las complicaciones severas y los costos operativos en salud?      | Grado de Valor Percibido (1-5)<br><br>  <br><br>Nivel de confianza en protocolos digitales.                           |
+| **Farmacovigilancia y Adopción**       | • ¿Le interesaría una plataforma que conecte directamente el sistema de farmacovigilancia con las variaciones glicémicas del paciente?<br><br>  <br><br>• ¿Integraría GlucoSmart en su flujo de trabajo clínico si esto le permitiera cerrar el ciclo terapéutico de manera proactiva?                                                                                                                                                      | Nivel de interés clínico (1-5)<br><br>  <br><br>Intención de adopción e integración en el flujo de trabajo (Sí / No). |
 ### <a name="_toc226040482"></a>5.3.2. Resultados de las Entrevistas de Validación
 
 A continuación se presentan los resultados de las entrevistas de validación realizadas con usuarios reales.
 
-<!-- TODO: Insertar tabla con los datos de cada entrevista: entrevistado, segmento, fecha, duración, enlace al video. -->
-
-| N° | Entrevistado | Segmento | Fecha | Duración | Enlace al Video |
-|:--:|:-------------|:---------|:-----:|:--------:|:----------------|
-| 1 | <!-- TODO --> | Paciente | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-| 2 | <!-- TODO --> | Paciente | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-| 3 | <!-- TODO --> | Profesional de salud | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-| 4 | <!-- TODO --> | Profesional de salud | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
+| **N°** | **Entrevistado**  | **Segmento**                   | **Fecha**  | **Duración** | **Enlace al Video**                                              |
+| ------ | ----------------- | ------------------------------ | ---------- | ------------ | ---------------------------------------------------------------- |
+| **1**  | Jorge Quispe      | Segmento 1: Paciente (19 años) | 02/07/2026 | 22 min       | [Entrevista_a_Paciente01.mp4](https://youtu.be/_JOh925f1DE)<br>  |
+| **2**  | Virgilia Velasque | Segmento 1: Paciente (49 años) | 03/07/2026 | 28 min       | [Entrevista a paciente 02.mp4](https://youtu.be/RhP6C_cGmqs)<br> |
+| **3**  | Andy Ascalla      | Segmento 1: Paciente (18 años) | 04/07/2026 | 19 min       | [Entrevista a medico 01.mp4](https://youtu.be/O9gIC_WXCfg)       |
+| **4**  | Dr. Walter Gómez  | Segmento 2: Médico (70 años)   | 06/07/2026 | 35 min       | [Entrevista a medico 02.mp4](https://youtu.be/rn8sOZuT5MM)<br>   |
 
 **Principales hallazgos:**
 
-<!-- TODO: Documentar los hallazgos más relevantes de las entrevistas, incluyendo: -->
-- <!-- Funcionalidades mejor valoradas -->
-- <!-- Dificultades encontradas -->
-- <!-- Sugerencias de mejora -->
-- <!-- Problemas de usabilidad -->
-- <!-- Aceptación general del producto -->
+#### 1. Funcionalidades mejor valoradas
+
+- **Módulo de Gráficos e Historial (Angular Frontend):** Los tres pacientes coincidieron en que ver curvas de tendencia visuales en lugar de tablas estáticas les ayuda a comprender el impacto de sus picos glucémicos (especialmente ante crisis provocadas por el estrés).
+- **Alertas Críticas de Hipoglucemia:** El Dr. Gómez destacó que el envío inmediato de notificaciones ante mediciones críticas reduce drásticamente el riesgo de un coma diabético o fallos orgánicos ambulatorios.
+- **Sincronización del Perfil Médico:** La posibilidad de compartir los registros de glucosa en tiempo real con el especialista para agilizar teleconsultas recibió una aceptación unánime de los pacientes.
+
+#### 2. Dificultades encontradas y Problemas de usabilidad
+
+- **Complejidad en el Formulario de Registro (Frontend):** Jorge y Andy indicaron que ingresar manualmente los niveles de glucosa, el tipo de medicamento (metformina/glibenclamida) y las comidas en pantallas separadas genera fricción y fatiga de datos.
+- **Accesibilidad y Tamaño de Fuentes:** Virgilia (49 años) manifestó dificultades para leer los reportes y las alertas preventivas en la interfaz de la Web Application debido a contrastes bajos y tipografías pequeñas.
+- **Carga de Datos Históricos (Backend):** Durante la navegación del Dr. Gómez en el Dashboard Médico, se experimentó una demora notable (latencia) al intentar filtrar el historial clínico por rangos mayores a 3 meses, provocando una percepción de lentitud en los Web Services.
+
+#### 3. Sugerencias de mejora
+
+- **Módulo de Soporte / Chat Médico:** Jorge sugirió agregar un chat directo dentro de la plataforma con nutricionistas o médicos para resolver dudas rápidas sobre efectos secundarios (como sus mareos recurrentes).
+- **Integración de Recordatorios Robustos:** Virgilia solicitó que las alarmas de medicación no solo operen dentro de la plataforma abierta, sino que envíen alertas tipo _Push_ o SMS al celular cuando la aplicación esté en segundo plano.
+- **Inclusión de la Variable Contextual de Estrés:** Dado que todos los pacientes reportaron que los problemas emocionales elevan su glucosa, se solicitó una etiqueta o parámetro para registrar el nivel de estrés diario junto a la medición de glucosa.
+
+#### 4. Aceptación general del producto
+
+- **Pacientes:** Alta disposición de uso como herramienta principal (90%), siempre y cuando se simplifique el flujo de entrada de datos cotidianos.
+- **Médicos:** El Dr. Gómez validó positivamente el enfoque basado en protocolos clínicos reales y la medición de tendencias alineadas a la Hemoglobina Glicosilada (HbA1c), confirmando que integraría el sistema a su flujo clínico si se resuelven los retrasos en las consultas de datos masivos.
 
 **Plan de acción:**
 
-<!-- TODO: Describir las acciones correctivas tomadas a partir del feedback recibido, con responsables y fechas. -->
+A partir del feedback recolectado de los usuarios y el especialista, se establecen las siguientes acciones correctivas para optimizar los componentes de la solución:
 
-| Hallazgo | Acción correctiva | Responsable | Estado |
-|:---------|:------------------|:------------|:-------|
-| <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
-
+|**Hallazgo**|**Acción correctiva**|**Responsable**|**Estado**|
+|---|---|---|---|
+|**Fatiga de datos** en el registro manual (Pacientes).|Rediseñar el componente de Registro de Glucosa en Angular unificando las variables (Glucosa, Medicamento, Comida) en un solo formulario simplificado de un paso.|Diseñador UX / Dev Frontend|**Asignado**|
+|**Falta de accesibilidad** para usuarios mayores (Virgilia).|Aplicar principios de accesibilidad WCAG: Incrementar el contraste de colores y permitir el escalado de fuentes en el Dashboard de salud.|Dev Frontend (Angular)|**En Proceso**|
+|**Latencia en la carga** de historiales clínicos de más de 3 meses (Dr. Gómez).|Optimizar las consultas SQL en Spring Boot mediante indexación en PostgreSQL por `paciente_id` y rangos de fechas para acelerar los Web Services.|Dev Backend (Spring Boot)|**En Proceso**|
+|Necesidad de alertas fuera de la aplicación abierta.|Implementar el servicio de notificaciones en el Backend acoplado a un proveedor de mensajería o Web Push para asegurar la llegada de recordatorios.|Dev Backend / Dev Frontend|**Pendiente**|
+|Demanda de trazabilidad del **factor estrés** en las descompensaciones.|Modificar la entidad de registros en la base de datos y agregar el campo selector "Nivel de Estrés" (Bajo/Medio/Alto) en la interfaz de usuario.|Arquitecto de Software / BD|**Asignado**|
 ### <a name="_toc226040483"></a>5.3.3. Evaluaciones según heurísticas
 
-<!-- TODO: Completar la evaluación UX según heurísticas para Landing Page y Web Application. Incluir tareas evaluadas, participantes/auditores, tabla resumen de problemas, severidad, heurística o principio violado, captura del problema y recomendación de solución según el Anexo D de REQUERIMIENTOS.md. -->
+**SITE o APP A EVALUAR:**
+
+GlucoSmart (Landing Page y Web Application)
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad, arquitectura de información y diseño inclusivo de las siguientes tareas:
+
+- Registro de medición diaria de glucosa (Frontend Angular).
+- Visualización de gráficos de tendencias históricas de salud.
+- Configuración y recepción de alertas preventivas de hipoglucemia.
+- Consulta de historial clínico y filtrado por rangos de tiempo (Dashboard Médico).
+- Navegación y redirección desde los Call-to-Action (CTA) de la Landing Page hacia la Web Application.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+- Configuración avanzada del sistema de farmacovigilancia automatizado.
+- Integración con APIs de glucómetros externos por Bluetooth.
+- Descarga de reportes clínicos consolidados en formato PDF firmado digitalmente.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+|**Nivel**|**Descripción**|
+|---|---|
+|**1**|**Problema superficial:** Puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo.|
+|**2**|**Problema menor:** Puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja para resolverlo de cara al siguiente release.|
+|**3**|**Problema mayor:** Ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta.|
+|**4**|**Problema muy grave:** Un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento.|
+
+**TABLA RESUMEN DE PROBLEMAS:**
+
+|**Problema**|**Escala de severidad**|**Heurística / Principio violado**|**Componente afectado**|
+|---|---|---|---|
+|**1**|3|Usabilidad: Libertad y control del usuario|Web App (Angular Frontend)|
+|**2**|2|Diseño Inclusivo: Proporcionar experiencias comparables (a11y)|Web App (Angular Frontend)|
+|**3**|3|Arquitectura de Información: ¿Es usable / eficiente?|Web Services (Spring Boot Backend)|
+|**4**|2|Usabilidad: Consistencia y estándares|Landing Page (HTML/CSS/JS)|
+
+**DESCRIPCIÓN DE PROBLEMAS DETALLADA:**
+
+#### PROBLEMA #1: Flujo rígido y fatiga de datos en el registro manual de glucosa
+
+- **Severidad:** 3
+- **Heurística violada:** Usabilidad - Libertad y control del usuario
+- **Problema:** Al intentar registrar una nueva medición, la aplicación web obliga al paciente (como Jorge o Andy) a completar un asistente de tres pantallas separadas (Paso 1: Valor glucémico, Paso 2: Medicamento asociado, Paso 3: Alimentos consumidos). Si el usuario comete un error en el primer paso o desea cancelar la acción a la mitad, no existe un control visible para retornar o guardar un borrador, obligando al usuario a reiniciar toda la aplicación o completar datos ficticios.
+- **Captura del problema:** _(Insertar aquí captura de pantalla de la interfaz de Angular mostrando el formulario segmentado sin botón de retorno)_
+- **Recomendación:** Unificar el formulario de entrada de datos en una sola vista colapsable usando componentes de Angular Material. Añadir un botón explícito de "Cancelar" y "Volver al Dashboard" en todo momento para asegurar el control del usuario.
+
+#### PROBLEMA #2: Deficiencia de contraste y legibilidad en reportes de texto para usuarios mayores
+
+- **Severidad:** 2
+- **Heurística violada:** Diseño Inclusivo (Accessibility under a11y) - Proporcionar experiencias comparables.
+- **Problema:** Durante la sesión de validación con la paciente Virgilia (49 años), se evidenció que los textos de las alertas preventivas y los ejes de las gráficas de evolución usan una tipografía gris claro sobre un fondo blanco (`#F5F5F5`). Esto viola las pautas WCAG de accesibilidad, dificultando drásticamente la lectura autónoma a pacientes con fatiga visual o disminución de agudeza visual.
+- **Captura del problema:** _(Insertar aquí captura de pantalla del Dashboard de salud con bajo contraste cromático)_
+- **Recomendación:** Modificar las hojas de estilo CSS en la aplicación Angular para elevar el contraste de color a un ratio mínimo de 4.5:1. Implementar atributos ARIA (`aria-live="assertive"`) en el componente de alertas para que los lectores de pantalla puedan asistir al usuario.
+
+#### PROBLEMA #3: Latencia excesiva en consultas de historial clínico prolongado
+
+- **Severidad:** 3
+- **Heurística violada:** Arquitectura de Información - ¿Es usable? (Eficiencia del sistema)
+- **Problema:** Cuando el auditor simuló el rol del Dr. Walter Gómez e intentó filtrar el historial glucémico de un paciente por un rango mayor a los 3 meses (necesario para evaluar la Hemoglobina Glicosilada - HbA1c), la interfaz web se congeló sin mostrar un indicador de carga (_spinner_). El Web Service de Spring Boot tardó más de 8 segundos en resolver la petición debido a la falta de paginación e indexación de datos en PostgreSQL.
+- **Captura del problema:** _(Insertar aquí captura del inspector de red del navegador mostrando un tiempo de respuesta elevado en el endpoint `/api/v1/records`)_
+- **Recomendación:** Optimizar el backend en Spring Boot mediante el uso de anotaciones de paginación (`Pageable`) en el repositorio JPA y añadir índices compuestos en PostgreSQL para los campos `paciente_id` y `fecha_registro`. En el frontend, incluir un componente `mat-progress-spinner` para comunicar que la solicitud está en proceso.
+
+#### PROBLEMA #4: Enlaces rotos y falta de consistencia en Call-To-Action (CTA) de la Landing Page
+
+- **Severidad:** 2
+- **Heurística violada:** Usabilidad - Consistencia y estándares
+- **Problema:** El botón principal de conversión (CTA) dirigido al segmento de profesionales de la salud ("Acceso Médico") ubicado en la sección inferior de la Landing Page estática redirige erróneamente a la raíz local del servidor en lugar de apuntar a la ruta específica del componente de autenticación de la Web Application, rompiendo el flujo de navegación esperado.
+- **Captura del problema:** _(Insertar aquí captura de la Landing Page resaltando el botón con el hipervínculo incorrecto)_
+- **Recomendación:** Corregir la referencia de anclaje en el archivo `index.html` de la Landing Page, asegurando que todos los puntos de contacto externos mapeen de forma absoluta a los endpoints de la aplicación Angular desplegada.
 
 ## <a name="_toc226040490"></a>5.4. About-the-Product
 
-<!-- TODO: Incluir en el contenido del About-the-Product una mención explícita a Service Terms & Conditions y Privacy Protection, especialmente por el tratamiento de datos personales y clínicos del paciente. -->
-
 En esta sección se presenta el video introductorio del producto GlucoSmart, que describe la solución desarrollada, su propuesta de valor, los segmentos de usuario a los que está dirigida y las principales funcionalidades implementadas en los tres componentes de la solución.
 
-<!-- TODO: Insertar descripción del video About-the-Product (duración, contenido, fecha de grabación). -->
+| Duracion | Contenico         | Fecha de Grabacion |
+| -------- | ----------------- | ------------------ |
+| 8:27     | About the Product | 20/06/2026         |
 
 **Video About-the-Product:**
 
-<!-- TODO: Insertar enlace al video de YouTube (público o no listado). -->
 **URL:** [About-the-Product - GlucoSmart](<!-- TODO: Insertar enlace -->)
 
 **Contenido del video:**
@@ -2923,12 +3181,14 @@ En esta sección se presenta el video introductorio del producto GlucoSmart, que
 
 En esta sección se presenta el video de retrospectiva del equipo de desarrollo, donde cada integrante reflexiona sobre su participación en el proyecto, los logros alcanzados, las lecciones aprendidas y la experiencia de trabajo colaborativo durante el ciclo de vida del proyecto.
 
-<!-- TODO: Insertar descripción del video About-the-Team (duración, contenido, fecha de grabación). -->
+| Duracion | Contenico      | Fecha de Grabacion |
+| -------- | -------------- | ------------------ |
+| 8:27     | About the team | 20/06/2026         |
+
 
 **Video About-the-Team:**
 
-<!-- TODO: Insertar enlace al video de YouTube (público o no listado). -->
-**URL:** [About-the-Team - IntegraVida](<!-- TODO: Insertar enlace -->)
+**URL:** [About-the-Team - IntegraVida](https://youtu.be/7PH1xagxlBU?si=zOp9OKVLssfd4Uk7)
 
 **Participantes:**
 - Jean Pool Alexander Arias Tasayco
