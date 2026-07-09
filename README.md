@@ -3168,7 +3168,7 @@ En esta sección se presenta el video introductorio del producto GlucoSmart, que
 
 **Video About-the-Product:**
 
-**URL:** [About-the-Product - GlucoSmart](<!-- TODO: Insertar enlace -->)
+**URL:** [About-the-Product - GlucoSmart](https://youtu.be/LJl85ku9Ycc)
 
 **Contenido del video:**
 1. Introducción al problema de salud abordado (diabetes y fragmentación de información clínica).
