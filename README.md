@@ -27,12 +27,13 @@
 | Nombre | Código |
 | :--- | :---: |
 | Arias Tasayco, Jean Pool Alexander | U202414054 |
-| Raymundo Villarroel, Abigail Nadhim | U202318001 |
 | Estupiñan Olortegui, Juan Sebastian | U202223405 |
 | Tello Murga, Javier Oswaldo | U202218387 |
 
 
 </div>
+
+<!-- TODO: Verificar que la tabla de integrantes incluya a todos los miembros evaluados en el informe y en la rúbrica, incluyendo código de estudiante, nombres completos consistentes y foto/perfil cuando corresponda. -->
 
 <h5 align="center">Ciclo 2026-10</h5>
 
@@ -74,6 +75,8 @@
 	- [ <https://github.com/MTS-OpenSource/InformeProyecto.git>](https://github.com/MTS-OpenSource/InformeProyecto)
 	- https://github.com/MTS-OpenSource/Integravida-FrontendServices.git
 	- https://github.com/MTS-OpenSource/IntegraVida-BackendServices.git
+
+<!-- TODO: Completar Project Report Collaboration Insights con evidencias por entrega del repositorio InformeProyecto: descripción de cómo se elaboró el informe, participación de cada integrante, capturas de analíticos de commits/contribuciones y coherencia con el Registro de Versiones del Informe. -->
 
 - AV3:
   - ¿Qué Problema se encontró?
@@ -244,6 +247,7 @@
 - [5.3 Validation Interviews](#_toc226040480)
   - [5.3.1 Diseño de Entrevistas de Validación](#_toc226040481)
   - [5.3.2 Resultados de las Entrevistas de Validación](#_toc226040482)
+  - [5.3.3 Evaluaciones según heurísticas](#_toc226040483)
 
 ## 5.4. About-the-Product
 
@@ -274,6 +278,8 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 **Criterio:** Capacidad de comunicarse efectivamente con un rango de audiencias.
 
 En el siguiente cuadro se describen las acciones realizadas y conclusiones por parte del grupo, que permiten sustentar el logro del ABET – EAC - Student Outcome 3.
+
+<!-- TODO: Revisar el Student Outcome contra el enunciado oficial del curso y el Anexo A de REQUERIMIENTOS.md. Asegurar que cada integrante tenga acciones específicas por entrega (AV1, TB1, AV2/TB2/TF según corresponda), incluyendo evidencias alineadas con el video About-the-Team. -->
 
 | Criterio específico                                                        | Acciones realizadas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Conclusiones                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |     |
 | :------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
@@ -434,8 +440,8 @@ A partir de nuestros supuestos, hemos formulado las siguientes declaraciones de 
 
 El Lean UX Canvas sintetiza los hallazgos del proceso Lean UX, organizando en una sola vista el Problem Statement, los segmentos objetivo, las Assumptions (de negocio, usuario y features), las Hypothesis, los Business Outcomes y User Outcomes, las funcionalidades mínimas (MVP) y los criterios de éxito. A continuación se presenta el Lean UX Canvas de **GlucoSmart**, el cual integra los resultados del análisis 5W+2H y las entrevistas realizadas a pacientes y médicos.
 
-<!-- TODO: Reemplazar con la imagen actualizada del Lean UX Canvas que cubra todo el alcance del proyecto, incluyendo Business Outcomes, User Outcomes y las 5+ Business Assumptions -->
-![LeanUXCanvas](./Informe/assets/LeanUxCanvas.png)
+![LeanUXCanvas](./Informe/assets/LeanUxCanvas.jpg)
+*Lean Ux Canvas realizado en Miro el link al board completo se encuentra en la seccion de anexos*
 
 **Nota:** Se debe verificar que el canvas incluya explícitamente:
 - **Problem Statement:** Redactado siguiendo el patrón Lean UX (problema, afectados, impacto, solución).
@@ -817,8 +823,8 @@ Los mapas de empatía permiten profundizar en la comprensión del estado emocion
 **Interpretación del mapa:** El médico valora la precisión de los datos clínicos pero recibe información fragmentada y desordenada del paciente. Sabe que la adherencia al tratamiento es el factor más crítico, pero no tiene herramientas para medirla objetivamente. Escucha de sus pacientes las mismas excusas ("se me olvidó", "no tuve tiempo") y desea contar con un sistema que le muestre la realidad del cumplimiento terapéutico para poder ajustar tratamientos con evidencia concreta.
 ## <a name="_toc226040407"></a>2.4 Big Picture Event Storming
 
-<!-- TODO: Reemplazar EventStorming.jpg con un diagrama de Big Picture Event Storming que siga la notación estándar de Event Storming (Domain Events naranja, Commands azul, Aggregates amarillo, Policies púrpura, Read Models verde, External Systems rosado, Actors/Personas amarillo claro). El diagrama actual no utiliza la notación correcta de Event Storming. -->
 ![EventStorming|601](./Informe/assets/EventStorming.jpg)
+*Big Picture Event Storming realizado en Miro el link al board completo se encuentra en la seccion de anexos*
 
 El análisis de _Big Picture Event Storming_ se ha realizado con el objetivo de comprender la complejidad del dominio de la gestión de la diabetes y la farmacovigilancia. Esta dinámica nos permitió visualizar cronológicamente cómo interactúan los pacientes, los médicos y el sistema a lo largo del proceso de tratamiento.
 
@@ -1035,7 +1041,7 @@ Información personal y profesional registrada en el sistema según el tipo de u
 
 En esta sección se presentan las épicas y las historias de usuario del proyecto **GlucoSmart**, alineadas con las necesidades funcionales de los principales actores del sistema: **pacientes** y **doctores**. Estas historias de usuario servirán como base para la priorización del backlog, el diseño del sistema y la planificación del desarrollo.
 
-<!-- TODO: Expandir los Acceptance Criteria de cada User Story para incluir al menos 2-3 escenarios Given-When-Then por historia (cubriendo happy path, flujo alternativo y casos de error). Actualmente cada US tiene un solo escenario. -->
+Los criterios de aceptacion de las historias se complementan con escenarios Given-When-Then que cubren el flujo principal, un flujo alternativo y un caso de error o validacion.
 
 ### Epics
 
@@ -1109,10 +1115,70 @@ En esta sección se presentan las épicas y las historias de usuario del proyect
 | US-54    | Confirmar cita médica                        | Como usuario, quiero confirmar una cita programada para asegurar mi atención médica. | **Scenario 1:**<br>**Given** the appointment is scheduled,<br>**When** the user confirms it,<br>**Then** the system updates the status. | EP-07 |
 | US-55    | Visualizar resumen general del sistema       | Como usuario, quiero ver un resumen general de mi información para tener una visión rápida de mi estado de salud. | **Scenario 1:**<br>**Given** the user accesses the dashboard,<br>**When** the system loads the data,<br>**Then** the system displays a summarized view of health data. | EP-04 |
 
+#### Acceptance Criteria detallados
+
+| Story ID | Scenario 1 - Happy path | Scenario 2 - Alternative flow | Scenario 3 - Error or validation |
+| --- | --- | --- | --- |
+| US-01 | Given the visitor enters the landing page, when the hero section loads, then the value proposition and diabetes management purpose are visible. | Given the visitor uses a mobile device, when the hero section is displayed, then the content remains readable and responsive. | Given the main image cannot load, when the hero section is rendered, then the key text and call to action remain available. |
+| US-02 | Given the patient enters valid registration data, when the form is submitted, then the system creates a patient account. | Given the patient includes optional clinical data, when registration is completed, then the system stores it with the account. | Given the email is duplicated or required fields are missing, when the form is submitted, then the system shows validation messages. |
+| US-03 | Given the doctor enters valid professional data, when the form is submitted, then the system creates a doctor account. | Given the doctor adds specialty information, when registration is completed, then the system associates it with the profile. | Given professional data is incomplete, when the form is submitted, then the system blocks registration and requests correction. |
+| US-04 | Given the user has an account, when valid credentials are entered, then the system grants access. | Given the user has a role, when login succeeds, then the system redirects to the corresponding dashboard. | Given credentials are invalid, when login is attempted, then the system denies access and displays an error. |
+| US-05 | Given the user enters a registered email, when recovery is requested, then the system sends reset instructions. | Given the user opens a valid recovery link, when a new password is submitted, then the password is updated. | Given the email is invalid or not registered, when recovery is requested, then the system displays a validation message. |
+| US-06 | Given the user is authenticated, when Log Out is selected, then the session is closed. | Given the session expires, when the user continues browsing, then the system redirects to login. | Given a logged-out user accesses a protected route, when the request is made, then the system blocks access. |
+| US-07 | Given the patient completes required profile fields, when the profile is saved, then the data is stored. | Given optional sections are incomplete, when required fields are valid, then the profile remains editable and valid. | Given required fields are empty or invalid, when saving is attempted, then field-level errors are shown. |
+| US-08 | Given the patient has a profile, when data is edited and saved, then the profile is updated. | Given the patient cancels editing, when the form closes, then previous data remains unchanged. | Given invalid values are entered, when saving is attempted, then the update is rejected. |
+| US-09 | Given the patient enters valid medical background, when it is submitted, then it is stored in the clinical record. | Given the patient adds multiple antecedents, when the list is saved, then all entries are displayed. | Given an antecedent is incomplete, when saving is attempted, then the system requests missing information. |
+| US-10 | Given the patient has health records, when history is opened, then records are shown in an organized timeline. | Given the patient filters by period, when the filter is applied, then matching records are displayed. | Given no records exist for the selected period, when history loads, then an empty-state message is shown. |
+| US-11 | Given the patient opens the profile view, when data is available, then personal and clinical information is shown together. | Given optional fields are empty, when the profile loads, then available data is still displayed correctly. | Given profile data cannot be loaded, when the view is requested, then an error and retry option are shown. |
+| US-12 | Given the patient enters a valid glucose value, when the record is saved, then the measurement is stored. | Given the patient adds notes, when the record is saved, then notes are linked to the measurement. | Given the glucose value is missing or invalid, when submitting, then saving is prevented and feedback is shown. |
+| US-13 | Given the patient has glucose records, when history is opened, then records are listed chronologically. | Given the patient changes sorting or pagination, when the list updates, then records remain consistent. | Given records cannot be retrieved, when the section loads, then the system shows an error message. |
+| US-14 | Given the patient enters valid symptom information, when it is submitted, then the symptom is stored. | Given the patient selects symptom intensity, when the record is saved, then intensity is shown with the symptom. | Given required symptom details are missing, when submitting, then the system requests completion. |
+| US-15 | Given the patient has health data, when the progress panel opens, then a health evolution summary is displayed. | Given the patient selects another period, when the summary refreshes, then values are recalculated. | Given there is insufficient data, when the panel loads, then the system explains that more records are needed. |
+| US-16 | Given a glucose value is outside range, when it is validated, then the system generates an alert. | Given the value is within range, when it is validated, then no risk alert is generated. | Given range configuration is unavailable, when validation runs, then default thresholds are used or the patient is informed. |
+| US-17 | Given the patient has an active treatment, when the treatment section opens, then current indications are displayed. | Given multiple medications are active, when the section loads, then all schedules are listed. | Given no active treatment exists, when the section opens, then an empty-state message is shown. |
+| US-18 | Given the doctor enters a valid treatment plan, when it is saved, then the prescription is stored. | Given the doctor edits dosage before saving, when submitted, then the latest values are stored. | Given medication or dosage data is missing, when saving is attempted, then the system blocks the action. |
+| US-19 | Given the patient confirms a scheduled medication intake, when saved, then the intake is recorded. | Given the patient marks a dose as delayed, when saved, then the history reflects the delay. | Given the selected medication is inactive, when confirmation is attempted, then the system prevents the record. |
+| US-20 | Given medication schedules are configured, when the scheduled time arrives, then the system sends a reminder. | Given the dose was already confirmed, when reminder time arrives, then duplicate reminders are avoided. | Given notifications are disabled, when a reminder should be sent, then the system informs that permissions are required. |
+| US-21 | Given the patient completes an adverse effect report, when submitted, then the report is stored. | Given the effect is severe, when submitted, then the system prioritizes it for medical review. | Given required report details are missing, when submitted, then validation messages are displayed. |
+| US-22 | Given the doctor opens adherence information, when intake records exist, then adherence level is displayed. | Given the doctor filters by date, when applied, then adherence is recalculated. | Given there is insufficient intake data, when adherence is requested, then the system indicates the metric cannot be calculated reliably. |
+| US-23 | Given the doctor opens a patient record, when clinical information exists, then consolidated data is displayed. | Given the doctor switches sections, when a section is selected, then relevant data is shown. | Given the doctor is not authorized, when the record is requested, then access is denied. |
+| US-24 | Given the doctor enters a valid observation, when saved, then it is stored in the patient record. | Given the doctor adds recommendations, when saved, then recommendations are linked to the note. | Given the observation is empty, when saving is attempted, then content is required. |
+| US-25 | Given the doctor enters a valid diagnosis, when submitted, then it is stored in the clinical history. | Given the doctor adds supporting notes, when saved, then notes are associated with the diagnosis. | Given diagnosis information is incomplete, when submitted, then saving is prevented. |
+| US-26 | Given the doctor requests a clinical report, when patient data exists, then a structured summary is generated. | Given the doctor selects a period, when generated, then the report includes only that period. | Given no clinical data exists, when requested, then the system shows that the report cannot be generated. |
+| US-27 | Given the patient submits a valid appointment request, when the slot is available, then the appointment is scheduled. | Given multiple doctors are available, when one is selected, then the appointment is linked to that doctor. | Given the slot is unavailable, when submitted, then another date or time is requested. |
+| US-28 | Given the user has appointments, when the agenda is opened, then appointments are displayed chronologically. | Given the user filters by status, when applied, then matching appointments are shown. | Given no appointments exist, when the agenda loads, then an empty-state message is displayed. |
+| US-29 | Given the visitor selects a menu option, when the landing page responds, then it scrolls to the correct section. | Given the visitor uses mobile navigation, when an option is selected, then the menu closes and the section is shown. | Given the target section is unavailable, when selected, then navigation does not break. |
+| US-30 | Given the visitor opens About Us, when content loads, then startup and product information is displayed. | Given the visitor scrolls from another section, when About Us appears, then content remains consistent. | Given a media asset is unavailable, when the section loads, then text content remains visible. |
+| US-31 | Given the visitor opens mission and vision, when the cards are displayed, then both statements are readable. | Given the visitor changes language, when the section reloads, then content is shown in the selected language. | Given translated content is unavailable, when language changes, then default language content is shown. |
+| US-32 | Given the visitor selects an available language, when applied, then interface text changes language. | Given the visitor refreshes the page, when it loads again, then the language preference is preserved. | Given a translation key is missing, when the interface renders, then fallback text is shown. |
+| US-33 | Given the visitor completes the contact form, when the message is sent, then it is registered or sent successfully. | Given optional details are provided, when submitted, then those details are included. | Given required fields or email format are invalid, when submitted, then validation errors are shown. |
+| US-34 | Given the user has a scheduled appointment, when a valid new date and time are selected, then the appointment is updated. | Given another available doctor is selected, when confirmed, then the appointment is reassigned. | Given the new slot is unavailable, when confirmed, then the change is rejected. |
+| US-35 | Given the user has a scheduled appointment, when cancellation is confirmed, then the appointment is canceled. | Given the user declines confirmation, when the dialog closes, then the appointment remains scheduled. | Given the appointment is completed or canceled, when cancellation is requested, then the action is prevented. |
+| US-36 | Given the user has an upcoming appointment, when reminder time arrives, then the system sends the reminder. | Given the appointment is rescheduled, when reminders are recalculated, then the new date is used. | Given notifications are unavailable, when a reminder should be sent, then the issue is recorded or reported. |
+| US-37 | Given the patient has glucose data, when analytics open, then glucose charts are displayed over time. | Given the patient selects another period, when charts update, then the selected range is reflected. | Given there is no data for the period, when analytics load, then an empty chart state is shown. |
+| US-38 | Given the patient applies a valid date filter, when history updates, then matching records are displayed. | Given the patient clears the filter, when applied, then the full history is displayed again. | Given the start date is after the end date, when applied, then a validation error is shown. |
+| US-39 | Given the patient edits an existing glucose record with valid data, when saved, then the record is updated. | Given the patient cancels editing, when the modal closes, then the original record remains unchanged. | Given invalid glucose data is entered, when saving is attempted, then the update is rejected. |
+| US-40 | Given the patient confirms deletion of a glucose record, when executed, then the record is removed. | Given the patient cancels confirmation, when the dialog closes, then the record remains. | Given the record no longer exists, when deletion is requested, then an error is shown or the list refreshes. |
+| US-41 | Given the patient has alerts, when the alerts section opens, then alert history is displayed. | Given the patient filters by status, when applied, then matching alerts are shown. | Given alerts cannot be loaded, when the section opens, then an error state is displayed. |
+| US-42 | Given the patient defines valid glucose ranges, when settings are saved, then the configuration is stored. | Given only one threshold changes, when saved, then the other threshold is preserved. | Given minimum range is greater than maximum, when saved, then a validation error is shown. |
+| US-43 | Given the patient has an unread alert, when it is marked as read, then the status is updated. | Given the patient marks all alerts as read, when confirmed, then all unread alerts are updated. | Given the alert is already resolved, when marked as read, then duplicate changes are avoided. |
+| US-44 | Given the patient has adverse effect records, when the section opens, then records are displayed. | Given the patient filters by severity or date, when applied, then matching reports are shown. | Given no reports exist, when the section loads, then an empty-state message is shown. |
+| US-45 | Given the doctor opens adverse effects, when reports exist, then details are displayed for evaluation. | Given the doctor marks an effect as reviewed, when saved, then the report status is updated. | Given the doctor lacks access, when reports are requested, then access is denied. |
+| US-46 | Given the doctor has assigned patients, when the dashboard opens, then the patient list is displayed. | Given the doctor sorts or filters the list, when applied, then the list updates. | Given no patients are assigned, when the dashboard loads, then an empty-state message is shown. |
+| US-47 | Given the doctor enters a valid search parameter, when search runs, then matching patients are displayed. | Given the doctor clears search, when the list refreshes, then all assigned patients are displayed. | Given there are no matches, when search runs, then a no-results message is shown. |
+| US-48 | Given a patient has evolution data, when analytics open, then graphical evolution is displayed. | Given the doctor changes metric or period, when the chart updates, then selected data is shown. | Given insufficient records exist, when analytics open, then the system explains that charts cannot be generated. |
+| US-49 | Given the doctor updates treatment with valid information, when saved, then treatment is updated. | Given the doctor schedules a future change, when saved, then the effective date is recorded. | Given dosage or medication data is invalid, when saving is attempted, then the update is blocked. |
+| US-50 | Given the patient authorizes sharing, when the doctor requests access, then secure access is granted. | Given the patient revokes permission, when the doctor requests data again, then access is removed. | Given authorization is missing, when the doctor requests information, then access is denied. |
+| US-51 | Given the doctor sends a recommendation, when the patient opens notifications, then the recommendation is displayed. | Given the patient marks it as read, when saved, then the status is updated. | Given the recommendation cannot be loaded, when notifications open, then an error state is displayed. |
+| US-52 | Given an appointment is canceled, when processed, then affected users receive a notification. | Given the appointment is rescheduled, when processed, then the notification includes the new schedule. | Given notification delivery fails, when cancellation is processed, then the failure is recorded for retry. |
+| US-53 | Given the patient opens scheduling, when availability is retrieved, then available slots are displayed. | Given the patient changes doctor or date, when availability refreshes, then slots update. | Given no slots are available, when scheduling loads, then a no-availability message is shown. |
+| US-54 | Given an appointment is scheduled, when the user confirms it, then the appointment status is updated. | Given doctor confirmation is required, when the doctor confirms it, then the patient is notified. | Given the appointment was canceled before confirmation, when confirmation is attempted, then the status change is prevented. |
+| US-55 | Given the user opens the dashboard, when system data loads, then a general health summary is displayed. | Given some widgets have no recent data, when the dashboard loads, then available widgets are shown with empty states. | Given summary data cannot be retrieved, when the dashboard opens, then an error and retry option are displayed. |
+
 ## <a name="_toc226040411"></a>3.2 Impact Mapping
 
-<!-- TODO: Reemplazar la imagen de Impact Mapping con una versión que incluya al menos 3 objetivos de negocio SMART, los actores con sus impactos, y los entregables vinculados. La imagen actual puede no cubrir el mínimo requerido. -->
 ![](./Informe/assets/ImpactMapping.jpg)
+*Impact Mapping realizado en Miro el link al board completo se encuentra en la seccion de anexos*
 
 Para asegurar que las funcionalidades de **GlucoSmart** estén alineadas con los objetivos estratégicos de **IntegraVida**, se ha desarrollado un Impact Mapping. Esta técnica nos permite visualizar cómo los entregables de software generarán un cambio de comportamiento en nuestros usuarios, logrando así el impacto de negocio deseado.
 
@@ -1172,8 +1238,7 @@ Para alcanzar estas metas, dependemos de los dos segmentos principales identific
 
 El Product Backlog de **GlucoSmart** ha sido priorizado en función del valor de negocio que cada historia aporta al producto. El orden sigue la secuencia recomendada: primero las historias relacionadas con la **Landing Page** (visibilidad y propuesta de valor), luego los **CRUDs fundamentales** (autenticación y perfiles), después el **core de negocio** (monitoreo de glucosa, alertas y adherencia), seguido de las **Technical Stories** para el RESTful API y el despliegue, y finalmente las historias secundarias de gestión médica.
 
-**URL pública del Product Backlog:** [`https://linear.app/aplicaciones-web/team/INT/all`](https://linear.app/aplicaciones-web/team/INT/all)
-*(Nota: Linear requiere inicio de sesión con cuenta del workspace para visualizar el contenido. Se incluye captura de evidencia a continuación.)*
+**URL pública del Product Backlog:** https://trello.com/invite/b/6a4e64494b5bffc899ec3b0e/ATTI4356e6f50a007be86b2cf9b2aca5dcac26194524/integravida
 
 ![](./Informe/assets/ProductBacklogLinear.png)
 
@@ -1253,9 +1318,6 @@ La estimación técnica de cada historia se expresa mediante **Story Points**.
 | 70 | TS-19 | Configurar JWT y Spring Security para autenticación | Como equipo técnico, necesitamos implementar autenticación stateless con JWT, filtro de seguridad y endpoints sign-up/sign-in protegidos. | 5 | Alta |
 | 71 | TS-20 | Configurar CORS y desplegar backend en Render | Como equipo técnico, necesitamos configurar CORS para el frontend Angular y desplegar el backend Spring Boot en Render como Web Service. | 3 | Alta |
 
-<!-- TODO: El Product Backlog debe ser priorizado por valor de negocio. El orden actual sigue: Landing Page (US-01, US-29-US-33), CRUD (US-02-US-04, US-06-US-08, US-11), Core de negocio (US-12-US-55), Technical Stories (TS-01-TS-20), Gestión de usuario. El equipo debe verificar que este orden coincida con el tablero en Linear/Trello. -->
-
-
 # <a name="_toc226040413"></a>Capitulo IV: Product Design
 
 ## <a name="_toc226040414"></a>4.1. Style Guidelines.
@@ -1265,8 +1327,7 @@ El propósito de esta sección es establecer los lineamientos visuales y de dise
 
 Los lineamientos generales definen la identidad visual de la marca **IntegraVida** y los elementos base que componen todas las interfaces del sistema **GlucoSmart**. Estas directrices aseguran consistencia visual en todos los puntos de contacto digital con el usuario, transmitiendo profesionalismo, confianza y tecnología médica.
 
-<!-- TODO: Reemplazar StudyGuidelines.jpeg con una imagen que muestre claramente la paleta de colores (con códigos HEX), la jerarquía tipográfica (con nombres de fuentes y tamaños), los spacings y el branding completo. -->
-![](./Informe/assets/StudyGuidelines.jpeg)
+![](./Informe/assets/StudyGuidelines.png)
 
 #### Branding
 La marca **IntegraVida** se presenta con un logotipo compuesto por un símbolo (corazón/pulso estilizado) y el nombre en tipografía sans-serif. El logotipo se posiciona en la esquina superior izquierda del header en todas las pantallas. La marca verbal utiliza un tono de comunicación **profesional, empático y claro** —ni demasiado técnico para el paciente, ni demasiado simple para el médico— priorizando la claridad sobre la jerga. El lenguaje es formal pero cercano, en español neutro con soporte de internacionalización EN/ES.
@@ -1434,17 +1495,118 @@ Estos wireframes permiten definir la organización de la información y la naveg
 
 
 ### <a name="_toc226040428"></a>4.4.2. Web Applications Wireflow Diagrams.
-El wireflow representa la navegación entre las diferentes pantallas del sistema.
 
-El flujo principal inicia en el login, seguido del dashboard, desde donde el usuario puede acceder a las funcionalidades principales como registro de glucosa, historial de salud, alertas y perfil.
+Los wireflow diagrams representan la secuencia de pantallas, acciones del usuario, respuestas del sistema y validaciones principales de la Web Application de **GlucoSmart**. A diferencia de un wireframe individual, cada wireflow permite visualizar la continuidad de la experiencia y la forma en que el usuario avanza entre vistas para completar un objetivo específico.
 
-Este flujo permite visualizar cómo el usuario interactúa con la aplicación de manera estructurada.
+Para esta propuesta se definieron wireflows asociados a los user goals principales del producto, priorizando los flujos de mayor valor para pacientes y profesionales de salud: acceso a la plataforma, registro de glucosa, revisión de historial, gestión de alertas, edición de perfil, gestión de citas y seguimiento médico de pacientes.
 
-#### Wireflow Diagram
+#### Wireflow Diagrams por User Goal
 
-<img width="1280" height="841" alt="image" src="https://github.com/user-attachments/assets/17590af3-7f3b-4c32-96cf-f7e267255d1c" />
+##### Wireflow 1: Registro e Inicio de Sesión
 
+**User Goal:** acceder a la plataforma de forma segura según el rol del usuario.
 
+![](./Informe/assets/Wireframe1.png)
+*Wireflow diagram elaborado en Figma. El enlace al board completo se encuentra en la sección de anexos.*
+
+| Elemento | Descripción |
+| :--- | :--- |
+| Actor principal | Visitante, paciente o médico |
+| Punto de inicio | Landing Page |
+| Punto de cierre | Dashboard correspondiente al rol autenticado |
+| Flujo principal | Landing Page → botón `Iniciar sesión` o `Registrarse` → pantalla Login/Register → selección de rol → ingreso de datos → validación del sistema → acceso al dashboard del paciente o dashboard médico |
+| Flujo alternativo | El usuario cambia entre login y registro antes de enviar el formulario, manteniendo el contexto de acceso a la plataforma. |
+| Validación o error | Si existen credenciales inválidas, campos incompletos o correo ya registrado, el sistema muestra mensajes de validación y permite corregir la información antes de reintentar. |
+
+##### Wireflow 2: Registro de Glucosa
+
+**User Goal:** registrar una medición diaria de glucosa para mantener actualizado el control de salud.
+
+![](./Informe/assets/Wireframe2.png)
+*Wireflow diagram elaborado en Figma. El enlace al board completo se encuentra en la sección de anexos.*
+
+| Elemento | Descripción |
+| :--- | :--- |
+| Actor principal | Paciente |
+| Punto de inicio | Dashboard del paciente |
+| Punto de cierre | Lectura guardada y reflejada en el historial |
+| Flujo principal | Dashboard del paciente → botón `Registrar glucosa` → formulario Nueva Lectura → ingreso de valor mg/dL, fecha, hora, estado y comentario opcional → validación del sistema → registro guardado → historial actualizado |
+| Flujo alternativo | Si el valor registrado se encuentra fuera del rango configurado, el sistema guarda la lectura y genera una alerta preventiva asociada. |
+| Validación o error | Si el valor está vacío, tiene un formato inválido o se encuentra fuera de los límites permitidos de entrada, el sistema muestra el mensaje correspondiente y solicita corrección. |
+
+##### Wireflow 3: Revisión de Historial y Gráficos
+
+**User Goal:** consultar la evolución de los niveles de glucosa e identificar patrones en el tiempo.
+
+![](./Informe/assets/Wireframe3.png)
+*Wireflow diagram elaborado en Figma. El enlace al board completo se encuentra en la sección de anexos.*
+
+| Elemento | Descripción |
+| :--- | :--- |
+| Actor principal | Paciente |
+| Punto de inicio | Dashboard del paciente |
+| Punto de cierre | Historial filtrado y gráfico de evolución consultado |
+| Flujo principal | Dashboard del paciente → menú `Historial` → pantalla Historial de Glucosa → visualización de tabla de lecturas → selección de filtro por periodo → actualización de resultados → cambio a vista de gráficos → revisión de tendencias |
+| Flujo alternativo | El usuario puede alternar entre periodos predefinidos, como última semana, último mes, tres meses o rango personalizado. |
+| Validación o error | Si no existen registros para el periodo seleccionado, el sistema presenta un estado vacío indicando que aún no hay información disponible. |
+
+##### Wireflow 4: Gestión de Alertas
+
+**User Goal:** revisar, comprender y atender las alertas generadas por valores críticos o eventos relevantes.
+
+![](./Informe/assets/Wireframe4.png)
+*Wireflow diagram elaborado en Figma. El enlace al board completo se encuentra en la sección de anexos.*
+
+| Elemento | Descripción |
+| :--- | :--- |
+| Actor principal | Paciente |
+| Punto de inicio | Dashboard del paciente |
+| Punto de cierre | Alerta revisada o marcada como leída |
+| Flujo principal | Dashboard del paciente → widget `Alertas recientes` → pantalla Alertas → selección de pestaña Todas, Activas o Resueltas → selección de alerta → visualización de detalle → marcado como leída |
+| Flujo alternativo | Si existen varias alertas pendientes, el usuario puede ejecutar una acción masiva para marcar todas como leídas. |
+| Validación o error | Si no existen alertas registradas, el sistema muestra un estado vacío. Si la alerta ya fue resuelta, evita duplicar el cambio de estado. |
+
+##### Wireflow 5: Edición de Perfil
+
+**User Goal:** actualizar la información personal, clínica y de contacto del paciente.
+
+![](./Informe/assets/Wireframe5.png)
+*Wireflow diagram elaborado en Figma. El enlace al board completo se encuentra en la sección de anexos.*
+
+| Elemento | Descripción |
+| :--- | :--- |
+| Actor principal | Paciente |
+| Punto de inicio | Dashboard del paciente |
+| Punto de cierre | Perfil actualizado o cambios descartados |
+| Flujo principal | Dashboard del paciente → menú `Perfil` → pantalla Perfil del Paciente → botón `Editar` → formulario habilitado → modificación de datos personales, contacto, tipo de diabetes, datos clínicos y preferencias → botón `Guardar cambios` → validación → confirmación |
+| Flujo alternativo | El usuario puede cancelar la edición antes de guardar, conservando la información anterior. |
+| Validación o error | Si existen campos obligatorios incompletos o valores inválidos, el sistema muestra validaciones por campo y no actualiza el perfil hasta que la información sea corregida. |
+
+##### Wireflow 6: Solicitud y Reprogramación de Cita Médica
+
+**User Goal:** solicitar o modificar una cita médica según la disponibilidad del paciente y del profesional de salud.
+
+| Elemento | Descripción |
+| :--- | :--- |
+| Actor principal | Paciente |
+| Punto de inicio | Dashboard del paciente o módulo de Citas |
+| Punto de cierre | Cita programada, reprogramada o solicitud rechazada por falta de disponibilidad |
+| Flujo principal | Dashboard del paciente → menú `Citas` → pantalla Agenda/Citas → botón `Solicitar cita` → selección de médico, fecha, hora y motivo → validación de disponibilidad → confirmación de cita |
+| Flujo alternativo | Desde una cita existente, el usuario selecciona `Reprogramar`, elige una nueva fecha u hora disponible y confirma el cambio. |
+| Validación o error | Si el horario seleccionado no está disponible, el sistema muestra horarios alternativos y solicita una nueva selección. |
+
+##### Wireflow 7: Seguimiento Médico de Pacientes
+
+**User Goal:** revisar el estado clínico de un paciente y registrar acciones médicas de seguimiento.
+
+| Elemento | Descripción |
+| :--- | :--- |
+| Actor principal | Médico |
+| Punto de inicio | Dashboard médico |
+| Punto de cierre | Observación, diagnóstico, tratamiento o reporte clínico registrado |
+| Flujo principal | Login como médico → Dashboard médico → búsqueda o filtrado de paciente → selección de paciente → detalle clínico → revisión de perfil, historial de glucosa, alertas, tratamiento, adherencia y citas → registro de acción médica |
+| Flujo alternativo | El médico puede cambiar entre secciones clínicas antes de registrar una observación, emitir un diagnóstico, actualizar tratamiento o generar un reporte. |
+| Validación o error | Si el paciente no tiene información suficiente o el médico no cuenta con acceso autorizado, el sistema muestra el mensaje correspondiente y bloquea la acción restringida. |
 
 ### <a name="_toc226040429"></a>4.4.2. Web Applications Mock-ups.
 
@@ -1474,6 +1636,8 @@ Se mantuvo coherencia con la landing page de IntegraVida, utilizando un diseño 
 
 ### <a name="_toc226040430"></a>4.4.3. Web Applications User Flow Diagrams.
 
+<!-- TODO: Agregar User Flow Diagrams por cada User Goal y cubrir happy path + flujos alternativos. Incluir al menos los objetivos de paciente y médico definidos en el Product Backlog para evidenciar trazabilidad con las User Stories. -->
+
 El flujo de usuario se diseñó considerando como segmento objetivo principal a pacientes con diabetes, quienes requieren monitorear constantemente su estado de salud.
 
 El flujo principal describe el proceso de uso diario de la aplicación:
@@ -1498,6 +1662,8 @@ Este flujo permite garantizar una experiencia centrada en el monitoreo continuo 
 
 
 ## <a name="_toc226040431"></a>4.5. Web Applications Prototyping.
+
+* *Link del Prototyping: https://www.figma.com/design/lu1p4NLglhTYnbHWT8lDl4/GlucoSmart-Prototype?node-id=0-1&t=TQ9to3YM80qq0e3Q-1
 
 Se desarrolló un prototipo interactivo de la aplicación GlucoSmart utilizando la herramienta Figma, con el objetivo de simular la navegación y la interacción real del usuario dentro del sistema antes de su implementación.
 
@@ -1538,6 +1704,8 @@ El prototipo representa el flujo completo de uso diario del paciente, asegurando
 ## <a name="_toc226040432"></a>4.6. Domain-Driven Software Architecture.
 
 ### <a name="_toc226040433"></a>4.6.1. Design-Level Event Storming.
+
+<!-- TODO: Complementar Design-Level Event Storming con evidencia del proceso: foto/captura del tablero, leyenda de notación usada, comandos, eventos de dominio, aggregates, policies, read models y relación explícita con bounded contexts. -->
 
 Se aplicó la técnica de Event Storming a nivel de diseño con el objetivo de identificar y modelar los principales eventos del dominio en la aplicación GlucoSmart, orientada al monitoreo de pacientes con diabetes mellitus tipo 1 y tipo 2, así como al apoyo de profesionales de salud en su seguimiento clínico.
 
@@ -1605,8 +1773,7 @@ La comunicación entre el frontend y el backend se realiza mediante solicitudes 
 
 Este nivel permite comprender cómo se estructura técnicamente el sistema y cómo fluye la información entre sus componentes principales.
 
-<!-- TODO: Reemplazar la imagen del Container Diagram con una versión que refleje la arquitectura DDD + CQRS, mostrando: Angular Frontend → Spring Boot Backend (4 bounded contexts: Profiles, Patients, Monitoring, Medical) → PostgreSQL (por BC) → Servicios Externos (Notification). Debe incluir las flechas de comunicación HTTP/REST y JWT. -->
-<img width="1800" height="701" alt="image" src="https://github.com/user-attachments/assets/5cc88130-74c5-4c0e-aec4-422decaec86c" />
+![](./Informe/assets/ContainerDiagram.png)
 
 
 ### <a name="_toc226040436"></a>4.6.4. Software Architecture Components Diagrams.
@@ -1625,11 +1792,25 @@ El diagrama de componentes presenta una vista detallada de la arquitectura inter
 
 La aplicación del patrón CQRS permite que las operaciones de escritura (command) y lectura (query) tengan modelos optimizados de forma independiente, mejorando la escalabilidad y facilitando la evolución del modelo de dominio.
 
-<!-- TODO: Reemplazar la imagen del Components Diagram. Debe elaborarse UN diagrama de componentes por cada bounded context (Profiles, Patients, Monitoring, Medical), mostrando las capas interfaces → application → domain → infrastructure con CQRS. El diagrama actual es incorrecto y no sigue DDD. -->
-<img width="1527" height="1090" alt="image" src="https://github.com/user-attachments/assets/1fe09ded-f9b0-4d9c-8b59-b5a514c7d14a" />
+* *Monitoring Bounded
 
+![](./Informe/assets/MonitoringComponents.png)
+![](./Informe/assets/MonitoringComponents-key.png)
 
+* *Profiles Bounded
 
+![](./Informe/assets/ProfilesComponents.png)
+![](./Informe/assets/ProfilesComponents-key.png)
+
+* *Patients Bounded
+
+![](./Informe/assets/PatientsComponents.png)
+![](./Informe/assets/PatientsComponents-key.png)
+
+* *Medical Bounded
+
+![](./Informe/assets/MedicalComponents.png)
+![](./Informe/assets/MedicalComponents-key.png)
 
 ## <a name="_toc226040437"></a>4.7. Software Object-Oriented Design.
 
@@ -1681,14 +1862,17 @@ El diseño de base de datos de **GlucoSmart** sigue un modelo relacional organiz
 
 Los siguientes diagramas de base de datos están organizados por bounded context, mostrando las tablas, atributos, tipos de datos y relaciones entre entidades para cada dominio del sistema GlucoSmart.
 
-<!-- TODO: Crear UN Database Diagram por cada bounded context (Profiles, Patients, Monitoring, Medical) en lugar de un solo diagrama global. Cada diagrama debe incluir: nombre de tabla, columnas con tipos de datos, claves primarias/foráneas, y relaciones (1:N, N:M). El diagrama actual (erd-database-diagram.png) puede mantenerse como vista general, pero debe complementarse con diagramas individuales por BC. -->
-
+![ERD - GlucoSmart](./Informe/assets/ProfilesIDB.png)
 **Bounded Context 1: Profiles** — incluye las tablas `profiles` (datos personales: nombres, email, teléfono, fecha de nacimiento) y `users` (credenciales de autenticación con email, password hash y rol). El aggregate raíz es `Profile`, y `User` actúa como entidad de autenticación asociada.
 
+
+![](./Informe/assets/PatientsDB.png)
 **Bounded Context 2: Patients** — incluye las tablas `patients` (datos clínicos: tipo de diabetes, fecha de diagnóstico, HbA1c objetivo), `treatments` (planes de tratamiento con fecha inicio/fin y estado), `medications` (medicamentos prescritos con dosis, frecuencia y horario) y `medication_intakes` (registro de cada toma con fecha/hora y estado). El aggregate raíz es `Patient`.
 
+![](./Informe/assets/MonitoringDB.png)
 **Bounded Context 3: Monitoring** — incluye las tablas `glucose_records` (lecturas de glucosa con valor, fecha, hora, estado del paciente y notas), `glucose_ranges` (umbrales personalizados por paciente: mínimo, máximo y etiqueta) y `alerts` (alertas generadas con tipo, severidad, mensaje, estado de lectura y referencia al record de glucosa). El aggregate raíz es `GlucoseRecord`.
 
+![](./Informe/assets/MedicalDB.png)
 **Bounded Context 4: Medical** — incluye las tablas `appointments` (citas médicas con fecha, hora, estado: SCHEDULED/CONFIRMED/COMPLETED/CANCELLED), `diagnoses` (diagnósticos con código, descripción y fecha), `clinical_reports` (reportes clínicos con resumen estructurado y referencias a records de glucosa y alertas) y `clinical_observations` (observaciones médicas con texto y fecha). El aggregate raíz es `Appointment`.
 
 ![ERD - GlucoSmart](./Informe/assets/erd-database-diagram.png)
@@ -1764,6 +1948,8 @@ La administración del código fuente se realizó mediante **Git** y los reposit
 | Frontend Web Application | Integravida-FrontendServices | https://github.com/MTS-OpenSource/Integravida-FrontendServices |
 | Fake RESTful API (json-server) | JsondbData | https://github.com/MTS-OpenSource/JsondbData |
 | Informe del Proyecto | InformeProyecto | https://github.com/MTS-OpenSource/InformeProyecto |
+
+<!-- TODO: Agregar el repositorio del Server-Side Software real (Spring Boot Backend Services) dentro de la tabla de repositorios y verificar que las URLs de Landing Page, Frontend Web Application, Backend Services e Informe coincidan con los repositorios finales usados para TF. -->
 
 **Estructura de ramas (GitFlow):**
 
@@ -2709,7 +2895,13 @@ A continuación se presentan los resultados de las entrevistas de validación re
 |:---------|:------------------|:------------|:-------|
 | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> | <!-- TODO --> |
 
+### <a name="_toc226040483"></a>5.3.3. Evaluaciones según heurísticas
+
+<!-- TODO: Completar la evaluación UX según heurísticas para Landing Page y Web Application. Incluir tareas evaluadas, participantes/auditores, tabla resumen de problemas, severidad, heurística o principio violado, captura del problema y recomendación de solución según el Anexo D de REQUERIMIENTOS.md. -->
+
 ## <a name="_toc226040490"></a>5.4. About-the-Product
+
+<!-- TODO: Incluir en el contenido del About-the-Product una mención explícita a Service Terms & Conditions y Privacy Protection, especialmente por el tratamiento de datos personales y clínicos del paciente. -->
 
 En esta sección se presenta el video introductorio del producto GlucoSmart, que describe la solución desarrollada, su propuesta de valor, los segmentos de usuario a los que está dirigida y las principales funcionalidades implementadas en los tres componentes de la solución.
 
@@ -2849,3 +3041,4 @@ Anexo 3: [Impact Mapping](https://miro.com/app/board/uXjVHdifA00=/?share_link_id
 Anexo 4:https://integravida-appweb.web.app/
 Anexo 5:https://integravida-data.onrender.com/
 Anexo 6: [Web Services (Backend) Desplegado](https://integravida-backendservices.onrender.com) | [Swagger UI](https://integravida-backendservices.onrender.com/swagger-ui/index.html#/)
+Anexo 7:https://miro.com/app/board/uXjVH9-y8M8=/?share_link_id=910309606422
